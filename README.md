@@ -36,13 +36,14 @@ ___
 
    Músico amateur, Vendedor de oficio, Programador Web Trainee.
 ___
-   Patricio Villarruel.
+-  Patricio Villarruel.
 
    21 años.
 
    Avellaneda, Buenos Aires.
 
    Estudiante secundario, programación.
+__
 
 ### **Temática:**
 ElecTodo es una empresa que se dedica a la importación, comercialización y distribución en todo el país de productos y accesorios electrónicos, con más de 15 años de experiencia. Esto nos permite posicionarnos como una compañía reconocida por su seriedad, responsabilidad y excelente atención.
