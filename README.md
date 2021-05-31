@@ -10,7 +10,13 @@ ___
 ___
 -
 ___
--
+-  Rocío Recalde
+
+   18 años.
+
+   Estudiante de diseño gráfico y programación. 
+
+   Vegana, artista.
 ___
 -  Nestor Agustin Vega.
 
@@ -31,7 +37,7 @@ Texto a editar
 
 - [Compumundo](https://www.compumundo.com.ar/)
 
-- 
+- [Binah Deco](https://www.binahdeco.com.ar/)
 
 - 
 
@@ -43,7 +49,7 @@ Texto a editar
 
 - Font Awesome
 
-- 
+- Segoe UI
 
 ### **Paleta de color**
 ![paleta de color](./color/paleta_color.jpg)
