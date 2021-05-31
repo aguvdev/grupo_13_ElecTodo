@@ -21,10 +21,12 @@ ___
 -  Rocío Recalde
 
    18 años.
+   
+   Villa Celina, Buenos Aires.
 
    Estudiante de diseño gráfico y programación. 
 
-   Vegana, artista.
+   Vegana, artista plástica.
 ___
 -  Nestor Agustin Vega.
 
