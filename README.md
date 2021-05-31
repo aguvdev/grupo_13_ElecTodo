@@ -80,6 +80,12 @@ Ante cualquier duda, nos podes escribir a elec@Todo.com.ar
 - Segoe UI
 
 ### **Paleta de color**
-![paleta de color](./color/paleta_color.jpg)
+- /#FF6100
 
- 
+- /#241D17
+
+- /#202020
+
+- /#0B0E07
+
+- /#000000
