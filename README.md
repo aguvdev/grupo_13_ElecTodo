@@ -6,8 +6,6 @@
 ___
 
 ### **Integrantes:**
--
-___
 -  Sergio Romero
    
    24 años.
@@ -43,7 +41,7 @@ ___
    Avellaneda, Buenos Aires.
 
    Estudiante secundario, programación.
-__
+___
 
 ### **Temática:**
 ElecTodo es una empresa que se dedica a la importación, comercialización y distribución en todo el país de productos y accesorios electrónicos, con más de 15 años de experiencia. Esto nos permite posicionarnos como una compañía reconocida por su seriedad, responsabilidad y excelente atención.
@@ -67,8 +65,6 @@ Ante cualquier duda, nos podes escribir a elec@Todo.com.ar
 - [Binah Deco](https://www.binahdeco.com.ar/)
 
 - [Compra Gamer](https://compragamer.com/)
-
--
 
 ### **Tipografías:**
 
