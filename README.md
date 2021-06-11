@@ -44,16 +44,16 @@ ___
 ___
 
 ### **Temática:**
-ElecTodo es una empresa que se dedica a la importación, comercialización y distribución en todo el país de productos y accesorios electrónicos, con más de 15 años de experiencia. Esto nos permite posicionarnos como una compañía reconocida por su seriedad, responsabilidad y excelente atención.
+ElecTodo es una empresa que se dedica a la importación, comercialización y distribución en todo el país de productos y accesorios electrónicos, con más de 15 años de experiencia. Esto nos permite posicionarnos como una compañía reconocida por su seriedad , responsabilidad y excelente atención.
 
 Contamos con un amplio surtido de productos ofreciendo la mejor relación precio/calidad como concecuencia de nuestra excelente vinculación con el exterior y presencia en las exposiciones más importantes del mundo, para seguir actualizando día a día a nuestros clientes. Brindamos asesoramiento personalizado a nuestros clientes mediante un Staff de venta y adminitración, suministrando las mejores soluciones a sus compras.
 
-Buscamos que nuestro cliente reconozca siempre nuestros objetivos de trabajo:
+Buscamos que nuestro clientes reconozca siempre nuestros objetivos de trabajo:
 
 Calidad de atención, originalidad y calidad de producto, entrega inmediata y stock permanente.
 Para estar más cerca de nuestros clientes, ofrecemos el envío de nuestros productos a todo el país de manera rápida, segura y eficaz.
  
-Ante cualquier duda, nos podes escribir a elec@Todo.com.ar
+Ante cualquier dudas, nos podes escribir a elec@Todo.com.ar
 
 ### **Referencias**
 - [Seven Electronics](https://www.sevenelectronics.com.ar/ofertas.php)
