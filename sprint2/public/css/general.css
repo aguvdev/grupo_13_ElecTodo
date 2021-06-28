@@ -3,3 +3,21 @@
 :root{
     --color-naranja: #ff6100;
 }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body {
+    background: linear-gradient(to bottom, #000, var(--color-naranja), white);
+    height: 100vh;
+    background-size: cover;
+}
+
+.fa-bell, .fa-user-circle, .fa-heart, .fa-shopping-cart, .fa-laptop, .fa-desktop, .fa-mouse, .fa-keyboard, .fa-volume-up, .fa-mobile-alt, .fa-gamepad, .fa-xbox, .fa-print, .fa-headphones-alt{
+    color: #fff;
+    font-size: 1.5em;
+}
