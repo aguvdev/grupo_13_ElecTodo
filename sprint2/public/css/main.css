@@ -1,0 +1,28 @@
+/* main */
+
+.ofertas{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.beneficios{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.beneficios div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50px 50px 50px 50px;
+    width: 300px;
+    height: 60px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+.beneficios div p{
+    margin-left: 15px;
+}
