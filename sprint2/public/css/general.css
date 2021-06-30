@@ -13,7 +13,7 @@
 
 body {
     background: linear-gradient(to bottom, #000, var(--color-naranja), white);
-    height: 100%;
+    height: auto;
     background-size: cover;
 }
 
