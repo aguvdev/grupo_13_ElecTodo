@@ -1,0 +1,248 @@
+
+/* header */
+*{
+    background: repet;
+}
+.cabeza{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo a img{
+    width: 100px;
+    display: flex;
+}
+
+.buscador{
+    display: flex;
+    border: 3px solid rgb(168, 168, 168);
+    min-width: 12px;
+    border-radius: 2em;
+}
+
+.buscar-texto{
+    border: none;
+    background: none;
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    width: 350px;
+    padding: 7px;
+}
+
+.boton{
+    background: rgb(168, 168, 168);
+    border-radius: 0 1em 1em 0;
+    border: none;
+    width: 2em;
+    height: 2.5em;
+    text-decoration: none;
+}
+
+.nav-header-menu ul li{
+    list-style: none;
+    float: left;
+    margin: 10px
+}
+
+.nav-header-items{
+    background-color: #000;
+    width: 100%;
+    height: 2.5em;
+    padding: 5px 20px;
+}
+
+.nav-header-items ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-header-items ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+
+.nav-header-items ul li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* MAIN */
+
+.menu{/* todo */
+    padding: 0px 350px 0px 250px;/* un espaciado: abajo, derecha 200px */ 
+    
+          
+
+}
+.menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
+    background-color: white;
+    display: flex;
+    margin-bottom: 0px;      
+   
+}
+.galeria-auris{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+}
+.auris{
+    width: 6em;
+    margin-bottom: 0px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px 0 rgba(0, 0, 0, .5)
+    
+}
+.auris  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+.menulado{
+    margin: 0px 50px;
+}
+.menulado i, p{/* esto es todo el lado de la foto */
+    padding: 0px 50px;
+    font-size: 15px;
+    padding: 9px;
+    
+                
+}
+.titulo{
+    border-bottom: 1px black solid ;
+    padding: 10px 0px;
+}
+.titulo h1{
+    font-weight: 100;/* achicar grosorr letras */
+    font-style: oblique;/* inclinar las palabras */      
+}
+
+.precio{/* todo de: 6000, img , p */
+    color: blue;
+    display: flex;
+    margin: 10px 0px;  
+    border-bottom: 1px black solid ;
+    padding: 20px 0px;     
+}
+.precio img{/* mini logo electodo */
+    width: 50px;
+    margin: 0 40px;/* SEPARAAAA LETRAS P IMG TODO */
+    display: flex;/* no se interponga lo que le siga, ocupa su propia linea */
+    background-color: orangered;/* !!!!!!PREGUNTAR A ROBERT!!!! */
+}
+.precio p{/* 12 cuotas sin interes a 6840 precio lista */
+    color: black;
+    font-weight: 500;/* grosor letras */ 
+    margin: -15PX 0px;
+    
+}
+
+.garantia-envios {/* garantia 12 meses, envios todo pais */
+    color: rgb(7, 201, 7);
+    border-bottom: 1px black solid ;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+
+.carrito{
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: orangered;
+    padding: 10px ;
+    font-size: 15px;
+    margin: 60px 10px;
+    color: #fff;
+    width: 180px ;
+}
+.menu article{
+    text-transform: uppercase;
+    padding: 10px ;
+    font-size: 15px;
+    margin: 60px 10px;
+    background-color: white;
+}
+/* menu caracteriscias conectividad sonido micro  */
+.contenedor-especificaciones{
+    padding-top: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    flex-direction: row;
+    
+}
+.contenedor-caracteristicas{
+    display: inline-block;
+    padding: .5rem;
+    margin: 0px 20px 20px 0px;
+    width: 38%;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    font-style: oblique;     
+}
+.contenedor-caracteristicas h3{
+    border-bottom: 1px solid orangered ;
+}
+.caracteristicas-contenido{
+    padding-top: 7px;
+    display: flex;
+    flex: 50%;
+    justify-content: space-between;
+    font-weight: 600; 
+     
+}
+/* PRODUCTOS RELACIONADOS */
+.relacionados{
+    background-color: white;
+    border-radius: 2em 2em 2em 2em;
+    margin: 10px 0px 0px 0px;
+    padding: 20px 20px 0px;
+    margin: -2px 0px 0px;  
+}
+.relacionados h3{
+    border-bottom: 1px solid orangered ;
+
+}
+.galeria-mouse{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+.mouse{
+    width: 15em;
+    margin-bottom: 0px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+}
+.mouse  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1em 1em 5em 1em;
+    margin: 0px 0px 20px;
+}
+
+
+
+
+
+    
+
+
+    
+
+
