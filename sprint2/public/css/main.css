@@ -1,0 +1,362 @@
+/*MOBILE*/
+.carrito main .barra{
+    color: white;
+    font-size: 35px;
+    background-color: black;
+    height: 10vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: center;
+}
+.carrito main .barra2{
+    display: none;
+}
+.carrito main nav{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 20px;
+}
+.carrito main ul .dktp{
+    display: none;
+}
+.carrito main nav .aqui{
+    padding: 5px 10px;
+    text-align: center;
+    background-color: var(--color-naranja);
+    color: white;
+    width: 40vh;
+}
+.carrito main nav .navegacion {
+    background: linear-gradient(to bottom, rgb(255, 190, 104) 0%, rgb(255, 190, 104) 50%, white 50%, white 100%);
+    text-align: center;
+    width: 40vh;
+    padding: 5px 10px;
+}
+.carrito main nav p{
+    display: none;
+}
+.carrito main nav .navegacion2 {
+    background: linear-gradient(to bottom, rgb(255, 190, 104) 0%, rgb(255, 190, 104) 50%, white 50%, white 100%);
+    text-align: center;
+    width: 40vh;
+    padding: 5px 10px;
+}
+.carrito main section article{
+    background-color: white;
+    margin: 20px 30px 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 20px 20px;
+}
+.carrito main section article i{
+    font-size: 40px;
+    color:var(--color-naranja);
+    text-align: center;
+}
+.carrito main article img{ 
+    margin: 15px;
+    background-color: white;
+    width: 130px;
+    height: 150px;
+}
+.carrito main article .descripcion{
+    max-width: 200px;
+}
+.carrito main article .menos{
+    background: none;
+    height: 24px;
+    border: 1px solid gray;
+    border-radius: 10px 0px 0px 10px;
+    border-right: none;
+}
+.carrito main article .mas{
+    color: orange;
+    background: none;
+    border: 1px solid gray;
+    height: 24px;
+    border-radius: 0px 10px 10px 0px;
+    border-left: none;
+}
+.carrito main article .cantidad{
+    width: 15px;
+    height: 20px;
+    border: 1px solid gray;
+    border-right: none;
+    border-left: none;
+    
+}
+.carrito main article div{
+    margin: 0 20px;
+}
+.carrito main article div h6{
+    color: gray;
+    font-size: 8px;
+    font-weight: lighter;
+}
+.carrito main article .subtotal{
+    font-weight: bold;
+}
+.carrito main .cupon{
+    background-color: white;
+    margin: 20px 30px 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 0px 20px 13px;
+    font-size: 15px;
+    line-height: 17px;
+}
+.carrito main .cupon .cod-cupon, .envio .cod-cupon{
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.carrito main .cupon button{
+    background: linear-gradient(0deg, var(--color-naranja), #fff);
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 35px;
+    width: 65px;
+}
+.carrito main .envio{
+    background-color: white;
+    margin: 20px 30px 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 0px 20px;  
+}
+.carrito main .caja-envio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carrito main .envio button{
+    color: var(--color-naranja);
+}
+.carrito main .envio .dire{
+    color: var(--color-naranja);
+}
+.carrito main .envio .caja-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1.3px solid black;
+}
+.carrito main .envio .p-e{
+    color: gray;
+    font-size: 17px;
+}
+.carrito main .envio .total{
+    font-size: 20px;
+    padding-top: 27px;
+} 
+.carrito main .envio .n-total{
+    font-size: 25px;
+}
+.carrito main .t-y-c{
+    text-align:end;
+    margin-right: 25px;
+}
+.carrito main .t-y-c button{
+    background: none;
+    border: none;
+}
+.carrito main a{
+   color: black;
+}
+.carrito main .continuar button{
+    background: linear-gradient(0deg, var(--color-naranja), #fff);
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0px 34px;
+    margin-left: 20px;
+    margin-bottom: 65px;
+}
+.carrito main .continuar a{
+    text-decoration: none;
+}
+/*METODO DE PAGO MAIN*/
+.carrito main .cuerpo{
+    display: block;
+}
+.carrito main .total-dos{
+    background-color: white;
+    margin: 15px 20px 0px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 0px 15px;
+    font-size: 20px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.carrito main .metodos{
+    background-color: white;
+    margin: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114); 
+    padding: 0px 10px;
+    font-size: 25px;
+    line-height: 60px;
+}
+.carrito main .metodos .opciones{
+    margin: 25px 20px;
+}
+.carrito main .metodos .opciones span{
+    margin-left: 30px;
+}
+.carrito main .metodos .opciones .fa-credit-card, i.fa-money-bill{
+    color: var(--color-naranja);
+    background-color: rgb(221, 221, 221);
+    font-size: 30px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+.carrito main .continuar-dos{
+    text-align: end;
+}
+.carrito main .continuar-dos button{
+    background: linear-gradient(0deg, var(--color-naranja), #fff);
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0px 34px;
+    margin-right: 20px;
+    margin-bottom: 65px;
+}
+.carrito main .continuar-dos a{
+    text-decoration: none;
+}
+/*CONFIRMACIÓN DE LA COMPRA MAIN*/
+.carrito main .cuerpo2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.carrito main .datos{
+    background-color: white;
+    margin: 15px 20px 0px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 0px 15px;
+    flex-grow: 1;
+    font-size: 20px;
+}
+.carrito main .datos .dato{
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.carrito main .datos .caja-dato{
+    border-radius: 5px;
+    border: 2px solid gray;
+    width: 40%;
+    height: 25px;
+    outline: none;
+    margin-left: 20%;
+}
+/*TABLET*/
+@media (min-width: 481px){
+    /*CARRITO*/
+    .carrito main .barra{
+        display: none;
+}
+.carrito main .barra2{
+    color: white;
+    font-size: 15px;
+    background-color: black;
+    height: 10vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: center;
+    }
+    .carrito main nav{
+        margin: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .carrito main nav i{
+        font-size: 30px;
+    }
+    .carrito main nav p{
+        display: block;
+        padding-top: 15px;
+    }
+    .carrito main nav .aqui, .navegacion, .navegacion2{
+        flex-grow: 0.33;
+    }
+    .carrito main section article{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .carrito main section article i{
+        font-size: 25px;
+    }
+    .carrito main section article p{
+        font-size: 15px;
+    }
+    .carrito main .cupon-envio{
+        display: flex;
+    }
+    .carrito main .cupon {
+        width: 30%;
+        height: 40%;
+    }
+    .carrito main .envio{
+        width: 50%;
+    }
+    .carrito main .continuar{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+    }
+    /*METODO DE PAGO*/
+    .carrito main .cuerpo{
+        display: flex;
+    }
+    .carrito main .total-dos{
+        padding: 0px 15px;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        max-width: 270px;
+    }
+    .carrito main .metodos{
+        margin: 15px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0.4;
+        
+    }
+}
+/*CONFIMACIÓN DE LA COMPRA*/
+    .carrito main .cuerpo2 .datos{
+        margin-bottom: 10px;
+        width: 50%;
+    }
+/*DESKTOP*/
+@media (min-width: 769px){
+    .carrito main ul .dktp{
+        display: inline-block;
+    }
+    .carrito main ul .dktp i{
+        margin-right: 10px;
+    }
+    .carrito main .cuerpo2{
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+}

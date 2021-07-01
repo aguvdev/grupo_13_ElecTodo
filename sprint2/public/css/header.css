@@ -1,0 +1,68 @@
+.carrito header{
+    display: flex;
+    align-items: center;
+}
+.carrito header img{
+    margin: 15px 0px 25px 35px;
+}
+.carrito header .buscador{
+    display: none;
+}
+.carrito header ul{
+    color: white; 
+    font-size: 40px;
+    width: 70vh;
+    display: flex;
+    justify-content: space-around;
+    margin: auto 40px;
+}
+.carrito header .tablet{
+    display: none;
+}
+
+@media (min-width: 481px){
+    .carrito header ul{
+        display: none;
+    }
+    .carrito header .buscador .form{
+        display: flex;
+        justify-content: center;
+    }
+    .carrito header .buscador{
+        width: 100vh;
+        text-align: center;
+        display: block;
+        margin-left: 20px;
+    }
+    .carrito header .buscador button{
+        border-radius: 0 10px 10px 0;
+        background-color: rgb(160, 156, 156);
+        border: none;
+        height: 32px;
+    }
+    .carrito header .buscador button i{
+        font-size: 15px;
+        text-align: center;
+    }
+    .carrito header .buscador .barra-busqueda{
+       border-radius: 10px 0 0px 10px;
+        padding: 5px;
+        font-size: 13px;
+        width: 190px;
+        height: 18px;
+        background: none;
+        border: 2px solid rgb(160, 156, 156);
+        outline: none;
+        color: white;
+    }
+    .carrito header .tablet{
+        font-size:20px;
+        color: white;
+        text-align: end;
+        width: 60vh;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 40px;
+    } 
+}

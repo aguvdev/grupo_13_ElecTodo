@@ -1,0 +1,100 @@
+.carrito footer{
+    background-color: var(--color-naranja);
+}
+.carrito footer .newsletter{
+    background-color: black;
+    padding: 1px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.carrito footer .newsletter h4{
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.carrito footer .put-email{
+    width: 40%;
+    height: 30px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid gray;
+    border-right: transparent;
+    outline: none;
+}
+.carrito footer .next-email{
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
+    border: 1px solid gray;
+    border-left: transparent;
+    height: 34px;
+}
+.carrito footer section div h4{
+    font-weight: normal;
+    padding: 20px 0px 10px 10px;
+    font-size: 35px;
+    line-height: 40px;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+    margin-right: 90px;
+}
+.carrito footer p{
+    padding-top: 5px;
+    padding-left: 25px;
+    font-size: 35px;
+    line-height: 35px;
+}
+.carrito footer .redes i{
+    margin: 0px 0px 15px 20px;
+    font-size: 70px;
+}
+.carrito footer .copyright{
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    padding: 5px 0px 5px 5px;
+}
+@media (min-width: 481px){
+.carrito footer section .f-tablet{
+    display: flex;
+}
+
+.carrito footer p{
+    font-size: 25px;
+    margin-left: 40px;
+}
+.carrito footer .redes i{
+    font-size: 55px;
+    margin: 0px 0px 0px 50px;
+    
+}
+.carrito footer section div h4{
+    font-size: 25px;
+    margin-left: 50px;
+    
+}
+}
+
+@media (min-width: 769px){
+    .carrito footer section .f-desk{
+        display: flex;
+        margin-left: 10px;
+        justify-content: space-evenly;
+    }
+    .carrito footer p{
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 5px;
+        line-height: 25px;
+    }
+    .carrito footer .redes i{
+        font-size: 45px;
+        margin: 0px 0px 0px 25px;
+        
+    }
+    .carrito footer section div h4{
+        font-size: 20px;
+        margin-left: 10px;
+        line-height: 30px ;
+    }
+}
