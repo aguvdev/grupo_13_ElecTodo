@@ -2,6 +2,13 @@
 
 :root{
     --color-naranja: #ff6100;
+    --color-negro4: #241D17;
+
+    --color-negro3: #202020;
+
+    --color-negro2: #0B0E07;
+
+    --color-negro1: #000000;
 }
 
 body{
@@ -16,11 +23,15 @@ main{
     background-repeat: no-repeat;
     background-size: 65%;
 }
+
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Roboto';
+    
+    
 }
 
 body {
@@ -72,3 +83,18 @@ body {
 .fa-truck{
     font-size: 2em;
 }
+
+.fa-bell:hover{
+    color: orangered;
+}
+.fa-user-circle:hover{
+    color: orangered;
+}
+.fa-heart:hover{
+    color: orangered;
+}
+.fa-shopping-cart:hover{
+    color: orangered;
+}
+
+
