@@ -2,3 +2,7 @@
 @import url('/css/main.css');
 @import url('/css/header.css');
 @import url('/css/footer.css');
+@import url('./general.css');
+@import url('./header2.css');
+@import url('./footer2.css');
+@import url('./home.css');
