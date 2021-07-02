@@ -1,8 +1,6 @@
 
 /* header */
-*{
-    background: repet;
-}
+
 .cabeza{
     display: flex;
     justify-content:space-evenly;
@@ -74,10 +72,9 @@
 /* MAIN */
 
 .menu{/* todo */
-    padding: 0px 350px 0px 250px;/* un espaciado: abajo, derecha 200px */ 
-    
-          
-
+    padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
+    padding-left: 25%;
+    padding-right: 25%;
 }
 .menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
     background-color: white;
@@ -93,6 +90,7 @@
     
 }
 .auris{
+    
     width: 6em;
     margin-bottom: 0px;
     overflow:hidden;
@@ -109,6 +107,7 @@
 
 }
 .menulado{
+    width: 100%;
     margin: 0px 50px;
 }
 .menulado i, p{/* esto es todo el lado de la foto */
@@ -235,7 +234,62 @@
     border-radius: 1em 1em 5em 1em;
     margin: 0px 0px 20px;
 }
-
+@media (max-width: 769px) {
+     .menu {
+        padding: 0px;
+}
+    .menulado {
+        width: 100%;
+        margin: -7px;
+}
+.precio{
+    padding: 15px 0px;
+}
+.precio img{
+    margin: 12px 14px 17px -25px;
+}
+.galeria-mouse{
+    flex-wrap: nowrap;
+}
+.mouse {
+    width: 9em;
+}
+@media (max-width: 481px) {
+    .menu1{
+        display: block;  
+    }
+    .menulado{
+        margin: 15px;
+    }
+    .carrito{
+        margin: 60px 120px;
+        font-size: 17px;
+    }
+    .precio img{
+        margin: 1px 25px 14px 33px;
+    }
+    .contenedor-caracteristicas{
+        padding: 0.5rem;
+        margin: -25px 0px 37px 11px;
+        width: 95%;
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        font-style: oblique;
+    }
+    .contenedor-especificaciones{
+        padding-top: 0em;
+    }
+    .relacionados {
+        padding: 8px 111px 0px;
+    }
+    .galeria-mouse{
+        display: block;
+    }
+    .mouse{
+        width: 15em;
+    }
+}
+}
 
 
 

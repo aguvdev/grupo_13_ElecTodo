@@ -1,2 +1,4 @@
-@import url('/css/general.css');
-@import url("/css/detalle-producto.css")
+@import url("general.css");
+@import url("detalle-producto.css");
+@import url("footerdetalle.css");
+@import url("headerdetalle.css");
