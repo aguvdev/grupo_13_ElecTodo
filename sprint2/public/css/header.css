@@ -1,68 +1,186 @@
-.carrito header{
+/* header */
+
+.carrito .cabeza{
     display: flex;
+    justify-content:space-evenly;
     align-items: center;
+    padding: 30px 0;
 }
-.carrito header img{
-    margin: 15px 0px 25px 35px;
-}
-.carrito header .buscador{
-    display: none;
-}
-.carrito header ul{
-    color: white; 
-    font-size: 40px;
-    width: 70vh;
-    display: flex;
-    justify-content: space-around;
-    margin: auto 40px;
-}
-.carrito header .tablet{
+
+.carrito .buscador2{
     display: none;
 }
 
-@media (min-width: 481px){
-    .carrito header ul{
+.carrito .logo a img{
+    width: 100px;
+    display: flex;
+}
+
+.carrito .buscador{
+    display: flex;
+    border: 3px solid rgb(168, 168, 168);
+    min-width: 12px;
+    border-radius: 2em;
+}
+
+.carrito .buscar-texto:focus{
+    outline: none;
+}
+
+.carrito .buscar-texto{
+    border: none;
+    background: none;
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    width: 350px;
+    padding-left: 10px;
+}
+
+.carrito .boton{
+    background: rgb(168, 168, 168);
+    border-radius: 0 1em 1em 0;
+    border: none;
+    width: 2em;
+    height: 2.5em;
+    text-decoration: none;
+}
+
+.carrito .nav-header-menu2{
+    display: none;
+}
+
+.carrito .nav-header-menu ul li{
+    list-style: none;
+    float: left;
+    margin: 10px
+}
+
+.carrito .nav-header-items{
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    padding: 5px 20px;
+}
+
+.carrito .nav-header-items2{
+    display: none;
+}
+
+.carrito .nav-header-items ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.carrito .nav-header-items ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carrito .nav-header-items ul li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+@media (max-width: 769px) {
+
+    /* header */
+
+    .carrito .buscador2{
         display: none;
     }
-    .carrito header .buscador .form{
+
+    .carrito .buscar-texto{
+        width: auto;
+    }
+    .carrito .nav-header-menu2{
+        display: none;
+    }
+    .carrito .nav-header-items2{
+        display: none;
+    }
+    .carrito .nav-header-items ul li a i{
+        display: none;
+    }
+
+}
+
+@media (max-width: 481px) {
+    
+    /* header */
+
+    .carrito .cabeza{
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    .carrito .buscador{
+        display: none;
+    }
+
+    .carrito .buscador2{
         display: flex;
-        justify-content: center;
+        align-items: center;
     }
-    .carrito header .buscador{
-        width: 100vh;
-        text-align: center;
-        display: block;
-        margin-left: 20px;
-    }
-    .carrito header .buscador button{
-        border-radius: 0 10px 10px 0;
-        background-color: rgb(160, 156, 156);
-        border: none;
-        height: 32px;
-    }
-    .carrito header .buscador button i{
-        font-size: 15px;
-        text-align: center;
-    }
-    .carrito header .buscador .barra-busqueda{
-       border-radius: 10px 0 0px 10px;
-        padding: 5px;
-        font-size: 13px;
-        width: 190px;
-        height: 18px;
+
+    .carrito .buscador2 .fa-search{
         background: none;
-        border: 2px solid rgb(160, 156, 156);
-        outline: none;
         color: white;
+        font-size: 3em;
+        margin-left: 60px;
     }
-    .carrito header .tablet{
-        font-size:20px;
-        color: white;
-        text-align: end;
-        width: 60vh;
+
+    .carrito .nav-header-menu{
+        display: none;
+    }
+
+    .carrito .nav-header-menu2{
         display: flex;
-        justify-content: space-between;
+    }
+
+    .carrito .nav-header-menu2 ul{
+        display: flex;
+        justify-content: space-evenly;
+        width: 200px;
         padding: 0;
-        margin: 40px;
-    } 
+    }
+
+    .carrito .nav-header-menu2 ul{
+        margin: 0;
+    }
+
+    .carrito .nav-header-menu2 ul li{
+        list-style: none;
+    }
+
+    .carrito .nav-header-menu2 ul li a i.fas{
+        font-size: 3em;
+    }
+
+    .carrito .nav-header-items{
+        display: none;
+    }
+
+    .carrito .nav-header-items2{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #000;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .carrito .nav-header-items2 .fas{
+        font-size: 2em;
+    }
+
+    .carrito .nav-header-items2 .burger-menu button{
+        border: none;
+        background: none;
+    }
+
 }
