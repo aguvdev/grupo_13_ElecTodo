@@ -2,10 +2,6 @@
 
 :root{
     --color-naranja: #ff6100;
-}@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-:root{
-    --color-naranja: #ff6100;
 }
 
 * {
@@ -17,7 +13,7 @@
 
 body {
     background: linear-gradient(to bottom, #000, var(--color-naranja), white);
-    height: 100%;
+    height: auto;
     background-size: cover;
 }
 
@@ -34,7 +30,8 @@ body {
 .fa-gamepad, 
 .fa-xbox, 
 .fa-print, 
-.fa-headphones-alt{
+.fa-headphones-alt,
+.fa-bars{
     color: #fff;
     font-size: 1.5em;
 }

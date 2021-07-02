@@ -1,0 +1,186 @@
+/* header */
+
+.register .cabeza{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.register .buscador2{
+    display: none;
+}
+
+.register .logo a img{
+    width: 100px;
+    display: flex;
+}
+
+.register .buscador{
+    display: flex;
+    border: 3px solid rgb(168, 168, 168);
+    min-width: 12px;
+    border-radius: 2em;
+}
+
+.register .buscar-texto:focus{
+    outline: none;
+}
+
+.register .buscar-texto{
+    border: none;
+    background: none;
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    width: 350px;
+    padding-left: 10px;
+}
+
+.register .boton{
+    background: rgb(168, 168, 168);
+    border-radius: 0 1em 1em 0;
+    border: none;
+    width: 2em;
+    height: 2.5em;
+    text-decoration: none;
+}
+
+.register .nav-header-menu2{
+    display: none;
+}
+
+.register .nav-header-menu ul li{
+    list-style: none;
+    float: left;
+    margin: 10px
+}
+
+.register .nav-header-items{
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    padding: 5px 20px;
+}
+
+.register .nav-header-items2{
+    display: none;
+}
+
+.register .nav-header-items ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.register .nav-header-items ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register .nav-header-items ul li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+@media (max-width: 769px) {
+
+    /* header */
+
+    .register .buscador2{
+        display: none;
+    }
+
+    .register .buscar-texto{
+        width: auto;
+    }
+    .register .nav-header-menu2{
+        display: none;
+    }
+    .register .nav-header-items2{
+        display: none;
+    }
+    .register .nav-header-items ul li a i{
+        display: none;
+    }
+
+}
+
+@media (max-width: 481px) {
+    
+    /* header */
+
+    .register .cabeza{
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    .register .buscador{
+        display: none;
+    }
+
+    .register .buscador2{
+        display: flex;
+        align-items: center;
+    }
+
+    .register .buscador2 .fa-search{
+        background: none;
+        color: white;
+        font-size: 3em;
+        margin-left: 60px;
+    }
+
+    .register .nav-header-menu{
+        display: none;
+    }
+
+    .register .nav-header-menu2{
+        display: flex;
+    }
+
+    .register .nav-header-menu2 ul{
+        display: flex;
+        justify-content: space-evenly;
+        width: 200px;
+        padding: 0;
+    }
+
+    .register .nav-header-menu2 ul{
+        margin: 0;
+    }
+
+    .register .nav-header-menu2 ul li{
+        list-style: none;
+    }
+
+    .register .nav-header-menu2 ul li a i.fas{
+        font-size: 3em;
+    }
+
+    .register .nav-header-items{
+        display: none;
+    }
+
+    .register .nav-header-items2{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #000;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .register .nav-header-items2 .fas{
+        font-size: 2em;
+    }
+
+    .register .nav-header-items2 .burger-menu button{
+        border: none;
+        background: none;
+    }
+
+}
