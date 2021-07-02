@@ -30,7 +30,8 @@ body {
 .fa-gamepad, 
 .fa-xbox, 
 .fa-print, 
-.fa-headphones-alt{
+.fa-headphones-alt,
+.fa-bars{
     color: #fff;
     font-size: 1.5em;
 }
