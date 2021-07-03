@@ -27,12 +27,17 @@
     background-color: var(--color-naranja);
     color: white;
     width: 40vh;
+    margin-top: 15px;
 }
+.carrito main nav .aqui i, .navegacion i, .navegacion2 i{
+    font-size: 20px;
+} 
 .carrito main nav .navegacion {
     background: linear-gradient(to bottom, rgb(255, 190, 104) 0%, rgb(255, 190, 104) 50%, white 50%, white 100%);
     text-align: center;
     width: 40vh;
     padding: 5px 10px;
+    margin-top: 15px;
 }
 .carrito main nav p{
     display: none;
@@ -42,6 +47,7 @@
     text-align: center;
     width: 40vh;
     padding: 5px 10px;
+    margin-top: 15px;
 }
 .carrito main section article{
     background-color: white;
@@ -70,6 +76,7 @@
     border: 1px solid gray;
     border-radius: 10px 0px 0px 10px;
     border-right: none;
+    width: 19px;
 }
 .carrito main article .mas{
     color: orange;
@@ -78,14 +85,18 @@
     height: 24px;
     border-radius: 0px 10px 10px 0px;
     border-left: none;
+    width: 19px;
 }
 .carrito main article .cantidad{
-    width: 15px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border: 1px solid gray;
     border-right: none;
     border-left: none;
-    
+    text-align: center;
+}
+.carrito main article .form-cant{
+    margin: 9px;
 }
 .carrito main article div{
     margin: 0 20px;
@@ -94,6 +105,7 @@
     color: gray;
     font-size: 8px;
     font-weight: lighter;
+    margin: 9px;
 }
 .carrito main article .subtotal{
     font-weight: bold;
@@ -109,8 +121,8 @@
 }
 .carrito main .cupon .cod-cupon, .envio .cod-cupon{
     text-align: center;
-    width: 130px;
-    height: 25px;
+    width: 120px;
+    height: 30px;
     border-radius: 5px;
     border: 1px solid gray;
 }
@@ -126,7 +138,8 @@
     margin: 20px 30px 5px 20px;
     border-radius: 10px;
     border: 2px solid rgb(114, 114, 114);
-    padding: 0px 20px;  
+    padding: 20px 20px;  
+    
 }
 .carrito main .caja-envio{
     display: flex;
@@ -151,10 +164,11 @@
 }
 .carrito main .envio .total{
     font-size: 20px;
-    padding-top: 27px;
+    padding-top: 20px;
 } 
 .carrito main .envio .n-total{
     font-size: 25px;
+    padding-top: 20px;
 }
 .carrito main .t-y-c{
     text-align:end;
@@ -328,11 +342,11 @@
         display: flex;
     }
     .carrito main .total-dos{
-        padding: 0px 15px;
+        padding: 15px 15px;
         display: flex;
         flex-direction: column;
-        height: 50%;
-        max-width: 270px;
+        height: 150px;
+        max-width: 250px;
     }
     .carrito main .metodos{
         margin: 15px 20px 10px;

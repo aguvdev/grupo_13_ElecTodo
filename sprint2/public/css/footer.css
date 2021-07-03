@@ -11,7 +11,7 @@
     color: white;
     font-size: 32px;
     font-family: 'Open Sans';
-    padding: 20px 0 10px 0;
+    padding: 20px 0 10px;
 }
 
 .carrito .seccion-newsletter div span{
@@ -32,7 +32,7 @@
     background: white;
     border-radius: 5px 0 0 5px;
     font-size: 1.3em;
-    width: 600px;
+    width: 60%;
     height: 45px;
     padding-left: 20px;
 }
@@ -58,6 +58,10 @@
     margin: 10px 0;
     font-size: 25px;
     border-bottom: 1px solid black;
+}
+.carrito .final .secciones-footer .sigamos-conectados div i{
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
 .carrito .copyr{
