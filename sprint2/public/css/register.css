@@ -1,0 +1,15 @@
+/* main */
+.register .btn-primary{
+    color: #000;
+    background: linear-gradient(to bottom, white, var(--color-naranja));
+    border-color: #ffb080;
+}
+
+.register .btn-primary:hover{
+    color: #fff;
+    border-color: var(--color-naranja);
+}
+
+.register .card-body a{
+    color: var(--color-naranja);
+}

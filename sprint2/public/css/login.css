@@ -1,0 +1,47 @@
+/* main */
+
+.login .btn-primary{
+    color: #000;
+    background: linear-gradient(to bottom, white, var(--color-naranja));
+    border-color: #ffb080;
+}
+
+.login .btn-primary:hover{
+    color: #fff;
+    border-color: var(--color-naranja);
+}
+
+.login .card-body a{
+    color: var(--color-naranja);
+}
+
+.login .btn-redes{
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+
+.login .btn-redes button{
+    margin: 5px 0;
+}
+
+.login .btn-redes .fa-google, .fa-apple{
+    color: gray;
+    font-size: 18px;
+}
+
+.login .btn-redes .fa-facebook-f{
+    color: gray;
+    font-size: 18px;
+    background: none;
+    height: auto;
+    width: auto;
+    border-radius: 0;
+    text-align: center;
+    padding-top: 0;
+}
+
+.login .registro{
+    text-align: center;
+    margin-top: 30px;
+}
