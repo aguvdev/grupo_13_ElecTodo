@@ -58,7 +58,7 @@
 }
 .carrito section article i{
     font-size: 40px;
-    color:var(--color-naranja);
+    color:var(--color-rosaFluor);
     text-align: center;
 }
 .carrito article img{ 
@@ -79,7 +79,7 @@
     width: 19px;
 }
 .carrito article .mas{
-    color: orange;
+    color: var(--color-rosaFluor);
     background: none;
     border: 1px solid gray;
     height: 24px;
@@ -149,6 +149,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 .carrito .envio button{
     color: var(--color-naranja);
@@ -180,6 +181,7 @@
 }
 .carrito .t-y-c p{
     color: white;
+    margin-top: 10px;
 }
 .carrito .t-y-c button{
     background: none;
@@ -232,7 +234,7 @@
     margin-left: 30px;
 }
 .carrito .metodos .opciones .fa-credit-card, i.fa-money-bill{
-    color: var(--color-naranja);
+    color: var(--color-rosaFluor);
     background-color: rgb(221, 221, 221);
     font-size: 30px;
     border-radius: 50%;
@@ -245,8 +247,9 @@
     text-align: end;
 }
 .carrito .continuar-dos button{
-    background: linear-gradient(0deg, var(--color-naranja), #fff);
+    background: var(--color-rosaFluor);
     border: none;
+    color: #fff;
     height: 45px;
     border-radius: 5px;
     font-weight: 500;
@@ -274,8 +277,7 @@
 }
 .carrito .datos .dato{
     font-size: 18px;
-    margin-bottom: 20px;
-    margin-left: 25px;
+    margin: 10px 0 20px 25px
 }
 .carrito .datos .caja-dato{
     border-radius: 5px;
@@ -284,6 +286,21 @@
     height: 25px;
     outline: none;
     margin-left: 20%;
+}
+.carrito .datos textarea{
+    max-width: 400px;
+    max-height: 200px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    width: 40%;
+    height: 25px;
+    outline: none;
+}
+.carrito .datos .dato .coment{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 50px;
 }
 /*TABLET*/
 @media (min-width: 481px){
@@ -343,6 +360,7 @@
         display: flex;
         justify-content: space-between;
         margin-right: 40px;
+        margin-top: 15px;
     }
     /*METODO DE PAGO*/
     .carrito .cuerpo{
@@ -365,6 +383,7 @@
 }
 /*CONFIMACIÓN DE LA COMPRA*/
     .carrito .cuerpo2 .datos{
+        padding-top: 15px;
         margin-bottom: 10px;
         width: 50%;
     }
