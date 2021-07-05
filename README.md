@@ -82,3 +82,5 @@ Ante cualquier dudas, nos podes escribir a elec@Todo.com.ar
 - /#0567A8
 
 - /#F6F0F0
+
+- /#0A112B
