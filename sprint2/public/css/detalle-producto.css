@@ -5,11 +5,13 @@
     padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
     padding-left: 15%;
     padding-right: 15%;
+    
 }
 .detalle .menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
     background-color: white;
     display: flex;
-    margin-bottom: 0px;      
+    margin-bottom: 0px; 
+    border-radius: 1em 2em 2em 1em;     
    
 }
 .detalle .galeria-auris{
@@ -113,6 +115,8 @@
     flex-flow: column wrap;
     align-content: space-between;
     flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
     
 }
 .detalle .contenedor-caracteristicas{
@@ -143,8 +147,10 @@
     padding: 20px 20px 0px;
     margin: -2px 0px 0px;  
 }
+
 .detalle .relacionados h3{
     border-bottom: 1px solid orangered ;
+    font-style: oblique;
 
 }
 .detalle .galeria-mouse{
@@ -153,13 +159,17 @@
     justify-content: space-evenly;
     align-items: flex-start;
     text-align: center;
+    
+    
 }
 .detalle .mouse{
-    width: 15em;
+    width: 19em;
     margin-bottom: 0px;
     overflow:hidden;
     position: relative;
     cursor: pointer;
+    
+    
 }
 .detalle .mouse  img{
     width: 100%;
@@ -168,6 +178,7 @@
     display: block;
     border-radius: 1em 1em 5em 1em;
     margin: 0px 0px 20px;
+    height: 220px;
 }
 @media (max-width: 769px) {
      .detalle .menu {
