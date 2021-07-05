@@ -69,7 +69,7 @@
     width: 50px;
     margin: 0 40px;/* SEPARAAAA LETRAS P IMG TODO */
     display: flex;/* no se interponga lo que le siga, ocupa su propia linea */
-    background-color: orangered;/* !!!!!!PREGUNTAR A ROBERT!!!! */
+    background-color: var(--rosaFluor);
 }
 .detalle .precio p{/* 12 cuotas sin interes a 6840 precio lista */
     color: black;
@@ -89,7 +89,7 @@
     text-transform: uppercase;
     border-radius: 1em 1em 1em 1em;
     color: white;
-    background-color: orangered;
+    background-color: var(--rosaFluor);
     padding: 10px ;
     font-size: 15px;
     margin: 60px 10px;
@@ -129,7 +129,7 @@
     font-style: oblique;     
 }
 .detalle .contenedor-caracteristicas h3{
-    border-bottom: 1px solid orangered ;
+    border-bottom: 1px solid var(--rosaFluor) ;
 }
 .detalle .caracteristicas-contenido{
     padding-top: 7px;
@@ -149,7 +149,7 @@
 }
 
 .detalle .relacionados h3{
-    border-bottom: 1px solid orangered ;
+    border-bottom: 1px var(--rosaFluor) ;
     font-style: oblique;
 
 }
