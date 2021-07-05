@@ -77,10 +77,10 @@ Ante cualquier dudas, nos podes escribir a elec@Todo.com.ar
 - Segoe UI
 
 ### **Paleta de color**
-- /#60E3D5
+- /#101B37
 
-- /#0567A8
+- /#E41476
 
-- /#F6F0F0
+- /#02C8ED
 
 - /#0A112B
