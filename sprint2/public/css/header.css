@@ -1,22 +1,22 @@
 /* header */
 
-.carrito .cabeza{
+.cabeza{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     padding: 30px 0;
 }
 
-.carrito .buscador2{
+.buscador2{
     display: none;
 }
 
-.carrito .logo a img{
+.logo a img{
     width: 100px;
     display: flex;
 }
 
-.carrito .buscador{
+.buscador{
     display: flex;
     border: 3px solid rgb(168, 168, 168);
     min-width: 12px;
@@ -24,11 +24,11 @@
     height: 37px
 }
 
-.carrito .buscar-texto:focus{
+.buscar-texto:focus{
     outline: none;
 }
 
-.carrito .buscar-texto{
+.buscar-texto{
     border: none;
     background: none;
     color: rgb(168, 168, 168);
@@ -37,8 +37,8 @@
     padding-left: 10px;
 }
 
-.carrito .boton{
-    background: rgb(168, 168, 168);
+.boton{
+    background: none;
     border-radius: 0 1em 1em 0;
     border: none;
     width: 2em;
@@ -46,40 +46,40 @@
     text-decoration: none;
 }
 
-.carrito .nav-header-menu2{
+.nav-header-menu2{
     display: none;
 }
 
-.carrito .nav-header-menu ul li{
+.nav-header-menu ul li{
     list-style: none;
     float: left;
     margin: 10px
 }
 
-.carrito .nav-header-items{
+.nav-header-items{
     background-color: #000;
     width: 100%;
     height: auto;
     padding: 5px 20px 10px;
 }
 
-.carrito .nav-header-items2{
+.nav-header-items2{
     display: none;
 }
 
-.carrito .nav-header-items ul{
+.nav-header-items ul{
     display: flex;
     justify-content: space-around;
 }
 
-.carrito .nav-header-items ul li{
+.nav-header-items ul li{
     list-style: none;
     float: left;
     text-align: center;
     margin-top: 10px;
 }
 
-.carrito .nav-header-items ul li a{
+.nav-header-items ul li a{
     color: #fff;
     list-style: none;
     text-decoration: none;
@@ -91,20 +91,20 @@
 
     /* header */
 
-    .carrito .buscador2{
+    .buscador2{
         display: none;
     }
 
-    .carrito .buscar-texto{
+    .buscar-texto{
         width: auto;
     }
-    .carrito .nav-header-menu2{
+    .nav-header-menu2{
         display: none;
     }
-    .carrito .nav-header-items2{
+    .nav-header-items2{
         display: none;
     }
-    .carrito .nav-header-items ul li a i{
+    .nav-header-items ul li a i{
         display: none;
     }
 
@@ -114,59 +114,59 @@
     
     /* header */
 
-    .carrito .cabeza{
+    .cabeza{
         justify-content: space-around;
         padding: 30px;
     }
 
-    .carrito .buscador{
+    .buscador{
         display: none;
     }
 
-    .carrito .buscador2{
+    .buscador2{
         display: flex;
         align-items: center;
     }
 
-    .carrito .buscador2 .fa-search{
+    .buscador2 .fa-search{
         background: none;
         color: white;
         font-size: 3em;
         margin-left: 60px;
     }
 
-    .carrito .nav-header-menu{
+    .nav-header-menu{
         display: none;
     }
 
-    .carrito .nav-header-menu2{
+    .nav-header-menu2{
         display: flex;
     }
 
-    .carrito .nav-header-menu2 ul{
+    .nav-header-menu2 ul{
         display: flex;
         justify-content: space-evenly;
         width: 200px;
         padding: 0;
     }
 
-    .carrito .nav-header-menu2 ul{
+    .nav-header-menu2 ul{
         margin: 0;
     }
 
-    .carrito .nav-header-menu2 ul li{
+    .nav-header-menu2 ul li{
         list-style: none;
     }
 
-    .carrito .nav-header-menu2 ul li a i.fas{
+    .nav-header-menu2 ul li a i.fas{
         font-size: 3em;
     }
 
-    .carrito .nav-header-items{
+    .nav-header-items{
         display: none;
     }
 
-    .carrito .nav-header-items2{
+    .nav-header-items2{
         display: flex;
         justify-content: space-evenly;
         background-color: #000;
@@ -175,11 +175,11 @@
         padding: 20px;
     }
 
-    .carrito .nav-header-items2 .fas{
+    .nav-header-items2 .fas{
         font-size: 2em;
     }
 
-    .carrito .nav-header-items2 .burger-menu button{
+    .nav-header-items2 .burger-menu button{
         border: none;
         background: none;
     }

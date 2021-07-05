@@ -54,7 +54,8 @@ body {
 .fa-xbox, 
 .fa-print, 
 .fa-headphones-alt,
-.fa-bars{
+.fa-bars,
+.fa-search{
     color: #fff;
     font-size: 1.5em;
 }
