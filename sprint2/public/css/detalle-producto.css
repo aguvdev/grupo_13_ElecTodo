@@ -5,49 +5,39 @@
     padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
     padding-left: 15%;
     padding-right: 15%;
-    
 }
 .detalle .menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
     background-color: white;
     display: flex;
-    margin-bottom: 0px; 
-    border-radius: 1em 2em 2em 1em;     
-   
+    margin-bottom: 0px;
 }
 .detalle .galeria-auris{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-    
+    justify-content: space-evenly;  
 }
 .detalle .auris{
-    
     width: 6em;
     margin-bottom: 0px;
     overflow:hidden;
     position: relative;
     cursor: pointer;
     box-shadow:0 0 6px 0 rgba(0, 0, 0, .5)
-    
 }
 .detalle .auris  img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-
 }
 .detalle .menulado{
     width: 100%;
     margin: 0px 50px;
 }
-.detalle .menulado i, p{/* esto es todo el lado de la foto */
+.detalle .menulado i, .detalle p{
     padding: 0px 50px;
     font-size: 15px;
-    padding: 9px;
-    
-                
+    padding: 9px;            
 }
 .detalle .titulo{
     border-bottom: 1px black solid ;
@@ -69,13 +59,12 @@
     width: 50px;
     margin: 0 40px;/* SEPARAAAA LETRAS P IMG TODO */
     display: flex;/* no se interponga lo que le siga, ocupa su propia linea */
-    background-color: var(--rosaFluor);
+    background-color: var(--color-rosaFluor);/* !!!!!!PREGUNTAR A ROBERT!!!! */
 }
 .detalle .precio p{/* 12 cuotas sin interes a 6840 precio lista */
     color: black;
     font-weight: 500;/* grosor letras */ 
     margin: -15PX 0px;
-    
 }
 
 .detalle .garantia-envios {/* garantia 12 meses, envios todo pais */
@@ -89,13 +78,12 @@
     text-transform: uppercase;
     border-radius: 1em 1em 1em 1em;
     color: white;
-    background-color: var(--rosaFluor);
+    background-color: var(--color-rosaFluor);
     padding: 10px ;
     font-size: 15px;
     margin: 60px 10px;
     color: #fff;
     width: 180px ;
-
 }
 .detalle .carrito a{
     text-decoration: none;
@@ -117,7 +105,6 @@
     flex-direction: row;
     padding-left: 15%;
     padding-right: 15%;
-    
 }
 .detalle .contenedor-caracteristicas{
     display: inline-block;
@@ -129,7 +116,7 @@
     font-style: oblique;     
 }
 .detalle .contenedor-caracteristicas h3{
-    border-bottom: 1px solid var(--rosaFluor) ;
+    border-bottom: 1px solid var(--color-rosaFluor);
 }
 .detalle .caracteristicas-contenido{
     padding-top: 7px;
@@ -147,11 +134,9 @@
     padding: 20px 20px 0px;
     margin: -2px 0px 0px;  
 }
-
 .detalle .relacionados h3{
-    border-bottom: 1px var(--rosaFluor) ;
+    border-bottom: 1px solid var(--color-rosaFluor);
     font-style: oblique;
-
 }
 .detalle .galeria-mouse{
     display: flex;
@@ -159,26 +144,21 @@
     justify-content: space-evenly;
     align-items: flex-start;
     text-align: center;
-    
-    
 }
 .detalle .mouse{
-    width: 19em;
+    width: 15em;
     margin-bottom: 0px;
     overflow:hidden;
     position: relative;
     cursor: pointer;
-    
-    
 }
 .detalle .mouse  img{
     width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
     display: block;
     border-radius: 1em 1em 5em 1em;
     margin: 0px 0px 20px;
-    height: 220px;
 }
 @media (max-width: 769px) {
      .detalle .menu {

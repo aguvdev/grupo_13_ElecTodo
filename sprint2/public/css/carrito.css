@@ -24,7 +24,7 @@
 .carrito nav .aqui{
     padding: 5px 10px;
     text-align: center;
-    background-color: var(--color-naranja);
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
     color: white;
     width: 40vh;
     margin-top: 15px;
@@ -33,7 +33,7 @@
     font-size: 20px;
 } 
 .carrito nav .navegacion {
-    background: linear-gradient(to bottom, rgb(255, 190, 104) 0%, rgb(255, 190, 104) 50%, white 50%, white 100%);
+    background: linear-gradient(to bottom, var(--color-rosaFluor) 0%, var(--color-rosaFluor) 50%, white 50%, white 100%);
     text-align: center;
     width: 40vh;
     padding: 5px 10px;
@@ -43,7 +43,7 @@
     display: none;
 }
 .carrito nav .navegacion2 {
-    background: linear-gradient(to bottom, rgb(255, 190, 104) 0%, rgb(255, 190, 104) 50%, white 50%, white 100%);
+    background: linear-gradient(to bottom, var(--color-rosaFluor) 0%, var(--color-rosaFluor) 50%, white 50%, white 100%);
     text-align: center;
     width: 40vh;
     padding: 5px 10px;
@@ -115,7 +115,7 @@
     margin: 20px 30px 5px 20px;
     border-radius: 10px;
     border: 2px solid rgb(114, 114, 114);
-    padding: 0px 20px 13px;
+    padding: 20px 20px 13px;
     font-size: 15px;
     line-height: 17px;
 }
@@ -127,11 +127,15 @@
     border: 1px solid gray;
 }
 .carrito .cupon button{
-    background: linear-gradient(0deg, var(--color-naranja), #fff);
+    background: var(--color-celesteClaro);
     border: 1px solid gray;
     border-radius: 5px;
     height: 35px;
     width: 65px;
+    color: #fff;
+}
+.carrito .cupon button:hover{
+    background: var(--color-rosaFluor);
 }
 .carrito .envio{
     background-color: white;
@@ -174,15 +178,18 @@
     text-align:end;
     margin-right: 25px;
 }
+.carrito .t-y-c p{
+    color: white;
+}
 .carrito .t-y-c button{
     background: none;
     border: none;
 }
 .carrito a{
-   color: black;
+   color: #fff;
 }
 .carrito .continuar button{
-    background: linear-gradient(0deg, var(--color-naranja), #fff);
+    background: var(--color-rosaFluor);
     border: none;
     height: 45px;
     border-radius: 5px;

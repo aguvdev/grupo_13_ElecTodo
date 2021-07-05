@@ -1,24 +1,22 @@
 /* main */
 
 .btn-primary{
-    color: #000;
-    background: linear-gradient(to bottom, white, var(--color-naranja));
-    border-color: #ffb080;
+    color: #fff;
+    background: var(--color-azulOscuro);
 }
 
 .btn-primary:hover{
     color: #fff;
-    border-color: var(--color-naranja);
+    background: var(--color-rosaFluor);
 }
 
 .codlogin- .card-body a{
-    color: var(--color-naranja);
+    color: var(--color-rosaFluor);
 }
 
 .btn-redes{
     display: flex;
     flex-direction: column;
-    color: gray;
 }
 
 .btn-redes button{

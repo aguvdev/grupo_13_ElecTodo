@@ -1,14 +1,5 @@
 /* main */
 
-.home .cuerpo{
-    background-image: url('/img/Atardecer-ciudad.png');
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: left;
-    background-size: 70%;
-    padding: 0;
-}
-
 .home .ofertas{
     display: flex;
     justify-content: space-evenly;
