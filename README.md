@@ -77,12 +77,8 @@ Ante cualquier dudas, nos podes escribir a elec@Todo.com.ar
 - Segoe UI
 
 ### **Paleta de color**
-- /#FF6100
+- /#60E3D5
 
-- /#241D17
+- /#0567A8
 
-- /#202020
-
-- /#0B0E07
-
-- /#000000
+- /#F6F0F0
