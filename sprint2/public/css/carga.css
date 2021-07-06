@@ -172,29 +172,58 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-.carga .subir-carga{
-    background-color: rgb(74, 255, 67);
-    width: 150px;
-    height: 40px;
-    margin-top: 70px;
-    align-items: center;
+.carga .subir-carga button a{
     display: flex;
-    padding-left: 10px;
-    border: 1px solid black;
-    border-radius: 2px 2px 2px 2px;
-}
-.carga .cancelar-carga{
-    background-color: rgb(255, 56, 56);
-    width: 150px;
-    height: 40px;
-    margin-bottom: 70px;
-    margin-top: 70px;
     align-items: center;
-    display: flex;
-    padding-left: 10px;
-    border: 1px solid black;
-    border-radius: 2px 2px 2px 2px;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #fff;
 }
+.carga .subir-carga button a p{
+    margin-left: 5px;
+}
+
+.carga .subir-carga button{
+    background: linear-gradient(to bottom, #fff, #37b610 50%);
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 40px;
+    width: 160px;
+    border-radius: 5px 10px;
+    font-size: 0.9em;
+}
+.carga .subir-carga button:hover{
+    background: linear-gradient(to bottom, #fff, #65ce48 50%);
+}
+
+.carga .cancelar-carga button{
+    background: linear-gradient(to bottom, #fff, #e41441 50%);
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 40px;
+    width: 160px;
+    border-radius: 5px 10px;
+}
+.carga .cancelar-carga button:hover{
+    background: linear-gradient(to bottom, #fff, #ff3f69 50%);
+}
+.carga .cancelar-carga button a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #fff;
+}
+.carga .cancelar-carga button a p{
+    margin-left: 5px;
+}
+
 
 
 @media(max-width: 769px){
