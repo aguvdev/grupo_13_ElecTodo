@@ -55,20 +55,22 @@
     border-radius: 10px;
     border: 2px solid rgb(114, 114, 114);
     padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .carrito section article i{
     font-size: 40px;
     color:var(--color-rosaFluor);
-    text-align: center;
+    align-self: center;
 }
-.carrito article img{ 
-    margin: 15px;
-    background-color: white;
-    width: 130px;
-    height: 150px;
+.carrito article img{
+    width: 170px;
+    height: 170px;
 }
 .carrito article .descripcion{
-    max-width: 200px;
+    max-width: 180px;
+    margin: 30px;
 }
 .carrito article .menos{
     background: none;
@@ -98,9 +100,6 @@
 .carrito article .form-cant{
     margin: 9px;
 }
-.carrito article div{
-    margin: 0 20px;
-}
 .carrito article div h6{
     color: gray;
     font-size: 8px;
@@ -125,6 +124,7 @@
     height: 30px;
     border-radius: 5px;
     border: 1px solid gray;
+    outline: none;
 }
 .carrito .cupon button{
     background: var(--color-celesteClaro);
@@ -181,7 +181,7 @@
 }
 .carrito .t-y-c p{
     color: white;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 .carrito .t-y-c button{
     background: none;
@@ -277,8 +277,16 @@
 }
 .carrito .datos .dato{
     font-size: 18px;
-    margin: 10px 0 20px 25px
+    margin: 10px 0 20px 25px;
 }
+.carrito .datos .dato label{
+    display: inline-block;
+    width: 200px;
+}
+.carrito .datos .dato .comentario{
+    display: block;
+    margin-bottom: 10px;
+} 
 .carrito .datos .caja-dato{
     border-radius: 5px;
     border: 2px solid gray;
@@ -287,20 +295,12 @@
     outline: none;
     margin-left: 20%;
 }
-.carrito .datos textarea{
-    max-width: 400px;
-    max-height: 200px;
+.carrito .datos .dato .coment{
+    max-width: 85%;
+    max-height: 90px;
     border-radius: 5px;
     border: 2px solid gray;
-    width: 40%;
-    height: 25px;
     outline: none;
-}
-.carrito .datos .dato .coment{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 50px;
 }
 /*TABLET*/
 @media (min-width: 481px){
