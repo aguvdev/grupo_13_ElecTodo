@@ -129,14 +129,29 @@ header{
 
     .buscador2{
         display: flex;
-        align-items: center;
+    }
+
+    .buscador2:hover > .buscar-texto2{
+        width: 150px;
+    }
+
+    .buscar-texto2{
+        border: none;
+        background: var(--color-celesteClaro);
+        color: #fff;
+        outline: none;
+        font-size: 2em;
+        width: 0;
+        float: left;
+        line-height: 60px;
+        transition: .3s;
     }
 
     .buscador2 .fa-search{
         background: none;
         color: white;
         font-size: 3em;
-        margin-left: 60px;
+        margin-left: 10px;
     }
 
     .nav-header-menu{
