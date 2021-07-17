@@ -13,3 +13,9 @@
 .register .card-body a{
     color: var(--color-naranja);
 }
+
+@media (max-width: 481px) {
+    .mb-5 {
+        width: 90%;
+    }
+}

@@ -43,3 +43,9 @@
     text-align: center;
     margin-top: 30px;
 }
+
+@media (max-width: 481px) {
+    .mb-5 {
+        width: 90%;
+    }
+}
