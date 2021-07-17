@@ -37,6 +37,9 @@ main{
     
     
 }
+ul, ol{
+    list-style: none;
+}
 
 .fa-bell, 
 .fa-user-circle, 
@@ -53,7 +56,9 @@ main{
 .fa-print, 
 .fa-headphones-alt,
 .fa-bars,
-.fa-search{
+.fa-search,
+.fa-upload,
+.fa-times{
     color: #fff;
     font-size: 1.5em;
 }
@@ -83,6 +88,21 @@ main{
     font-size: 2em;
 }
 
+.fa-shopping-cart:hover, 
+.fa-laptop:hover, 
+.fa-desktop:hover, 
+.fa-mouse:hover, 
+.fa-keyboard:hover, 
+.fa-volume-up:hover, 
+.fa-mobile-alt:hover, 
+.fa-gamepad:hover, 
+.fa-xbox:hover, 
+.fa-print:hover, 
+.fa-headphones-alt:hover,
+.fa-bars:hover,
+.fa-search:hover,
+.fa-upload:hover,
+.fa-times:hover,
 .fa-shopping-cart:hover,
 .fa-heart:hover,
 .fa-user-circle:hover,

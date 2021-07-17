@@ -173,10 +173,34 @@ header{
     .nav-header-items2{
         display: flex;
         justify-content: space-evenly;
-        background-color: #000;
-        width: 100%;
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
         height: auto;
         padding: 20px;
+    }
+    .dropdown-menu{
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    }
+    .btn-secondary{
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor));
+    }
+
+    .nav-header-items2 li a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .nav-header-items2 li a:hover{
+        color: var(--color-rosaFluor);
+    }
+
+    .nav-header-items2 ul{
+        overflow: hidden;
+    }
+
+    .nav-header-items2 ul li {
+        float: left;
     }
 
     .nav-header-items2 .fas{
