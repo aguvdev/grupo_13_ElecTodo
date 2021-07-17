@@ -56,9 +56,36 @@
     width: 60vw;
 }
 
+.home .item-carrousel{
+    display: flex;
+}
+
+.home .carousel-indicators{
+    background: rgba(228,20,118,0.5);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.home .visually .fa-arrow-left{
+    color: var(--color-rosaFluor);
+    font-size: 2em;
+    margin-right: 120px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.home .visually .fa-arrow-right{
+    color: var(--color-rosaFluor);
+    font-size: 2em;
+    margin-left: 120px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
 .home .card{
     width: 12rem;
     background-color: rgba(255, 255, 255, 0.9);
+    margin: 15px;
 }
 
 .home .card .image{
