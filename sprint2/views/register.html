@@ -98,25 +98,35 @@
                         <form>
                             <div class="mb-3">
                                 <h4 class="card-title text-center">Creá tu cuenta</h4>
-                                <label for="exampleInputEmail1" class="form-label">Tu nombre</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="last-name" class="form-label">Apellido</label>
+                                <input type="name" class="form-control" name="last-name" id="last-name"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <input type="email" class="form-control" name="email" id="email"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email-again" class="form-label">Vuelve a escribir el correo</label>
+                                <input type="email" class="form-control" name="email-again" id="email-again"
                                     aria-describedby="emailHelp">
                             </div>
                             
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" placeholder="Debe tener al menos 6 caracteres" class="form-control" id="exampleInputPassword1">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" placeholder="Debe tener al menos 6 caracteres" class="form-control" name="password" id="password">
                                 <div id="emailHelp" class="form-text"><i class="fas fa-info"></i> La contraseña debe contener al menos 6 caracteres.
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Vuelve a escribir la contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="password-again" class="form-label">Vuelve a escribir la contraseña</label>
+                                <input type="password" class="form-control" name="password-again" id="password-again">
                             </div>
                             <button type="submit" class="btn btn-primary">Continuar</button>
                             <p>Al continuar, aceptas las <a href="">Condiciones de Uso</a> y
