@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
@@ -15,18 +16,11 @@
             <div class="logo">
                 <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
             </div>
-            <div class="buscador2">
-                <form action="">
-                        <i class="fas fa-search"></i>
-                </form>
-            </div>
             <div class="buscador">
-                <form action="">
                     <input class="buscar-texto" type="text" placeholder="¿Qué producto estás buscando?">
-                        <button class="boton">
-                            <i class="fas fa-search"></i>
-                        </button>
-                </form>
+                <button class="boton">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             <nav class="nav-header-menu">
                 <ul>
@@ -37,14 +31,20 @@
                 </ul>
             </nav>
             <nav class="nav-header-menu2">
+                <div class="buscador2">
+                    <input type="text" class="buscar-texto2">
+                    <a href="" class="boton-busc">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="/login">
                             <i class="fas fa-user-circle"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/CarritoDeCompras">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                     </li>
@@ -66,13 +66,27 @@
             </ul>
         </nav>
         <nav class="nav-header-items2">
-            <div class="burger-menu">
-                <button>
-                    <i class="fas fa-bars"></i>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bars"></i>
                 </button>
-            </div>
-            <a href=""><i class="fas fa-bell"></i></a>
-            <a href=""><i class="fas fa-heart"></i></a>
+                <ul class="dropdown-menu dropdown p-2 mb-2 bg-primary" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-laptop"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-desktop"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-mouse"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-keyboard"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-headphones-alt"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-volume-up"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-gamepad"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fab fa-xbox"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-print"></i></a></li>
+                </ul>
+              </div>
+            <ul>
+                <li><a href=""><i class="fas fa-bell"></i></a></li>
+                <li><a href=""><i class="fas fa-heart"></i></a></li>
+            </ul>
         </nav>
     </header>
     <main class="carrito">

@@ -21,6 +21,7 @@
 
 .email-buscador{
     margin-top: 20px;
+    position: relative;
 }
 
 .buscar-email:focus{
@@ -30,19 +31,19 @@
 .buscar-email{
     border: none;
     background: white;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 5px 5px 5px;
     font-size: 1.3em;
-    width: 60%;
+    width: 60vw;
     height: 45px;
     padding-left: 20px;
 }
 
 .boton2{
-    position: absolute;
-    background: white;
+    position: relative;
+    background: none;
     border: none;
-    border-radius: 0 5px 5px 0;
     height: 45px;
+    right: 40px;
 }
 
 .seccion-datos{
@@ -87,10 +88,6 @@
 
 @media (max-width: 481px) {
     /* footer */
-
-    .buscar-email{
-        width: 300px;
-    }
 
     .seccion-datos{
         flex-direction: column;
