@@ -10,6 +10,8 @@
     background-color: white;
     display: flex;
     margin-bottom: 0px;
+    border-radius: 1em 1em 1em 1em;
+    
 }
 .detalle .galeria-auris{
     display: flex;
@@ -103,8 +105,8 @@
     flex-flow: column wrap;
     align-content: space-between;
     flex-direction: row;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    width: 100%;
 }
 .detalle .contenedor-caracteristicas{
     display: inline-block;
@@ -180,6 +182,10 @@
 .detalle .mouse {
     width: 9em;
 }
+.detalle .contenedor-especificaciones{
+    padding-left: 2%;
+    width: 125%;
+}
 @media (max-width: 481px) {
     .detalle .menu1{
         display: block;  
@@ -204,6 +210,7 @@
     }
     .detalle .contenedor-especificaciones{
         padding-top: 0em;
+        width: 98%;
     }
     .detalle .relacionados {
         padding: 8px 111px 0px;
