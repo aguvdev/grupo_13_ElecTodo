@@ -1,100 +1,97 @@
-.carrito footer{
-    background-color: var(--color-naranja);
-}
-.carrito footer .newsletter{
-    background-color: black;
-    padding: 1px;
+/* footer */
+
+.seccion-newsletter{
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
+    width: 100%;
+    height: 250px;
     text-align: center;
-    padding-bottom: 20px;
 }
-.carrito footer .newsletter h4{
-    font-weight: normal;
+
+.seccion-newsletter div p{
     color: white;
-    text-align: center;
-    font-size: 20px;
+    font-size: 32px;
+    font-family: 'Open Sans';
+    padding: 20px 0 10px;
 }
-.carrito footer .put-email{
-    width: 40%;
-    height: 30px;
-    border-radius: 5px 0px 0px 5px;
-    border: 1px solid gray;
-    border-right: transparent;
+
+.seccion-newsletter div span{
+    color: white;
+    font-size: 25px;
+}
+
+.email-buscador{
+    margin-top: 20px;
+    position: relative;
+}
+
+.buscar-email:focus{
     outline: none;
 }
-.carrito footer .next-email{
-    border-radius: 0px 5px 5px 0px;
-    background-color: white;
-    border: 1px solid gray;
-    border-left: transparent;
-    height: 34px;
+
+.buscar-email{
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1.3em;
+    width: 60vw;
+    height: 45px;
+    padding-left: 20px;
 }
-.carrito footer section div h4{
-    font-weight: normal;
-    padding: 20px 0px 10px 10px;
-    font-size: 35px;
-    line-height: 40px;
-    border-bottom: 2px solid black;
-    margin-left: 20px;
-    margin-right: 90px;
+
+.boton2{
+    position: relative;
+    background: none;
+    border: none;
+    height: 45px;
+    right: 40px;
 }
-.carrito footer p{
-    padding-top: 5px;
-    padding-left: 25px;
-    font-size: 35px;
-    line-height: 35px;
-}
-.carrito footer .redes i{
-    margin: 0px 0px 15px 20px;
-    font-size: 70px;
-}
-.carrito footer .copyright{
-    background-color: black;
+
+.seccion-datos{
     color: white;
-    font-size: 10px;
-    padding: 5px 0px 5px 5px;
-}
-@media (min-width: 481px){
-.carrito footer section .f-tablet{
     display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    width: 100%;
+    height: 300px;
+    padding: 50px 35px 0 35px;
 }
 
-.carrito footer p{
+.seccion-datos p.title{
+    color: white;
+    margin: 10px 0;
     font-size: 25px;
-    margin-left: 40px;
+    border-bottom: 1px solid #fff;
 }
-.carrito footer .redes i{
-    font-size: 55px;
-    margin: 0px 0px 0px 50px;
-    
-}
-.carrito footer section div h4{
-    font-size: 25px;
-    margin-left: 50px;
-    
-}
+.final .secciones-footer .sigamos-conectados div i{
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
-@media (min-width: 769px){
-    .carrito footer section .f-desk{
-        display: flex;
-        margin-left: 10px;
-        justify-content: space-evenly;
+.copyr{
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 60px;
+}
+
+@media (max-width: 769px) {
+    /* footer */
+
+    .seccion-datos{
+        height: 100%;
     }
-    .carrito footer p{
-        font-size: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 5px;
-        line-height: 25px;
+
+    .seccion-datos p.title{
+        margin: 10px;
     }
-    .carrito footer .redes i{
-        font-size: 45px;
-        margin: 0px 0px 0px 25px;
-        
-    }
-    .carrito footer section div h4{
-        font-size: 20px;
-        margin-left: 10px;
-        line-height: 30px ;
+}
+
+@media (max-width: 481px) {
+    /* footer */
+
+    .seccion-datos{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
