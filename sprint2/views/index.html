@@ -10,42 +10,41 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
 </head>
-<body class="home">
+<body>
     <header>
         <div class="cabeza">
             <div class="logo">
                 <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
             </div>
-            <div class="buscador2">
-                <form action="">
-                        <i class="fas fa-search"></i>
-                </form>
-            </div>
             <div class="buscador">
-                <form action="">
                     <input class="buscar-texto" type="text" placeholder="¿Qué producto estás buscando?">
-                        <button class="boton">
-                            <i class="fas fa-search"></i>
-                        </button>
-                </form>
+                <button class="boton">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             <nav class="nav-header-menu">
                 <ul>
                     <li><a href=""><i class="fas fa-bell"></i></a></li>
-                    <li><a href=""><i class="fas fa-user-circle"></i></a></li>
+                    <li><a href="/login"><i class="fas fa-user-circle"></i></a></li>
                     <li><a href=""><i class="fas fa-heart"></i></a></li>
-                    <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="/CarritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
             <nav class="nav-header-menu2">
+                <div class="buscador2">
+                    <input type="text" class="buscar-texto2">
+                    <a href="" class="boton-busc">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="/login">
                             <i class="fas fa-user-circle"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/CarritoDeCompras">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                     </li>
@@ -67,16 +66,30 @@
             </ul>
         </nav>
         <nav class="nav-header-items2">
-            <div class="burger-menu">
-                <button>
-                    <i class="fas fa-bars"></i>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bars"></i>
                 </button>
-            </div>
-            <a href=""><i class="fas fa-bell"></i></a>
-            <a href=""><i class="fas fa-heart"></i></a>
+                <ul class="dropdown-menu dropdown p-2 mb-2 bg-primary" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-laptop"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-desktop"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-mouse"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-keyboard"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-headphones-alt"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-volume-up"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-mobile-alt"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-gamepad"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fab fa-xbox"></i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fas fa-print"></i></a></li>
+                </ul>
+              </div>
+            <ul>
+                <li><a href=""><i class="fas fa-bell"></i></a></li>
+                <li><a href=""><i class="fas fa-heart"></i></a></li>
+            </ul>
         </nav>
     </header>
-    <main>
+    <main class="home">
         <div class="cuerpo">
             <section class="banner">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -87,7 +100,7 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="/img/img-banner2.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/img-banner.jpg" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
                         <img src="/img/img-banner2.jpg" class="d-block w-100" alt="...">
@@ -107,13 +120,33 @@
                   </div>
             </section>
             <section class="ofertas">
-                <a href=""><img src="/img/impresoras-cartuchos.jpg" alt=""></a>
-                <a href=""><img src="/img/auriculares-descuentos.jpg" alt=""></a>
-                <a href=""><img src="/img/audio-descuento.jpg" alt=""></a>
+                <a href="">
+                    <div class="impreYCartDesc">
+                        <img src="/img/impresorasYcartuchosDesct.png" alt="">
+                        <h3>Impresoras y Cartuchos</h3>
+                        <span>20% OFF</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="impreYCartDesc">
+                        <img src="/img/auricularesDesc.png" alt="">
+                        <h3>Auriculares</h3>
+                        <span>15% OFF</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="impreYCartDesc">
+                        <img src="/img/audioDesct.png" alt="">
+                        <h3>Audio</h3>
+                        <span>15% OFF</span>
+                    </div>
+                </a>
             </section>
             <section class="recomendaciones2">
                 <div class="gaming-sect">
-                    <a href=""><img src="/img/gaming-sect.jpg" alt=""></a>
+                    <a href="">
+                        <img src="/img/gaming-sect.jpg" alt="">
+                    </a>
                 </div>
                 <div class="cellphones-sect">
                     <a href=""><img src="/img/cellphones-sect.jpg" alt=""></a>
@@ -135,171 +168,201 @@
             </section>
             <div class="carrousel-ind">
                 <article>
-                    <div class="card">
-                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-precio">$5.000</h5>
-                          <p class="card-descuento">40% OFF</p>
-                          <a href="#" class="btn btn-primary">Comprar</a>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="item-carrousel">
+                                <div class="card">
+                                    <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-precio">$5.000</h5>
+                                      <p class="card-descuento">40% OFF</p>
+                                      <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="item-carrousel">
+                                <div class="card">
+                                    <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-precio">$5.000</h5>
+                                      <p class="card-descuento">40% OFF</p>
+                                      <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="item-carrousel">
+                                <div class="card">
+                                    <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-precio">$5.000</h5>
+                                      <p class="card-descuento">40% OFF</p>
+                                      <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="visually"><i class="fas fa-arrow-left"></i></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="visually"><i class="fas fa-arrow-right"></i></span>
+                        </button>
                       </div>
                 </article>
             </div>
             <section class="recomendaciones">
-                <div class="row-container">
-                    <div class="seccion-header">
-                        <img src="/img/seccion-gaming.jpg" alt="">
+                <div class="seccion-gaming">
+                    <div class="cuadro-gaming">
+                        <a href="">
+                            <img src="/img/gamingTeclado.png" alt="">
+                            <h3>Gaming</h3>
+                        </a>
                     </div>
-                    <div class="item-carrousel">
-                        <div class="resbaladizo-init">
-                            <div class="list-art">
-                                <div class="row">
-                                    <article>
-                                        <div class="card">
-                                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                              <h5 class="card-precio">$5.000</h5>
-                                              <p class="card-descuento">40% OFF</p>
-                                              <a href="#" class="btn btn-primary">Comprar</a>
-                                            </div>
-                                          </div>
-                                    </article>
-                                </div>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
                             </div>
-                        </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                </div>
+                <div class="seccion-celulares">
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <div class="cuadro-celulares">
+                        <a href="">
+                            <img src="/img/celular-sect.png" alt="">
+                            <h3>Celulares</h3>
+                        </a>
                     </div>
                 </div>
-                <div class="row-container">
-                    <div class="item-carrousel">
-                        <div class="resbaladizo-init">
-                            <div class="list-art">
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
+                <div class="seccion-notebooks">
+                    <div class="cuadro-notebooks">
+                        <img src="/img/notebooksDesc.png" alt="">
+                        <h3>Gaming</h3>
+                    </div>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="seccion-header">
-                        <img src="/img/seccion-celulares.jpg" alt="">
-                    </div>
-                </div>
-                <div class="row-container">
-                    <div class="seccion-header">
-                        <img src="/img/seccion-netbooks.jpg" alt="">
-                    </div>
-                    <div class="item-carrousel">
-                        <div class="resbaladizo-init">
-                            <div class="list-art">
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
-                                <article>
-                                    <div class="card" style="width: 12rem;">
-                                        <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-precio">$5.000</h5>
-                                          <p class="card-descuento">40% OFF</p>
-                                          <a href="#" class="btn btn-primary">Comprar</a>
-                                        </div>
-                                      </div>
-                                </article>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
                             </div>
-                        </div>
-                    </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-precio">$5.000</h5>
+                              <p class="card-descuento">40% OFF</p>
+                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                            </div>
+                          </div>
+                    </article>
                 </div>
             </section>
             <section class="ofertas2">

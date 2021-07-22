@@ -1,23 +1,162 @@
 /* main */
 
-.home .cuerpo{
-    background-image: url('/img/Atardecer-ciudad.png');
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: left;
-    background-size: 70%;
-    padding: 0;
-}
-
 .home .ofertas{
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
+    flex-wrap: wrap;
+}
+
+.home .ofertas .impreYCartDesc{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+}
+
+.home .ofertas .impreYCartDesc:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .ofertas .impreYCartDesc img{
+    width: auto;
+    height: 150px;
+    order: 1;
+}
+
+.home .ofertas .impreYCartDesc h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .ofertas .impreYCartDesc span{
+    color: #fff;
+    margin: 5px;
 }
 
 .home .beneficios{
     display: flex;
     justify-content: space-evenly;
+}
+
+.home .seccion-gaming{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.home .seccion-gaming .cuadro-gaming{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home .seccion-gaming .cuadro-gaming:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .seccion-gaming .cuadro-gaming img {
+    width: auto;
+    height: 150px;
+}
+
+.home .seccion-gaming .cuadro-gaming h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .seccion-gaming .cuadro-gaming span{
+    color: #fff;
+    margin: 5px;
+}
+
+.home .seccion-celulares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.home .seccion-celulares .cuadro-celulares{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.home .seccion-celulares .cuadro-celulares:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .seccion-celulares .cuadro-celulares img {
+    width: auto;
+    height: 150px;
+}
+
+.home .seccion-celulares .cuadro-celulares h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .seccion-celulares .cuadro-celulares span{
+    color: #fff;
+    margin: 5px;
+}
+
+.home .seccion-notebooks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.home .seccion-notebooks .cuadro-notebooks{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; 
+}
+.home .seccion-notebooks .cuadro-notebooks:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .seccion-notebooks .cuadro-notebooks img {
+    width: auto;
+    height: 150px;
+}
+
+.home .seccion-notebooks .cuadro-notebooks h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .seccion-notebooks .cuadro-notebooks span{
+    color: #fff;
+    margin: 5px;
 }
 
 .home .carrousel-ind{
@@ -52,22 +191,52 @@
     padding: 3em 0;
 }
 
+.home .seccion-header img{
+    margin: 15px;
+}
+
 .home .row-container{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     padding-bottom: 3em;
 }
 
 .home .list-art{
     display: flex;
-    justify-content: space-between;
-    width: 60vw;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+
+.home .item-carrousel{
+    display: flex;
+}
+
+.home .carousel-indicators{
+    background: rgba(228,20,118,0.5);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.home .visually .fa-arrow-left{
+    color: var(--color-rosaFluor);
+    font-size: 2em;
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.home .visually .fa-arrow-right{
+    color: var(--color-rosaFluor);
+    font-size: 2em;
+    margin-left: 50px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .home .card{
     width: 12rem;
     background-color: rgba(255, 255, 255, 0.9);
+    margin: 15px;
 }
 
 .home .card .image{
@@ -117,6 +286,10 @@
         .home .list-art{
             justify-content: space-around;
             flex-wrap: wrap;
+        }
+
+        .home .row-container{
+            margin-bottom: 6em;
         }
 }
 

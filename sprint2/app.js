@@ -1,9 +1,9 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+const express = require("express");
+const path = require("path");
 const port = 3000;
 
-app.use(express.static('public'));
+const app = express();
+app.use(express.static("public"));
 
 app.get('/', (req,res) => res.sendFile(path.join(__dirname, 'views', 'index.html')))
 app.get('/register', (req,res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
@@ -15,3 +15,4 @@ app.get('/carga', (req,res) => res.sendFile(path.join(__dirname, 'views', 'carga
 app.get('/detalle-producto', (req,res) => res.sendFile(path.join(__dirname, 'views', 'detalle-producto.html')))
 
 app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}`));
+
