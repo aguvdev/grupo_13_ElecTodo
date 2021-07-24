@@ -187,6 +187,9 @@
     width: 125%;
 }
 @media (max-width: 481px) {
+    .menu1 img{
+        width: 100%;
+    }
     .detalle .menu1{
         display: block;  
     }

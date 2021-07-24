@@ -416,6 +416,7 @@
 }
 @media(max-width: 481px){
   /*Main------------------------------------------------------------------------------------------------------*/
+    
     .carga .seccionesProducto{
         display: flex;
         justify-content: left;
@@ -450,8 +451,8 @@
     }
     .carga .carga-imagen{
         background-color: #fff;
-        width: 430px;
-        height: 300px;
+        width: 90%;
+        height: 100%;
         margin: 30px 10px 10px 25px;
         align-items:center;
         justify-content: center;
@@ -465,8 +466,8 @@
     .carga .secciones-imagen-carga-2{
         display: flex;
         justify-content:left;
-        flex-wrap: wrap;
         flex-direction: row;
+        width: 55%;
     }
     .carga .carga-imagen2{
         background-color: #fff;
@@ -496,14 +497,17 @@
     .carga .carga-imagen .fa-image{
         font-size: 15em;
         color: #9c9c9c;
+        padding-left: 0%;
     }
     .carga .carga-imagen2, .fa-image, .fa-plus-square{
         font-size: 2.5em;
         color: #9c9c9c; 
+        padding-left: 25%;
     }
     .carga .carga-imagen3, .fa-plus-square{
-        font-size: 35px;
+        
         color: #9c9c9c; 
+        padding-left: 25%;
     
     }
     
@@ -512,12 +516,13 @@
         display:flex;
         flex-direction: center;
         flex-wrap: wrap;
+        width: 100%;
       }
     
     .carga .formulario-carga{
         background-color: #fff;
-        width: 427px;
-        height: 40px;
+        width: 90%;
+        height: 100%;
         margin-left: 25px;
         margin-right: 70px;
         margin-top: 50px;
@@ -531,8 +536,8 @@
     
     .carga .formulario-carga2{
         background-color: #fff;
-        width: 427px;
-        height: 40px;
+        width: 90%;
+        height: 100%;
         margin-left: 25px;
         margin-right: 10px;
         margin-top: 10px;
@@ -554,7 +559,7 @@
     .carga .texto-carga-espe{
         background-color: white;
         outline: none;
-        width: 95%;
+        width: 99%;
         height: 30px;
         border: 1px none;
         font-size: 25px;
@@ -562,8 +567,8 @@
     
     .carga .formulario-carga-espe{
         background-color: #fff;
-        width: 427px;
-        height: 147px;
+        width: 90%;
+        height: 100%;
         margin-left: 25px;
         margin-right: 10px;
         margin-top: 10px;
@@ -580,8 +585,8 @@
     
     .carga .formulario-descripcion-carga{
         background-color: #fff;
-        width: 427px;
-        height: 200px;
+        width: 90%;
+        
         margin-left: 25px;
         margin-top: 30px;
         padding-top: 10px;
