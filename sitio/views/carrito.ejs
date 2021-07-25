@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main class="carrito">
+     <nav>
+         <div class="aqui">
+        <i class="fas fa-truck"></i>
+         <p>Carrito / Punto de entrega</p> 
+         </div>
+         <div class="navegacion">
+          <i class="fas fa-money-bill-alt"></i>
+         <p>Método de pago</p>
+         </div>
+         <div class="navegacion2">
+            <i class="far fa-check-circle"></i>
+            <p>Confirmación de la compra</p> 
+         </div>
+     </nav>
+     <section>
+         <article>
+             <i class="fas fa-trash-alt"></i>
+             <img src="/img/notebook-carrito.jpeg" alt="">
+             <p class="descripcion">Notebook Celeron 14'' Memoria 4gb Almacenaje 128gb - Tedge</p>
+             <div>
+              <p>Precio</p>
+                 <p>$47.499</p>   
+             </div>
+                 <div>
+                   <p>Cantidad</p>
+                   <form action="" class="form-cant"><button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button></form>
+                 <h6>922 disponibles</h6>
+                 </div>
+                <div>
+                 <p >Subtotal</p>
+                 <p class="subtotal">$47.499</p>    
+                </div>
+         </article>
+         <article>
+             <i class="fas fa-trash-alt"></i>
+             <img src="/img/auriculares-carrito.jpeg" alt="">
+             <p class="descripcion">Auriculares In-ear inalámbricos Xiaomi Redmi AirDots 2 negro</p>
+             <div>
+               <p>Precio</p>
+                 <p>$2.251</p>  
+             </div>
+                 <div>
+                 <p>Cantidad</p>    
+                 <form action="" class="form-cant"><button class="menos">-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button></form>
+                 <h6>520 disponibles</h6>    
+                 </div>
+                 <div>
+                 <p>Subtotal</p>
+                 <p class="subtotal">$2.251</p>    
+                 </div>
+         </article>
+         <article>
+             <i class="fas fa-trash-alt"></i>
+             <img src="/img/celular-carrito.jpeg" alt="" width="100" height="200">
+             <p class="descripcion"> Samsung Galaxy A32 128 GB awesome black 4 GB RAM</p>
+             <div>
+               <p>Precio</p>
+                 <p>$35.999</p>  
+             </div>
+                 <div>
+                 <p>Cantidad</p>
+                 <form action="" class="form-cant"><button class="menos">-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button></form>
+                 <h6>125 disponibles</h6>    
+                 </div>
+                 <div>
+                 <p>Subtotal</p>
+                 <p class="subtotal">$35.999</p>    
+                 </div>
+         </article>
+     </section>
+     <section class="cupon-envio">
+
+        <section class="cupon">
+         <p>Si tenés un cupón de descuento y querés asignarlo a esta compra, completá el siguiente campo con el código del cupón.
+         </p>
+         <form action=""><input class="cod-cupon" type="text" placeholder="Código cupón" name="cupón"><button>Aplicar</button></form>
+     </section>
+     <section class="envio">
+         <div class="caja-envio">
+            <p class="dire">Envío a <input class="cod-cupon" type="text" placeholder="Dirección" name="Dirección"></p>
+            <p class="p-e">$204.99</p>
+         </div>
+         <div class="caja-total">
+         <p class="total">Total</p>
+         <p class="n-total">$85.749</p>
+         </div>
+
+     </section>
+
+     </section>
+     
+     <section class="t-y-c">
+         
+        <p><button><input type="checkbox" value="Acepto los términos y condiciones" name="términos y condiciones"></button>Aceptar los <a href="">términos y condiciones</a></p>
+     </section>
+     
+     <div class="continuar">
+         <button><a href="/">Comprar más productos</a></button>
+         <button><a href="/cart/metodoDePago">Continuar compra</a></button>
+     </div>
+    </main>
+    <%- include('partials/footer') %> 
+    <%- include('partials/scripts') %> 
+</body>
+</html>
