@@ -1,0 +1,8 @@
+-Retrospectiva del sprint 1
+Concluimos que durante el primer sprint, nos distrajimos mucho durante las reuniones de zoom y las alargamos innecesariamente, cuestión que debemos cambiar para las próximas entregas. 
+Acordamos que tenemos que empezar a ser puntuales, respetar los horarios acordados para nuestras reuniones y armar un listado con los temas a tratar en las mismas. También empezar a programar juntos para aclarar dudas entre nosotros, ver cómo trabaja el otro/a y optimizar nuestro código.
+Durante el sprint 1 sostuvimos una práctica activa y fuimos detallistas, pero creemos que no fue suficiente, por lo tanto, tendremos que seguir puliéndolo. También, tuvimos una excelente comunicación y organización, al igual que reuniones constantes que vamos a seguir manteniendo.
+
+-Retrospectiva del sprint 2:
+Durante este sprint logramos dejar de distraernos durante los zooms por completo, implementamos armar una lista de temas a tratar en las reuniones, y sostuvimos una buena organización y comunicación. Sin embargo, pensamos que podríamos haber tenido reuniones más seguidas.
+Empezamos a reunirnos para programar juntos, algo que consideramos que deberíamos hacerlo más a menudo. Decidimos reunirnos entre sprints para pensar las retrospectivas y así también sostener reuniones frecuentes. Asimismo acordamos realizar una forma estándar para trabajar, de esta manera los conflictos se reducirían. Por último, tendremos que seguir trabajando la puntualidad para entrar a los zooms y evitar tener que alargarlos sin necesidad.
