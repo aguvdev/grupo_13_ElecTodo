@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %> 
+<body class="register">
+  <%- include('./partials/header') %> 
+    <main>
+        <div class="row">
+            <div class="col-6 mx-auto mt-5 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <h4 class="card-title text-center">Creá tu cuenta</h4>
+                                <label for="exampleInputEmail1" class="form-label">Tu nombre</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                <input type="password" placeholder="Debe tener al menos 6 caracteres" class="form-control" id="exampleInputPassword1">
+                                <div id="emailHelp" class="form-text"><i class="fas fa-info"></i> La contraseña debe contener al menos 6 caracteres.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Vuelve a escribir la contraseña</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Continuar</button>
+                            <p>Al continuar, aceptas las <a href="">Condiciones de Uso</a> y
+                                el <a href="">Aviso de Privacidad</a> de Electodo</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %> 
+    <%- include('./partials/scripts') %> 
+</body>
+</html>
