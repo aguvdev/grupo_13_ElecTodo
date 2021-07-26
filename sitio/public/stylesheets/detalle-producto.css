@@ -1,0 +1,235 @@
+
+/* MAIN */
+
+.detalle .menu{/* todo */
+    padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.detalle .menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
+    background-color: white;
+    display: flex;
+    margin-bottom: 0px;
+    border-radius: 1em 1em 1em 1em;
+    
+}
+.detalle .galeria-auris{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+}
+.detalle .auris{
+    width: 6em;
+    margin-bottom: 0px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px 0 rgba(0, 0, 0, .5)
+}
+.detalle .auris  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.detalle .menulado{
+    width: 100%;
+    margin: 0px 50px;
+}
+.detalle .menulado i, .detalle p{
+    padding: 0px 50px;
+    font-size: 15px;
+    padding: 9px;            
+}
+.detalle .titulo{
+    border-bottom: 1px black solid ;
+    padding: 10px 0px;
+}
+.detalle .titulo h1{
+    font-weight: 100;/* achicar grosorr letras */
+    font-style: oblique;/* inclinar las palabras */      
+}
+
+.detalle .precio{/* todo de: 6000, img , p */
+    color: blue;
+    display: flex;
+    margin: 10px 0px;  
+    border-bottom: 1px black solid ;
+    padding: 20px 0px;     
+}
+.detalle .precio img{/* mini logo electodo */
+    width: 50px;
+    margin: 0 40px;/* SEPARAAAA LETRAS P IMG TODO */
+    display: flex;/* no se interponga lo que le siga, ocupa su propia linea */
+    background-color: var(--color-rosaFluor);/* !!!!!!PREGUNTAR A ROBERT!!!! */
+}
+.detalle .precio p{/* 12 cuotas sin interes a 6840 precio lista */
+    color: black;
+    font-weight: 500;/* grosor letras */ 
+    margin: -15PX 0px;
+}
+
+.detalle .garantia-envios {/* garantia 12 meses, envios todo pais */
+    color: rgb(7, 201, 7);
+    border-bottom: 1px black solid ;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+
+.detalle .carrito{
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: var(--color-rosaFluor);
+    padding: 10px ;
+    font-size: 15px;
+    margin: 60px 10px;
+    color: #fff;
+    width: 180px ;
+}
+.detalle .carrito a{
+    text-decoration: none;
+    color: white;
+}
+.detalle .menu article{
+    text-transform: uppercase;
+    padding: 10px ;
+    font-size: 15px;
+    margin: 60px 10px;
+    background-color: white;
+}
+/* menu caracteriscias conectividad sonido micro  */
+.detalle .contenedor-especificaciones{
+    padding-top: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    flex-direction: row;
+    padding-left: 20%;
+    width: 100%;
+}
+.detalle .contenedor-caracteristicas{
+    display: inline-block;
+    padding: .5rem;
+    margin: 0px 20px 20px 0px;
+    width: 38%;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    font-style: oblique;     
+}
+.detalle .contenedor-caracteristicas h3{
+    border-bottom: 1px solid var(--color-rosaFluor);
+}
+.detalle .caracteristicas-contenido{
+    padding-top: 7px;
+    display: flex;
+    flex: 50%;
+    justify-content: space-between;
+    font-weight: 600; 
+     
+}
+/* PRODUCTOS RELACIONADOS */
+.detalle .relacionados{
+    background-color: white;
+    border-radius: 2em 2em 2em 2em;
+    margin: 10px 0px 0px 0px;
+    padding: 20px 20px 0px;
+    margin: -2px 0px 0px;  
+}
+.detalle .relacionados h3{
+    border-bottom: 1px solid var(--color-rosaFluor);
+    font-style: oblique;
+}
+.detalle .galeria-mouse{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+.detalle .mouse{
+    width: 20em;
+    margin-bottom: 20px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+}
+.detalle .mouse  img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 1em 1em 5em 1em;
+    margin: 0px 0px 20px;
+}
+@media (max-width: 769px) {
+     .detalle .menu {
+        padding: 0px;
+}
+    .detalle .menulado {
+        width: 100%;
+        margin: -7px;
+}
+.detalle .precio{
+    padding: 15px 0px;
+}
+.detalle .precio img{
+    margin: 12px 14px 17px -25px;
+}
+.detalle .galeria-mouse{
+    flex-wrap: nowrap;
+}
+.detalle .mouse {
+    width: 9em;
+}
+.detalle .contenedor-especificaciones{
+    padding-left: 2%;
+    width: 125%;
+}
+@media (max-width: 481px) {
+    .detalle .menu1{
+        display: block;  
+    }
+    .detalle .menulado{
+        margin: 15px;
+    }
+    .detalle .carrito{
+        margin: 60px 120px;
+        font-size: 17px;
+    }
+    .detalle .precio img{
+        margin: 1px 25px 14px 33px;
+    }
+    .detalle .contenedor-caracteristicas{
+        padding: 0.5rem;
+        margin: -25px 0px 37px 11px;
+        width: 95%;
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        font-style: oblique;
+    }
+    .detalle .contenedor-especificaciones{
+        padding-top: 0em;
+        width: 98%;
+    }
+    .detalle .relacionados {
+        padding: 8px 111px 0px;
+    }
+    .detalle .galeria-mouse{
+        display: block;
+    }
+    .detalle .mouse{
+        width: 15em;
+    }
+}
+}
+
+
+
+
+    
+
+
+    
+
+
