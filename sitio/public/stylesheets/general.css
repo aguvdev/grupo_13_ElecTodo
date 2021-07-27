@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --color-azulOscuro: #101B37;
+    --color-rosaFluor: #E41476;
+    --color-celesteClaro: #02C8ED;
+    --color-fondo: #0A112B;
+
+    --color-negro4: #241D17;
+
+    --color-negro3: #202020;
+
+    --color-negro2: #0B0E07;
+
+    --color-negro1: #000000;
+}
+
+body{
+    background: var(--color-fondo);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+main{
+    background-image: url('/img/circulo-fondo.jpg');
+    background-position: center 90%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    
+    
+}
+ul, ol{
+    list-style: none;
+}
+
+.fa-bell, 
+.fa-user-circle, 
+.fa-heart, 
+.fa-shopping-cart, 
+.fa-laptop, 
+.fa-desktop, 
+.fa-mouse, 
+.fa-keyboard, 
+.fa-volume-up, 
+.fa-mobile-alt, 
+.fa-gamepad, 
+.fa-xbox, 
+.fa-print, 
+.fa-headphones-alt,
+.fa-bars,
+.fa-search,
+.fa-upload,
+.fa-times{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.fa-arrow-right{
+    color:rgb(17, 17, 17);
+    font-size: 1.5em;
+    padding-right: 10px;
+}
+
+.fa-instagram,
+.fa-facebook-f,
+.fa-whatsapp{
+    color: var(--color-naranja);
+    font-size: 1.5em;
+    background: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.fa-credit-card,
+.fa-store-alt,
+.fa-truck{
+    font-size: 2em;
+}
+
+.fa-arrow-left:hover,
+.fa-shopping-cart:hover, 
+.fa-laptop:hover, 
+.fa-desktop:hover, 
+.fa-mouse:hover, 
+.fa-keyboard:hover, 
+.fa-volume-up:hover, 
+.fa-mobile-alt:hover, 
+.fa-gamepad:hover, 
+.fa-xbox:hover, 
+.fa-print:hover, 
+.fa-headphones-alt:hover,
+.fa-bars:hover,
+.fa-search:hover,
+.fa-upload:hover,
+.fa-times:hover,
+.fa-shopping-cart:hover,
+.fa-heart:hover,
+.fa-user-circle:hover,
+.fa-bell:hover{
+    color: var(--color-rosaFluor);
+}

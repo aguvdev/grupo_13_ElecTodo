@@ -1,0 +1,97 @@
+/* footer */
+
+.seccion-newsletter{
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
+    width: 100%;
+    height: 250px;
+    text-align: center;
+}
+
+.seccion-newsletter div p{
+    color: white;
+    font-size: 32px;
+    font-family: 'Open Sans';
+    padding: 20px 0 10px;
+}
+
+.seccion-newsletter div span{
+    color: white;
+    font-size: 25px;
+}
+
+.email-buscador{
+    margin-top: 20px;
+    position: relative;
+}
+
+.buscar-email:focus{
+    outline: none;
+}
+
+.buscar-email{
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1.3em;
+    width: 60vw;
+    height: 45px;
+    padding-left: 20px;
+}
+
+.boton2{
+    position: relative;
+    background: none;
+    border: none;
+    height: 45px;
+    right: 40px;
+}
+
+.seccion-datos{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    width: 100%;
+    height: 300px;
+    padding: 50px 35px 0 35px;
+}
+
+.seccion-datos p.title{
+    color: white;
+    margin: 10px 0;
+    font-size: 25px;
+    border-bottom: 1px solid #fff;
+}
+.final .secciones-footer .sigamos-conectados div i{
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.copyr{
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 60px;
+}
+
+@media (max-width: 769px) {
+    /* footer */
+
+    .seccion-datos{
+        height: 100%;
+    }
+
+    .seccion-datos p.title{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 481px) {
+    /* footer */
+
+    .seccion-datos{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

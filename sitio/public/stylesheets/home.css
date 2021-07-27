@@ -1,0 +1,343 @@
+/* main */
+
+.home .ofertas{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.home .ofertas .impreYCartDesc{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+}
+
+.home .ofertas .impreYCartDesc:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .ofertas .impreYCartDesc img{
+    width: auto;
+    height: 150px;
+    order: 1;
+}
+
+.home .ofertas .impreYCartDesc h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .ofertas .impreYCartDesc span{
+    color: #fff;
+    margin: 5px;
+}
+
+.home .beneficios{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home .seccion-gaming{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.home .seccion-gaming .cuadro-gaming{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home .seccion-gaming .cuadro-gaming:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .seccion-gaming .cuadro-gaming img {
+    width: auto;
+    height: 150px;
+}
+
+.home .seccion-gaming .cuadro-gaming h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .seccion-gaming .cuadro-gaming span{
+    color: #fff;
+    margin: 5px;
+}
+
+.home .seccion-celulares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.home .seccion-celulares .cuadro-celulares{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.home .seccion-celulares .cuadro-celulares:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .seccion-celulares .cuadro-celulares img {
+    width: auto;
+    height: 150px;
+}
+
+.home .seccion-celulares .cuadro-celulares h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .seccion-celulares .cuadro-celulares span{
+    color: #fff;
+    margin: 5px;
+}
+
+.home .seccion-notebooks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.home .seccion-notebooks .cuadro-notebooks{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; 
+}
+.home .seccion-notebooks .cuadro-notebooks:hover{
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.home .seccion-notebooks .cuadro-notebooks img {
+    width: auto;
+    height: 150px;
+}
+
+.home .seccion-notebooks .cuadro-notebooks h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+.home .seccion-notebooks .cuadro-notebooks span{
+    color: #fff;
+    margin: 5px;
+}
+
+.home .carrousel-ind{
+    display: none;
+}
+
+.home .recomendaciones2{
+    display: none;
+}
+
+.home .ofertas2{
+    display: none;
+}
+
+.home .beneficios div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50px 50px 50px 50px;
+    width: 300px;
+    height: 60px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+.home .beneficios div p{
+    margin-left: 15px;
+}
+
+.home .recomendaciones{
+    padding: 3em 0;
+}
+
+.home .seccion-header img{
+    margin: 15px;
+}
+
+.home .row-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 3em;
+}
+
+.home .list-art{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+
+.home .item-carrousel{
+    display: flex;
+}
+
+.home .carousel-indicators{
+    background: rgba(228,20,118,0.5);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.home .visually .fa-arrow-left{
+    color: var(--color-rosaFluor);
+    font-size: 2em;
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.home .visually .fa-arrow-right{
+    color: var(--color-rosaFluor);
+    font-size: 2em;
+    margin-left: 50px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.home .card{
+    width: 12rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 15px;
+}
+
+.home .card .image{
+    background: white;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.home .car .image img{
+    width: auto;
+}
+
+@media (max-width: 769px) {
+        /* main */
+
+        .home .ofertas{
+            padding: 30px;
+        }
+
+        .home .recomendaciones2{
+            display: none;
+        }
+
+        .home .ofertas2{
+            display: none;
+        }
+
+        .home .carrousel-ind{
+            display: none;
+        }
+    
+        .home .ofertas a img{
+            width: 200px;
+        }
+
+        .home .beneficios{
+            padding: 0 20px;
+        }
+
+        .home .beneficios div{
+            height: 90px;
+            margin: 0 20px;
+        }
+
+        .home .list-art{
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .home .row-container{
+            margin-bottom: 6em;
+        }
+}
+
+@media (max-width: 481px) {
+    .home .recomendaciones{
+        display: none;
+    }
+
+    .home .ofertas{
+        display: none;
+    }
+
+    .home .recomendaciones2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .home .recomendaciones2 a img{
+        margin: 10px;
+    }
+
+    .home .beneficios{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .beneficios div{
+        margin: 10px;
+    }
+
+    .home .carrousel-ind{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .home .ofertas2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .home .ofertas2 a{
+        padding: 20px;
+    }
+}
