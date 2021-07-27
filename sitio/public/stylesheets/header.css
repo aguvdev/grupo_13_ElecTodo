@@ -1,0 +1,246 @@
+/* header */
+header{
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin: 0;
+}
+
+.cabeza{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.buscador2{
+    display: none;
+}
+
+.logo a img{
+    width: 100px;
+    display: flex;
+}
+
+.buscador{
+    display: flex;
+    border: 3px solid rgb(168, 168, 168);
+    border-radius: 2em;
+    align-items: center;
+}
+
+.buscar-texto:focus{
+    outline: none;
+}
+
+.buscar-texto{
+    border: none;
+    background: none;
+    color: rgb(168, 168, 168);
+    font-size: 16px;
+    width: 40vw;
+    padding-left: 10px;
+}
+
+.boton{
+    background: none;
+    border-radius: 0 1em 1em 0;
+    border: none;
+    width: 2em;
+    height: 2.5em;
+    text-decoration: none;
+}
+
+.nav-header-menu2{
+    display: none;
+}
+
+.nav-header-menu ul li{
+    list-style: none;
+    float: left;
+    margin: 10px
+}
+
+.nav-header-items{
+    background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    width: 100%;
+    height: 100%;
+    padding: 5px 20px 10px;
+}
+
+.nav-header-items2{
+    display: none;
+}
+
+.nav-header-items ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-header-items ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav-header-items ul li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+@media (max-width: 769px) {
+
+    /* header */
+
+    .buscador2{
+        display: none;
+    }
+
+    .buscar-texto{
+        width: auto;
+    }
+    .nav-header-menu2{
+        display: none;
+    }
+    .nav-header-items2{
+        display: none;
+    }
+    .nav-header-items ul li a i{
+        display: none;
+    }
+
+}
+
+@media (max-width: 481px) {
+    
+    /* header */
+
+    .cabeza{
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    .buscador{
+        display: none;
+    }
+
+    .buscador2{
+        display: flex;
+    }
+
+    .buscador2:hover > .buscar-texto2{
+        width: 130px;
+    }
+
+    .buscar-texto2{
+        border: none;
+        background: var(--color-celesteClaro);
+        color: #fff;
+        outline: none;
+        font-size: 1.5em;
+        width: 0;
+        float: left;
+        line-height: 60px;
+        transition: .3s;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .buscador2 .fa-search{
+        background: none;
+        color: white;
+        font-size: 2em;
+        margin-left: 10px;
+    }
+
+    .boton-busc{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-header-menu{
+        display: none;
+    }
+
+    .nav-header-menu2{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-header-menu2 ul{
+        display: flex;
+        justify-content: space-evenly;
+        width: 130px;
+        padding: 0;
+    }
+
+    .nav-header-menu2 ul{
+        margin: 0;
+    }
+
+    .nav-header-menu2 ul li{
+        list-style: none;
+    }
+
+    .nav-header-menu2 ul li a i.fas{
+        font-size: 2em;
+    }
+
+    .nav-header-items{
+        display: none;
+    }
+
+    .nav-header-items2{
+        display: flex;
+        justify-content: space-evenly;
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+        height: auto;
+        padding: 20px;
+        align-items: center;
+    }
+    .dropdown-menu{
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    }
+    .btn-secondary{
+        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor));
+    }
+
+    .nav-header-items2 li a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .nav-header-items2 li a:hover{
+        color: var(--color-rosaFluor);
+    }
+
+    .nav-header-items2 ul{
+        overflow: hidden;
+    }
+
+    .nav-header-items2 ul li {
+        float: left;
+    }
+
+    .nav-header-items2 .fas{
+        font-size: 2em;
+    }
+
+    .nav-header-items2 .burger-menu button{
+        border: none;
+        background: none;
+    }
+
+}

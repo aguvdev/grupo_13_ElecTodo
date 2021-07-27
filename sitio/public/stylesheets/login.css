@@ -1,36 +1,34 @@
 /* main */
 
-.login .btn-primary{
-    color: #000;
-    background: linear-gradient(to bottom, white, var(--color-naranja));
-    border-color: #ffb080;
-}
-
-.login .btn-primary:hover{
+.btn-primary{
     color: #fff;
-    border-color: var(--color-naranja);
+    background: var(--color-azulOscuro);
 }
 
-.login .card-body a{
-    color: var(--color-naranja);
+.btn-primary:hover{
+    color: #fff;
+    background: var(--color-rosaFluor);
 }
 
-.login .btn-redes{
+.codlogin- .card-body a{
+    color: var(--color-rosaFluor);
+}
+
+.btn-redes{
     display: flex;
     flex-direction: column;
-    color: gray;
 }
 
-.login .btn-redes button{
+.btn-redes button{
     margin: 5px 0;
 }
 
-.login .btn-redes .fa-google, .fa-apple{
+.btn-redes .fa-google, .fa-apple{
     color: gray;
     font-size: 18px;
 }
 
-.login .btn-redes .fa-facebook-f{
+.btn-redes .fa-facebook-f{
     color: gray;
     font-size: 18px;
     background: none;
@@ -41,7 +39,13 @@
     padding-top: 0;
 }
 
-.login .registro{
+.registro{
     text-align: center;
     margin-top: 30px;
+}
+
+@media (max-width: 481px) {
+    .mb-5 {
+        width: 90%;
+    }
 }
