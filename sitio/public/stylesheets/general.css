@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --color-naranja: #ff6100;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body {
+    background: linear-gradient(to bottom, #000, var(--color-naranja), white);
+    height: 100%;
+    background-size: cover;
+}
+
+.fa-bell, 
+.fa-user-circle, 
+.fa-heart, 
+.fa-shopping-cart, 
+.fa-laptop, 
+.fa-desktop, 
+.fa-mouse, 
+.fa-keyboard, 
+.fa-volume-up, 
+.fa-mobile-alt, 
+.fa-gamepad, 
+.fa-xbox, 
+.fa-print, 
+.fa-headphones-alt,
+.fa-bars{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.fa-arrow-right{
+    color:rgb(17, 17, 17);
+    font-size: 1.5em;
+    padding-right: 10px;
+}
+
+.fa-instagram,
+.fa-facebook-f,
+.fa-whatsapp{
+    color: var(--color-naranja);
+    font-size: 1.5em;
+    background: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.fa-credit-card,
+.fa-store-alt,
+.fa-truck{
+    font-size: 2em;
+}

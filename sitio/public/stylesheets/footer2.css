@@ -1,0 +1,94 @@
+/* footer */
+
+.register .seccion-newsletter{
+    background-color: black;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+}
+
+.register .seccion-newsletter div p{
+    color: white;
+    font-size: 32px;
+    font-family: 'Open Sans';
+    padding: 20px 0 10px 0;
+}
+
+.register .seccion-newsletter div span{
+    color: white;
+    font-size: 25px;
+}
+
+.register .email-buscador{
+    margin-top: 20px;
+}
+
+.register .buscar-email:focus{
+    outline: none;
+}
+
+.register .buscar-email{
+    border: none;
+    background: white;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.3em;
+    width: 600px;
+    height: 45px;
+    padding-left: 20px;
+}
+
+.register .boton2{
+    position: absolute;
+    background: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    height: 45px;
+}
+
+.register .seccion-datos{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-naranja);
+    width: 100%;
+    height: 350px;
+    padding: 50px 35px 0 35px;
+}
+
+.register .seccion-datos p.title{
+    margin: 10px 0;
+    font-size: 25px;
+    border-bottom: 1px solid black;
+}
+
+.register .copyr{
+    color: gray;
+    background-color: black;
+    width: 100%;
+    height: 20px;
+}
+
+@media (max-width: 769px) {
+    /* footer */
+
+    .register .seccion-datos{
+        height: 100%;
+    }
+
+    .register .seccion-datos p.title{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 481px) {
+    /* footer */
+
+    .register .buscar-email{
+        width: 300px;
+    }
+
+    .register .seccion-datos{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
