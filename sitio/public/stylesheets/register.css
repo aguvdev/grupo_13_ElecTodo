@@ -1,15 +1,21 @@
 /* main */
 .register .btn-primary{
     color: #000;
-    background: linear-gradient(to bottom, white, var(--color-naranja));
+    background: var(--color-celesteClaro);
     border-color: #ffb080;
 }
 
 .register .btn-primary:hover{
     color: #fff;
-    border-color: var(--color-naranja);
+    border-color: var(--color-celesteClaro);
 }
 
 .register .card-body a{
     color: var(--color-naranja);
+}
+
+@media (max-width: 481px) {
+    .mb-5 {
+        width: 90%;
+    }
 }
