@@ -163,6 +163,7 @@
     margin: 0px 0px 20px;
 }
 @media (max-width: 769px) {
+
      .detalle .menu {
         padding: 0px;
 }
@@ -187,6 +188,9 @@
     width: 125%;
 }
 @media (max-width: 481px) {
+    .detalle .img-auricular img{
+        width: 100%;
+    }
     .detalle .menu1{
         display: block;  
     }
