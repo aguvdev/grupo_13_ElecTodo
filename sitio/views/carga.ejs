@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<%- include('./partials/head') %>
 
 <body>
     <header>
@@ -104,7 +105,7 @@
                         <input class="texto-carga" type="text" placeholder="Nombre:">
                     </section>
                     <section class="formulario-carga2">
-                        <input class="texto-carga" type="text" placeholder="Precio $:">
+                        <input class="texto-carga" type="number" placeholder="Precio $:">
                     </section>
                     <section class="formulario-carga2">
                         <input class="texto-carga" type="text" placeholder="Descuento %:">
@@ -115,9 +116,20 @@
                     <section class="formulario-carga-espe">
                         <input class="texto-carga-espe" type="text" placeholder="Especificaciones:">
                     </section>
-                    <section class="formulario-carga2">
-                        <input class="texto-carga" type="text" placeholder="Tags:">
-                    </section>
+                    
+                    <select class="formulario-category">
+                        <option selected>Seleccione su Categoria</option>
+                        <option value="1">Laptops</option>
+                        <option value="2">PC</option>
+                        <option value="3">Mouse</option>
+                        <option value="4">Teclados</option>
+                        <option value="5">Auriculares</option>
+                        <option value="6">Audio</option>
+                        <option value="7">Celulares</option>
+                        <option value="8">Gaming</option>
+                        <option value="9">Consolas</option>
+                        <option value="10">Impresoras</option>
+                      </select>
                  
                 
                 </div>

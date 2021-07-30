@@ -106,7 +106,23 @@
     border-radius: 2px 2px 2px 2px;
 
 }
-
+.carga .formulario-category{
+   
+    background-color: #fff;
+    width: 530px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 14px;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 2px 2px 2px 2px;
+}
+.carga .formulario-category option{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
 .carga .formulario-carga2{
     background-color: #fff;
     width: 530px;
