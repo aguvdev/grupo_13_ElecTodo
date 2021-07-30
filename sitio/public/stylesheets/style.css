@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-=======
 @import url('./general.css');
 @import url('./header.css');
 @import url('./footer.css');
@@ -18,4 +8,3 @@ a {
 @import url('./headerdetalle.css');
 @import url('./carga.css');
 @import url('./login.css');
->>>>>>> vista-home/agustin
