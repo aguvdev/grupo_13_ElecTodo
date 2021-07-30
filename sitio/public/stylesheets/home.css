@@ -19,6 +19,7 @@
 
 .home .ofertas .impreYCartDesc:hover{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: .3s;
 }
 
 .home .ofertas .impreYCartDesc img{
@@ -64,6 +65,7 @@
 }
 .home .seccion-gaming .cuadro-gaming:hover{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: .3s;
 }
 
 .home .seccion-gaming .cuadro-gaming img {
@@ -103,6 +105,7 @@
 }
 .home .seccion-celulares .cuadro-celulares:hover{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: .3s;
 }
 
 .home .seccion-celulares .cuadro-celulares img {
@@ -142,6 +145,7 @@
 }
 .home .seccion-notebooks .cuadro-notebooks:hover{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transition: .3s;
 }
 
 .home .seccion-notebooks .cuadro-notebooks img {
