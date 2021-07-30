@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,3 +7,15 @@ body {
 a {
   color: #00B7FF;
 }
+=======
+@import url('./general.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./carrito.css');
+@import url('./home.css');
+@import url('./detalle-producto.css');
+@import url('./footerdetalle.css');
+@import url('./headerdetalle.css');
+@import url('./carga.css');
+@import url('./login.css');
+>>>>>>> vista-home/agustin
