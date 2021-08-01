@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main class="carrito">
+     <nav>
+         <div class="navegacion">
+        <i class="fas fa-truck"></i>
+         <p>Carrito / Punto de entrega</p> 
+         </div>
+         <div class="navegacion2">
+          <i class="fas fa-money-bill-alt"></i>
+         <p>Método de pago</p>
+           </div>
+         <div class="aqui">
+           <i class="far fa-check-circle"></i>   
+          <p>Confirmación de la compra</p>   
+         </div>
+     </nav>
+     <section class="cuerpo2">
+        <div class="total-dos">
+            <h3>Total</h3>
+            <h3>$85.749</h3>
+        </div>
+        <section class="datos">
+                <p>Datos personales:</p>
+            <div class="dato">
+                <form action="">
+                    <label for="email">E-mail</label>
+                    <input class="caja-dato" type="email" name="email" id="email">
+                </form>
+            </div>
+            <div class="dato">
+                <form action="">
+                    <label for="nombre">Nombres/s</label>
+                    <input class="caja-dato" type="text" name="nombre" id="nombre"></form>
+            </div>
+            <div class="dato">
+                <form action="">
+                    <label for="apellido">Apellido/s</label>
+                    <input class="caja-dato" type="text" name="apellido" id="apellido"></form>
+            </div>
+            <div class="dato">
+                <form action="">
+                    <label for="dni">DNI</label>
+                    <input class="caja-dato" type="text" name="dni" id="dni"></form>
+            </div>
+            <div class="dato">
+                <form action="">
+                    <label for="contacto">Número de contacto</label>
+                    <input class="caja-dato" type="tel" name="contacto" id="contacto"></form>
+            </div>
+            <div class="dato">
+                <form action="">
+                    <label class="comentario" for="comentario">Comentario</label>
+                    <textarea class="coment" name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                   </form>
+            </div>
+        </section>   
+     </section>
+        <div class="continuar-dos">
+            <button type="submit">Confirmar</button>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %> 
+</body>
+</html>

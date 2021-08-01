@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main class="carrito">
+     <nav>
+         <div class="navegacion">
+        <i class="fas fa-truck"></i>
+         <p>Carrito / Punto de entrega</p> 
+         </div>
+         <div class="aqui">
+          <i class="fas fa-money-bill-alt"></i>
+         <p>Método de pago</p>
+           </div>
+         <div class="navegacion2">
+           <i class="far fa-check-circle"></i>   
+          <p>Confirmación de la compra</p>   
+         </div>
+     </nav>
+     <section class="cuerpo">
+    <div class="total-dos">
+        <h3>Total</h3>
+        <h3>$85.749</h3>
+    </div>
+    <section class="metodos">
+        <div>
+         <p>Método de pago:</p>   
+        </div>
+        <div class="opciones">
+                <input type="radio" name="medio" value="Crédito">
+                <i class="far fa-credit-card"></i>
+                <span>Tarjeta de crédito</span>
+        </div>
+        <div class="opciones">
+            <input type="radio" name="medio" value="Débito">
+                <i class="fas fa-credit-card"></i>
+                <span>Tarjeta de débito</span>
+        </div>
+        <div class="opciones">
+            <input type="radio" name="medio" value="Efectivo">
+                <i class="fas fa-money-bill"></i>
+                <span>Efectivo en los puntos de pago</span>
+        </div>
+    </section>
+     </section>
+
+    <div class="continuar-dos">
+        <button><a href="/cart/confirmacionDeLaCompra">Continuar compra</a></button>
+    </div>
+    </main>
+    <%- include('partials/footer') %> 
+    <%- include('partials/scripts') %> 
+</body>
+</html>
