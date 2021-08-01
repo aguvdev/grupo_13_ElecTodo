@@ -1,0 +1,51 @@
+/* main */
+
+.btn-primary{
+    color: #fff;
+    background: var(--color-azulOscuro);
+}
+
+.btn-primary:hover{
+    color: #fff;
+    background: var(--color-rosaFluor);
+}
+
+.codlogin- .card-body a{
+    color: var(--color-rosaFluor);
+}
+
+.btn-redes{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-redes button{
+    margin: 5px 0;
+}
+
+.btn-redes .fa-google, .fa-apple{
+    color: gray;
+    font-size: 18px;
+}
+
+.btn-redes .fa-facebook-f{
+    color: gray;
+    font-size: 18px;
+    background: none;
+    height: auto;
+    width: auto;
+    border-radius: 0;
+    text-align: center;
+    padding-top: 0;
+}
+
+.registro{
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 481px) {
+    .mb-5 {
+        width: 90%;
+    }
+}
