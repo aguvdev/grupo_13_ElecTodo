@@ -81,23 +81,32 @@
          </p>
          <form action=""><input class="cod-cupon" type="text" placeholder="Código cupón" name="cupón"><button>Aplicar</button></form>
      </section>
+
      <section class="envio">
          <div class="caja-envio">
-            <p class="dire">Envío a <input class="cod-cupon" type="text" placeholder="Dirección" name="Dirección"></p>
+             <form action="/cart" method="POST">
+                <p class="dire"> Envío a <input class="cod-cupon <%= locals.errors && errors.direccion ? 'is-invalid' : null%>" type="text" placeholder="Dirección" name="direccion" value="<%= locals.oldData ? oldData.direccion : null%>">
+                <% if (locals.errors && errors.direccion) { %>
+                    <div class="text-danger">
+                        <%= errors.direccion.msg %> 
+                    </div>
+                <% } %>
+            </p> 
+             </form>
             <p class="p-e">$204.99</p>
          </div>
          <div class="caja-total">
          <p class="total">Total</p>
          <p class="n-total">$85.749</p>
          </div>
-
      </section>
 
      </section>
      
      <section class="t-y-c">
-         
-        <p><button><input type="checkbox" value="Acepto los términos y condiciones" name="términos y condiciones"></button>Aceptar los <a href="">términos y condiciones</a></p>
+           <p>
+               <button><input type="checkbox" value="Acepto los términos y condiciones" name="condiciones" checked></button>Aceptar los <a href="">términos y condiciones</a>
+            </p>
      </section>
      
      <div class="continuar">

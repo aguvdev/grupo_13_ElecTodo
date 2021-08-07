@@ -1,10 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-const {carrito, metodo, confirmacion} = require('../controllers/cartController')
-
+const {validarPago, validacionFinal, validarDireccion} = require('../validations/cartValidation')
+const {carrito, metodoDePago, confirmacion, pagar, eliminar, terminar, agregarDireccion} = require('../controllers/cartController')
+/* /cart */ 
+/*Vista carrito de compras*/ 
 router.get('/', carrito)
-router.get('/metodoDePago', metodo)
+/* proceso informacion de la dirección*/
+router.post('/', validarDireccion, agregarDireccion)
+
+router.delete('/', eliminar)
+
+/*vista formulario metodo de pago*/ 
+router.get('/metodoDePago', metodoDePago)
+/*proceso formulario metodo de pago*/ 
+router.post('/metodoDePago', validarPago, pagar)
+
+/*vista confirmación de la compra*/ 
 router.get('/confirmacionDeLaCompra', confirmacion)
+/* proceso formulario de confirmacion*/
+router.post('/confirmacionDeLaCompra', validacionFinal, terminar)
 
 module.exports = router

@@ -184,6 +184,12 @@
     color: white;
     margin: 10px 0;
 }
+.carrito .t-y-c a{
+    text-decoration: underline;
+}
+.carrito .t-y-c a:hover{
+    color: var(--color-celesteClaro);
+}
 .carrito .t-y-c button{
     background: none;
     border: none;
@@ -279,6 +285,9 @@
 .carrito .datos .dato{
     font-size: 18px;
     margin: 10px 0 20px 25px;
+}
+.carrito .datos .text-danger{
+    font-size: 10px;
 }
 .carrito .datos .dato label{
     display: inline-block;
