@@ -6,3 +6,6 @@ Durante el sprint 1 sostuvimos una práctica activa y fuimos detallistas, pero c
 -Retrospectiva del sprint 2:
 Durante este sprint logramos dejar de distraernos durante los zooms por completo, implementamos armar una lista de temas a tratar en las reuniones, y sostuvimos una buena organización y comunicación. Sin embargo, pensamos que podríamos haber tenido reuniones más seguidas.
 Empezamos a reunirnos para programar juntos, algo que consideramos que deberíamos hacerlo más a menudo. Decidimos reunirnos entre sprints para pensar las retrospectivas y así también sostener reuniones frecuentes. Asimismo acordamos realizar una forma estándar para trabajar, de esta manera los conflictos se reducirían. Por último, tendremos que seguir trabajando la puntualidad para entrar a los zooms y evitar tener que alargarlos sin necesidad.
+
+-Retrospectiva del sprint 3:
+Sentimos que durante la semana no tuvimos tiempo suficiente para aplicar todo lo propuesto para esta tercera entrega. Mantuvimos la misma organización, manejo del tiempo, constancia de reuniones, comunicación y aspectos prácticos. Pero igualmente, pudimos cumplir con algunos puntos como: reunirnos entre los sprints para pensar la retrospectiva y poner en práctica una forma estándar de trabajar.
