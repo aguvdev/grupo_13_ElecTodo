@@ -83,8 +83,11 @@
      </section>
 
      <section class="envio">
+
          <div class="caja-envio">
+
              <form action="/cart" method="POST">
+
                 <p class="dire"> Envío a <input class="cod-cupon <%= locals.errors && errors.direccion ? 'is-invalid' : null%>" type="text" placeholder="Dirección" name="direccion" value="<%= locals.oldData ? oldData.direccion : null%>">
                 <% if (locals.errors && errors.direccion) { %>
                     <div class="text-danger">
@@ -92,7 +95,6 @@
                     </div>
                 <% } %>
             </p> 
-             </form>
             <p class="p-e">$204.99</p>
          </div>
          <div class="caja-total">
@@ -111,8 +113,9 @@
      
      <div class="continuar">
          <button><a href="/">Comprar más productos</a></button>
-         <button><a href="/cart/metodoDePago">Continuar compra</a></button>
+         <button type="submit"><a href="/cart/metodoDePago">Continuar compra</a></button>
      </div>
+     </form>
     </main>
     <%- include('partials/footer') %> 
     <%- include('partials/scripts') %> 

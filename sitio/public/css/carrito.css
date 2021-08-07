@@ -146,17 +146,11 @@
     padding: 20px 20px;  
     
 }
-.carrito .caja-envio{
+.carrito .envio .caja-envio{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
-}
-.carrito .envio button{
-    color: var(--color-naranja);
-}
-.carrito .envio .dire{
-    color: var(--color-naranja);
 }
 .carrito .envio .caja-total{
     display: flex;
