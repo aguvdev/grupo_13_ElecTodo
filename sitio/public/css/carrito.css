@@ -76,6 +76,12 @@
     max-width: 180px;
     margin: 30px;
 }
+.carrito article div .precio-desc{
+    text-decoration:line-through;
+}
+.carrito article div .off{
+    color: var(--color-rosaFluor);
+}
 .carrito article .menos{
     background: none;
     height: 24px;
@@ -94,12 +100,13 @@
     width: 19px;
 }
 .carrito article .cantidad{
-    width: 24px;
+    width: 30px;
     height: 24px;
     border: 1px solid gray;
     border-right: none;
     border-left: none;
     text-align: center;
+    outline: none;
 }
 .carrito article .form-cant{
     margin: 7px;
@@ -355,6 +362,7 @@
     .carrito section article p{
         font-size: 15px;
         margin: 5px;
+        text-align: center;
     }
     .carrito .cupon-envio{
         display: flex;

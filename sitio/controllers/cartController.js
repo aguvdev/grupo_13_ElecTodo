@@ -13,6 +13,7 @@ module.exports = {
         const result = validationResult(req);
         if(result.errors.length > 0){
             return res.render('carrito', {
+                cartProducts,
                 errors: result.mapped(),
                 oldData: req.body
             })

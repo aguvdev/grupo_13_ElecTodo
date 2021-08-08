@@ -30,10 +30,9 @@
                 <p>Precio</p>
                     <% if (product.discount > 0) { %>
                         <div>
-                         <%= product.price %>
-                        <%= product.discount %>%OFF   
-                        </div>
-                        
+                        <span class="precio-desc"><%= product.price %></span>
+                        <span class="off"><%= product.discount %>%OFF</span>
+                        </div>  
                     <% }else { %>
                    <p>$<%= product.price %></p>
                    <% } %>   
