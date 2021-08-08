@@ -59,6 +59,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.carrito section article button{
+    border: none;
+    background: transparent;
+}
 .carrito section article i{
     font-size: 40px;
     color:var(--color-rosaFluor);
@@ -107,8 +111,9 @@
     font-weight: lighter;
     margin: 9px;
 }
-.carrito article .subtotal{
+.carrito article .subtotal , h2, .h2{
     font-weight: bold;
+    font-size: 16px;
 }
 .carrito .cupon{
     background-color: white;

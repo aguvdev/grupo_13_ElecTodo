@@ -19,60 +19,45 @@
          </div>
      </nav>
      <section>
+         <% cartProducts.forEach(product => { %>
          <article>
-             <i class="fas fa-trash-alt"></i>
-             <img src="/img/notebook-carrito.jpeg" alt="">
-             <p class="descripcion">Notebook Celeron 14'' Memoria 4gb Almacenaje 128gb - Tedge</p>
-             <div>
-              <p>Precio</p>
-                 <p>$47.499</p>   
-             </div>
-                 <div>
-                   <p>Cantidad</p>
-                   <form action="" class="form-cant"><button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button></form>
-                 <h6>922 disponibles</h6>
-                 </div>
+                 <form action="/cart/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            <img src="/img/<%= product.image %> " alt="">
+            <p class="descripcion"><%= product.description %> </p>
+            <div>
+                <p>Precio</p>
+                    <% if (product.discount > 0) { %>
+                        <div>
+                         <%= product.price %>
+                        <%= product.discount %>%OFF   
+                        </div>
+                        
+                    <% }else { %>
+                   <p>$<%= product.price %></p>
+                   <% } %>   
+               </div>
+               <div>
+                <p>Cantidad</p>
+                <form action="" class="form-cant">
+                    <button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button>
+                </form>
+              <h6><%= product.stock %>  disponibles</h6>
+              </div>
                 <div>
-                 <p >Subtotal</p>
-                 <p class="subtotal">$47.499</p>    
+                 <p>Subtotal</p>
+                 <p class="subtotal"></p>  
+                   <% if (product.discount > 0) { %>
+                    <h2>$<%= (product.price - (product.discount * product.price /100).toFixed(2)) %></h2>
+                <% } else {%>
+                    <h2>$<%= product.price %></h2>
+                <% } %>
                 </div>
-         </article>
-         <article>
-             <i class="fas fa-trash-alt"></i>
-             <img src="/img/auriculares-carrito.jpeg" alt="">
-             <p class="descripcion">Auriculares In-ear inalámbricos Xiaomi Redmi AirDots 2 negro</p>
-             <div>
-               <p>Precio</p>
-                 <p>$2.251</p>  
-             </div>
-                 <div>
-                 <p>Cantidad</p>    
-                 <form action="" class="form-cant"><button class="menos">-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button></form>
-                 <h6>520 disponibles</h6>    
-                 </div>
-                 <div>
-                 <p>Subtotal</p>
-                 <p class="subtotal">$2.251</p>    
-                 </div>
-         </article>
-         <article>
-             <i class="fas fa-trash-alt"></i>
-             <img src="/img/celular-carrito.jpeg" alt="" width="100" height="200">
-             <p class="descripcion"> Samsung Galaxy A32 128 GB awesome black 4 GB RAM</p>
-             <div>
-               <p>Precio</p>
-                 <p>$35.999</p>  
-             </div>
-                 <div>
-                 <p>Cantidad</p>
-                 <form action="" class="form-cant"><button class="menos">-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button></form>
-                 <h6>125 disponibles</h6>    
-                 </div>
-                 <div>
-                 <p>Subtotal</p>
-                 <p class="subtotal">$35.999</p>    
-                 </div>
-         </article>
+                
+            </article>
+        <% }) %>
+
      </section>
      <section class="cupon-envio">
 

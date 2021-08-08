@@ -1,8 +1,13 @@
+const fs = require('fs');
+const path = require('path');
+const cartProducts = require('../data/cartProducts');
 const {validationResult} = require('express-validator');
 
 module.exports = {
     carrito : (req, res) => {
-        return res.render('carrito')
+        return res.render('carrito', {
+            cartProducts
+        })
     },
     agregarDireccion : (req, res) =>{
         const result = validationResult(req);
@@ -14,7 +19,14 @@ module.exports = {
         }
     },
     eliminar : (req, res) =>{
-
+        cartProducts.forEach(product => {
+            if(product.id === +req.params.id){
+				let eliminar = cartProducts.indexOf(product)
+                cartProducts.splice(eliminar, 1)
+                }
+        });
+        fs.writeFileSync(path.join(__dirname, '../data/cartProducts.json'), JSON.stringify(cartProducts,null,2),'utf-8');
+		return res.redirect('/cart')
     },
     metodoDePago : (req, res) => {
         return res.render('metodoDePago')

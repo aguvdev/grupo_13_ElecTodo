@@ -9,7 +9,7 @@ router.get('/', carrito)
 /* proceso informacion de la dirección*/
 router.post('/', validarDireccion, agregarDireccion)
 
-router.delete('/', eliminar)
+router.delete('/delete/:id', eliminar)
 
 /*vista formulario metodo de pago*/ 
 router.get('/metodoDePago', metodoDePago)
