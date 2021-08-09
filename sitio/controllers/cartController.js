@@ -50,6 +50,6 @@ module.exports = {
                 errors: resultado.mapped(),
                 oldData: req.body
             })
-        }
+        } return res.redirect('/')
     }
 }
