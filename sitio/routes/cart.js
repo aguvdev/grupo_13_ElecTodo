@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-const {validarPago, validacionFinal, validarDireccion} = require('../validations/cartValidation')
+const {validarPago, validacionFinal, validarDireccion, terminosCondiciones} = require('../validations/cartValidation')
 const {carrito, metodoDePago, confirmacion, pagar, eliminar, terminar, agregarDireccion} = require('../controllers/cartController')
 /* /cart */ 
 /*Vista carrito de compras*/ 
 router.get('/', carrito)
-/* proceso informacion de la dirección*/
-router.post('/', validarDireccion, agregarDireccion)
+/* proceso informacion de la dirección, acepto términos y condiciones*/
+router.post('/', validarDireccion,terminosCondiciones, agregarDireccion)
 
 router.delete('/delete/:id', eliminar)
 
