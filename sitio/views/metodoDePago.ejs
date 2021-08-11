@@ -27,27 +27,36 @@
         <div>
          <p>Método de pago:</p>   
         </div>
-        <div class="opciones">
-                <input type="radio" name="medio" value="Crédito">
-                <i class="far fa-credit-card"></i>
-                <span>Tarjeta de crédito</span>
+        <form action="/cart/metodoDePago" method="POST" >
+            <% if (locals.errors && errors.pago) { %>
+                <div class="text-danger">
+                        <%= errors.pago.msg %> 
+                </div>
+            <% } %> 
+         <div class="opciones">
+                <input type="radio" name="pago" value="credito" id="credito">
+                <label for="credito"><i class="far fa-credit-card"></i></label>
+                <label for="credito"><span>Tarjeta de crédito</span></label>
         </div>
         <div class="opciones">
-            <input type="radio" name="medio" value="Débito">
-                <i class="fas fa-credit-card"></i>
-                <span>Tarjeta de débito</span>
+            <input type="radio" name="pago" value="debito" id="debito">
+            <label for="debito"><i class="fas fa-credit-card"></i></label>
+            <label for="debito"><span>Tarjeta de débito</span></label>
         </div>
         <div class="opciones">
-            <input type="radio" name="medio" value="Efectivo">
-                <i class="fas fa-money-bill"></i>
-                <span>Efectivo en los puntos de pago</span>
+            <input type="radio" name="pago" value="efectivo" id="efectivo">
+            <label for="efectivo"><i class="fas fa-money-bill"></i></label>
+            <label for="efectivo"><span>Efectivo en los puntos de pago</span></label>
         </div>
     </section>
+    
+
      </section>
 
     <div class="continuar-dos">
         <button><a href="/cart/confirmacionDeLaCompra">Continuar compra</a></button>
     </div>
+    </form>
     </main>
     <%- include('partials/footer') %> 
     <%- include('partials/scripts') %> 

@@ -59,6 +59,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.carrito section article button{
+    border: none;
+    background: transparent;
+}
 .carrito section article i{
     font-size: 40px;
     color:var(--color-rosaFluor);
@@ -71,6 +75,12 @@
 .carrito article .descripcion{
     max-width: 180px;
     margin: 30px;
+}
+.carrito article div .precio-desc{
+    text-decoration:line-through;
+}
+.carrito article div .off{
+    color: var(--color-rosaFluor);
 }
 .carrito article .menos{
     background: none;
@@ -90,12 +100,13 @@
     width: 19px;
 }
 .carrito article .cantidad{
-    width: 24px;
+    width: 30px;
     height: 24px;
     border: 1px solid gray;
     border-right: none;
     border-left: none;
     text-align: center;
+    outline: none;
 }
 .carrito article .form-cant{
     margin: 7px;
@@ -107,8 +118,9 @@
     font-weight: lighter;
     margin: 9px;
 }
-.carrito article .subtotal{
+.carrito article .subtotal , h2, .h2{
     font-weight: bold;
+    font-size: 16px;
 }
 .carrito .cupon{
     background-color: white;
@@ -146,17 +158,11 @@
     padding: 20px 20px;  
     
 }
-.carrito .caja-envio{
+.carrito .envio .caja-envio{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
-}
-.carrito .envio button{
-    color: var(--color-naranja);
-}
-.carrito .envio .dire{
-    color: var(--color-naranja);
 }
 .carrito .envio .caja-total{
     display: flex;
@@ -183,6 +189,12 @@
 .carrito .t-y-c p{
     color: white;
     margin: 10px 0;
+}
+.carrito .t-y-c a{
+    text-decoration: underline;
+}
+.carrito .t-y-c a:hover{
+    color: var(--color-celesteClaro);
 }
 .carrito .t-y-c button{
     background: none;
@@ -280,6 +292,9 @@
     font-size: 18px;
     margin: 10px 0 20px 25px;
 }
+.carrito .datos .text-danger{
+    font-size: 10px;
+}
 .carrito .datos .dato label{
     display: inline-block;
     width: 200px;
@@ -347,6 +362,7 @@
     .carrito section article p{
         font-size: 15px;
         margin: 5px;
+        text-align: center;
     }
     .carrito .cupon-envio{
         display: flex;
