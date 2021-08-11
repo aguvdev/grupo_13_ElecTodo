@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "notebook-carrito.jpeg",
+    "name": "Notebook Celeron",
+    "category": "notebooks",
+    "description": "Notebook Celeron 14'' Memoria 4gb Almacenaje 128gb - Tedge",
+    "stock": 922,
+    "price": 47.499,
+    "discount": 0
+  },
+  {
+    "id": 2,
+    "image": "auriculares-carrito.jpeg",
+    "name": "Auriculares In-ear",
+    "category": "auriculares",
+    "description": "Auriculares In-ear inalámbricos Xiaomi Redmi AirDots 2 negro",
+    "stock": 520,
+    "price": 2.251,
+    "discount": 0
+  },
+  {
+    "id": 3,
+    "image": "celular-carrito.jpeg",
+    "name": "Celular Samsung",
+    "category": "celulares",
+    "description": "Samsung Galaxy A32 128 GB awesome black 4 GB RAM",
+    "stock": 125,
+    "price": 35.999,
+    "discount": 10
+  }
+]
