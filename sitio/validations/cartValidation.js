@@ -15,11 +15,7 @@ const validarPago = [
 const validarDireccion = [
     check('direccion').notEmpty().withMessage('Debes introducir una dirección')
 ]
-const terminosCondiciones = [
-    check('condiciones').isString('on').withMessage('Debes aceptar los términos y condiciones')
-
-]
 
 module.exports = {
-    validacionFinal, validarPago, validarDireccion, terminosCondiciones
+    validacionFinal, validarPago, validarDireccion
 }
