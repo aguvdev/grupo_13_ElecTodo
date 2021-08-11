@@ -7,7 +7,8 @@
     "description": "Notebook Celeron 14'' Memoria 4gb Almacenaje 128gb - Tedge",
     "stock": 922,
     "price": 47.499,
-    "discount": 0
+    "discount": 0,
+    "userId": 2
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "description": "Auriculares In-ear inalámbricos Xiaomi Redmi AirDots 2 negro",
     "stock": 520,
     "price": 2.251,
-    "discount": 0
+    "discount": 0,
+    "userId": 2
   },
   {
     "id": 3,
@@ -27,6 +29,7 @@
     "description": "Samsung Galaxy A32 128 GB awesome black 4 GB RAM",
     "stock": 125,
     "price": 35.999,
-    "discount": 10
+    "discount": 10,
+    "userId": 3
   }
 ]
