@@ -1,0 +1,22 @@
+[
+    {
+        "image" : "img1.jpg",
+        "titulo" : "Mouse redragon",
+        "price" : 999
+    },
+    {
+        "image" : "teclado3.jpg",
+        "titulo" : "Teclado Redragon",
+        "price" : 999
+    },
+    {
+        "image" : "teclado2.jpg",
+        "titulo" : "Teclado Redragon",
+        "price" : 999
+    },
+    {
+        "image" : "teclado1.jpg",
+        "titulo" : "Teclado Redragon",
+        "price" : 999
+    }
+]

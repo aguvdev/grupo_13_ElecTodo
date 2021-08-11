@@ -1,0 +1,56 @@
+[
+    {
+        "title" : "CARACTERISTICAS GENERALES",
+        "caracteristica1" : "Audio",
+        "caracteristica10" : "7.1",
+        "caracteristica2" : "Colores",
+        "caracteristica20" : "Negro",
+        "caracteristica3" : "Conexion",
+        "caracteristica30" : "Cableado",
+        "caracteristica4" : "Con microfono",
+        "caracteristica40" : "Si",
+        "caracteristica5" : "Tipo de Audio",
+        "caracteristica50" : "Virtual",
+        "caracteristica6" : "Tipo",
+        "caracteristica60" : "Headset"
+
+    },
+
+    {
+        "title" : "CONECTIVIDAD",
+        "caracteristica1" : "Usb",
+        "caracteristica10" : "Si",
+        "caracteristica2" : "Inalambrico con Receptor",
+        "caracteristica20" : "No",
+        "caracteristica3" : "Inalambrico Por Bluetooth",
+        "caracteristica30" : "No",
+        "caracteristica4" : "Usb de Alimentacion",
+        "caracteristica40" : "No"
+    },
+        
+    {
+        "title" : "SONIDO",
+        "caracteristica1" : "Impedancia",
+        "caracteristica10" : "32 Ω",
+        "caracteristica2" : "Repuesta Minima",
+        "caracteristica20" : "20Hz",
+        "caracteristica3" : "Respuesta Maxima",
+        "caracteristica30" : "20000 HZ",
+        "caracteristica4" : "Sensibilidad",
+        "caracteristica40" : "117 DB",
+        "caracteristica5" : "Surround",
+        "caracteristica50" : "Si"
+    },
+
+    {
+        "title" : "MICROFONO",
+        "caracteristica1" : "Sensibilidad",
+        "caracteristica10" : "40 DB (-)",
+        "caracteristica2" : "Tipo De Microfono",
+        "caracteristica20" : "Retractil",
+        "caracteristica3" : "Cancelacion De Ruidos",
+        "caracteristica30" : "No",
+        "caracteristica4" : "Tipo Captacion",
+        "caracteristica40" : "Omnidireccional"
+    }
+]
