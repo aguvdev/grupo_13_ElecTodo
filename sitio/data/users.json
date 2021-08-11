@@ -1,0 +1,29 @@
+[
+    {
+        "userId": 1,
+        "name": "Rocio",
+        "surname": "Recalde",
+        "email": "rocio@gmail.com",
+        "password": "xxxxxx",
+        "category": "user",
+        "image": "default-image.png"
+    },
+    {
+        "userId": 2,
+        "name": "Juan",
+        "surname": "Perez",
+        "email": "juan123@gmail.com",
+        "password": "xxxxxx",
+        "category": "user",
+        "image": "default-image.png"
+    },
+    {
+        "userId": 3,
+        "name": "Fran",
+        "surname": "Ruiz",
+        "email": "franx@outlook.com",
+        "password": "xxxxxx",
+        "category": "user",
+        "image": "default-image.png"
+    }
+]
