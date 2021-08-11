@@ -1,0 +1,18 @@
+[
+    {
+        "image1" : "default-image.png",
+        "image2" : "default-image.png",
+        "image3" : "default-image.png",
+        "image4" : "default-image.png",
+        "image5" : "default-image.png",
+        "nombre" : "agregale nombre pa",
+        "modelo" : "agrega el modelo plis",
+        "precio" : 100,
+        "descuento" : 20,
+        "especificaciones" : "agrega especificaciones",
+        "descripcion1" : "agrega tu descripcion 1",
+        "descripcion2" : "agrega tu descripcion 2",
+        "descripcion3" : "agrega tu descripcion 3",
+        "descripcion4" : "agrega tu descripcion 4"
+    }
+]

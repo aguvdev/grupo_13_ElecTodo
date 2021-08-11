@@ -93,6 +93,9 @@
     justify-content: top;
     flex-direction: column;
   }
+  .caja-descripcion{
+    display: flex;
+  }
 
 .carga .formulario-carga{
     background-color: #fff;
