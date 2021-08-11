@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "name" :"auricular",
+        "model": "Redragon H320 Lamia RGB 7.1",
+        "price" : 6000,
+        "discount" : 5500,
+        "specification":"caracteristicas, conectividad",
+        "image1" : "1.jpg",
+        "image2" : "2.jpg",
+        "image3" : "3.jpg",
+        "image4" : "4.jpg",
+        "image5" : "5.jpg",
+        "category" : "auriculares, audio, pc, gaming",
+        "description":"audio, colores , concexion, con mirofono, tipo de audio"
+    }
+]
