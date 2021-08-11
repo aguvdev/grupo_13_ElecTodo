@@ -3,7 +3,7 @@
 
 .carga .seccionesProducto{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 .carga .tituloProduc{
@@ -30,7 +30,8 @@
 }
 .carga .secciones-imagen-carga{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .carga .carga-imagen{
     background-color: #fff;
