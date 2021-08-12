@@ -143,88 +143,43 @@
                             <h3>Gaming</h3>
                         </a>
                     </div>
-                    <article>
+                    <% Gaming.forEach(product => { %>
+                     <article>
                         <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <img src="/img/<%= product.image %>" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                              <p class="product-name"><%= product.name %> </p>
+                              <% if (product.discount > 0) { %>
+                                <h5 class="card-precio precio-desc">$<%= product.price %> </h5>
+                               <p class="card-descuento desc-font"><%= (product.price - (product.discount * product.price /100).toFixed(0)) %> %OFF</p>
+                              <% }else { %>
+                                <h5 class="card-precio">$<%= product.price %> </h5>
+                              <% } %>
+                              <a href="product/detalle-product/<%= product.id %>" class="btn btn-primary">Comprar</a>
                             </div>
                           </div>
                     </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
+                    <% }) %>
                 </div>
+
                 <div class="seccion-celulares">
-                    <article>
+                  <% Celulares.forEach(product => { %>
+                   <article>
                         <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
+                            <img src="/img/<%= product.image %> " class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
+                              <p class="product-name"><%= product.name %> </p>
+                              <% if (product.discount > 0) { %>
+                                <h5 class="card-precio precio-desc">$<%= product.price %> </h5>
+                                <p class="card-descuento desc-font"><%= (product.price - (product.discount * product.price /100).toFixed(0)) %> %OFF</p>
+                                <% }else { %>
+                                  <h5 class="card-precio">$<%= product.price %> </h5>
+                                <% } %>
+                              <a href="product/detalle-product/<%= product.id %>" class="btn btn-primary">Comprar</a>
                             </div>
                           </div>
                     </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
+                  <% }) %>
                     <div class="cuadro-celulares">
                         <a href="">
                             <img src="/img/celular-sect.png" alt="">
@@ -235,48 +190,26 @@
                 <div class="seccion-notebooks">
                     <div class="cuadro-notebooks">
                         <img src="/img/notebooksDesc.png" alt="">
-                        <h3>Gaming</h3>
+                        <h3>Notebooks</h3>
                     </div>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
-                    <article>
-                        <div class="card">
-                            <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-precio">$5.000</h5>
-                              <p class="card-descuento">40% OFF</p>
-                              <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                            </div>
-                          </div>
-                    </article>
+                    <% Notebooks.forEach(product => { %>
+                      <article>
+                           <div class="card">
+                               <img src="/img/<%= product.image %> " class="card-img-top" alt="...">
+                               <div class="card-body">
+                                <p class="product-name"><%= product.name %> </p>
+                                 <% if (product.discount > 0) { %> 
+                                  <h5 class="card-precio precio-desc">$<%= product.price %> </h5>
+                                   <p class="card-descuento desc-font"><%= (product.price - (product.discount * product.price /100).toFixed(0)) %> %OFF</p>
+                              
+                                  <% }else { %>
+                                    <h5 class="card-precio">$<%= product.price %> </h5>
+                                  <% } %>
+                                 <a href="product/detalle-product/<%= product.id %>" class="btn btn-primary">Comprar</a>
+                               </div>
+                             </div>
+                       </article>
+                     <% }) %>
                 </div>
             </section>
             <section class="ofertas2">
