@@ -42,7 +42,16 @@
     display: flex;
     justify-content: space-evenly;
 }
-
+.home .product-name{
+    font-size: 20px;
+}
+.home .precio-desc{
+    text-decoration: line-through 2px solid;
+}
+.home .desc-font{
+    color: var(--color-rosaFluor);
+    font-size: 20px;
+}
 .home .seccion-gaming{
     display: flex;
     flex-wrap: wrap;
@@ -239,6 +248,7 @@
 
 .home .card{
     width: 12rem;
+    height: 28rem;
     background-color: rgba(255, 255, 255, 0.9);
     margin: 15px;
 }
