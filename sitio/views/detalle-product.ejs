@@ -55,10 +55,23 @@
                             <p></p>
                             <i class="fas fa-truck"></i> <span>Envios a todo el pais</span>
                         </div> 
-                
-                        <div class="carrito">
-                            <a href="/cart"><span>sumar al carrito</span></a>
+                        
+                        <div class="botones">
+                            <div class="carrito">
+                                <a href="/cart"><span>sumar al carrito</span></a>
+                            </div>
+                            
+                            <div class="botoncito">
+                                <a class="btn btn-success" href="product/edit/<%= producto.id %>" class="btn btn-primary">Editar</a>
+                            </div>
+    
+                            <div class="botoncito">
+                                <form action="/product/remove/<%= producto.id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-primary btn-danger">Eliminar</button>
+                                  </form>
+                            </div>
                         </div>
+
                     
                 </div>
             </div>

@@ -95,6 +95,23 @@
     text-decoration: none;
     color: white;
 }
+.detalle .botoncito{
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: var(--color-rosaFluor);
+    padding: 6px;
+    font-size: 17px;
+    margin: 28px auto;
+    color: #fff;
+    width: 185px;
+}
+.detalle .botones{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
 .detalle .menu article{
     text-transform: uppercase;
     padding: 10px ;
