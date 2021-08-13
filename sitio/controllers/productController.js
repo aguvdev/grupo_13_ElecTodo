@@ -48,10 +48,18 @@ module.exports={
     },
     update : (req,res) => {
         res.send(req.body)
+        return res.redirect('/');
     },
-    remove : (req,res) => {
-        res.send(req.params.id)
-    }
-
     
+    remove : (req, res) =>{
+        productos.forEach(producto => {
+            if(producto.id === +req.params.id){
+				let eliminar = productos.indexOf(producto)
+                productos.splice(eliminar, 1)
+                }
+        });
+        fs.writeFileSync(path.join(__dirname, '../data/indexProducts.json'), JSON.stringify(productos,null,2),'utf-8');
+		return res.redirect('/');
+
+    }  
 }

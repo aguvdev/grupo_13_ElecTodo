@@ -30,15 +30,6 @@
     "discount": 0
   },
   {
-    "id": 4,
-    "image": "default-image.png",
-    "name": "Mousepad",
-    "category": "gaming",
-    "description": "Mousepad HyperX FURY Ultra RGB Hard (360x300mm)",
-    "price": 6899,
-    "discount": 10
-  },
-  {
     "id": 5,
     "image": "default-image.png",
     "name": "Celular Samsung Galaxy M12",
@@ -127,5 +118,14 @@
     "description": "es mejor otro celular este se cae a pedazos",
     "price": "123",
     "discount": "12"
+  },
+  {
+    "id": 15,
+    "image": "default-image.png",
+    "name": "mouspad",
+    "category": "gaming",
+    "description": "se cae a pedazos este mouspad mejor compra el logitech pa full picado",
+    "price": "3000",
+    "discount": "15"
   }
 ]
