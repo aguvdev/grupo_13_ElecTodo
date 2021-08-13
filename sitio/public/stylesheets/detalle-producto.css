@@ -95,7 +95,7 @@
     text-decoration: none;
     color: white;
 }
-.detalle .botoncito button, a{
+.detalle .botoncito button{
     text-transform: uppercase;
     border-radius: 1em 1em 1em 1em;
     color: white;
