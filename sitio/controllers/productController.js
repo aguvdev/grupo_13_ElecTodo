@@ -1,12 +1,15 @@
 const fs = require("fs");
 const path = require("path");
-const productos = require("../data/products_db");
+const productos = require("../data/indexProducts");
 const description = require("../data/description_db");
 const relacionados = require("../data/relacionados_db");
+const categorias = require("../data/categories_db");
 
 module.exports={    
     carga : (req,res) => {
-        return res.render('carga');
+        return res.render('carga',{
+            categorias
+        });
     },
     save : (req,res) => {
         const {id,image,name,category,category1,description,price,discount} = req.body;
@@ -20,8 +23,6 @@ module.exports={
             description,
             price,
             discount,
-            
-            
         }
         productos.push(producto)
         fs.writeFileSync(path.join(__dirname,"..","data","indexProducts.json"),JSON.stringify(productos,null,2),"utf-8")
@@ -29,10 +30,9 @@ module.exports={
     },
 
     product : (req,res) => {
-        let product = productos.find(producto => producto.id === +req.params.id);
+        let producto = productos.find(producto => producto.id === +req.params.id);
         return res.render("detalle-product",{
-            product,
-            productos,
+            producto,
             description,
             relacionados
             
@@ -41,7 +41,6 @@ module.exports={
     edit : (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
         return res.render ("productEdit",{
-            
             producto,
             productos
         })

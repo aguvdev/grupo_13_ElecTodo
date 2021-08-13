@@ -7,46 +7,47 @@
         <div class="menu">
             <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
                 <section class="img-auricular"><!-- encierro solo las fotos -->
-                    <% productos.forEach(producto => { %>
-                        <img src="/img/<%= producto.image1 %>" alt="imagen auris">
+                    
+                        <img src="/img/<%= producto.image %>" alt="imagen auris">
         
                         <div class="galeria-auris">
                             <div class="auris">
-                                <img src="/img/<%= producto.image2 %>" alt="">
+                                <img src="/img/<%= producto.image %>" alt="">
                             </div>
                             <div class="auris">
-                                <img src="/img/<%= producto.image3 %>" alt="">
+                                <img src="/img/<%= producto.image %>" alt="">
                             </div>
                             <div class="auris">
-                                <img src="/img/<%= producto.image4 %>" alt="">
+                                <img src="/img/<%= producto.image %>" alt="">
                             </div>
                             <div class="auris">
-                                <img src="/img/<%= producto.image5 %>" alt="">
+                                <img src="/img/<%= producto.image %>" alt="">
                             </div>
                         </div>
-
-                    <% }) %>
-
+                    
                 </section>        
                 
+
+
                 <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
-                    <% productos.forEach(producto => { %>
+                    
                         <div class="titulo">
                             <h1><%= producto.name %> </h1>  
                         </div>
         
                         <div class="model">
                             <h1> <%= producto.model %> </h1>
-                            <h6><%= producto.category %></h6>
+                            <h3> <%= producto.description %> </h3>
+                            <h5>Categoria de: <%= producto.category %></h5>
                         </div>
                 
                         <div class="precio">
-                            <h4> $<%= producto.price %> <br> precio especial</h4>
+                            <h4> $<%= producto.price %> <br> Precio Lista</h4>
                             <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
                         </div>
         
                         <div class="discount">
-                            <h4>pagando al contado a: <br> $<%= producto.discount %> <br> precio en efectivo</h4>
+                            <h4>pagando con efectivo un: <br> <%= producto.discount %>%  de descuento</h4>
                         </div>
                 
                         <div class="garantia-envios">
@@ -58,7 +59,7 @@
                         <div class="carrito">
                             <a href="/cart"><span>sumar al carrito</span></a>
                         </div>
-                    <% }) %>
+                    
                 </div>
             </div>
         </div>

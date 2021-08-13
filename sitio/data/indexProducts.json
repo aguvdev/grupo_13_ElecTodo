@@ -1,116 +1,116 @@
 [
-    {
-        "id": 1,
-        "image": "default-image.png",
-        "name": "Mouse HyperX Pulsefire",
-        "category": "gaming",
-        "category1": "mouse",
-        "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
-        "price": 4299,
-        "discount": 20 
-    },
-    {
-        "id": 2,
-        "image": "default-image.png",
-        "name": "Auriculares HyperX Cloud Revolver",
-        "category": "gaming",
-        "category1": "auriculares",
-        "description": "Auriculares HyperX Cloud Revolver + 7.1 Gaming Headset Metal 3.5mm/USB PC/PS4/XBOX/Switch",
-        "price": 17300,
-        "discount": 0 
-    },
-    {
-        "id": 3,
-        "image": "default-image.png",
-        "name": "Teclado Redragon ",
-        "category": "gaming",
-        "category1": "teclados",
-        "description": "Teclado Redragon KUMARA K552 RGB Mecánico Switch Red",
-        "price": 6000,
-        "discount": 0
-    },
-    {
-        "id": 4,
-        "image": "default-image.png",
-        "name": "Mousepad",
-        "category": "gaming",
-        "description": "Mousepad HyperX FURY Ultra RGB Hard (360x300mm)",
-        "price": 6899,
-        "discount": 10 
-    },
+  {
+      "id": 1,
+      "image": "default-image.png",
+      "name": "Mouse HyperX Pulsefire",
+      "category": "gaming",
+      "category1": "mouse",
+      "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+      "price": 4299,
+      "discount": 20 
+  },
+  {
+      "id": 2,
+      "image": "default-image.png",
+      "name": "Auriculares HyperX Cloud Revolver",
+      "category": "gaming",
+      "category1": "auriculares",
+      "description": "Auriculares HyperX Cloud Revolver + 7.1 Gaming Headset Metal 3.5mm/USB PC/PS4/XBOX/Switch",
+      "price": 17300,
+      "discount": 0 
+  },
+  {
+      "id": 3,
+      "image": "default-image.png",
+      "name": "Teclado Redragon ",
+      "category": "gaming",
+      "category1": "teclados",
+      "description": "Teclado Redragon KUMARA K552 RGB Mecánico Switch Red",
+      "price": 6000,
+      "discount": 0
+  },
+  {
+      "id": 4,
+      "image": "default-image.png",
+      "name": "Mousepad",
+      "category": "gaming",
+      "description": "Mousepad HyperX FURY Ultra RGB Hard (360x300mm)",
+      "price": 6899,
+      "discount": 10 
+  },
 
-    {
-        "id": 5,
-        "image": "default-image.png",
-        "name": "Celular Samsung Galaxy M12",
-        "category": "Celulares",
-        "description": "Celular Samsung Galaxy M12 Negro",
-        "price": 36000,
-        "discount": 5
-    },
-    {
-        "id": 6,
-        "image": "default-image.png",
-        "name": "Celular Samsung Galaxy Z Fold",
-        "category": "Celulares",
-        "description": "Celular Samsung Galaxy Z Fold",
-        "price": 40000,
-        "discount": 0
-    },
-    {
-        "id": 7,
-        "image": "default-image.png",
-        "name": "Celular Moto e5",
-        "category": "Celulares",
-        "description": "Celular Moto e5",
-        "price": 40000,
-        "discount": 0
-    },
-    {
-        "id": 8,
-        "image": "default-image.png",
-        "name": "Celular Samsung A72",
-        "category": "Celulares",
-        "description": "Celular Samsung A72",
-        "price": 75000,
-        "discount": 10
-    },
+  {
+      "id": 5,
+      "image": "default-image.png",
+      "name": "Celular Samsung Galaxy M12",
+      "category": "Celulares",
+      "description": "Celular Samsung Galaxy M12 Negro",
+      "price": 36000,
+      "discount": 5
+  },
+  {
+      "id": 6,
+      "image": "default-image.png",
+      "name": "Celular Samsung Galaxy Z Fold",
+      "category": "Celulares",
+      "description": "Celular Samsung Galaxy Z Fold",
+      "price": 40000,
+      "discount": 0
+  },
+  {
+      "id": 7,
+      "image": "default-image.png",
+      "name": "Celular Moto e5",
+      "category": "Celulares",
+      "description": "Celular Moto e5",
+      "price": 40000,
+      "discount": 0
+  },
+  {
+      "id": 8,
+      "image": "default-image.png",
+      "name": "Celular Samsung A72",
+      "category": "Celulares",
+      "description": "Celular Samsung A72",
+      "price": 75000,
+      "discount": 10
+  },
 
 
-    {
-        "id": 9,
-        "image": "default-image.png",
-        "name": "Notebook HP",
-        "category": "laptops",
-        "description": "Notebook HP 14-DK1016LA AMDATHLON",
-        "price": 69000,
-        "discount": 10
-    },
-    {
-        "id": 10,
-        "image": "default-image.png",
-        "name": "Notebook Lenovo",
-        "category": "laptops",
-        "description": "Notebook Lenovo Idea Pad 1-12 GL05 Intel Celeron",
-        "price": 56000,
-        "discount": 0
-    },
-    {
-        "id": 11,
-        "image": "default-image.png",
-        "name": "Notebook X-View",
-        "category": "laptops",
-        "description": "Notebook X-View Novabook V2 Intel Celeron",
-        "price": 42000,
-        "discount": 10
-    },
-    {
-        "id": 12,
-        "image": "default-image.png",
-        "name": "Notebook Exo",
-        "category": "laptops",
-        "description": "Notebook Exo L33 Celeron",
-        "price": 40000,
-        "discount": 0
-    }
+  {
+      "id": 9,
+      "image": "default-image.png",
+      "name": "Notebook HP",
+      "category": "laptops",
+      "description": "Notebook HP 14-DK1016LA AMDATHLON",
+      "price": 69000,
+      "discount": 10
+  },
+  {
+      "id": 10,
+      "image": "default-image.png",
+      "name": "Notebook Lenovo",
+      "category": "laptops",
+      "description": "Notebook Lenovo Idea Pad 1-12 GL05 Intel Celeron",
+      "price": 56000,
+      "discount": 0
+  },
+  {
+      "id": 11,
+      "image": "default-image.png",
+      "name": "Notebook X-View",
+      "category": "laptops",
+      "description": "Notebook X-View Novabook V2 Intel Celeron",
+      "price": 42000,
+      "discount": 10
+  },
+  {
+      "id": 12,
+      "image": "default-image.png",
+      "name": "Notebook Exo",
+      "category": "laptops",
+      "description": "Notebook Exo L33 Celeron",
+      "price": 40000,
+      "discount": 0
+  }
 ]
