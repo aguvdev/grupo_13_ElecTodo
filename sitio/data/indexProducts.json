@@ -102,24 +102,6 @@
     "discount": 0
   },
   {
-    "id": 13,
-    "image": "default-image.png",
-    "name": "Prueba de agregar celular",
-    "category": "Celulares",
-    "description": "es mejor otro celular este se cae a pedazos",
-    "price": "999999",
-    "discount": "10"
-  },
-  {
-    "id": 14,
-    "image": "default-image.png",
-    "name": "otra prueba",
-    "category": "laptops",
-    "description": "es mejor otro celular este se cae a pedazos",
-    "price": "123",
-    "discount": "12"
-  },
-  {
     "id": 15,
     "image": "default-image.png",
     "name": "mouspad",
