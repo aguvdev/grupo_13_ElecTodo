@@ -16,7 +16,7 @@ module.exports={
 
         let producto = {
             id : productos[productos.length - 1].id + 1,
-            image ,
+            image : "default-image.png",
             name,
             category,
             category1,
@@ -42,8 +42,15 @@ module.exports={
         let producto = productos.find(producto => producto.id === +req.params.id);
         return res.render ("productEdit",{
             producto,
-            productos
+            productos,
+            categorias
         })
+    },
+    update : (req,res) => {
+        res.send(req.body)
+    },
+    remove : (req,res) => {
+        res.send(req.params.id)
     }
 
     
