@@ -109,5 +109,14 @@
     "description": "se cae a pedazos este mouspad mejor compra el logitech pa full picado",
     "price": "3000",
     "discount": "15"
+  },
+  {
+    "id": 16,
+    "image": "image-1629120590198.jpg",
+    "name": "placa video",
+    "category": "gaming",
+    "description": "placa video xfx nuevo 8gb vram 1366hz velocidad",
+    "price": "75000",
+    "discount": "5"
   }
 ]

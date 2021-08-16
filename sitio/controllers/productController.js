@@ -16,7 +16,7 @@ module.exports={
 
         let producto = {
             id : productos[productos.length - 1].id + 1,
-            image : "default-image.png",
+            image : req.file ? req.file.filename : "default-image.png", /* si viene algo por file de lo comtrario guarda un img default */
             name,
             category,
             category1,
