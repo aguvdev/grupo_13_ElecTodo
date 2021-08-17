@@ -3,12 +3,17 @@
         <div class="logo">
             <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
         </div>
+
+
         <div class="buscador">
-                <input class="buscar-texto" type="text" placeholder="¿Qué producto estás buscando?">
-            <button class="boton">
-                <i class="fas fa-search"></i>
-            </button>
+            <form action="/product/search" method="GET">
+                <input class="buscar-texto" type="text" name="search" placeholder="¿Qué producto estás buscando?">
+                <button class="boton"> <i class="fas fa-search"></i> </button>
+            </form>
+
         </div>
+
+
         <nav class="nav-header-menu">
             <ul>
                 <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>

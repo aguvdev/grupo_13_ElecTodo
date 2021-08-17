@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {product,carga,save,edit,update,remove} = require("../controllers/productController")
+const {product,carga,save,edit,update,remove,search} = require("../controllers/productController")
 const multer = require("multer");
 const path = require ("path");
 
@@ -24,5 +24,6 @@ router.get("/detalle-product/:id", product);
 router.get("/edit/:id",edit);
 router.put("/edit/:id",update);
 router.delete("/remove/:id",remove);
+router.get("/search", search);
 
 module.exports = router;

@@ -61,5 +61,15 @@ module.exports={
         fs.writeFileSync(path.join(__dirname, '../data/indexProducts.json'), JSON.stringify(productos,null,2),'utf-8');
 		return res.redirect('/');
 
-    }  
+    },
+    search : (req,res) =>{
+        let result = productos.filter(producto => producto.category === req.query.search)
+        return res.render("resultSearch",{
+            result,
+            productos,
+            busqueda : req.query.search
+        })
+
+        }
+      
 }
