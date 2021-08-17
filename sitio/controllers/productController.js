@@ -63,7 +63,7 @@ module.exports={
 
     },
     search : (req,res) =>{
-        let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search.toLowerCase()));
+        let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search.toLowerCase().trim()));
         return res.render("resultSearch",{
             result,
             productos,
