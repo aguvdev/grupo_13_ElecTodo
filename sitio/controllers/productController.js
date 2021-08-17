@@ -63,12 +63,17 @@ module.exports={
 
     },
     search : (req,res) =>{
-        let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search.toLowerCase().trim()));
-        return res.render("resultSearch",{
-            result,
-            productos,
-            busqueda : req.query.search
-        })
+        if(req.query.search.trim() != ""){/* para no tocar la busqueda  si no escribi nada me aparesca el else no todo la lista */
+            let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search.toLowerCase().trim()));
+            return res.render("resultSearch",{
+                result,
+                productos,
+                busqueda : req.query.search
+            })
+        }else{
+            res.send("DEBE ESCRIBIR ALGUN PRODUCTO QUE DESEA BUSCAR... ")
+        }
+
 
         }
       
