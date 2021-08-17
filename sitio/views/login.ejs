@@ -14,12 +14,22 @@
                             <div class="mb-3">
                                 <h4 class="card-title text-center">Iniciar Sesión</h4>
                                 <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                <input type="email" class="form-control <%= locals.errors && errors.correo ? 'is-invalid' : null%>" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="correo" value="<%= locals.oldData ? oldData.correo : null%>">
+                                    <% if (locals.errors && errors.correo) { %>
+                                        <div class="text-danger">
+                                                <%= errors.correo.msg %> 
+                                        </div>
+                                        <% } %>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <input type="password" class="form-control <%= locals.errors && errors.contrasenia ? 'is-invalid' : null%>" id="exampleInputPassword1" name="contrasenia">
+                                <% if (locals.errors && errors.contrasenia) { %>
+                                    <div class="text-danger">
+                                            <%= errors.contrasenia.msg %> 
+                                    </div>
+                                    <% } %>
                                 <div id="emailHelp" class="form-text text-center"><a href="">¿Olvidaste la contraseña?</a></div>
                             </div>
                             <div class="mb-3 form-check">
