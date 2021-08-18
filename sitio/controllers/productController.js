@@ -4,6 +4,7 @@ const productos = require("../data/indexProducts");
 const description = require("../data/description_db");
 const relacionados = require("../data/relacionados_db");
 const categorias = require("../data/categories_db");
+const {validationResult} = require('express-validator');
 
 module.exports={    
     carga : (req,res) => {
@@ -12,6 +13,14 @@ module.exports={
         });
     },
     save : (req,res) => {
+        const result = validationResult(req);
+        if(result.errors.length > 0){
+            return res.render('carga', {
+                categorias,
+                errors: result.mapped(),
+                oldData: req.body
+            })
+        }
         const {id,image,name,category,category1,description,price,discount} = req.body;
 
         let producto = {

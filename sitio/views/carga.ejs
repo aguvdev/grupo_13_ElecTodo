@@ -50,27 +50,47 @@
         
                         <div class="secciones-formulario-carga">
                             <section class="formulario-carga">
-                                <input class="texto-carga" type="text" placeholder="Nombre:" name="name">
+                                <input class="texto-carga <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" placeholder="Nombre:" name="name" value="<%= locals.oldData ? oldData.name : null%>">
+                                
                             </section>
+                            <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger">
+                                            <%= errors.name.msg %> 
+                                    </div>
+                                    <% } %>
                             <section class="formulario-carga2">
-                                <input class="texto-carga" type="text" placeholder="Modelo:" name="model">
+                                <input class="texto-carga <%= locals.errors && errors.model ? 'is-invalid' : null%>" type="text" placeholder="Modelo:" name="model" value="<%= locals.oldData ? oldData.model : null%>">
                             </section>
+                            <% if (locals.errors && errors.model) { %>
+                                <div class="text-danger">
+                                        <%= errors.model.msg %> 
+                                </div>
+                                <% } %>
                             <select class="formulario-category" name="category">
-                                <option selected>Seleccione su Categoria</option>
+                                <option >Seleccione su categoría</option>
                                 <% categorias.forEach(categoria => { %>
                                     <option value="<%= categoria %>"><%= categoria %></option>
                                 <% }) %>
                               </select>
                             <section class="formulario-carga2">
-                                <input class="texto-carga" type="number" placeholder="Precio $:" name="price">
+                                <input class="texto-carga <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" placeholder="Precio $:" name="price" value="<%= locals.oldData ? oldData.price : null%>">
                             </section>
+                            <% if (locals.errors && errors.price) { %>
+                                <div class="text-danger">
+                                        <%= errors.price.msg %> 
+                                </div>
+                                <% } %>
                             <section class="formulario-carga2">
                                 <input class="texto-carga" type="text" placeholder="Descuento %:" name="discount">
                             </section>
                             <section class="formulario-descripcion-carga">
-                                <input class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description">
+                                <input class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" value="<%= locals.oldData ? oldData.description : null%>">
                             </section>
-                                    
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-danger">
+                                        <%= errors.description.msg %> 
+                                </div>
+                                <% } %>
                             
                                           
                         
@@ -84,7 +104,8 @@
                         <button class="btn btn-primary" type="submit">Guardar</button>
                     </section>
                     <section class="cancelar-carga">
-                        <button>
+                        <button type="reset">
+                            
                             <a href="">
                             <i class="fas fa-times"></i><p> Cancelar</p>
                             </a>

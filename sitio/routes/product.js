@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const {validacionCarga} =require('../validations/cargaValidation')
 const {product,carga,save,edit,update,remove,search} = require("../controllers/productController")
 const multer = require("multer");
 const path = require ("path");
@@ -19,7 +20,7 @@ const upload = multer ({
 
 /* GET products listing. */
 router.get('/carga', carga);
-router.post('/carga',upload.single("image"),save);
+router.post('/carga', upload.single("image"),validacionCarga, save);
 router.get("/detalle-product/:id", product);
 router.get("/edit/:id",edit);
 router.put("/edit/:id",update);
