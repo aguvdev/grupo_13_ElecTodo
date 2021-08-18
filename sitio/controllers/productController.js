@@ -56,8 +56,21 @@ module.exports={
         })
     },
     update : (req,res) => {
-        res.send(req.body)
-        return res.redirect('/');
+        const {id,image,name,category,category1,description,price,discount} = req.body;
+
+        productos.forEach(producto => {
+            if(producto.id === +req.params.id){/* recorro y si me toco con el id correspondiente hago la modificacion */
+                producto.id = +req.params.id
+                producto.name = name,
+                producto.image = req.file ? req.file.filename : producto.image,
+                producto.category = category,
+                producto.description = description,
+                producto.price = price,
+                producto.discount = discount
+            }
+        });
+        fs.writeFileSync(path.join(__dirname,"..","data","indexProducts.json"),JSON.stringify(productos,null,2),"utf-8")
+        return res.redirect('/product/detalle-product/' + req.params.id);
     },
     
     remove : (req, res) =>{
