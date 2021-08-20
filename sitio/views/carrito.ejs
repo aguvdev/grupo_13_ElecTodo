@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main class="carrito">
+     <nav>
+         <div class="aqui">
+        <i class="fas fa-truck"></i>
+         <p>Carrito / Punto de entrega</p> 
+         </div>
+         <div class="navegacion">
+          <i class="fas fa-money-bill-alt"></i>
+         <p>Método de pago</p>
+         </div>
+         <div class="navegacion2">
+            <i class="far fa-check-circle"></i>
+            <p>Confirmación de la compra</p> 
+         </div>
+     </nav>
+     <section>
+         <% cartProducts.forEach(product => { %>
+         <article>
+                 <form action="/cart/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            <img src="/img/<%= product.image %> " alt="">
+            <p class="descripcion"><%= product.description %> </p>
+            <div>
+                <p>Precio</p>
+                    <% if (product.discount > 0) { %>
+                        <div>
+                        <span class="precio-desc"><%= product.price %></span>
+                        <span class="off"><%= product.discount %>%OFF</span>
+                        </div>  
+                    <% }else { %>
+                   <p>$<%= product.price %></p>
+                   <% } %>   
+               </div>
+               <div>
+                <p>Cantidad</p>
+                <form action="" class="form-cant">
+                    <button class="menos" >-</button><input class="cantidad" type="text" placeholder="1"><button class="mas">+</button>
+                </form>
+              <h6><%= product.stock %>  disponibles</h6>
+              </div>
+                <div>
+                 <p>Subtotal</p>
+                 <p class="subtotal"></p>  
+                   <% if (product.discount > 0) { %>
+                    <h2>$<%= (product.price - (product.discount * product.price /100).toFixed(2)) %></h2>
+                <% } else {%>
+                    <h2>$<%= product.price %></h2>
+                <% } %>
+                </div>
+                
+            </article>
+        <% }) %>
+
+     </section>
+     <section class="cupon-envio">
+
+        <section class="cupon">
+         <p>Si tenés un cupón de descuento y querés asignarlo a esta compra, completá el siguiente campo con el código del cupón.
+         </p>
+         <form action=""><input class="cod-cupon" type="text" placeholder="Código cupón" name="cupón"><button>Aplicar</button></form>
+     </section>
+
+     <section class="envio">
+
+         <div class="caja-envio">
+
+             <form action="/cart" method="POST">
+
+                <p class="dire"> Envío a <input class="cod-cupon <%= locals.errors && errors.direccion ? 'is-invalid' : null%>" type="text" placeholder="Dirección" name="direccion" value="<%= locals.oldData ? oldData.direccion : null%>">
+                <% if (locals.errors && errors.direccion) { %>
+                    <div class="text-danger">
+                        <%= errors.direccion.msg %> 
+                    </div>
+                <% } %>
+            </p> 
+            <p class="p-e">$204.99</p>
+            
+         </div>
+         <div class="caja-total">
+         <p class="total">Total</p>
+         <p class="n-total">$82.649</p>
+         </div>
+     </section>
+
+     </section>
+     
+     <section class="t-y-c">
+           <p>
+               <button><input type="checkbox" value="Acepto los términos y condiciones" name="condiciones" checked></button>Aceptar los <a href="">términos y condiciones</a> 
+            </p>
+     </section>
+     
+     <div class="continuar">
+         <button><a href="/">Comprar más productos</a></button>
+         <button type="submit"><a href="/cart/metodoDePago">Continuar compra</a></button>
+     </div>
+     </form>
+    </main>
+    <%- include('partials/footer') %> 
+    <%- include('partials/scripts') %> 
+</body>
+</html>

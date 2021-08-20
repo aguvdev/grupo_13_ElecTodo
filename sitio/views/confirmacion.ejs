@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+        <%- include('partials/header') %>
+            <main class="carrito">
+                <nav>
+                    <div class="navegacion">
+                        <i class="fas fa-truck"></i>
+                        <p>Carrito / Punto de entrega</p>
+                    </div>
+                    <div class="navegacion2">
+                        <i class="fas fa-money-bill-alt"></i>
+                        <p>Método de pago</p>
+                    </div>
+                    <div class="aqui">
+                        <i class="far fa-check-circle"></i>
+                        <p>Confirmación de la compra</p>
+                    </div>
+                </nav>
+                <section class="cuerpo2">
+                    <div class="total-dos">
+                        <h3>Total</h3>
+                        <h3>$85.749</h3>
+                    </div>
+                    <section class="datos">
+                        <p>Datos personales:</p>
+                    <form action="/cart/confirmacionDeLaCompra" method="POST">
+                        <div class="dato">
+                                <label for="email">E-mail</label>
+                                <input class="caja-dato <%= locals.errors && errors.email ? 'is-invalid' : null%>" type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null%>">
+                                
+                        <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                                <%= errors.email.msg %> 
+                        </div>
+                        <% } %>
+                            </div>
+                        
+                        <div class="dato">
+                            <label for="nombre">Nombres/s</label>
+                            <input class="caja-dato <%= locals.errors && errors.nombre ? 'is-invalid' : null%>" type="text" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : null%>">
+                            <% if (locals.errors && errors.nombre) { %>
+                                <div class="text-danger">
+                                        <%= errors.nombre.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="dato">
+                            <label for="apellido">Apellido/s</label>
+                            <input class="caja-dato <%= locals.errors && errors.apellido ? 'is-invalid' : null%>" type="text" name="apellido" id="apellido" value="<%= locals.oldData ? oldData.apellido : null%>">
+                            <% if (locals.errors && errors.apellido) { %>
+                                <div class="text-danger">
+                                        <%= errors.apellido.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+                        <div class="dato">
+                            <label for="dni">DNI</label>
+                            <input class="caja-dato <%= locals.errors && errors.dni ? 'is-invalid' : null%>" type="text" name="dni" id="dni" value="<%= locals.oldData ? oldData.dni : null%>">
+                            <% if (locals.errors && errors.dni) { %>
+                                <div class="text-danger">
+                                        <%= errors.dni.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+                        <div class="dato">
+                            <label for="contacto">Número de contacto</label>
+                            <input class="caja-dato <%= locals.errors && errors.contacto ? 'is-invalid' : null%>" type="tel" name="contacto" id="contacto" value="<%= locals.oldData ? oldData.contacto : null%>">
+                            <% if (locals.errors && errors.contacto) { %>
+                                <div class="text-danger">
+                                        <%= errors.contacto.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="dato">
+                            <label class="comentario" for="comentario">Comentario</label>
+                            <textarea class="coment" name="comentario" id="comentario" cols="30" rows="10" value="<%= locals.oldData ? oldData.comentario : null%>"></textarea>
+                        </div>
+                      
+                    </section>
+                </section>
+                <div class="continuar-dos">
+                    <button type="submit" onclick="alert('¡Su compra ha sido exitosa!')" value="compra exitosa">Confirmar</button>
+                </div>
+            </form> 
+            </main>
+            <%- include('partials/footer') %>
+                <%- include('partials/scripts') %>
+    </body>
+
+</html>

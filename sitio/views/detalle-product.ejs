@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("./partials/head") %> 
+<body>
+    <%- include("./partials/header") %>
+    <main class="detalle">
+        <div class="menu">
+            <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
+                <section class="img-auricular"><!-- encierro solo las fotos -->
+                    
+                        <img src="/img/<%= producto.image %>" alt="imagen auris">
+        
+                        <div class="galeria-auris">
+                            <div class="auris">
+                                <img src="/img/<%= producto.image %>" alt="">
+                            </div>
+                            <div class="auris">
+                                <img src="/img/<%= producto.image %>" alt="">
+                            </div>
+                            <div class="auris">
+                                <img src="/img/<%= producto.image %>" alt="">
+                            </div>
+                            <div class="auris">
+                                <img src="/img/<%= producto.image %>" alt="">
+                            </div>
+                        </div>
+                    
+                </section>        
+                
+
+
+                <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
+                    
+                        <div class="titulo">
+                            <h1><%= producto.name %> </h1>  
+                        </div>
+        
+                        <div class="model">
+                            <h1> <%= producto.model %> </h1>
+                            <h3> <%= producto.description %> </h3>
+                            <h5>Categoria de: <%= producto.category %></h5>
+                        </div>
+                
+                        <div class="precio">
+                            <h4> $<%= producto.price %> <br> Precio Lista</h4>
+                            <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
+                        </div>
+        
+                        <div class="discount">
+                            <h4>pagando con efectivo un: <br> <%= producto.discount %>%  de descuento</h4>
+                        </div>
+                
+                        <div class="garantia-envios">
+                            <i class="fad fa-shield-alt"></i> <span>Garantia - 12 meses</span>
+                            <p></p>
+                            <i class="fas fa-truck"></i> <span>Envios a todo el pais</span>
+                        </div> 
+                        
+                        <div class="botones">
+                            <div class="carrito">
+                                <a href="/cart"><span>sumar al carrito</span></a>
+                            </div>
+                            
+                            
+                                <a class="btn btn-primary btn-success" href="/product/edit/<%= producto.id %>" >Editar</a>
+                            
+    
+                            <div class="botoncito">
+                                <form action="/product/remove/<%= producto.id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-primary btn-danger">Eliminar</button>
+                                  </form>
+                            </div>
+                        </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    
+    </div>   
+    <div class="contenedor-especificaciones">
+        <% description.forEach(description => { %>
+        <div class="contenedor-caracteristicas">
+
+                <h3> <%= description.title %> </h3>
+                <div class="caracteristicas-contenido">
+                    <span><%= description.caracteristica1 %></span>
+                    <span><%= description.caracteristica10 %></span>
+                </div>
+                <div class="caracteristicas-contenido">
+                    <span><%= description.caracteristica2 %></span>
+                    <span><%= description.caracteristica20 %></span>
+                </div>
+                <div class="caracteristicas-contenido">
+                    <span><%= description.caracteristica3 %></span>
+                    <span><%= description.caracteristica30 %></span>
+                </div>
+                <div class="caracteristicas-contenido">
+                    <span><%= description.caracteristica4 %></span>
+                    <span><%= description.caracteristica40 %></span>
+                </div>
+                <div class="caracteristicas-contenido">
+                    <span><%= description.caracteristica5 %></span>
+                    <span><%= description.caracteristica50 %></span>
+                </div>
+                <div class="caracteristicas-contenido">
+                    <span><%= description.caracteristica6 %></span>
+                    <span><%= description.caracteristica60 %></span>
+                </div>
+        
+            </div> 
+            <% }) %>
+
+    </div>
+
+    <!-- productos relacionado -->
+    <section class="relacionados">
+        <h3>PRODUCTOS RELACIONADOS</h3>
+        <p></p>
+        <div class="galeria-mouse">
+            <% relacionados.forEach(relacionado => { %>
+                <div class="mouse">
+                    <img src="/img/<%= relacionado.image %>" alt="mouse">
+                    <h4><%= relacionado.titulo %></h4>
+                    <span>$<%= relacionado.price %></span>
+                </div>
+            <% }) %>
+        </div>
+    </section>     
+    
+    </main>
+    <%- include("./partials/footer") %>
+    <%- include("./partials/scripts") %>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "image": "notebook-carrito.jpeg",
+    "name": "Notebook Celeron",
+    "category": "notebooks",
+    "description": "Notebook Celeron 14'' Memoria 4gb Almacenaje 128gb - Tedge",
+    "stock": 922,
+    "price": 47.499,
+    "discount": 0,
+    "userId": 2
+  }
+]

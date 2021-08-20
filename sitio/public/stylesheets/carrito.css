@@ -1,0 +1,420 @@
+/*MOBILE*/
+.carrito .barra{
+    color: white;
+    font-size: 35px;
+    background-color: black;
+    height: 10vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: center;
+}
+.carrito .barra2{
+    display: none;
+}
+.carrito nav{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 20px;
+}
+.carrito ul .dktp{
+    display: none;
+}
+.carrito nav .aqui{
+    padding: 5px 10px;
+    text-align: center;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
+    color: white;
+    width: 40vh;
+    margin-top: 15px;
+}
+.carrito nav .aqui i, .navegacion i, .navegacion2 i{
+    font-size: 20px;
+} 
+.carrito nav .navegacion {
+    background: linear-gradient(to bottom, var(--color-rosaFluor) 0%, var(--color-rosaFluor) 50%, white 50%, white 100%);
+    text-align: center;
+    width: 40vh;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+.carrito nav p{
+    display: none;
+}
+.carrito nav .navegacion2 {
+    background: linear-gradient(to bottom, var(--color-rosaFluor) 0%, var(--color-rosaFluor) 50%, white 50%, white 100%);
+    text-align: center;
+    width: 40vh;
+    padding: 5px 10px;
+    margin-top: 15px;
+}
+.carrito section article{
+    background-color: white;
+    margin: 20px 30px 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.carrito section article button{
+    border: none;
+    background: transparent;
+}
+.carrito section article i{
+    font-size: 40px;
+    color:var(--color-rosaFluor);
+    align-self: center;
+}
+.carrito article img{
+    width: 170px;
+    height: 170px;
+}
+.carrito article .descripcion{
+    max-width: 180px;
+    margin: 30px;
+}
+.carrito article div .precio-desc{
+    text-decoration:line-through;
+}
+.carrito article div .off{
+    color: var(--color-rosaFluor);
+}
+.carrito article .menos{
+    background: none;
+    height: 24px;
+    border: 1px solid gray;
+    border-radius: 10px 0px 0px 10px;
+    border-right: none;
+    width: 19px;
+}
+.carrito article .mas{
+    color: var(--color-rosaFluor);
+    background: none;
+    border: 1px solid gray;
+    height: 24px;
+    border-radius: 0px 10px 10px 0px;
+    border-left: none;
+    width: 19px;
+}
+.carrito article .cantidad{
+    width: 30px;
+    height: 24px;
+    border: 1px solid gray;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    outline: none;
+}
+.carrito article .form-cant{
+    margin: 7px;
+    display: flex;
+}
+.carrito article div h6{
+    color: gray;
+    font-size: 8px;
+    font-weight: lighter;
+    margin: 9px;
+}
+.carrito article .subtotal , h2, .h2{
+    font-weight: bold;
+    font-size: 16px;
+}
+.carrito .cupon{
+    background-color: white;
+    margin: 20px 30px 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 20px 20px 13px;
+    font-size: 15px;
+    line-height: 17px;
+}
+.carrito .cupon .cod-cupon, .envio .cod-cupon{
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+.carrito .cupon button{
+    background: var(--color-celesteClaro);
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 35px;
+    width: 65px;
+    color: #fff;
+}
+.carrito .cupon button:hover{
+    background: var(--color-rosaFluor);
+}
+.carrito .envio{
+    background-color: white;
+    margin: 20px 30px 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 20px 20px;  
+    
+}
+.carrito .envio .caja-envio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.carrito .envio .caja-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1.3px solid black;
+}
+.carrito .envio .p-e{
+    color: gray;
+    font-size: 17px;
+}
+.carrito .envio .total{
+    font-size: 20px;
+    padding-top: 20px;
+} 
+.carrito .envio .n-total{
+    font-size: 25px;
+    padding-top: 20px;
+}
+.carrito .t-y-c{
+    text-align:end;
+    margin-right: 25px;
+}
+.carrito .t-y-c p{
+    color: white;
+    margin: 10px 0;
+}
+.carrito .t-y-c a{
+    text-decoration: underline;
+}
+.carrito .t-y-c a:hover{
+    color: var(--color-celesteClaro);
+}
+.carrito .t-y-c button{
+    background: none;
+    border: none;
+}
+.carrito a{
+   color: #fff;
+}
+.carrito .continuar button{
+    background: var(--color-rosaFluor);
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0px 34px;
+    margin-left: 20px;
+    margin-bottom: 65px;
+}
+.carrito .continuar a{
+    text-decoration: none;
+}
+/*METODO DE PAGO MAIN*/
+.carrito .cuerpo{
+    display: block;
+}
+.carrito .total-dos{
+    background-color: white;
+    margin: 15px 20px 0px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 0px 15px;
+    font-size: 20px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.carrito .metodos{
+    background-color: white;
+    margin: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114); 
+    padding: 0px 10px;
+    font-size: 25px;
+    line-height: 60px;
+}
+.carrito .metodos .opciones{
+    margin: 25px 20px;
+}
+.carrito .metodos .opciones span{
+    margin-left: 30px;
+}
+.carrito .metodos .opciones .fa-credit-card, i.fa-money-bill{
+    color: var(--color-rosaFluor);
+    background-color: rgb(221, 221, 221);
+    font-size: 30px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+.carrito .continuar-dos{
+    text-align: end;
+}
+.carrito .continuar-dos button{
+    background: var(--color-rosaFluor);
+    border: none;
+    color: #fff;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 0px 34px;
+    margin-right: 20px;
+    margin-bottom: 65px;
+}
+.carrito .continuar-dos a{
+    text-decoration: none;
+}
+/*CONFIRMACIÓN DE LA COMPRA MAIN*/
+.carrito .cuerpo2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.carrito .datos{
+    background-color: white;
+    margin: 15px 20px 0px;
+    border-radius: 10px;
+    border: 2px solid rgb(114, 114, 114);
+    padding: 0px 15px;
+    flex-grow: 1;
+    font-size: 20px;
+}
+.carrito .datos .dato{
+    font-size: 18px;
+    margin: 10px 0 20px 25px;
+}
+.carrito .datos .text-danger{
+    font-size: 10px;
+}
+.carrito .datos .dato label{
+    display: inline-block;
+    width: 200px;
+}
+.carrito .datos .dato .comentario{
+    display: block;
+    margin-bottom: 10px;
+} 
+.carrito .datos .caja-dato{
+    border-radius: 5px;
+    border: 2px solid gray;
+    width: 40%;
+    height: 25px;
+    outline: none;
+    margin-left: 20%;
+}
+.carrito .datos .dato .coment{
+    max-width: 85%;
+    max-height: 90px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    outline: none;
+}
+/*TABLET*/
+@media (min-width: 481px){
+    /*CARRITO*/
+    .carrito .barra{
+        display: none;
+}
+.carrito .barra2{
+    color: white;
+    font-size: 15px;
+    background-color: black;
+    height: 10vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: center;
+    }
+    .carrito nav{
+        margin: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .carrito nav i{
+        font-size: 30px;
+    }
+    .carrito nav p{
+        display: block;
+        padding-top: 15px;
+    }
+    .carrito nav .aqui, .navegacion, .navegacion2{
+        flex-grow: 0.33;
+    }
+    .carrito section article{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .carrito section article i{
+        font-size: 25px;
+    }
+    .carrito section article p{
+        font-size: 15px;
+        margin: 5px;
+        text-align: center;
+    }
+    .carrito .cupon-envio{
+        display: flex;
+    }
+    .carrito .cupon {
+        width: 30%;
+        height: 40%;
+    }
+    .carrito .envio{
+        width: 50%;
+    }
+    .carrito .continuar{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 40px;
+        margin-top: 15px;
+    }
+    /*METODO DE PAGO*/
+    .carrito .cuerpo{
+        display: flex;
+    }
+    .carrito .total-dos{
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        max-width: 250px;
+    }
+    .carrito .metodos{
+        margin: 15px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0.4;
+        
+    }
+}
+/*CONFIMACIÓN DE LA COMPRA*/
+    .carrito .cuerpo2 .datos{
+        padding-top: 15px;
+        margin-bottom: 10px;
+        width: 50%;
+    }
+/*DESKTOP*/
+@media (min-width: 769px){
+    .carrito ul .dktp{
+        display: inline-block;
+    }
+    .carrito ul .dktp i{
+        margin-right: 10px;
+    }
+    .carrito .cuerpo2{
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+}

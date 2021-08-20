@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+        <%- include('./partials/head') %>
+        
+        <body>
+            <%- include('./partials/header') %>
+        
+            <!-- MENUU -->
+        
+            <main class="carga">
+                
+                <form action="" method="POST" enctype="multipart/form-data">
+                    
+                <div class="seccionesProducto">
+                 
+                 <div class="secciones-imagen-carga">
+        
+                        <div class="mb-3">
+                            <label for="productImagen" class="form-label"> imagen </label>
+                            <input type="file" class="form-control" id="productImagen"
+                                placeholder="ingrese precio" name="image">
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImagen" class="form-label"> imagen </label>
+                            <input type="file" class="form-control" id="productImagen"
+                                placeholder="ingrese precio" name="image">
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImagen" class="form-label"> imagen </label>
+                            <input type="file" class="form-control" id="productImagen"
+                                placeholder="ingrese precio" name="image">
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImagen" class="form-label"> imagen </label>
+                            <input type="file" class="form-control" id="productImagen"
+                                placeholder="ingrese precio" name="image">
+                        </div>
+                        <div class="mb-3">
+                            <label for="productImagen" class="form-label"> imagen </label>
+                            <input type="file" class="form-control" id="productImagen"
+                                placeholder="ingrese precio" name="image">
+                        </div>
+                      
+        
+                </div>
+                    
+                    <!-- <button class="btn btn-primary" type="submit">guardar</button> -->
+        
+        
+                        <div class="secciones-formulario-carga">
+                            <section class="formulario-carga">
+                                <input class="texto-carga <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" placeholder="Nombre:" name="name" value="<%= locals.oldData ? oldData.name : null%>">
+                                
+                            </section>
+                            <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger">
+                                            <%= errors.name.msg %> 
+                                    </div>
+                                    <% } %>
+                            <section class="formulario-carga2">
+                                <input class="texto-carga <%= locals.errors && errors.model ? 'is-invalid' : null%>" type="text" placeholder="Modelo:" name="model" value="<%= locals.oldData ? oldData.model : null%>">
+                            </section>
+                            <% if (locals.errors && errors.model) { %>
+                                <div class="text-danger">
+                                        <%= errors.model.msg %> 
+                                </div>
+                                <% } %>
+                            <select class="formulario-category" name="category">
+                                <option >Seleccione su categoría</option>
+                                <% categorias.forEach(categoria => { %>
+                                    <option value="<%= categoria %>"><%= categoria %></option>
+                                <% }) %>
+                              </select>
+                            <section class="formulario-carga2">
+                                <input class="texto-carga <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" placeholder="Precio $:" name="price" value="<%= locals.oldData ? oldData.price : null%>">
+                            </section>
+                            <% if (locals.errors && errors.price) { %>
+                                <div class="text-danger">
+                                        <%= errors.price.msg %> 
+                                </div>
+                                <% } %>
+                            <section class="formulario-carga2">
+                                <input class="texto-carga" type="text" placeholder="Descuento %:" name="discount">
+                            </section>
+                            <section class="formulario-descripcion-carga">
+                                <input class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" value="<%= locals.oldData ? oldData.description : null%>">
+                            </section>
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-danger">
+                                        <%= errors.description.msg %> 
+                                </div>
+                                <% } %>
+                            
+                                          
+                        
+                        </div>
+                       
+                 </div>
+                    
+        
+                <div class="secciones-subir-cancelar">
+                    <section class="subir-carga">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </section>
+                    <section class="cancelar-carga">
+                        <button type="reset">
+                            
+                            <a href="">
+                            <i class="fas fa-times"></i><p> Cancelar</p>
+                            </a>
+                        </button>
+                    </section>
+                </div>
+          </form>      
+    </main>
+    <%- include('./partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
