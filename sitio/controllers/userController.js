@@ -20,9 +20,19 @@ module.exports = {
     },
     processRegister : (req,res) => {
         const result = validationResult(req);
-        if(result.errors.length > 0){
-            
+        
+        let emailRegistrado = usuarios.find(usuario => usuario.email === req.body.email)
+        if(emailRegistrado){
+            return res.render('../views/users/register', {
+                errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+            })
         }
+
         if(result.isEmpty()){  
             let {nombre, lastname, email}= req.body
             let newUser = {

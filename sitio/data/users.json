@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "userId": 1,
+    "nombre": "Juan",
+    "lastname": "Perez",
+    "email": "juan1988@outlook.com",
+    "password": "$2a$10$HB1ikCWzsGXJ.XZiFcO/I.VKbFAhyaHMuiZ9mEsFt1iBxTfHKGCEW",
+    "image": "default-image.png"
+  }
+]
