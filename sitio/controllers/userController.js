@@ -26,5 +26,8 @@ module.exports = {
             })
         }
         return res.redirect('/')
+    },
+    profile: (req,res) => {
+        return res.render('profile')
     }
 }
