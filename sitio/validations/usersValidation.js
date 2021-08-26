@@ -1,10 +1,29 @@
-const {check, body}=require('express-validator')
+const {check, body}=require('express-validator');
+const {usuarios} = require('../data/user_db');
+const bcrypt = require('bcryptjs');
 
 const loginValidation = [
-    check('correo')
+    body('email')
     .notEmpty().withMessage('Debes escribir un correo electrónico').bail()
-    .isEmail().withMessage('Debes escribir un correo electrónico válido'),
-    check('contrasenia').notEmpty().withMessage('Debes escribir una contraseña')
+    .isEmail().withMessage('Debes escribir un correo electrónico válido')
+    .custom((value,{req}) => {
+        let usuario = usuarios.find(usuario => usuario.email === value);
+        if (usuario){
+            return true
+        }else{
+            return false
+        }
+    }).withMessage('Correo o contraseña incorrecta'),
+    body('password')
+    .notEmpty().withMessage('Debes escribir una contraseña').bail()
+    .custom((value, {req})=> {
+        let user = usuarios.find(user => user.email === req.body.email)
+        if (bcrypt.compareSync(req.body.password, user.password)){
+            return true
+        }else{
+            return false
+        }
+    }).withMessage('Correo o contraseña incorrecta'),
 ]
 const registerValidation = [
     check('nombre')

@@ -1,29 +1,18 @@
 [
-    {
-        "userId": 1,
-        "name": "Rocio",
-        "surname": "Recalde",
-        "email": "rocio@gmail.com",
-        "password": "xxxxxx",
-        "category": "user",
-        "image": "default-image.png"
-    },
-    {
-        "userId": 2,
-        "name": "Juan",
-        "surname": "Perez",
-        "email": "juan123@gmail.com",
-        "password": "xxxxxx",
-        "category": "user",
-        "image": "default-image.png"
-    },
-    {
-        "userId": 3,
-        "name": "Fran",
-        "surname": "Ruiz",
-        "email": "franx@outlook.com",
-        "password": "xxxxxx",
-        "category": "user",
-        "image": "default-image.png"
-    }
+  {
+    "userId": 1,
+    "nombre": "Juan",
+    "lastname": "Perez",
+    "email": "juan1988@outlook.com",
+    "password": "$2a$10$HB1ikCWzsGXJ.XZiFcO/I.VKbFAhyaHMuiZ9mEsFt1iBxTfHKGCEW",
+    "image": "default-image.png"
+  },
+  {
+    "userId": 2,
+    "nombre": "Rocio",
+    "lastname": "Recalde",
+    "email": "rorecalde@gmail.com",
+    "password": "$2a$10$l82BmAGB11kne0f4CFqWlefrC5dYiONpybAirV75PLmFsPfsaD5hG",
+    "image": "default-image.png"
+  }
 ]
