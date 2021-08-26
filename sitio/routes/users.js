@@ -3,7 +3,7 @@ var router = express.Router();
 const multer=require('multer')
 const path=require('path')
 const {loginValidation, registerValidation} = require('../validations/usersValidation')
-const {login,register, processLogin, processRegister} = require('../controllers/userController')
+const {login,register, processLogin, processRegister,logout} = require('../controllers/userController')
 
 
 const storage = multer.diskStorage({
@@ -22,5 +22,7 @@ router.post('/login',loginValidation, processLogin)
 
 router.get('/register', register);
 router.post('/register', uploadFile.single('fotoPerfil'), registerValidation, processRegister);
+
+router.get('/logOut',logout);
 
 module.exports = router;

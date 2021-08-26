@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 var session = require('express-session')
-
+var locals = require('./validations/loggued')
+var cookies = require('./validations/cookies')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,6 +30,9 @@ app.use(session({ secret: 'Mensaje secreto de elecTodo',
 resave: false,
 saveUninitialized: false
 }));
+app.use(locals)
+app.use(cookies)
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

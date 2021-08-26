@@ -17,6 +17,10 @@ module.exports = {
                 nombre : usuario.nombre
             }
             res.locals.userLogin = req.session.userLogin
+            if(recordar){
+                res.cookie('elecTodo',req.session.userLogin,{maxAge: 1000 * 60})
+                req.session.userLogin = req.cookies.elecTodo
+            }
             return res.redirect('/')
         }else{
             return res.render('../views/users/login', {
@@ -68,5 +72,10 @@ module.exports = {
                 oldData: req.body
             })
         }
+    },
+    logout : (req,res) =>{
+        req.session.destroy();
+        res.cookie('elecTodo',null,{maxAge:-1})
+        return res.redirect('/')
     }
 }
