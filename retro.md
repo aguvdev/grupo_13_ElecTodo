@@ -9,3 +9,8 @@ Empezamos a reunirnos para programar juntos, algo que consideramos que deberíam
 
 -Retrospectiva del sprint 3:
 Sentimos que durante la semana no tuvimos tiempo suficiente para aplicar todo lo propuesto para esta tercera entrega. Mantuvimos la misma organización, manejo del tiempo, constancia de reuniones, comunicación y aspectos prácticos. Pero igualmente, pudimos cumplir con algunos puntos como: reunirnos entre los sprints para pensar la retrospectiva y poner en práctica una forma estándar de trabajar.
+
+-Retrospectiva del sprint 4:
+En esta cuarta entrega nos dividimos en subgrupos para las consignas del sprint, de igual manera esta nueva forma de organización que tuvimos fue tan buena como las anteriores, seguimos cumpliendo con una lista guía para los temas de las reuniones y estas no se extendieron innecesariamente.
+La puntualidad para los zooms mejoró mucho aunque no nos reunimos tan seguido como en las anteriores entregas. También mejoramos la comunicación, estuvimos al tanto de cada avance y modificación en el proyecto. Aún tenemos que coordinar para programar juntos, reunirnos para pensar la retrospectiva entre cada sprint y agregar más detalles que sumen para ir más allá de lo que se pida en las consignas.
+Llegamos a la conclusión de eliminar por completo el hábito de no pedir ayuda cuando la necesitemos, ya que así todo el grupo puede poner en práctica lo aprendido resolviendo el problema que se presente. Finalmente, implementamos al principio de cada reunión jugar a las cartas en una página para distendernos y distraernos un poco.
