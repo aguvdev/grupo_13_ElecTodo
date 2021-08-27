@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %>
+    <main class="profile">
+        <section class="perfil-usuario">
+            <div class="contenedor-perfil">
+                <div class="fondo-perfil-oscuro">
+                    <div class="logo-carnet">
+                        <img src="/img/electodo log.png" alt="">
+                    </div>
+                    <div class="foto-perfil">
+                        <img src="/img/foto-de-perfil-default.png" alt="">
+                        <div class="efecto-borde"></div>
+                    </div>
+                    <div class="fondo-perfil-claro">
+                        <div class="datos-usuario">
+                        <div class="nombre-usuario">
+                            <label class="nombre-apellido">Agustin Vega</label>
+                            <label for="">Nombre y apellido</label>
+                        </div>
+                        <div class="datos-generales">
+                            <p class="numero-cel">011-4444-5555</p>
+                            <label>Numero de celular</label>
+
+                            <p class="email">aguFullStack@hotmail.com</p>
+                            <label>Correo Electrónico</label>
+
+                            <p id="passOculta" class="email">88888888</p>
+                            <label>Contraseña</label>
+                        </div>
+                        <button>Editar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+</body>
+</html>

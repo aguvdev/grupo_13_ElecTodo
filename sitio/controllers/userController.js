@@ -79,5 +79,8 @@ module.exports = {
         req.session.destroy();
         res.cookie('elecTodo',null,{maxAge:-1})
         return res.redirect('/')
+    },
+    profile: (req,res) => {
+        res.render('../views/users/profile');
     }
 }
