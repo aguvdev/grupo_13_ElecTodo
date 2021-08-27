@@ -4,7 +4,7 @@
             <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
         </div>
 
-
+ 
         <div class="buscador">
             <form action="/product/search" method="GET">
                 <input class="buscar-texto" type="text" name="search" placeholder="¿Qué producto estás buscando?">
@@ -12,17 +12,20 @@
             </form>
         </div>
         <% if (locals.userLogin) { %>
-            <ul>
-                <li><a href="/users/logout">cerrar sesión</a></li>
-                <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
             
-  
+            <% if (locals.userLogin.rol==="admin") { %>
+                <h2 class="btn btn-success" > Modo administrador: <%= locals.userLogin.nombre %> </h2>
+                <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
+            <% } %>
+
+            <h2 class="btn btn-info" > USUARIO: <%= locals.userLogin.nombre %> </h2>
+            <a href="/cart"><i class="fas fa-shopping-cart"></i></a>              
+            <a href="/users/logout" class="btn btn-danger">cerrar sesión</a>
+             
         <% }else{ %>
             <nav class="nav-header-menu">
                         <ul>
-                            <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
-                            <li><a href=""><i class="fas fa-bell"></i></a></li>
+                           <li><a href=""><i class="fas fa-bell"></i></a></li>
                             <li><a href="/users/login"><i class="fas fa-user-circle"></i></a></li>
                             <li><a href=""><i class="fas fa-heart"></i></a></li>
                         </ul>

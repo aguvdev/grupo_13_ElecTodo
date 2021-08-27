@@ -55,21 +55,25 @@
                             <p></p>
                             <i class="fas fa-truck"></i> <span>Envios a todo el pais</span>
                         </div> 
+
+                        <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                            <div class="botones">  
+                                <div class="botoncito">                  
+                                    <a class="btn btn-primary btn-success" href="/product/edit/<%= producto.id %>" >Editar</a>                  
+                                </div>
+                                <div class="botoncito">
+                                    <form action="/product/remove/<%= producto.id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-primary btn-danger">Eliminar</button>
+                                      </form>
+                                </div>
+                            </div>
+                         
+                        <% } %> 
                         
                         <div class="botones">
                             <div class="carrito">
                                 <a href="/cart"><span>sumar al carrito</span></a>
-                            </div>
-                            
-                            
-                                <a class="btn btn-primary btn-success" href="/product/edit/<%= producto.id %>" >Editar</a>
-                            
-    
-                            <div class="botoncito">
-                                <form action="/product/remove/<%= producto.id %>?_method=DELETE" method="POST">
-                                    <button class="btn btn-primary btn-danger">Eliminar</button>
-                                  </form>
-                            </div>
+                            </div>                      
                         </div>
 
                     

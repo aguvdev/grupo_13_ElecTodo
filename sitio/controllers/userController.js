@@ -14,7 +14,8 @@ module.exports = {
         if(result.isEmpty()){
             let usuario = usuarios.find(usuario => usuario.email === email)
             req.session.userLogin = {
-                nombre : usuario.nombre
+                nombre : usuario.nombre,
+                rol : usuario.rol
             }
             res.locals.userLogin = req.session.userLogin
             if(recordar){
@@ -55,7 +56,8 @@ module.exports = {
                 lastname,
                 email,
                 password : bcrypt.hashSync(req.body.password, 10),
-                image : req.file ? req.file.filename : 'default-image.png'
+                image : req.file ? req.file.filename : 'default-image.png',
+                rol : "user"
             }
             usuarios.push(newUser);
             guardar(usuarios);
