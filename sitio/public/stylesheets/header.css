@@ -98,6 +98,23 @@ ul{
     font-size: 1em;
 }
 
+/* -----------DESPLEGRABLE-------------- */
+
+.usuarios-desplegable{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 14%;
+    right: 10%;
+    z-index: 50;
+}
+
+.usuarios-desplegable:active{
+    width: 150px;
+    height: 150px;
+}
+
 
 @media (max-width: 769px) {
 
