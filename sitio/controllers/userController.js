@@ -22,7 +22,7 @@ module.exports = {
                 res.cookie('elecTodo',req.session.userLogin,{maxAge: 1000 * 60})
                 req.session.userLogin = req.cookies.elecTodo
             }
-            return res.redirect('/')
+            return res.redirect('/')/*aca poner el vista perfil*/
         }else{
             return res.render('../views/users/login', {
                 errors: result.mapped(),
