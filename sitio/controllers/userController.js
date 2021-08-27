@@ -56,7 +56,7 @@ module.exports = {
                 lastname,
                 email,
                 password : bcrypt.hashSync(req.body.password, 10),
-                image : req.file ? req.file.filename : 'default-image.png',
+                image : req.file ? req.file.filename : 'foto-de-perfil-default.png',
                 rol : "user"
             }
             usuarios.push(newUser);
@@ -81,6 +81,8 @@ module.exports = {
         return res.redirect('/')
     },
     profile: (req,res) => {
-        res.render('../views/users/profile');
+        res.render('../views/users/profile',{
+            usuarios
+        });
     }
 }

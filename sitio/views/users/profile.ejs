@@ -11,23 +11,23 @@
                         <img src="/img/electodo log.png" alt="">
                     </div>
                     <div class="foto-perfil">
-                        <img src="/img/foto-de-perfil-default.png" alt="">
+                        <img src="/img/<%= usuarios.image %> " alt="">
                         <div class="efecto-borde"></div>
                     </div>
                     <div class="fondo-perfil-claro">
                         <div class="datos-usuario">
                         <div class="nombre-usuario">
                             <label class="nombre-apellido">Agustin Vega</label>
-                            <label for="">Nombre y apellido</label>
+                            <label for=""><%= usuarios.nombre %>  y <%= usuarios.lastname %> </label>
                         </div>
                         <div class="datos-generales">
                             <p class="numero-cel">011-4444-5555</p>
                             <label>Numero de celular</label>
 
-                            <p class="email">aguFullStack@hotmail.com</p>
+                            <p class="email"><%= usuarios.email %> </p>
                             <label>Correo Electrónico</label>
 
-                            <p id="passOculta" class="email">88888888</p>
+                            <p id="passOculta" class="email"><%= usuarios.password %> </p>
                             <label>Contraseña</label>
                         </div>
                         <button>Editar</button>
