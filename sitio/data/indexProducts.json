@@ -1,7 +1,9 @@
 [
   {
     "id": 1,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Mouse HyperX Pulsefire",
     "category": "gaming",
     "category1": "mouse",
@@ -11,7 +13,9 @@
   },
   {
     "id": 2,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Auriculares HyperX Cloud Revolver",
     "category": "gaming",
     "category1": "auriculares",
@@ -21,7 +25,9 @@
   },
   {
     "id": 3,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Teclado Redragon ",
     "category": "gaming",
     "category1": "teclados",
@@ -31,7 +37,9 @@
   },
   {
     "id": 5,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Samsung Galaxy M12",
     "category": "Celulares",
     "description": "Celular Samsung Galaxy M12 Negro",
@@ -40,7 +48,9 @@
   },
   {
     "id": 6,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Samsung Galaxy Z Fold",
     "category": "Celulares",
     "description": "Celular Samsung Galaxy Z Fold",
@@ -49,7 +59,9 @@
   },
   {
     "id": 7,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Moto e5",
     "category": "Celulares",
     "description": "Celular Moto e5",
@@ -58,7 +70,9 @@
   },
   {
     "id": 8,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Samsung A72",
     "category": "Celulares",
     "description": "Celular Samsung A72",
@@ -67,7 +81,9 @@
   },
   {
     "id": 9,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook HP",
     "category": "laptops",
     "description": "Notebook HP 14-DK1016LA AMDATHLON",
@@ -76,7 +92,9 @@
   },
   {
     "id": 10,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook Lenovo",
     "category": "laptops",
     "description": "Notebook Lenovo Idea Pad 1-12 GL05 Intel Celeron",
@@ -85,7 +103,9 @@
   },
   {
     "id": 11,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook X-View",
     "category": "laptops",
     "description": "Notebook X-View Novabook V2 Intel Celeron",
@@ -94,7 +114,9 @@
   },
   {
     "id": 12,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook Exo",
     "category": "laptops",
     "description": "Notebook Exo L33 Celeron",
@@ -103,7 +125,9 @@
   },
   {
     "id": 15,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "mouspad",
     "category": "gaming",
     "description": "se cae a pedazos este mouspad mejor compra el logitech pa full picado",
@@ -112,11 +136,57 @@
   },
   {
     "id": 16,
-    "image": "image-1629304407930.jpg",
+    "images": [
+      "image-1629304407930.jpg"
+    ],
     "name": "placa video xfx",
     "category": "gaming",
     "description": "placa video xfx nuevo 8gb vram 1366hz velocidad",
     "price": "80000",
+    "discount": "5"
+  },
+  {
+    "id": 20,
+    "images": [
+      "images-1630171333289.jpg",
+      "images-1630171333291.jpg",
+      "images-1630171333292.jpg",
+      "images-1630171333292.jpg"
+    ],
+    "name": "placa video",
+    "category": "laptops",
+    "description": "placa video xfx nuevo 8gb vram 1366hz velocidad",
+    "price": "123123",
+    "discount": "2"
+  },
+  {
+    "id": 21,
+    "images": [
+      "images-1630175831987.png",
+      "images-1630175831998.png",
+      "images-1630175832005.png",
+      "images-1630175832012.png",
+      "images-1630175832019.png"
+    ],
+    "name": "placa video 580 msi",
+    "category": "laptops",
+    "description": "placa video xfx nuevo 8gb vram 1366hz velocidad",
+    "price": "80000",
+    "discount": "4"
+  },
+  {
+    "id": 22,
+    "images": [
+      "images-1630177418323.png",
+      "images-1630177418325.png",
+      "images-1630177418328.png",
+      "images-1630177418329.png",
+      "images-1630177418331.png"
+    ],
+    "name": "motorola g9",
+    "category": "Celulares",
+    "description": "nuevo con garantia somos fabricantes",
+    "price": "20000",
     "discount": "5"
   }
 ]

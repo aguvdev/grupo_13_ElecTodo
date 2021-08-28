@@ -16,7 +16,7 @@
 .detalle .galeria-auris{
     padding-top: 40px;
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: space-evenly;  
 }
 .detalle .auris{

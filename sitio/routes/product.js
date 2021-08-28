@@ -22,7 +22,7 @@ const rolAdmin = require("../validations/rolAdmin") /* requiero el rol admin par
 
 /* GET products listing. */
 router.get('/carga',rolAdmin, carga);/* antes que me lleve al metodo de carga verifica 1ro si es admin */
-router.post('/carga', upload.single("image"),validacionCarga, save);
+router.post('/carga', upload.array("images"),validacionCarga, save);
 router.get("/detalle-product/:id", product);
 router.get("/edit/:id",rolAdmin,edit);/* aplico rol admin para q aca en edit tambien no ingrese cualquiera solo el admin */
 router.put("/edit/:id",update);

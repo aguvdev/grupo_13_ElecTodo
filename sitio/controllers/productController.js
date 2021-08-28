@@ -22,10 +22,12 @@ module.exports={
             })
         }
         const {id,image,name,category,category1,description,price,discount} = req.body;
-
+        if (req.files){
+            var imagenes = req.files.map(imagen => imagen.filename)
+        }
         let producto = {
             id : productos[productos.length - 1].id + 1,
-            image : req.file ? req.file.filename : "default-image.png", /* si viene algo por file de lo comtrario guarda un img default */
+            images : req.files.length != 0 ? imagenes : ["default-image.png"], /* si viene algo por file de lo comtrario guarda un img default */
             name,
             category,
             category1,

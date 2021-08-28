@@ -6,23 +6,19 @@
     <main class="detalle">
         <div class="menu">
             <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
+
                 <section class="img-auricular"><!-- encierro solo las fotos -->
                     
-                        <img src="/img/<%= producto.image %>" alt="imagen auris">
-        
+                        <img id="img-principal" class="img-fluid" src="/img/<%= producto.images[0] %>" alt="imagen auris">
+                        
+
                         <div class="galeria-auris">
+                            <% producto.images.forEach((imagen,index) => { %>
                             <div class="auris">
-                                <img src="/img/<%= producto.image %>" alt="">
+                                    <img onclick="document.getElementById('img-principal').setAttribute('src','/img/<%=imagen%>')" src="/img/<%= imagen %>" alt="">
                             </div>
-                            <div class="auris">
-                                <img src="/img/<%= producto.image %>" alt="">
-                            </div>
-                            <div class="auris">
-                                <img src="/img/<%= producto.image %>" alt="">
-                            </div>
-                            <div class="auris">
-                                <img src="/img/<%= producto.image %>" alt="">
-                            </div>
+                            <% }) %>
+
                         </div>
                     
                 </section>        

@@ -146,7 +146,7 @@
                     <% Gaming.forEach(product => { %>
                      <article>
                         <div class="card">
-                            <img src="/img/<%= product.image %>" class="card-img-top" alt="...">
+                            <img src="/img/<%= product.images[0] %>" class="card-img-top" alt="...">
                             <div class="card-body">
                               <p class="product-name"><%= product.name %> </p>
                               <% if (product.discount > 0) { %>
@@ -167,7 +167,7 @@
                   <% Celulares.forEach(product => { %>
                    <article>
                         <div class="card">
-                            <img src="/img/<%= product.image %> " class="card-img-top" alt="...">
+                            <img src="/img/<%= product.images[0] %> " class="card-img-top" alt="...">
                             <div class="card-body">
                               <p class="product-name"><%= product.name %> </p>
                               <% if (product.discount > 0) { %>
@@ -198,7 +198,7 @@
                     <% Notebooks.forEach(product => { %>
                       <article>
                            <div class="card">
-                               <img src="/img/<%= product.image %> " class="card-img-top" alt="...">
+                               <img src="/img/<%= product.images[0] %> " class="card-img-top" alt="...">
                                <div class="card-body">
                                 <p class="product-name"><%= product.name %> </p>
                                  <% if (product.discount > 0) { %> 
