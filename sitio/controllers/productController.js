@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const productos = require("../data/indexProducts");
-const description = require("../data/description_db");
 const relacionados = require("../data/relacionados_db");
 const categorias = require("../data/categories_db");
 const {validationResult} = require('express-validator');
@@ -44,7 +43,6 @@ module.exports={
         let producto = productos.find(producto => producto.id === +req.params.id);
         return res.render("detalle-product",{
             producto,
-            description,
             relacionados
             
         })

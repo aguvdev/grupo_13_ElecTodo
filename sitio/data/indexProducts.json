@@ -24,18 +24,6 @@
     "discount": 0
   },
   {
-    "id": 3,
-    "images": [
-      "default-image.png"
-    ],
-    "name": "Teclado Redragon ",
-    "category": "gaming",
-    "category1": "teclados",
-    "description": "Teclado Redragon KUMARA K552 RGB Mecánico Switch Red",
-    "price": 6000,
-    "discount": 0
-  },
-  {
     "id": 5,
     "images": [
       "default-image.png"
@@ -170,7 +158,7 @@
     ],
     "name": "placa video 580 msi",
     "category": "laptops",
-    "description": "placa video xfx nuevo 8gb vram 1366hz velocidad",
+    "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora. Además, sus procesadores usan tecnología de punta para que puedas disfrutar de un producto veloz y duradero.  Velocidad en cada lectura Como cuenta con 768 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa. Esto le permitirá ejecutar lecturas dispersas y rápidas de y hacia la GPU.  Calidad de imagen Criterio fundamental a la hora de elegir una placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te harán ver hasta los detalles más ínfimos en cada ilustración.",
     "price": "80000",
     "discount": "4"
   },
@@ -187,6 +175,19 @@
     "category": "Celulares",
     "description": "nuevo con garantia somos fabricantes",
     "price": "20000",
+    "discount": "5"
+  },
+  {
+    "id": 23,
+    "images": [
+      "images-1630269472455.jpg",
+      "images-1630269472460.jpg",
+      "images-1630269472462.jpg"
+    ],
+    "name": "teclado",
+    "category": "gaming",
+    "description": "teclado gaming redragon exelente de fabrica .....",
+    "price": "6000",
     "discount": "5"
   }
 ]
