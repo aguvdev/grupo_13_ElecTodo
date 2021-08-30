@@ -17,6 +17,8 @@
     padding: 10px;
 }
 
+.cont-cuadro-gamCelNote
+
 .home .ofertas .impreYCartDesc:hover{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
     transition: .3s;
@@ -52,85 +54,188 @@
     color: var(--color-rosaFluor);
     font-size: 20px;
 }
+
+
+/* -----------------RECOMENDACIONES--------------- */
+
+.home .recom-gamCelNote{
+    width: 90%;
+    margin: auto;
+}
+
 .home .seccion-gaming{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 100px;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-.home .seccion-gaming .cuadro-gaming{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    font-size: 16px;
-    width: 300px;
-    height: 200px;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    
-}
-.home .seccion-gaming .cuadro-gaming:hover{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: .3s;
+/* ----------------Seccion gaming-------------- */
+
+.home .cont-cuadro-gamCelNote{
+    margin-top: 120px;
+    margin-bottom: 30px;
 }
 
-.home .seccion-gaming .cuadro-gaming img {
-    width: auto;
+
+.home .cuadro-gamCelNote{
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
+}
+
+
+
+.home  .cuadro-gamCelNote img{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+}
+
+
+.home .tit-secc label{
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    margin: 0;
+    color: white;
+    font-family: Play;
+    font-size: 40px;
+    margin: 0;
+}
+
+/* ------------------TARJETAS DE PRODUCTOS-------------------*/
+
+
+.home .tarj-prod{
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    margin: 15px;
+}
+
+.home .tarj-prod .img-prod img{
+    width: 100%;
     height: 150px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    -webkit-box-reflect: below -25px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
 }
 
-.home .seccion-gaming .cuadro-gaming h3{
-    font-size: 20px;
-    color: #fff;
+.home .info-prod{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
 }
 
-.home .seccion-gaming .cuadro-gaming span{
-    color: #fff;
+.home .info-prod h4{
+    font-family: Play;
+    color: rgb(27, 27, 27);
+    /* background: linear-gradient(to bottom right, rgba(228, 20, 118, 0.5) 30%, rgba(2, 200, 237, 0.5) 70%); */
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 2px;
+}
+
+.home .info-prod p{
+    display: -webkit-box;
+    max-width: 190px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     margin: 5px;
 }
 
-.home .seccion-celulares{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px;
-    align-items: center;
-}
-
-.home .seccion-celulares .cuadro-celulares{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    font-size: 16px;
-    width: 300px;
-    height: 200px;
+.home .info-prod h3{
+    width: 100px;
+    background: rgb(2, 237, 61);
+    color: #fff;
     padding: 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-}
-.home .seccion-celulares .cuadro-celulares:hover{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: .3s;
+    border-radius: 5px;
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    margin: 0;
 }
 
-.home .seccion-celulares .cuadro-celulares img {
-    width: auto;
-    height: 150px;
-}
-
-.home .seccion-celulares .cuadro-celulares h3{
-    font-size: 20px;
+.home .info-prod span{
+    width: 100px;
+    background: rgb(237, 88, 2);
     color: #fff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: -5%;
+    bottom: 30%;
+    text-decoration: line-through;
 }
 
-.home .seccion-celulares .cuadro-celulares span{
+.home .info-prod button{
+    width: 90px;
+    background: var(--color-celesteClaro);
     color: #fff;
-    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    border: none;
 }
+
+/* ------------------SECCION CELULARES---------------- */
+
+
+.home .cuadro-Cel{
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
+}
+
+.home  .cuadro-Cel img{
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: -80%;
+    left: 2%;
+}
+
+/* --------------NOTEBOOKS-------------------- */
+
+.home .cuadro-Note{
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
+}
+
+.home .cuadro-Note img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: -80%;
+    left: 2%;
+}
+
+
 
 .home .seccion-notebooks{
     display: flex;
@@ -308,9 +413,6 @@
 }
 
 @media (max-width: 481px) {
-    .home .recomendaciones{
-        display: none;
-    }
 
     .home .ofertas{
         display: none;
