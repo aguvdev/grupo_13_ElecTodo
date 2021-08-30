@@ -33,8 +33,7 @@
         
                         <div class="model">
                             <h1> <%= producto.model %> </h1>
-                            <h3> <%= producto.description %> </h3>
-                            <h5>Categoria de: <%= producto.category %></h5>
+                            <h4>Categoria de: <%= producto.category %></h4>
                         </div>
                 
                         <div class="precio">
@@ -44,6 +43,7 @@
         
                         <div class="discount">
                             <h4>pagando con efectivo un: <br> <%= producto.discount %>%  de descuento</h4>
+                            <h4 class="text-primary">$<%= (producto.price - (producto.discount * producto.price /100).toFixed(0)) %> %OFF</h4>
                         </div>
                 
                         <div class="garantia-envios">
@@ -54,8 +54,8 @@
 
                         <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
                             <div class="botones">  
-                                <div class="botoncito">                  
-                                    <a class="btn btn-primary btn-success" href="/product/edit/<%= producto.id %>" >Editar</a>                  
+                                <div >                  
+                                    <a class="editor" href="/product/edit/<%= producto.id %>" >Editar</a>                  
                                 </div>
                                 <div class="botoncito">
                                     <form action="/product/remove/<%= producto.id %>?_method=DELETE" method="POST">
@@ -79,38 +79,14 @@
     
     </div>   
     <div class="contenedor-especificaciones">
-        <% description.forEach(description => { %>
         <div class="contenedor-caracteristicas">
 
-                <h3> <%= description.title %> </h3>
+                <h3> CARACTERISTICAS GENERALES </h3>
                 <div class="caracteristicas-contenido">
-                    <span><%= description.caracteristica1 %></span>
-                    <span><%= description.caracteristica10 %></span>
+                    <h4><%= producto.description %></h4>               
                 </div>
-                <div class="caracteristicas-contenido">
-                    <span><%= description.caracteristica2 %></span>
-                    <span><%= description.caracteristica20 %></span>
-                </div>
-                <div class="caracteristicas-contenido">
-                    <span><%= description.caracteristica3 %></span>
-                    <span><%= description.caracteristica30 %></span>
-                </div>
-                <div class="caracteristicas-contenido">
-                    <span><%= description.caracteristica4 %></span>
-                    <span><%= description.caracteristica40 %></span>
-                </div>
-                <div class="caracteristicas-contenido">
-                    <span><%= description.caracteristica5 %></span>
-                    <span><%= description.caracteristica50 %></span>
-                </div>
-                <div class="caracteristicas-contenido">
-                    <span><%= description.caracteristica6 %></span>
-                    <span><%= description.caracteristica60 %></span>
-                </div>
-        
-            </div> 
-            <% }) %>
-
+            </div>              
+                      
     </div>
 
     <!-- productos relacionado -->
