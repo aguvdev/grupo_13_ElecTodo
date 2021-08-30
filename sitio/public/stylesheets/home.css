@@ -1,5 +1,7 @@
 /* main */
 
+/* -----OFERTAS----- */
+
 .home .ofertas{
     display: flex;
     justify-content: space-evenly;
@@ -7,35 +9,80 @@
     flex-wrap: wrap;
 }
 
-.home .ofertas .impreYCartDesc{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
+/* -----IMPRESORA DESCUENTO----- */
+
+.home .ofertas .impreDesc{
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
     font-size: 16px;
     width: 300px;
     height: 200px;
     padding: 10px;
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+    border-radius: 0 100% 0 0;
+    position: relative;
 }
 
-.home .ofertas .impreYCartDesc:hover{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: .3s;
+.home .ofertas .impreDesc img{
+    width: 150px;
+    position: absolute;
+    top: -10%;
+    left: 0;
 }
 
-.home .ofertas .impreYCartDesc img{
-    width: auto;
-    height: 150px;
-    order: 1;
-}
-
-.home .ofertas .impreYCartDesc h3{
-    font-size: 20px;
+.home .ofertas .impreDesc h3{
+    font-size: 30px;
     color: #fff;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-family: Play;
 }
 
-.home .ofertas .impreYCartDesc span{
+.home .ofertas .impreDesc span{
     color: #fff;
-    margin: 5px;
+    font-size: 35px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+/* -----AURICULARES DESCUENTO----- */
+
+.home .ofertas .auriDesc{
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    font-size: 16px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+    border-radius: 0 100% 0 0;
+    position: relative;
+}
+
+.home .ofertas .auriDesc img{
+    width: 120px;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+}
+
+.home .ofertas .auriDesc h3{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-family: Play;
+}
+
+.home .ofertas .auriDesc span{
+    color: #fff;
+    font-size: 35px;
+    position: absolute;
+    right: 0;
+    top: 20%;
 }
 
 .home .beneficios{
@@ -52,136 +99,189 @@
     color: var(--color-rosaFluor);
     font-size: 20px;
 }
+
+
+/* -----------------RECOMENDACIONES--------------- */
+
+.home .recomendaciones{
+    margin-bottom: 50px;
+}
+
+.home .recom-gamCelNote{
+    width: 90%;
+    margin: auto;
+}
+
 .home .seccion-gaming{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 100px;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-.home .seccion-gaming .cuadro-gaming{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    font-size: 16px;
-    width: 300px;
-    height: 200px;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    
-}
-.home .seccion-gaming .cuadro-gaming:hover{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: .3s;
+/* ----------------Seccion gaming-------------- */
+
+.home .cont-cuadro-gamCelNote{
+    margin-top: 120px;
+    margin-bottom: 30px;
 }
 
-.home .seccion-gaming .cuadro-gaming img {
-    width: auto;
+
+.home .cuadro-gamCelNote{
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
+}
+
+
+
+.home  .cuadro-gamCelNote img{
+    width: 230px;
+    height: auto;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+}
+
+
+.home .tit-secc label{
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    margin: 0;
+    color: white;
+    font-family: Play;
+    font-size: 40px;
+    margin: 0;
+}
+
+/* ------------------TARJETAS DE PRODUCTOS-------------------*/
+
+
+.home .tarj-prod{
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    margin: 15px;
+}
+
+.home .tarj-prod .img-prod img{
+    width: 100%;
     height: 150px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    -webkit-box-reflect: below -25px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
 }
 
-.home .seccion-gaming .cuadro-gaming h3{
-    font-size: 20px;
-    color: #fff;
+.home .info-prod{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
 }
 
-.home .seccion-gaming .cuadro-gaming span{
-    color: #fff;
+.home .info-prod h4{
+    font-family: Play;
+    color: rgb(27, 27, 27);
+    /* background: linear-gradient(to bottom right, rgba(228, 20, 118, 0.5) 30%, rgba(2, 200, 237, 0.5) 70%); */
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 2px;
+}
+
+.home .info-prod p{
+    display: -webkit-box;
+    max-width: 190px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     margin: 5px;
 }
 
-.home .seccion-celulares{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px;
-    align-items: center;
-}
-
-.home .seccion-celulares .cuadro-celulares{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    font-size: 16px;
-    width: 300px;
-    height: 200px;
+.home .info-prod h3{
+    width: 100px;
+    background: rgb(2, 237, 61);
+    color: #fff;
     padding: 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-}
-.home .seccion-celulares .cuadro-celulares:hover{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: .3s;
+    border-radius: 5px;
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    margin: 0;
 }
 
-.home .seccion-celulares .cuadro-celulares img {
-    width: auto;
-    height: 150px;
-}
-
-.home .seccion-celulares .cuadro-celulares h3{
-    font-size: 20px;
+.home .info-prod span{
+    width: 100px;
+    background: rgb(237, 88, 2);
     color: #fff;
-}
-
-.home .seccion-celulares .cuadro-celulares span{
-    color: #fff;
-    margin: 5px;
-}
-
-.home .seccion-notebooks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px;
-    align-items: center;
-}
-
-.home .seccion-notebooks .cuadro-notebooks{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    font-size: 16px;
-    width: 300px;
-    height: 200px;
+    font-size: 12px;
     padding: 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 10px; 
-}
-.home .seccion-notebooks .cuadro-notebooks:hover{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    transition: .3s;
+    border-radius: 5px;
+    position: absolute;
+    right: -5%;
+    bottom: 30%;
+    text-decoration: line-through;
 }
 
-.home .seccion-notebooks .cuadro-notebooks img {
-    width: auto;
-    height: 150px;
-}
-
-.home .seccion-notebooks .cuadro-notebooks h3{
-    font-size: 20px;
+.home .info-prod button{
+    width: 90px;
+    background: var(--color-celesteClaro);
     color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    border: none;
 }
 
-.home .seccion-notebooks .cuadro-notebooks span{
-    color: #fff;
-    margin: 5px;
+/* ------------------SECCION CELULARES---------------- */
+
+
+.home .cuadro-Cel{
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
 }
 
-.home .carrousel-ind{
-    display: none;
+.home  .cuadro-Cel img{
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: -80%;
+    left: 2%;
 }
 
-.home .recomendaciones2{
-    display: none;
+/* --------------NOTEBOOKS-------------------- */
+
+.home .cuadro-Note{
+    width: 320px;
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
 }
 
-.home .ofertas2{
-    display: none;
+.home .cuadro-Note img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: -80%;
+    left: 2%;
 }
 
 .home .beneficios div{
@@ -200,88 +300,13 @@
     margin-left: 15px;
 }
 
-.home .recomendaciones{
-    padding: 3em 0;
-}
 
-.home .seccion-header img{
-    margin: 15px;
-}
-
-.home .row-container{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 3em;
-}
-
-.home .list-art{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap
-}
-
-.home .item-carrousel{
-    display: flex;
-}
-
-.home .carousel-indicators{
-    background: rgba(228,20,118,0.5);
-    border-radius: 15px 15px 15px 15px;
-}
-
-.home .visually .fa-arrow-left{
-    color: var(--color-rosaFluor);
-    font-size: 2em;
-    margin-right: 50px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-}
-.home .visually .fa-arrow-right{
-    color: var(--color-rosaFluor);
-    font-size: 2em;
-    margin-left: 50px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.home .card{
-    width: 12rem;
-    height: 28rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 15px;
-}
-
-.home .card .image{
-    background: white;
-    border: 1px solid black;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-}
-
-.home .car .image img{
-    width: auto;
-}
 
 @media (max-width: 769px) {
         /* main */
 
         .home .ofertas{
             padding: 30px;
-        }
-
-        .home .recomendaciones2{
-            display: none;
-        }
-
-        .home .ofertas2{
-            display: none;
-        }
-
-        .home .carrousel-ind{
-            display: none;
         }
     
         .home .ofertas a img{
@@ -296,36 +321,9 @@
             height: 90px;
             margin: 0 20px;
         }
-
-        .home .list-art{
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .home .row-container{
-            margin-bottom: 6em;
-        }
 }
 
 @media (max-width: 481px) {
-    .home .recomendaciones{
-        display: none;
-    }
-
-    .home .ofertas{
-        display: none;
-    }
-
-    .home .recomendaciones2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .home .recomendaciones2 a img{
-        margin: 10px;
-    }
 
     .home .beneficios{
         flex-direction: column;
@@ -334,24 +332,5 @@
 
     .home .beneficios div{
         margin: 10px;
-    }
-
-    .home .carrousel-ind{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .home .ofertas2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 50px;
-    }
-
-    .home .ofertas2 a{
-        padding: 20px;
     }
 }
