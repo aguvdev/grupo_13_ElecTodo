@@ -81,8 +81,13 @@ module.exports = {
         return res.redirect('/')
     },
     profile: (req,res) => {
-        res.render('../views/users/profile',{
-            usuarios
-        });
+        
+        if(req.session.userLogin){
+            
+                res.render('../views/users/profile');
+        }else{
+            res.redirect('/users/login')
+        }
+        
     }
 }

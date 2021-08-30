@@ -14,7 +14,7 @@
                             <div class="mb-3">
                                 <h4 class="card-title text-center">Iniciar Sesión</h4>
                                 <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control <%= locals.errors && errors.correo ? 'is-invalid' : null%>" id="exampleInputEmail1"
+                                <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null%>" id="exampleInputEmail1"
                                     aria-describedby="emailHelp" name="email" value="<%= locals.oldData ? oldData.email : null%>">
                                     <% if (locals.errors && errors.email)  { %>
                                         <div class="text-danger">
