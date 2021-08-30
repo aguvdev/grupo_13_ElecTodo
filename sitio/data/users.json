@@ -5,14 +5,32 @@
     "lastname": "Perez",
     "email": "juan1988@outlook.com",
     "password": "$2a$10$HB1ikCWzsGXJ.XZiFcO/I.VKbFAhyaHMuiZ9mEsFt1iBxTfHKGCEW",
-    "image": "default-image.png"
+    "image": "foto-de-perfil-default.png"
   },
   {
     "userId": 2,
-    "nombre": "Juana",
-    "lastname": "Rojas",
-    "email": "juanita@gmail.com",
-    "password": "$2a$10$4cx5l.nnqZSVVs6ys0OxquOqNKcHhqDn1fO7eoUyPt8sisQAXZ2ZG",
-    "image": "fotoPerfil-1630106167049.png"
+    "nombre": "Rocio",
+    "lastname": "Recalde",
+    "email": "rorecalde@gmail.com",
+    "password": "$2a$10$l82BmAGB11kne0f4CFqWlefrC5dYiONpybAirV75PLmFsPfsaD5hG",
+    "image": "foto-de-perfil-default.png"
+  },
+  {
+    "userId": 5,
+    "nombre": "sergiowin",
+    "lastname": "romeo",
+    "email": "romeosantos@gmail.com",
+    "password": "$2a$10$AmD51ioRZzbO6b04zVhXye92qQF/IiVi8xEhmIn79ejM1qaIDtq3G",
+    "image": "foto-de-perfil-default.png",
+    "rol": "admin"
+  },
+  {
+    "userId": 6,
+    "nombre": "manolo",
+    "lastname": "ropercio",
+    "email": "manusergio96@gmail.com",
+    "password": "$2a$10$wuRun9GVdWh2hclsf3LVpuqqPkJkYfplZNmJlbT9oKODBKyZZsktC",
+    "image": "foto-de-perfil-default.png",
+    "rol": "user"
   }
 ]

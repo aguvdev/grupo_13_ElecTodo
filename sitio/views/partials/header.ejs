@@ -4,25 +4,39 @@
             <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
         </div>
 
-
+ 
         <div class="buscador">
             <form action="/product/search" method="GET">
                 <input class="buscar-texto" type="text" name="search" placeholder="¿Qué producto estás buscando?">
                 <button class="boton"> <i class="fas fa-search"></i> </button>
             </form>
-
         </div>
-
-
-        <nav class="nav-header-menu">
-            <ul>
+        <% if (locals.userLogin) { %>
+            
+            <% if (locals.userLogin.rol==="admin") { %>
+                <h2 class="btn btn-success" > Modo administrador: <%= locals.userLogin.nombre %> </h2>
                 <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
-                <li><a href=""><i class="fas fa-bell"></i></a></li>
-                <li><a href="/users/login"><i class="fas fa-user-circle"></i></a></li>
-                <li><a href=""><i class="fas fa-heart"></i></a></li>
-                <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
+            <% } %>
+            <nav class="nav-header-menu">
+                <ul>
+            <li><h2 class="btn btn-info" > USUARIO: <%= locals.userLogin.nombre %> </h2></li>
+            <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href=""><i class="fas fa-bell"></i></a></li>
+            <li><a href=""><i class="fas fa-heart"></i></a></li>
+            <li><a href="/users/login"><i class="fas fa-user-circle"></i></a></li>
+
+            <li><a href="/users/logout" class="btn btn-danger">cerrar sesión</a></li>
+     
+        </ul>
+    </nav>
+        <% }else{ %>
+            <nav class="nav-header-menu">
+                        <ul>
+                            <li><a href="/users/login"><i class="fas fa-user-circle"></i></a></li>
+                        </ul>
+            </nav>
+        <% } %>
+        
         <nav class="nav-header-menu2">
             <div class="buscador2">
                 <input type="text" class="buscar-texto2">
@@ -32,12 +46,12 @@
             </div>
             <ul>
                 <li>
-                    <a href="/login">
+                    <a href="/users/login">
                         <i class="fas fa-user-circle"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="/CarritoDeCompras">
+                    <a href="/cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>
@@ -81,4 +95,25 @@
             <li><a href=""><i class="fas fa-heart"></i></a></li>
         </ul>
     </nav>
+    
+        <div class="usuarios-desplegable">
+            <nav>
+                <ul>
+                    <li><a href="/users/profile ">
+                        <button>Ir al Perfil</button>
+                    </a></li>
+                    <li><a href="#">
+                        <button>Configuracion</button>
+                    </a></li>
+                    <li><a href="/users/logOut">
+                        <button>Cerrar Sesión</button>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    
+
+      
+
+
 </header>

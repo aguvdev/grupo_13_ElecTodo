@@ -4,11 +4,26 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
     login : (req,res) => {
-        return res.render('../views/users/login')
+        return res.render('../views/users/login', {
+            usuarios
+        })
     },
     processLogin : (req,res) => {
         const result = validationResult(req);
-        if(result.errors.length > 0){
+        const {email, recordar} = req.body
+        if(result.isEmpty()){
+            let usuario = usuarios.find(usuario => usuario.email === email)
+            req.session.userLogin = {
+                nombre : usuario.nombre,
+                rol : usuario.rol
+            }
+            res.locals.userLogin = req.session.userLogin
+            if(recordar){
+                res.cookie('elecTodo',req.session.userLogin,{maxAge: 1000 * 60})
+                req.session.userLogin = req.cookies.elecTodo
+            }
+            return res.redirect('/')/*aca poner el vista perfil*/
+        }else{
             return res.render('../views/users/login', {
                 errors: result.mapped(),
                 oldData: req.body
@@ -41,10 +56,17 @@ module.exports = {
                 lastname,
                 email,
                 password : bcrypt.hashSync(req.body.password, 10),
-                image : req.file ? req.file.filename : 'default-image.png'
+                image : req.file ? req.file.filename : 'foto-de-perfil-default.png',
+                rol : "user"
             }
             usuarios.push(newUser);
             guardar(usuarios);
+
+            req.session.userLogin = {
+                userId : newUser.userId,
+                nombre : newUser.nombre
+            }
+
             return res.redirect('/')
         }else{
             return res.render('../views/users/register', {
@@ -52,7 +74,20 @@ module.exports = {
                 oldData: req.body
             })
         }
+    },
+    logout : (req,res) =>{
+        req.session.destroy();
+        res.cookie('elecTodo',null,{maxAge:-1})
+        return res.redirect('/')
+    },
+    profile: (req,res) => {
         
+        if(req.session.userLogin){
+            
+                res.render('../views/users/profile');
+        }else{
+            res.redirect('/users/login')
+        }
         
     }
 }
