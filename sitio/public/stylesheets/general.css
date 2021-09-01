@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Bebas+Neue&family=Dancing+Script:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Source+Serif+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Play&family=Source+Serif+Pro:wght@600&display=swap');
 
 :root{
     --color-azulOscuro: #101B37;
@@ -16,13 +19,19 @@
 }
 
 body{
-    background: var(--color-fondo);
-    background-repeat: no-repeat;
-    height: 100%;
-    background-size: cover;
+    background-color:var(--color-fondo);
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
+
+
 main{
-    background-image: url('/img/circulo-fondo.jpg');
+    background-image: url('/img/circulo-fondo.png');
     background-position: center 90%;
     background-repeat: no-repeat;
     background-size: 80%;

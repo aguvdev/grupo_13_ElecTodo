@@ -1,5 +1,5 @@
 # Electodo
-![grupo_13](./logo/electodo_logo.png "Electodo")
+![grupo_13](./logo/electodo_log.png "Electodo")
 ## **Comisión 6**
 ---
 ## **Grupo 13**

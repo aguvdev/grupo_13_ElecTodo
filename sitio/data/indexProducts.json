@@ -1,7 +1,9 @@
 [
   {
     "id": 1,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Mouse HyperX Pulsefire",
     "category": "gaming",
     "category1": "mouse",
@@ -11,7 +13,9 @@
   },
   {
     "id": 2,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Auriculares HyperX Cloud Revolver",
     "category": "gaming",
     "category1": "auriculares",
@@ -20,18 +24,10 @@
     "discount": 0
   },
   {
-    "id": 3,
-    "image": "default-image.png",
-    "name": "Teclado Redragon ",
-    "category": "gaming",
-    "category1": "teclados",
-    "description": "Teclado Redragon KUMARA K552 RGB Mecánico Switch Red",
-    "price": 6000,
-    "discount": 0
-  },
-  {
     "id": 5,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Samsung Galaxy M12",
     "category": "Celulares",
     "description": "Celular Samsung Galaxy M12 Negro",
@@ -40,7 +36,9 @@
   },
   {
     "id": 6,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Samsung Galaxy Z Fold",
     "category": "Celulares",
     "description": "Celular Samsung Galaxy Z Fold",
@@ -49,7 +47,9 @@
   },
   {
     "id": 7,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Celular Moto e5",
     "category": "Celulares",
     "description": "Celular Moto e5",
@@ -57,17 +57,10 @@
     "discount": 0
   },
   {
-    "id": 8,
-    "image": "default-image.png",
-    "name": "Celular Samsung A72",
-    "category": "Celulares",
-    "description": "Celular Samsung A72",
-    "price": 75000,
-    "discount": 10
-  },
-  {
     "id": 9,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook HP",
     "category": "laptops",
     "description": "Notebook HP 14-DK1016LA AMDATHLON",
@@ -76,7 +69,9 @@
   },
   {
     "id": 10,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook Lenovo",
     "category": "laptops",
     "description": "Notebook Lenovo Idea Pad 1-12 GL05 Intel Celeron",
@@ -85,7 +80,9 @@
   },
   {
     "id": 11,
-    "image": "default-image.png",
+    "images": [
+      "default-image.png"
+    ],
     "name": "Notebook X-View",
     "category": "laptops",
     "description": "Notebook X-View Novabook V2 Intel Celeron",
@@ -93,30 +90,85 @@
     "discount": 10
   },
   {
-    "id": 12,
-    "image": "default-image.png",
-    "name": "Notebook Exo",
-    "category": "laptops",
-    "description": "Notebook Exo L33 Celeron",
-    "price": 40000,
-    "discount": 0
-  },
-  {
-    "id": 15,
-    "image": "default-image.png",
-    "name": "mouspad",
-    "category": "gaming",
-    "description": "se cae a pedazos este mouspad mejor compra el logitech pa full picado",
-    "price": "3000",
-    "discount": "15"
-  },
-  {
-    "id": 16,
-    "image": "image-1629304407930.jpg",
-    "name": "placa video xfx",
-    "category": "gaming",
-    "description": "placa video xfx nuevo 8gb vram 1366hz velocidad",
-    "price": "80000",
+    "id": 22,
+    "images": [
+      "images-1630177418323.png",
+      "images-1630177418325.png",
+      "images-1630177418328.png",
+      "images-1630177418329.png",
+      "images-1630177418331.png"
+    ],
+    "name": "motorola g9",
+    "category": "Celulares",
+    "description": "nuevo con garantia somos fabricantes",
+    "price": "20000",
     "discount": "5"
+  },
+  {
+    "id": 23,
+    "images": [
+      "images-1630269472455.jpg",
+      "images-1630269472460.jpg",
+      "images-1630269472462.jpg"
+    ],
+    "name": "teclado",
+    "category": "gaming",
+    "description": "teclado gaming redragon exelente de fabrica .....",
+    "price": "6000",
+    "discount": "5"
+  },
+  {
+    "id": 24,
+    "images": [
+      "images-1630422199717.png",
+      "images-1630422199726.png",
+      "images-1630422199733.png",
+      "images-1630422199740.png",
+      "images-1630422199749.png"
+    ],
+    "name": "placa video ",
+    "category": "gaming",
+    "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora. Además, sus procesadores usan tecnología de punta para que puedas disfrutar de un producto veloz y duradero. Velocidad en cada lectura Como cuenta con 768 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa. Esto le permitirá ejecutar lecturas dispersas y rápidas de y hacia la GPU. Calidad de imagen Criterio fundamental a la hora de elegir una placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te harán ver hasta los detalles más ínfimos en cada ilustración.",
+    "price": "90000",
+    "discount": "5"
+  },
+  {
+    "id": 25,
+    "images": [
+      "default-image.png"
+    ],
+    "name": "auricular lamia redragon",
+    "category": "Seleccione su categoría",
+    "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Redragon H320 Lamia 2 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.  El formato perfecto para vos Al ser headset podrás escuchar tu música preferida, mantener llamadas telefónicas y jugar en línea desde tu PC sin perderte ningún detalle.",
+    "price": "6500",
+    "discount": ""
+  },
+  {
+    "id": 26,
+    "images": [
+      "images-1630422619627.jpg",
+      "images-1630422619629.jpg",
+      "images-1630422619630.jpg",
+      "images-1630422619630.jpg"
+    ],
+    "name": "auricular lamia redragon",
+    "category": "gaming",
+    "description": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Redragon H320 Lamia 2 no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.  El formato perfecto para vos Al ser headset podrás escuchar tu música preferida, mantener llamadas telefónicas y jugar en línea desde tu PC sin perderte ningún detalle.",
+    "price": "6300",
+    "discount": "3"
+  },
+  {
+    "id": 27,
+    "images": [
+      "images-1630423344378.jpg",
+      "images-1630423344382.jpg",
+      "images-1630423344383.jpg",
+      "images-1630423344388.jpg"
+    ],
+    "name": "notebook lenovo",
+    "category": "laptops",
+    "description": "Lenovo IdeaPad 3 14″ ordenador portátil, 14.0″ FHD (1920 x 1080) Display, procesador AMD Ryzen 5 3500U, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, bisel estrecho, Windows 10, 81W0003QUS, Abyss Blue",
+    "price": "80000",
+    "discount": "2"
   }
 ]
