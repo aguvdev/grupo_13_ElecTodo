@@ -18,7 +18,7 @@
     --color-negro1: #000000;
 }
 
-body{
+/* body{
     background-color:var(--color-fondo);
     background-image:
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
@@ -27,15 +27,18 @@ body{
     radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+} */
+
+body{
+    background-image: url('/img/curls.png');
 }
 
-
-main{
+/* main{
     background-image: url('/img/circulo-fondo.png');
     background-position: center 90%;
     background-repeat: no-repeat;
     background-size: 80%;
-}
+} */
 
 
 * {
@@ -46,6 +49,11 @@ main{
     
     
 }
+
+main{
+    padding-top: 110px;
+}
+
 ul, ol{
     list-style: none;
 }
@@ -118,4 +126,5 @@ ul, ol{
 .fa-user-circle:hover,
 .fa-bell:hover{
     color: var(--color-rosaFluor);
+    transition: 0.3s;
 }
