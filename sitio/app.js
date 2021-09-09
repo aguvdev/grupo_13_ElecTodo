@@ -8,6 +8,8 @@ var session = require('express-session')
 var locals = require('./validations/loggued')
 var cookies = require('./validations/cookies')
 
+const userCheck = require('./middlewares/userCheck')
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
@@ -33,6 +35,7 @@ saveUninitialized: false
 app.use(locals)
 app.use(cookies)
 
+app.use(userCheck)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

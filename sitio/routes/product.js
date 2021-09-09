@@ -18,7 +18,7 @@ const upload = multer ({
     storage,
 })
 
-const rolAdmin = require("../validations/rolAdmin") /* requiero el rol admin para identicar quien es el  admin */
+const rolAdmin = require("../middlewares/rolAdmin") /* requiero el rol admin para identicar quien es el  admin */
 
 /* GET products listing. */
 router.get('/carga',rolAdmin, carga);/* antes que me lleve al metodo de carga verifica 1ro si es admin */
