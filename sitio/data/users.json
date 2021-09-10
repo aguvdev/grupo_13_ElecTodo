@@ -32,5 +32,14 @@
     "password": "$2a$10$wuRun9GVdWh2hclsf3LVpuqqPkJkYfplZNmJlbT9oKODBKyZZsktC",
     "image": "foto-de-perfil-default.png",
     "rol": "user"
+  },
+  {
+    "userId": 7,
+    "nombre": "Patricio",
+    "lastname": "Vill",
+    "email": "patricio.vill74@gmail.com",
+    "password": "$2a$10$RVxuzX683/aQc02Fu3d4KuVHtXWuEGldrTzpCTJdLBHsCvgcEjWOe",
+    "image": "foto-de-perfil-default.png",
+    "rol": "admin"
   }
 ]
