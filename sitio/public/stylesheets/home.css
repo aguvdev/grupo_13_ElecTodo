@@ -1,6 +1,12 @@
 /* main */
 
 /* -----OFERTAS----- */
+.home{
+    width: 90%;
+    margin: auto;
+    background: rgba(165, 165, 165, 0.05);
+}
+
 
 .home .ofertas{
     display: flex;
@@ -104,11 +110,11 @@
 /* -----------------RECOMENDACIONES--------------- */
 
 .home .recomendaciones{
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .home .recom-gamCelNote{
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -135,8 +141,6 @@
     -webkit-border-radius: 50% 0 / 100% 0;
     border-radius: 0 35% / 0 100%;
 }
-
-
 
 .home  .cuadro-gamCelNote img{
     width: 230px;
@@ -168,6 +172,11 @@
     border-radius: 5px;
     position: relative;
     margin: 15px;
+}
+
+.home .tarj-prod:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 .home .tarj-prod .img-prod img{
@@ -207,7 +216,7 @@
 }
 
 .home .info-prod h3{
-    width: 100px;
+    /* width: 100%; */
     background: rgb(2, 237, 61);
     color: #fff;
     padding: 5px;
@@ -232,7 +241,7 @@
 }
 
 .home .info-prod button{
-    width: 90px;
+    width: 85px;
     background: var(--color-celesteClaro);
     color: #fff;
     padding: 5px;
@@ -323,7 +332,7 @@
         }
 }
 
-@media (max-width: 481px) {
+@media (max-width: 320px) {
 
     .home .beneficios{
         flex-direction: column;
@@ -332,5 +341,12 @@
 
     .home .beneficios div{
         margin: 10px;
+    }
+
+
+    .home .cuadro-Cel,
+    .home .cuadro-gamCelNote,
+    .home .cuadro-Note{
+        width: 90%;
     }
 }

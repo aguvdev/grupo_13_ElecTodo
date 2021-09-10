@@ -1,0 +1,16 @@
+.error404 .imagen{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    background: rgba(165, 165, 165, 0.25);
+    position: relative;
+}
+
+.error404 .imagen img{
+    width: 45%;
+    margin: 20px;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
