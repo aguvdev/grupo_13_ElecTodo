@@ -11,60 +11,55 @@
                 <button class="boton"> <i class="fas fa-search"></i> </button>
             </form>
         </div>
-
-    <% if (locals.userLogin) { %>
-        <nav class="nav-header-menu">
-
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user-circle"></i>
-                </button>
-                <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Usuario : <%= locals.userLogin.nombre %></a></li>
-                  <li><a class="dropdown-item" href="/users/profile">Ir a mi Perfil</a></li>
-                  <li><a class="dropdown-item" href="/users/logOut">Cerrar Sesión</a></li>
-                </ul>
-            </div>
-</nav>  
-        <nav class="nav-header-menu">
-        <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>               
-</nav>
- 
-    <% } else if ({:locals.userLogin.rol==="admin"}) { %>
-     
-        <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
+        <% if (locals.userLogin) { %>
+            <% if (locals.userLogin.rol==="admin") { %>
+                <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
+                <nav class="nav-header-menu">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Administrador:<%= locals.userLogin.nombre %></a></li>
+                          <li><a class="dropdown-item" href="/users/profile">Ir a mi Perfil</a></li>
+                          <li><a class="dropdown-item" href="/users/logOut">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            
+            <% } else { %>
+             
             <nav class="nav-header-menu">
+
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user-circle"></i>
                     </button>
                     <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Administrador:<%= locals.userLogin.nombre %></a></li>
+                      <li><a class="dropdown-item" href="#">Usuario : <%= locals.userLogin.nombre %></a></li>
                       <li><a class="dropdown-item" href="/users/profile">Ir a mi Perfil</a></li>
                       <li><a class="dropdown-item" href="/users/logOut">Cerrar Sesión</a></li>
                     </ul>
                 </div>
-    </nav>
-
-    <% }else { %>
-        <nav class="nav-header-menu">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user-circle"></i>
-                </button>
-                <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>
-                  <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                  <li><a class="dropdown-item" href="/users/register">Registrarse</a></li>
-                </ul>
-            </div>
-        </nav>
-
-    <% } %>
-        
-         
-
-
+            </nav>  
+                    <nav class="nav-header-menu">
+                    <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li>               
+            </nav>
+            <% } %>
+        <% }else{ %>
+                <nav class="nav-header-menu">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>
+                          <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                          <li><a class="dropdown-item" href="/users/register">Registrarse</a></li>
+                        </ul>
+                    </div>
+                </nav>
+       <% } %>
 <!--         <nav class="nav-header-menu2">
             <div class="buscador2">
                 <input type="text" class="buscar-texto2">
