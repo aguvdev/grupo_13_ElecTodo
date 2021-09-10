@@ -28,7 +28,7 @@
     top: 30%;
     object-fit: cover;
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .profile  .fondo-perfil-oscuro .efecto-borde{
@@ -37,7 +37,7 @@
     position: absolute;
     left: 5%;
     top: 30%;
-    z-index: 1000;
+    z-index: 2;
     border-radius: 50%;
     border: 1px solid #1D9AF2;
     opacity: 1;
@@ -67,7 +67,7 @@
     height: 100px;
     object-fit: contain;
     left: 2%;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .profile .nombre-usuario{
