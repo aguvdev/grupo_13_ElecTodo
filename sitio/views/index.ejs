@@ -1,201 +1,294 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %> 
-<body>
+<%- include('./partials/head') %>
+
+  <body>
     <%- include('./partials/header') %>
-    <main class="home">
+      <main class="home">
         <div class="cuerpo">
           <!-- --------------BANNER--------------- -->
-            <section class="banner">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="/img/img-banner.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/img/img-banner2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/img/img-banner3.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </section>
-            <!-- ---------OFERTAS-------- -->
-            <section class="ofertas">
-                <a href="">
-                    <div class="impreDesc">
-                        <img src="/img/impresorasYcartuchosDesct.png" alt="">
-                        <h3>Impresoras y Cartuchos</h3>
-                        <span>20% OFF</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="auriDesc">
-                        <img src="/img/auricularesDesc.png" alt="">
-                        <h3>Auriculares</h3>
-                        <span>15% OFF</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="impreDesc">
-                        <img src="/img/audioDesct.png" alt="">
-                        <h3>Audio</h3>
-                        <span>15% OFF</span>
-                    </div>
-                </a>
-            </section>
-            <!-- ------------------BENEFICIOS----------- -->
-            <section class="beneficios">
-                <div>
-                    <i class="fas fa-credit-card"></i><p>Todos los medios de pago</p>
+          <section class="banner">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/img/img-banner.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div>
-                    <i class="fas fa-store-alt"></i><p>Retirá gratis en nuestras sucursales</p>
+                <div class="carousel-item">
+                  <img src="/img/img-banner2.jpg" class="d-block w-100" alt="...">
                 </div>
-                <div>
-                    <i class="fas fa-truck"></i><p>Envíos a todo el país</p>
-                </div>
-            </section>
-            <!-- ---------------RECOMENDACIONES--------------- -->
-            <section class="recomendaciones">
-              <!-- -----GAMING----- -->
-              <div class="recom-gamCelNote">
-                <!-- CUADRO DE SECCION -->
-            <div class="cont-cuadro-gamCelNote">
-              <div class="cuadro-gamCelNote">
-                <img src="/img/gamingTeclado.png" alt="">
-                <div class="tit-secc">
-                  <label>Gaming</label>
+                <div class="carousel-item">
+                  <img src="/img/img-banner3.jpg" class="d-block w-100" alt="...">
                 </div>
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-              <div class="seccion-gaming">
-                <% Gaming.forEach(product => { %>
-                  <article class="cont-tarj-prod">
-                    <div class="tarj-prod">
-                      <div class="img-prod">
-                        <img src="/img/<%= product.images[0] %>" alt="">
-                      </div>
-                      <div class="info-prod">
-                        <!-- titulo -->
-                        <h4><%= product.name %></h4>
-                        <!-- descripcion -->
-                        <p><%= product.description %> </p>
-                        <!-- precio -->
-                        <% if (product.discount > 0) { %>
-                          <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %> </h3>
-                          <span> $<%= product.price %>  <%= product.discount %>% OFF</span>
-                        <% }else { %>
-                          <h3> $<%= product.price %> </h3>
-                          <% } %>
-                        <a href="product/detalle-product/<%= product.id %>">
-                          <button>Más Info</button>
-                        </a>
-                      </div>
-                    </div>
-                  </article>
-                  <% }) %>
+          </section>
+          <!-- ---------OFERTAS-------- -->
+          <section class="ofertas">
+            <a href="">
+              <div class="impreDesc">
+                <img src="/img/impresorasYcartuchosDesct.png" alt="">
+                <h3>Impresoras y Cartuchos</h3>
+                <span>20% OFF</span>
               </div>
-                
+            </a>
+            <a href="">
+              <div class="auriDesc">
+                <img src="/img/auricularesDesc.png" alt="">
+                <h3>Auriculares</h3>
+                <span>15% OFF</span>
+              </div>
+            </a>
+            <a href="">
+              <div class="impreDesc">
+                <img src="/img/audioDesct.png" alt="">
+                <h3>Audio</h3>
+                <span>15% OFF</span>
+              </div>
+            </a>
+          </section>
+          <!-- ------------------BENEFICIOS----------- -->
+          <section class="beneficios">
+            <div>
+              <i class="fas fa-credit-card"></i>
+              <p>Todos los medios de pago</p>
             </div>
-          <!-- -----CELULARES----- -->
-          <div class="recom-gamCelNote">
-            <!-- CUADRO DE SECCION -->
-        <div class="cont-cuadro-gamCelNote">
-          <div class="cuadro-Cel">
-            <img src="/img/celular-sect.png" alt="">
-            <div class="tit-secc">
-              <label>Celulares</label>
+            <div>
+              <i class="fas fa-store-alt"></i>
+              <p>Retirá gratis en nuestras sucursales</p>
             </div>
-          </div>
-        </div>
-          <div class="seccion-gaming">
-            <% Celulares.forEach(product => { %>
-              <article class="cont-tarj-prod">
-                <div class="tarj-prod">
-                  <div class="img-prod">
-                    <img src="/img/<%= product.images[0] %>" alt="">
-                  </div>
-                  <div class="info-prod">
-                    <!-- titulo -->
-                    <h4><%= product.name %></h4>
-                    <!-- descripcion -->
-                    <p><%= product.description %> </p>
-                    <!-- precio -->
-                    <% if (product.discount > 0) { %>
-                      <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %> </h3>
-                      <span> $<%= product.price %>  <%= product.discount %>% OFF</span>
-                    <% }else { %>
-                      <h3> $<%= product.price %> </h3>
-                      <% } %>
-                    <a href="product/detalle-product/<%= product.id %>">
-                      <button>Más Info</button>
-                    </a>
+            <div>
+              <i class="fas fa-truck"></i>
+              <p>Envíos a todo el país</p>
+            </div>
+          </section>
+          <!-- ---------------RECOMENDACIONES--------------- -->
+          <section class="recomendaciones">
+            <!-- -----GAMING----- -->
+            <div class="recom-gamCelNote">
+              <!-- CUADRO DE SECCION -->
+              <div class="cont-cuadro-gamCelNote">
+                <div class="cuadro-gamCelNote">
+                  <img src="/img/gamingTeclado.png" alt="">
+                  <div class="tit-secc">
+                    <label>Gaming</label>
                   </div>
                 </div>
-              </article>
-              <% }) %>
-          </div>
-            
-        </div>
-          <!-- -----NOTEBOOKS----- -->
-          <div class="recom-gamCelNote">
-            <!-- CUADRO DE SECCION -->
-        <div class="cont-cuadro-gamCelNote">
-          <div class="cuadro-Note">
-            <img src="/img/notebooksDesc.png" alt="">
-            <div class="tit-secc">
-              <label>Notebooks</label>
+              </div>
+              <!-- carousel -->
+
+              <div class="carousel">
+
+                <div class="carousel__contenedor">
+
+                  <button aria-label = "Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="carousel__listaGam">
+
+                    <% Gaming.forEach(product=> { %>
+                      <article class="cont-tarj-prod">
+                        <div class="tarj-prod">
+                          <div class="img-prod">
+                            <img src="/img/<%= product.images[0] %>" alt="">
+                          </div>
+                          <div class="info-prod">
+                            <!-- titulo -->
+                            <h4>
+                              <%= product.name %>
+                            </h4>
+                            <!-- descripcion -->
+                            <p>
+                              <%= product.description %>
+                            </p>
+                            <!-- precio -->
+                            <% if (product.discount> 0) { %>
+                              <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                              </h3>
+                              <span> $<%= product.price %>
+                                  <%= product.discount %>% OFF</span>
+                              <% }else { %>
+                                <h3> $<%= product.price %>
+                                </h3>
+                                <% } %>
+                                  <a href="product/detalle-product/<%= product.id %>">
+                                    <button>Más Info</button>
+                                  </a>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+                    
+                    </div>
+
+                  <button aria-label = "Siguiente" class="carousel__siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                </div>
+
+                <div role="tablist" class="carousel__indicadores"></div>
+
+              </div>
+
             </div>
-          </div>
-        </div>
-          <div class="seccion-gaming">
-            <% Notebooks.forEach(product => { %>
-              <article class="cont-tarj-prod">
-                <div class="tarj-prod">
-                  <div class="img-prod">
-                    <img src="/img/<%= product.images[0] %>" alt="">
-                  </div>
-                  <div class="info-prod">
-                    <!-- titulo -->
-                    <h4><%= product.name %></h4>
-                    <!-- descripcion -->
-                    <p><%= product.description %> </p>
-                    <!-- precio -->
-                    <% if (product.discount > 0) { %>
-                      <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %> </h3>
-                      <span> $<%= product.price %>  <%= product.discount %>% OFF</span>
-                    <% }else { %>
-                      <h3> $<%= product.price %> </h3>
-                      <% } %>
-                    <a href="product/detalle-product/<%= product.id %>">
-                      <button>Más Info</button>
-                    </a>
+            <!-- -----CELULARES----- -->
+            <div class="recom-gamCelNote">
+              <!-- CUADRO DE SECCION -->
+              <div class="cont-cuadro-gamCelNote">
+                <div class="cuadro-Cel">
+                  <img src="/img/celular-sect.png" alt="">
+                  <div class="tit-secc">
+                    <label>Celulares</label>
                   </div>
                 </div>
-              </article>
-              <% }) %>
-          </div>
-            
-        </div>
-            </section>
-              
-    </main>
-    <%- include('./partials/footer') %>
-    <%- include('./partials/scripts') %>
-</body>
+              </div>
+              <div class="carousel">
+
+                <div class="carousel__contenedor">
+
+                  <button aria-label = "Anterior" class="carousel__anteriorCel">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="carousel__listaCel">
+
+                    <% Celulares.forEach(product=> { %>
+                      <article class="cont-tarj-prod">
+                        <div class="tarj-prod">
+                          <div class="img-prod">
+                            <img src="/img/<%= product.images[0] %>" alt="">
+                          </div>
+                          <div class="info-prod">
+                            <!-- titulo -->
+                            <h4>
+                              <%= product.name %>
+                            </h4>
+                            <!-- descripcion -->
+                            <p>
+                              <%= product.description %>
+                            </p>
+                            <!-- precio -->
+                            <% if (product.discount> 0) { %>
+                              <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                              </h3>
+                              <span> $<%= product.price %>
+                                  <%= product.discount %>% OFF</span>
+                              <% }else { %>
+                                <h3> $<%= product.price %>
+                                </h3>
+                                <% } %>
+                                  <a href="product/detalle-product/<%= product.id %>">
+                                    <button>Más Info</button>
+                                  </a>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+                    
+                    </div>
+
+                  <button aria-label = "Siguiente" class="carousel__siguienteCel">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                </div>
+
+                <div role="tablist" class="carousel__indicadoresCel"></div>
+
+              </div>
+
+            </div>
+            <!-- -----NOTEBOOKS----- -->
+            <div class="recom-gamCelNote">
+              <!-- CUADRO DE SECCION -->
+              <div class="cont-cuadro-gamCelNote">
+                <div class="cuadro-Note">
+                  <img src="/img/notebooksDesc.png" alt="">
+                  <div class="tit-secc">
+                    <label>Notebooks</label>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel">
+
+                <div class="carousel__contenedorNot">
+
+                  <button aria-label = "Anterior" class="carousel__anteriorNot">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="carousel__listaNot">
+
+                    <% Notebooks.forEach(product=> { %>
+                      <article class="cont-tarj-prod">
+                        <div class="tarj-prod">
+                          <div class="img-prod">
+                            <img src="/img/<%= product.images[0] %>" alt="">
+                          </div>
+                          <div class="info-prod">
+                            <!-- titulo -->
+                            <h4>
+                              <%= product.name %>
+                            </h4>
+                            <!-- descripcion -->
+                            <p>
+                              <%= product.description %>
+                            </p>
+                            <!-- precio -->
+                            <% if (product.discount> 0) { %>
+                              <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                              </h3>
+                              <span> $<%= product.price %>
+                                  <%= product.discount %>% OFF</span>
+                              <% }else { %>
+                                <h3> $<%= product.price %>
+                                </h3>
+                                <% } %>
+                                  <a href="product/detalle-product/<%= product.id %>">
+                                    <button>Más Info</button>
+                                  </a>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+                    
+                    </div>
+
+                  <button aria-label = "Siguiente" class="carousel__siguienteNot">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
+                </div>
+
+                <div role="tablist" class="carousel__indicadoresNot"></div>
+
+              </div>
+
+            </div>
+          </section>
+
+      </main>
+      <%- include('./partials/footer') %>
+        <%- include('./partials/scripts') %>
+  </body>
+
 </html>

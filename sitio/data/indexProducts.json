@@ -189,5 +189,220 @@
     "description": "teclado gaming redragon exelente de fabrica .....",
     "price": "6000",
     "discount": "5"
+  },
+  {
+    "id": 24,
+    "images": [
+      "Mouse HyperX Pulsefire.jpg"
+    ],
+    "name": "Mouse HyperX Pulsefire",
+    "category": "gaming",
+    "category1": "mouse",
+    "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+    "price": 4299,
+    "discount": 20
+  },
+  {
+    "id": 25,
+    "images": [
+      "Mouse HyperX Pulsefire.jpg"
+    ],
+    "name": "Mouse HyperX Pulsefire",
+    "category": "gaming",
+    "category1": "mouse",
+    "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+    "price": 4299,
+    "discount": 20
+  },
+  {
+    "id": 26,
+    "images": [
+      "Mouse HyperX Pulsefire.jpg"
+    ],
+    "name": "Mouse HyperX Pulsefire",
+    "category": "gaming",
+    "category1": "mouse",
+    "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+    "price": 4299,
+    "discount": 20
+  },
+  {
+    "id": 27,
+    "images": [
+      "Mouse HyperX Pulsefire.jpg"
+    ],
+    "name": "Mouse HyperX Pulsefire",
+    "category": "gaming",
+    "category27": "mouse",
+    "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+    "price": 4299,
+    "discount": 20
+  },
+  {
+    "id": 28,
+    "images": [
+      "Mouse HyperX Pulsefire.jpg"
+    ],
+    "name": "Mouse HyperX Pulsefire",
+    "category": "gaming",
+    "category1": "mouse",
+    "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+    "price": 4299,
+    "discount": 20
+  },
+  {
+    "id": 29,
+    "images": [
+      "Mouse HyperX Pulsefire.jpg"
+    ],
+    "name": "Mouse HyperX Pulsefire",
+    "category": "gaming",
+    "category1": "mouse",
+    "description": "Mouse HyperX Pulsefire FPS Pro RGB Gaming 16000 DPI",
+    "price": 4299,
+    "discount": 20
+  },
+  {
+    "id": 30,
+    "images": [
+      "galaxy-m12.png"
+    ],
+    "name": "Celular Samsung Galaxy M12",
+    "category": "Celulares",
+    "description": "Celular Samsung Galaxy M12 Negro",
+    "price": 36000,
+    "discount": 5
+  },
+  {
+    "id": 31,
+    "images": [
+      "galaxy-m12.png"
+    ],
+    "name": "Celular Samsung Galaxy M12",
+    "category": "Celulares",
+    "description": "Celular Samsung Galaxy M12 Negro",
+    "price": 36000,
+    "discount": 5
+  },
+  {
+    "id": 32,
+    "images": [
+      "galaxy-m12.png"
+    ],
+    "name": "Celular Samsung Galaxy M12",
+    "category": "Celulares",
+    "description": "Celular Samsung Galaxy M12 Negro",
+    "price": 36000,
+    "discount": 5
+  },
+  {
+    "id": 33,
+    "images": [
+      "galaxy-m12.png"
+    ],
+    "name": "Celular Samsung Galaxy M12",
+    "category": "Celulares",
+    "description": "Celular Samsung Galaxy M12 Negro",
+    "price": 36000,
+    "discount": 5
+  },
+  {
+    "id": 34,
+    "images": [
+      "galaxy-m12.png"
+    ],
+    "name": "Celular Samsung Galaxy M12",
+    "category": "Celulares",
+    "description": "Celular Samsung Galaxy M12 Negro",
+    "price": 36000,
+    "discount": 5
+  },
+  {
+    "id": 35,
+    "images": [
+      "galaxy-m12.png"
+    ],
+    "name": "Celular Samsung Galaxy M12",
+    "category": "Celulares",
+    "description": "Celular Samsung Galaxy M12 Negro",
+    "price": 36000,
+    "discount": 5
+  },
+  {
+    "id": 36,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
+  },
+  {
+    "id": 37,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
+  },
+  {
+    "id": 38,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
+  },
+  {
+    "id": 39,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
+  },
+  {
+    "id": 40,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
+  },
+  {
+    "id": 41,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
+  },
+  {
+    "id": 42,
+    "images": [
+      "notebook_exo.jpg"
+    ],
+    "name": "Notebook Exo",
+    "category": "laptops",
+    "description": "Notebook Exo L33 Celeron",
+    "price": 40000,
+    "discount": 0
   }
 ]

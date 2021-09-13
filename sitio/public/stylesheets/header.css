@@ -216,10 +216,6 @@ button:focus:not(:focus-visible){
         align-items: center;
     }
 
-    .nav-header-menu{
-        display: none;
-    }
-
     .nav-header-menu2{
         display: flex;
         align-items: center;

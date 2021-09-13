@@ -162,6 +162,85 @@
     margin: 0;
 }
 
+
+/* ------------------CAROUSEL---------------------- */
+
+.home .carousel__contenedorNot,
+.home .carousel__contenedorCel,
+.home .carousel__contenedor{
+    position: relative;
+}
+
+
+.home .carousel__anteriorNot,
+.home .carousel__siguienteNot,
+.home .carousel__anteriorCel,
+.home .carousel__siguienteCel,
+.home .carousel__anterior,
+.home .carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 20px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #fff;
+    opacity: 20%;
+}
+
+.home .carousel__anteriorNot:hover,
+.home .carousel__siguienteNot:hover,
+.home .carousel__anteriorCel:hover,
+.home .carousel__siguienteCel:hover,
+.home .carousel__anterior:hover,
+.home .carousel__siguiente:hover {
+    opacity: 100%;
+}
+
+.home .carousel__anteriorNot,
+.home .carousel__anteriorCel,
+.home .carousel__anterior {
+    left: -25px;
+}
+
+.home .carousel__siguienteNot,
+.home .carousel__siguienteCel,
+.home .carousel__siguiente {
+    right: -25px;
+}
+
+.home .carousel__listaGam,
+.home .carousel__listaCel,
+.home .carousel__listaNot {
+    overflow: hidden;
+}
+
+.home .carousel__indicadoresNot .glider-dot,
+.home .carousel__indicadoresCel .glider-dot,
+.home .carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+}
+
+.home .carousel__indicadoresNot .glider-dot:hover,
+.home .carousel__indicadoresCel .glider-dot:hover,
+.home .carousel__indicadores .glider-dot:hover {
+    opacity: .5;
+}
+
+.home .carousel__indicadoresNot .glider-dot.active,
+.home .carousel__indicadoresCel .glider-dot.active,
+.home .carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
 /* ------------------TARJETAS DE PRODUCTOS-------------------*/
 
 
