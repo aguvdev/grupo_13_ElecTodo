@@ -81,7 +81,249 @@
             </ul>
         </nav> -->
     </div>
-    <nav class="nav-header-items">
+
+    <!-- ----------------------------------------NUEVO DESPLEGABLE-------------------------------------- -->
+
+    <nav class="menu" id="menu">
+        <!-- botones para responsive mobile -->
+        <div class="contenedor contenedor-botones-menu">
+          <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+          <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+        </div>
+        <!-- buscador principal -->
+        <div class="contenedor contenedor-enlaces-nav">
+          <div class="btn-categorias" id="btn-categorias">
+            <p>Todas las Categorias</p>
+            <i class="fas fa-caret-down"></i>
+          </div>
+  
+
+        </div>
+        <!-- contenedero del GRID -->
+        <div class="contenedor contenedor-grid">
+          <div class="grid" id="grid">
+            <div class="categorias">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
+              <h3 class="subtitulo">Categorias</h3>
+  
+              <a href="#" data-categoria="televisores-y-video">Televisores y video <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="audio">Audio <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="accesorios">Accesorios <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="informatica">Informatica <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="videojuegos">Videojuegos <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="celulares-y-tablets">Celulares y Tablets <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="fotografia-y-video">Fotografia y Video <i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="contenedor-subcategorias">
+              <!-- primer subcontenedor -->
+              <div class="subcategoria activo" data-categoria="televisores-y-video">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Televisores y video</h3>
+                  <a href="#">TVLED</a>
+                  <a href="#">SMART TV</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/television-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- segundo subcontenedor -->
+              <div class="subcategoria" data-categoria="audio">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Audio</h3>
+                  <a href="#">Asistentes virtuales</a>
+                  <a href="#">Monitores de estudio</a>
+                  <a href="#">Parlantes</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/audio-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- tercer subcontenedor -->
+              <div class="subcategoria" data-categoria="accesorios">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Accesorios</h3>
+                  <a href="#">Almacenamiento</a>
+                  <a href="#">Insumos</a>
+                  <a href="#">Partes PC</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- cuarto subcontenedor -->
+              <div class="subcategoria" data-categoria="informatica">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Informatica</h3>
+                  <a href="#">Notebooks</a>
+                  <a href="#">All in One</a>
+                  <a href="#">Impresoras</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-banner-1.png" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-1.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-2.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-3.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-4.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- quinto subcontenedor -->
+              <div class="subcategoria" data-categoria="videojuegos">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Videojuegos</h3>
+                    <a href="#">Consolas</a>
+                    <a href="#">Juegos de Consola</a>
+                    <a href="#">Joysticks</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- sexto subcontenedor -->
+              <div class="subcategoria" data-categoria="celulares-y-tablets">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Celulares y Tablets</h3>
+                    <a href="#">Celulares libres</a>
+                    <a href="#">Tablets</a>
+                    <a href="#">Telefonos Fijos</a>
+                    <a href="#">Fax</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- séptimo subcontenedor -->
+              <div class="subcategoria" data-categoria="fotografia-y-video">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Fotografia y Video</h3>
+                    <a href="#">Cámaras instantáneas</a>
+                    <a href="#">Cámaras digitales</a>
+                    <a href="#">Video Cámaras</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!-- <nav class="nav-header-items">
         <ul>
             <li><a href=""><i class="fas fa-laptop"></i> Laptops</a></li>
             <li><a href=""><i class="fas fa-desktop"></i> PC</a></li>
@@ -94,8 +336,8 @@
             <li><a href=""><i class="fab fa-xbox"></i> Consolas</a></li>
             <li><a href=""><i class="fas fa-print"></i> Impresoras</a></li>
         </ul>
-    </nav>
-    <nav class="nav-header-items2">
+    </nav> -->
+    <!-- <nav class="nav-header-items2">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-bars"></i>
@@ -117,5 +359,5 @@
             <li><a href=""><i class="fas fa-bell"></i></a></li>
             <li><a href=""><i class="fas fa-heart"></i></a></li>
         </ul>
-    </nav>
+    </nav> -->
 </header>
