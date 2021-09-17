@@ -171,7 +171,7 @@
       "images-1630177418329.png",
       "images-1630177418331.png"
     ],
-    "name": "motorola g9",
+    "name": "motorola g20",
     "category": "Celulares",
     "description": "nuevo con garantia somos fabricantes",
     "price": "20000",
@@ -404,5 +404,20 @@
     "description": "Notebook Exo L33 Celeron",
     "price": 40000,
     "discount": 0
+  },
+  {
+    "id": 43,
+    "images": [
+      "images-1631898021156.jpg",
+      "images-1631898021162.jpg",
+      "images-1631898021164.jpg",
+      "images-1631898021174.jpg",
+      "images-1631898021179.jpg"
+    ],
+    "name": "tay y yo",
+    "category": "Seleccione su categoría",
+    "description": "nuevo con garantia somos fabricantes",
+    "price": "99999",
+    "discount": "2"
   }
 ]
