@@ -18,6 +18,29 @@
     --color-negro1: #000000;
 }
 
+/* ---------------------scrollbar------------------------- */
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-image: url('/img/curls.png');
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner{
+    border-radius: 50px;
+    background: none;
+}
+
+
+/* ------------------------------------------------------- */
+
 /* body{
     background-color:var(--color-fondo);
     background-image:

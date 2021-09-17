@@ -151,6 +151,33 @@
 }
 
 
+/* -------------------Animacion----------------- */
+.home .cuadro-Note img,
+.home .cuadro-Cel img,
+.home  .cuadro-gamCelNote img{
+    transition: 0.3ms;
+    animation: sizeChange;
+    animation-duration: 15s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sizeChange {
+    0% {transform: scale(1);
+    }
+    5% {transform: scale(1.1);}
+    10% {transform: scale(1.05);
+    }
+    15% {transform: scale(1.1);}
+    85% {transform: scale(1.1);}
+    90% {transform: scale(1.05);
+    }
+    95% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+
 .home .tit-secc label{
     position: absolute;
     bottom: 2%;
