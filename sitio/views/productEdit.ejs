@@ -9,63 +9,86 @@
             <!-- MENUU -->
         
             <main class="carga">
-
+                
                 <form action="/product/edit/<%= producto.id %>?_method=PUT" method="POST">
-                <div class="seccionesProducto">
-                                    
-                 <div class="secciones-imagen-carga">           
-        
-                        <div class="mb-3">
-                            <label for="productImagen" class="form-label"> imagen </label>
-                            <input type="file" class="form-contro" id="formGroupExampleInput2"
+                    <div class="menu">
+                        <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
+            
+                            <section class="img-auricular"><!-- encierro solo las fotos -->  
+                                <label for="productImagen" class="btn btn-light"> <h3>selecion de imagenes a editar</h3> </label>
+                                <input type="file" class="form-contro" id="formGroupExampleInput2"
                                 placeholder="ingrese precio" name="image" value="<%= producto.image %>">
-                        </div>
-                      
-        
-                </div>
-        
-
-                        <div class="secciones-formulario-carga">
-                            <section class="formulario-carga">
-                                <input class="texto-carga" type="text" placeholder="Nombre:" name="name" value="<%= producto.name %>">
-                            </section>
-                            <section class="formulario-carga2">
-                                <input class="texto-carga" type="text" placeholder="Modelo:" name="model" value="model" >
-                            </section>
-                            <select class="formulario-category" name="category">
-                                <% categorias.forEach(categoria => { %>
-                                    <option value="<%= categoria %>"<%= categoria === producto.category ? "selected" : null %> ><%= categoria %></option>
-                                <% }) %>
-                              </select>
-                            <section class="formulario-carga2">
-                                <input class="texto-carga" type="number" placeholder="Precio $:" name="price" value="<%= producto.price %>">
-                            </section>
-                            <section class="formulario-carga2">
-                                <input class="texto-carga" type="text" placeholder="Descuento %:" name="discount" value="<%= producto.discount %>">
-                            </section>
-                            <section class="formulario-descripcion-carga">
-                                <input class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description" value="<%= producto.description %>">
-                            </section>                       
+                                    <div class="galeria-auris">
+                                        <div class="auris">
+                                            <img onclick="document.getElementById('img-principal').setAttribute('src','/img/default-image.png')" src="/img/default-image.png" alt="">
+                                        </div>
+                                    </div>
+                            </section> 
                             
-                                          
+                            <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
+                    
+                                <div class="titulo">
+                                    <h3>Nombre del producto es:</h3>
+                                    <input class="texto-carga" type="text" placeholder="Nombre:" name="name" value="<%= producto.name %>">
+                                </div>
+                
+                                <div class="model">
+                                    <h3>El modelo del producto es:</h3>
+                                    <input class="texto-carga" type="text" placeholder="Modelo:" name="model" value="model" >
+                                </div>
+                                
+                                    <h3>Categoria del producto es :</h3>
+                                    <select class="formulario-category" name="category">
+                                        <option >Seleccione su categoría</option>
+                                        <% categorias.forEach(categoria => { %>
+                                            <option value="<%= categoria %>"<%= categoria === producto.category ? "selected" : null %> ><%= categoria %></option>
+                                            <% }) %>
+                                      </select>
                         
-                        </div>
-                       
-                 </div>           
-                         
-                <div class="secciones-subir-cancelar">
-                    <section class="subir-carga">
-                        <button class="btn btn-primary" type="submit">guardar</button>
-                    </section>
-                    <section class="cancelar-carga">
-                        <button>
-                            <a href="">
-                            <i class="fas fa-times"></i><p> Cancelar</p>
-                            </a>
-                        </button>
-                    </section>
+                                <div class="precio">
+                                    <h4>Editar Precio <br> del producto :</h4>
+                                    <input class="texto-carga" type="number" placeholder="Precio $:" name="price" value="<%= producto.price %>">
+                                    <a href="#"><img src="/img/electodo log.png" alt="electodo"></a>
+                                </div>
+                
+                                <div class="discount">
+                                    <h4>EDITAR pagando con efectivo un: <br> <input class="texto-carga" type="text" placeholder="Descuento %:" name="discount" value="<%= producto.discount %>">%  de descuento</h4> 
+                                </div>
+                                    <div class="garantia-envios">
+                                    <i class="fad fa-shield-alt"></i> <span>Garantia - 12 meses</span>
+                                    <p></p>
+                                    <i class="fas fa-truck"></i> <span>Envios a todo el pais</span>
+                                </div> 
+        
+                                <div class="botones">
+                                    <div class="botoncito">
+                                        <button  type="submit">Guardar</button>
+                                    </div> 
+
+                                    <div class="botoncito">     
+                                    <button type="reset"><i class="fas fa-times"></i> Cancelar</button>  
+                                    </div>  
+                                </div>            
+                                
+        
+                            
+                        
+                    </div>
                 </div>
-            </form>
+            
+            </div>   
+            <div class="contenedor-especificaciones">
+                <div class="contenedor-caracteristicas">
+        
+                        <h3> CARACTERISTICAS GENERALES </h3>
+                        <div class="caracteristicas-contenido">
+                            <input class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description" value="<%= producto.description %>">
+                        </div>
+                    </div>              
+                              
+            </div>
+                                                   
+          </form>       
     </main>
     <%- include('./partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

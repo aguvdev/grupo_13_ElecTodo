@@ -1,6 +1,8 @@
 
 /* MAIN */
-
+.carga input{
+    border-radius: 1em 1em 4em 1em;
+}
 .carga .menu{/* todo */
     padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
     padding-left: 15%;
@@ -72,6 +74,14 @@
     font-weight: 500;/* grosor letras */ 
     margin: -15PX 0px;
 }
+.carga .precio input{
+    width: 18%;
+    height: 40px;
+}
+.carga .discount input{
+    width: 18%;
+
+}
 
 .carga .garantia-envios {/* garantia 12 meses, envios todo pais */
     color: rgb(7, 201, 7);
@@ -142,12 +152,16 @@
 .carga .contenedor-caracteristicas h3{
     border-bottom: 1px solid var(--color-rosaFluor);
 }
-.carga .caracteristicas-contenido{
+.carga .caracteristicas-contenido input{
     padding-top: 12px;
     font-weight: 600;
     padding: 15px;
     margin: 15px;
-    letter-spacing: 3px; 
+    letter-spacing: 3px;
+    width: 96%;
+    height: 150px; 
+    border-radius: 1em 1em 4em 1em;
+
      
 }
 /* PRODUCTOS RELACIONADOS */
