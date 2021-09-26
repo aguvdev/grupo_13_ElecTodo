@@ -1,16 +1,31 @@
-/* const db =require('../database/models');
+ const db =require('../database/models');
 
 module.exports = {
     index : (req,res) => {
-        db.Producto.findAll()
-        .then(products => res.send(products))
+        let Producto = db.Producto.findAll({
+            include : [
+                {association : 'Categories'}
+            ]
+        })
+        let Categories = db.Categories.findAll()
+        Promise.all([Producto,Categories])
+        .then(([Producto,Categories])=>{
+            return res.render('index',{
+                Producto,
+                Categories
+            })
+            
+        })
+
         .catch(error => console.log(error))
-        
     }
-} */
+}
+
+    
+ 
 
 
- const indexProducts=require('../data/indexProducts.js');
+ /* const indexProducts=require('../data/indexProducts.js');
 
 module.exports = {
     index : (req,res) => {
@@ -22,4 +37,4 @@ module.exports = {
         });
         
     },
-} 
+}  */

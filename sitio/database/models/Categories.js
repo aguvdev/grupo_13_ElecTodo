@@ -20,9 +20,19 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     let config = {
+        timestamps : false,
         underscored : true
     }
     const Categories = sequelize.define(alias, cols, config);
+
+    /* relaciones */
+    Categories.associate = models => {
+        Categories.hasMany(models.Producto,{
+            as : "Products",
+            foreignKey : "category_id"
+        })
+    }
+    
 
     return Categories
 }

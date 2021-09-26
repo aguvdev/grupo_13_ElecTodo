@@ -4,6 +4,9 @@ const productos = require("../data/indexProducts");
 const relacionados = require("../data/relacionados_db");
 const categorias = require("../data/categories_db");
 const {validationResult} = require('express-validator');
+const db =require('../database/models');
+
+
 
 module.exports={    
     carga : (req,res) => {
@@ -38,14 +41,13 @@ module.exports={
         fs.writeFileSync(path.join(__dirname,"..","data","indexProducts.json"),JSON.stringify(productos,null,2),"utf-8")
         return res.redirect("/")
     },
+    product : (req,res) => {                  /* detalle producto es show que me muestre una pelicula de a uno, entonces tengo que tener el id en routes*/
+        db.Producto.findByPk(req.params.id)/* esto me va a devolver una pelicula */
+        .then(products => res.render('detalle-product',{/* una pelicula(movie) la mando a la vista movies_show */
+            products
+        }))
+        .catch(error => console.log(error))
 
-    product : (req,res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id);
-        return res.render("detalle-product",{
-            producto,
-            relacionados
-            
-        })
     },
     edit : (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id);
