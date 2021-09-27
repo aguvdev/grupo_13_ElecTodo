@@ -4,7 +4,9 @@ const productos = require("../data/indexProducts");
 const relacionados = require("../data/relacionados_db");
 const categorias = require("../data/categories_db");
 const {validationResult} = require('express-validator');
+
 const db =require('../database/models');
+const {Op} = require('sequelize') /* operador de seuqelize para el buscador search */
 
 
 
@@ -87,18 +89,23 @@ module.exports={
 
     },
     search : (req,res) =>{
-        if(req.query.search.trim() != ""){/* para no tocar la busqueda  si no escribi nada me aparesca el else no todo la lista */
-            let result = productos.filter(producto => producto.name.toLowerCase().includes(req.query.search.toLowerCase().trim()));
-            return res.render("resultSearch",{
-                result,
-                productos,
-                busqueda : req.query.search
-            })
-        }else{
-            res.send("DEBE ESCRIBIR ALGUN PRODUCTO QUE DESEA BUSCAR... ")
-        }
+        let Producto = db.Producto.findAll({
+            where : {
+                name : {
+                    [Op.substring] : req.query.search /* para q me busque ej : auris, micro etc.. */
+                }
+            }
+        })
+        let Categories = db.Categories.findAll()
+        Promise.all([Producto,Categories])
+        .then(([Producto,Categories])=> res.render('resultSearch',{
+                Producto,
+                Categories,
+                name : req.query.search
+            }))
 
 
         }
+        
       
 }
