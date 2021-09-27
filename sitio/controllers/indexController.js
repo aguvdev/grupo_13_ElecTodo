@@ -2,12 +2,12 @@
 
 module.exports = {
     index : (req,res) => {
-        let Producto = db.Product.findAll({
+        let Producto = db.Products.findAll({
             include : [
                 {association : 'Categories'}
             ]
         })
-        let Categories = db.Category.findAll()
+        let Categories = db.Categories.findAll()
         Promise.all([Producto,Categories])
         .then(([Producto,Categories])=>{
             return res.render('index',{

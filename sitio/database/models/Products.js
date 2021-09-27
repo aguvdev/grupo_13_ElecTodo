@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "Product";
+    let alias = "Products";
     
     let cols = {
         id : {
@@ -54,29 +54,25 @@ module.exports = (sequelize, dataTypes) => {
         underscored : true
     };
 
-    const Product = sequelize.define(alias, cols, config);
+    const Products = sequelize.define(alias, cols, config);
     
     /* relaciones */
-    Product.associate = models => {
-        Product.belongsTo(models.Category,{
+    Products.associate = models => {
+        Products.belongsTo(models.Categories,{
             as : "Categories",
             foreignKey : "category_id"
-        })
-    }
-    Product.associate = function (models) {
-        Product.belongsToMany(models.User, {
+        }),
+        Products.belongsToMany(models.User, {
             as: "users",
             through:"Cart",
             foreignKey:"product_id",
             otherKey: "user_id"
-        })
-    }
-    Product.associate = function(models){
-        Product.hasMany(models.Product_image, {
+        }),
+        Products.hasMany(models.Product_image, {
             as: "product_images",
             foreignKey: "image_id"
         })
     }
     
-    return Product
+    return Products
 }

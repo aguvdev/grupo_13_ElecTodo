@@ -44,7 +44,7 @@ module.exports={
         return res.redirect("/")
     },
     product : (req,res) => {                  /* detalle producto es show que me muestre una pelicula de a uno, entonces tengo que tener el id en routes*/
-        db.Producto.findByPk(req.params.id)/* esto me va a devolver una pelicula */
+        db.Products.findByPk(req.params.id)/* esto me va a devolver una pelicula */
         .then(products => res.render('detalle-product',{/* una pelicula(movie) la mando a la vista movies_show */
             products
         }))
@@ -89,7 +89,7 @@ module.exports={
 
     },
     search : (req,res) =>{
-        let Producto = db.Producto.findAll({
+        let Producto = db.Products.findAll({
             where : {
                 name : {
                     [Op.substring] : req.query.search /* para q me busque ej : auris, micro etc.. */
