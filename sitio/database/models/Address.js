@@ -19,5 +19,11 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Address = sequelize.define(alias, cols, config);
 
+    Address.associate = function(models){
+        Address.belongsTo(models.User, {
+            as: "address",
+            foreignKey: "address_id"
+        })
+    }
     return Address
 }

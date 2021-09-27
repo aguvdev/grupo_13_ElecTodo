@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "Rols";
+    let alias = "Brand";
     
     let cols = {
         id : {
@@ -9,8 +9,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             primaryKey : true
         },
-        rol : {
-            type : dataTypes.STRING(55),
+        name : {
+            type : dataTypes.STRING(50),
             allowNull: false
         }
     }
@@ -18,7 +18,13 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         underscored : true
     }
-    const Rols = sequelize.define(alias, cols, config);
+    const Brand = sequelize.define(alias, cols, config);
 
-    return Rols
+    Brand.associate = models => {
+        Brand.belongsTo(models.Category,{
+            as : "Categories",
+            foreignKey : "brand_id"
+        })
+    }
+    return Brand
 }

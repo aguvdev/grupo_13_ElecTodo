@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "categories_sub_categories";
+    let alias = "Category_sub_category";
     
     let cols = {
         id : {
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps : false,//todas q sean tablas intermedia lleva esto pa
         underscored : true
     }
-    const categories_sub_categories = sequelize.define(alias, cols, config);
+    const Category_sub_category = sequelize.define(alias, cols, config);
 
-    return categories_sub_categories
+    return Category_sub_category
 }

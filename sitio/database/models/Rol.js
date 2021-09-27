@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "Brands";
+    let alias = "Rol";
     
     let cols = {
         id : {
@@ -9,8 +9,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             primaryKey : true
         },
-        name : {
-            type : dataTypes.STRING(50),
+        rol : {
+            type : dataTypes.STRING(55),
             allowNull: false
         }
     }
@@ -18,7 +18,12 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         underscored : true
     }
-    const Brands = sequelize.define(alias, cols, config);
-
-    return Brands
+    const Rol = sequelize.define(alias, cols, config);
+    Rol.associate = function(models){
+        Rol.hasMany(models.User, {
+            as: "users",
+            foreignKey: "rol_id"
+        })
+    }
+    return Rol
 }

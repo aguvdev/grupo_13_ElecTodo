@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "Users";
+    let alias = "User";
     
     let cols = {
         id : {
@@ -42,7 +42,33 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         underscored : true
     }
-    const Users = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias, cols, config);
 
-    return Users
+    User.associate = function(models){
+        User.hasOne(models.User_image, {
+            as: "users_images",
+            foreignKey: "image_id"
+        })
+    }
+    User.associate = function(models){
+        User.hasOne(models.Address, {
+            as: "address",
+            foreignKey: "address_id"
+        })
+    }
+    User.associate = function(models){
+        User.belongsTo(models.Rol, {
+            as: "rols",
+            foreignKey: "rol_id"
+        })
+    }
+    User.associate = function (models) {
+        User.belongsToMany(models.Product, {
+            as: "products",
+            through:"Cart",
+            foreignKey:"user_id",
+            otherKey: "product_id"
+        })
+    }
+    return User
 }
