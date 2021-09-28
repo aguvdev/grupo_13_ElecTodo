@@ -38,10 +38,12 @@
                                 </div>
                                 
                                     <h3>Categoria del producto es :</h3>
-                                    <select class="formulario-category" name="category">
+                                    <select class="formulario-category" name="category_id">
                                         <option >Seleccione su categoría</option>
                                         <% categorias.forEach(categoria => { %>
-                                            <option value="<%= categoria %>"<%= categoria === producto.category ? "selected" : null %> ><%= categoria %></option>
+                                            <option value="<%= categoria.id %>"<%= categoria.id === producto.category_id ? "selected" : null %>>
+                                                <%= categoria.name %>
+                                            </option>
                                             <% }) %>
                                       </select>
                         

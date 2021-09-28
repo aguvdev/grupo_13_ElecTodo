@@ -1,4 +1,5 @@
  const db =require('../database/models');
+const Products = require('../database/models/Products');
 
 module.exports = {
     index : (req,res) => {
@@ -18,6 +19,19 @@ module.exports = {
         })
 
         .catch(error => console.log(error))
+    },
+    filter : (req,res) => {
+        let productito = db.Producto.findAll({
+            where : {
+                category_id : req.query.Categories
+            }
+            })
+            let categoria = db.Categories.findAll()
+            Promise.all([productito,categoria])
+            .then(productito => res.render('index',{
+                categoria,
+                productito
+        }))
     }
 }
 

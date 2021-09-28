@@ -1,48 +1,33 @@
 const fs = require("fs");
 const path = require("path");
-const productos = require("../data/indexProducts");
-const relacionados = require("../data/relacionados_db");
-const categorias = require("../data/categories_db");
-const {validationResult} = require('express-validator');
 
 const db =require('../database/models');
-const {Op} = require('sequelize') /* operador de seuqelize para el buscador search */
+const {Op} = require('sequelize'); /* operador de seuqelize para el buscador search */
+const Products = require("../database/models/Products");
 
 
 
 module.exports={    
     carga : (req,res) => {
-        return res.render('carga',{
-            categorias
-        });
+        db.Categories.findAll()
+        .then(Categorias => res.render("carga",{
+            Categorias
+        })).catch(error => console.log(error))
     },
+
     save : (req,res) => {
-        const result = validationResult(req);
-        if(result.errors.length > 0){
-            return res.render('carga', {
-                categorias,
-                errors: result.mapped(),
-                oldData: req.body
+            db.Products.create({
+    
+                ...req.body
+    
+            }).then(Products => {
+                console.log(Products)
+                return res.redirect('/')
             })
-        }
-        const {id,image,name,category,category1,description,price,discount} = req.body;
-        if (req.files){
-            var imagenes = req.files.map(imagen => imagen.filename)
-        }
-        let producto = {
-            id : productos[productos.length - 1].id + 1,
-            images : req.files.length != 0 ? imagenes : ["default-image.png"], /* si viene algo por file de lo comtrario guarda un img default */
-            name,
-            category,
-            category1,
-            description,
-            price,
-            discount,
-        }
-        productos.push(producto)
-        fs.writeFileSync(path.join(__dirname,"..","data","indexProducts.json"),JSON.stringify(productos,null,2),"utf-8")
-        return res.redirect("/")
-    },
+            .catch(error => console.log(error))
+        },
+        
+    
     product : (req,res) => {                  /* detalle producto es show que me muestre una pelicula de a uno, entonces tengo que tener el id en routes*/
         db.Products.findByPk(req.params.id)/* esto me va a devolver una pelicula */
         .then(products => res.render('detalle-product',{/* una pelicula(movie) la mando a la vista movies_show */
@@ -52,30 +37,32 @@ module.exports={
 
     },
     edit : (req,res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id);
-        return res.render ("productEdit",{
-            producto,
-            productos,
-            categorias
-        })
+        let categorias = db.Categories.findAll()
+        let producto =  db.Products.findByPk(req.params.id)
+        Promise.all([producto,categorias])
+        .then(([producto,categorias]) => res.render("productEdit",{
+            categorias,
+            producto
+        })).catch(error => console.log(error))
     },
-    update : (req,res) => {
-        const {id,image,name,category,category1,description,price,discount} = req.body;
 
-        productos.forEach(producto => {
-            if(producto.id === +req.params.id){/* recorro y si me toco con el id correspondiente hago la modificacion */
-                producto.id = +req.params.id
-                producto.name = name,
-                producto.image = req.file ? req.file.filename : producto.image,
-                producto.category = category,
-                producto.description = description,
-                producto.price = price,
-                producto.discount = discount
+    update : (req,res) => {
+        db.Products.update(
+            {
+                ...req.body
+            },
+            {
+                where : {
+                    id : req.params.id
+                }
             }
-        });
-        fs.writeFileSync(path.join(__dirname,"..","data","indexProducts.json"),JSON.stringify(productos,null,2),"utf-8")
-        return res.redirect('/product/detalle-product/' + req.params.id);
+        ).then( response => {
+            console.log(response)
+            return res.redirect('/')
+        }).catch(error => console.log(error))
     },
+    
+    
     
     remove : (req, res) =>{
         productos.forEach(producto => {

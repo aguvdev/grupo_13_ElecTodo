@@ -10,59 +10,36 @@
         
             <main class="carga">
                 
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form method="POST">
                     <div class="menu">
                         <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
             
-                            <section class="img-auricular"><!-- encierro solo las fotos -->  
-                                <label for="productImagen" class="btn btn-light"> <h3>seleccione, un maximo de 5 imagenes</h3> </label>
-                                            <input type="file" class="form-contro" id="productImagen"
-                                                placeholder="ingrese precio" name="images" multiple>
-                                    <div class="galeria-auris">
-                                        <div class="auris">
-                                            <img onclick="document.getElementById('img-principal').setAttribute('src','/img/default-image.png')" src="/img/default-image.png" alt="">
-                                        </div>
-                                    </div>
-                            </section> 
+ 
                             <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
                     
                                 <div class="titulo">
                                     <h3>Agregar Nombre del producto</h3>
-                                    <input class="texto-carga <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" placeholder="Nombre:" name="name" value="<%= locals.oldData ? oldData.name : null%>">  
+                                    <input class="texto-carga" type="text" placeholder="Nombre:" name="name">  
                                 </div>
-                                <% if (locals.errors && errors.name) { %>
-                                    <div class="text-danger">
-                                            <%= errors.name.msg %> 
-                                    </div>
-                                    <% } %>
                 
                                 <div class="model">
-                                    <h3>Agregar Modelo del producto</h3>
-                                    <input class="texto-carga <%= locals.errors && errors.model ? 'is-invalid' : null%>" type="text" placeholder="Modelo:" name="model" value="<%= locals.oldData ? oldData.model : null%>">
+                                    <h3>Agregar stock del producto</h3>
+                                    <input class="texto-carga" type="text" placeholder="stock:" name="stock">
                                 </div>
-                                <% if (locals.errors && errors.model) { %>
-                                    <div class="text-danger">
-                                            <%= errors.model.msg %> 
-                                    </div>
-                                    <% } %>
+
                                     <h3>Agregar Categoria del producto</h3>
-                                    <select class="formulario-category" name="category">
-                                        <option >Seleccione su categoría</option>
-                                        <% categorias.forEach(categoria => { %>
-                                            <option value="<%= categoria %>"><%= categoria %></option>
+                                    <select class="formulario-category" name="category_id">
+                                        <option value="" >Seleccione su categoría</option>
+                                        <% Categorias.forEach(categoria => { %>
+                                            <option value="<%= categoria.id %>"><%= categoria.name %></option>
                                         <% }) %>
                                       </select>
                         
                                 <div class="precio">
                                     <h4>Agregar Precio <br> del producto :</h4>
-                                    <input class="texto-carga <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" placeholder="Precio $:" name="price" value="<%= locals.oldData ? oldData.price : null%>">
+                                    <input class="texto-carga" type="number" placeholder="Precio $:" name="price">
                                     <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
                                 </div>
-                                <% if (locals.errors && errors.price) { %>
-                                    <div class="text-danger">
-                                            <%= errors.price.msg %> 
-                                    </div>
-                                    <% } %>
                 
                                 <div class="discount">
                                     <h3>pagando con efectivo un descuento de:</h3> 
@@ -95,12 +72,8 @@
         
                         <h3> CARACTERISTICAS GENERALES </h3>
                         <div class="caracteristicas-contenido">
-                            <input class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" value="<%= locals.oldData ? oldData.description : null%>">                
-                            <% if (locals.errors && errors.description) { %>
-                                <div class="text-danger">
-                                        <%= errors.description.msg %> 
-                                </div>
-                                <% } %>
+                            <input class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description">                
+                            
                         </div>
                     </div>              
                               
@@ -109,6 +82,5 @@
           </form>       
     </main>
     <%- include('./partials/footer') %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

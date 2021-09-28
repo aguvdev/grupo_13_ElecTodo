@@ -21,10 +21,10 @@ const upload = multer ({
 const rolAdmin = require("../middlewares/rolAdmin") /* requiero el rol admin para identicar quien es el  admin */
 
 /* GET products listing. */
-router.get('/carga',rolAdmin, carga);/* antes que me lleve al metodo de carga verifica 1ro si es admin */
+router.get('/carga', carga);/* antes que me lleve al metodo de carga verifica 1ro si es admin */
 router.post('/carga', upload.array("images"),validacionCarga, save);
 router.get("/detalle-product/:id", product);
-router.get("/edit/:id",rolAdmin,edit);/* aplico rol admin para q aca en edit tambien no ingrese cualquiera solo el admin */
+router.get("/edit/:id",edit);/* aplico rol admin para q aca en edit tambien no ingrese cualquiera solo el admin */
 router.put("/edit/:id",update);
 router.delete("/remove/:id",remove);
 router.get("/search", search);
