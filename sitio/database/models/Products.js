@@ -32,11 +32,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         created_at : {
             type : dataTypes.DATE,
-            allowNull: false
+            allowNull: true
         },
         updated_at : {
             type : dataTypes.DATE,
-            allowNull: false
+            allowNull: true
         },
         image_id : {
             type : dataTypes.INTEGER,
@@ -45,12 +45,16 @@ module.exports = (sequelize, dataTypes) => {
         category_id : {
             type : dataTypes.INTEGER,
             allowNull: false
+        },
+        sub_category_id : {
+            type : dataTypes.INTEGER,
+            allowNull: false
         }
     } ;
 
     let config = {
         tableName : 'products',
-        timestamps : true,
+        timestamps : false,
         underscored : true
     };
 

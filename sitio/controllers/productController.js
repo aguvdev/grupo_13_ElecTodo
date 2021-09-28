@@ -16,15 +16,24 @@ module.exports={
     },
 
     save : (req,res) => {
-            db.Products.create({
-    
-                ...req.body
-    
-            }).then(Products => {
-                console.log(Products)
-                return res.redirect('/')
-            })
-            .catch(error => console.log(error))
+        const { id,name,description,price,discount,stock,image_id,category_id,created_at,updated_at,sub_category_id} = req.body;
+        db.Products.create({
+            id,
+            name,
+            description,
+            price,
+            discount : +discount,
+            stock,
+            image_id : 1,
+            category_id,
+            created_at,
+            updated_at,
+            sub_category_id : 1
+        }).then(products =>{
+            console.log(products)
+            return res.redirect("/")
+        })
+        .catch(error => console.log(error))
         },
         
     
