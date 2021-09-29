@@ -74,16 +74,17 @@ module.exports={
     
     
     remove : (req, res) =>{
-        productos.forEach(producto => {
-            if(producto.id === +req.params.id){
-				let eliminar = productos.indexOf(producto)
-                productos.splice(eliminar, 1)
-                }
-        });
-        fs.writeFileSync(path.join(__dirname, '../data/indexProducts.json'), JSON.stringify(productos,null,2),'utf-8');
-		return res.redirect('/');
-
+        db.Products.destroy({
+            where : {
+                id : req.params.id
+            }
+        }).then(response => {
+            console.log(response)
+            return res.redirect('/')
+        }).catch(error => console.log(error))
     },
+
+    
     search : (req,res) =>{
         let Producto = db.Products.findAll({
             where : {
