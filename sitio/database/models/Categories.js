@@ -31,15 +31,13 @@ module.exports = (sequelize, dataTypes) => {
         Categories.hasMany(models.Products,{
             as : "Products",
             foreignKey : "category_id"
-        })
-    }
-    Categories.associate = models => {
+        }),
+    
         Categories.hasMany(models.Brand,{
             as : "brands",
             foreignKey : "brand_id"
-        })
-    }  
-    Categories.associate = function (models) {
+        }),
+     
         Categories.belongsToMany(models.Sub_category, {
             as: "subcategories",
             through:"Category_sub_category",

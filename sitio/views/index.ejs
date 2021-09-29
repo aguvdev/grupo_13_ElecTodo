@@ -88,7 +88,7 @@
                 <div class="cuadro-gamCelNote">
                   <img src="/img/gamingTeclado.png" alt="">
                   <div class="tit-secc">
-                    <label>Gaming</label>
+                    <label>accesorios</label>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@
 
                   <div class="carousel__listaGam">
 
-                    <% Producto.forEach(product=> { %>
+                    <% accesorios.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
                           <div class="img-prod">
@@ -112,7 +112,7 @@
                           </div>
                           <div class="info-prod">
                             <!-- titulo -->
-                            <h4> su categoria
+                            <h4>categoria:
                               <%= product.category_id %> <br>
 
                               <%= product.name %>
@@ -159,7 +159,7 @@
                 <div class="cuadro-Cel">
                   <img src="/img/celular-sect.png" alt="">
                   <div class="tit-secc">
-                    <label>Celulares</label>
+                    <label>celulares</label>
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@
 
                   <div class="carousel__listaCel">
 
-                    <% Producto.forEach(product=> { %>
+                    <% celulares_y_tablets.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
                           <div class="img-prod">
@@ -181,7 +181,9 @@
                           </div>
                           <div class="info-prod">
                             <!-- titulo -->
-                            <h4>
+                            <h4>categoria:
+                              <%= product.category_id %> <br>
+
                               <%= product.name %>
                             </h4>
                             <!-- descripcion -->
@@ -226,7 +228,7 @@
                 <div class="cuadro-Note">
                   <img src="/img/notebooksDesc.png" alt="">
                   <div class="tit-secc">
-                    <label>Notebooks</label>
+                    <label>informatica</label>
                   </div>
                 </div>
               </div>
@@ -240,7 +242,7 @@
 
                   <div class="carousel__listaNot">
 
-                    <% Producto.forEach(product=> { %>
+                    <% informatica.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
                           <div class="img-prod">
@@ -248,7 +250,9 @@
                           </div>
                           <div class="info-prod">
                             <!-- titulo -->
-                            <h4>
+                            <h4>categoria:
+                              <%= product.category_id %> <br>
+
                               <%= product.name %>
                             </h4>
                             <!-- descripcion -->
