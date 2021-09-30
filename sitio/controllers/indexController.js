@@ -3,12 +3,17 @@
 module.exports = {
     index : (req,res) => {
         let Producto = db.Products.findAll()
-        let accesorios = db.Categories.findOne({
+        let laptops = db.Categories.findOne({
             where : {
-                name : 'accesorios'
+                name : 'laptops'
             },
             include : [
-                {association : 'Products'}
+                {
+                    association : 'Products',
+                    include : [
+                        {association : 'images'}
+                    ]
+                }
             ]
         });
         let celulares_y_tablets = db.Categories.findOne({
@@ -29,12 +34,12 @@ module.exports = {
         })
 
         let Categories = db.Categories.findAll()
-        Promise.all([Producto,Categories,accesorios,celulares_y_tablets,informatica])
-        .then(([Producto,Categories,accesorios,celulares_y_tablets,informatica]) => {
+        Promise.all([Producto,Categories,laptops,celulares_y_tablets,informatica])
+        .then(([Producto,Categories,laptops,celulares_y_tablets,informatica]) => {
             return res.render('index',{
                 Producto,
                 Categories,
-                accesorios : accesorios.Products,
+                laptops : laptops.Products,
                 celulares_y_tablets : celulares_y_tablets.Products,
                 informatica : informatica.Products
             })
