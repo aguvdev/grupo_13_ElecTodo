@@ -32,11 +32,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         created_at : {
             type : dataTypes.DATE,
-            allowNull: true
+            allowNull: false
         },
         updated_at : {
             type : dataTypes.DATE,
-            allowNull: true
+            allowNull: false
         },
         category_id : {
             type : dataTypes.INTEGER,
@@ -44,7 +44,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         sub_category_id : {
             type : dataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
+        },
+        brand_id : {
+            type : dataTypes.INTEGER,
+            allowNull: true
         }
     } ;
 

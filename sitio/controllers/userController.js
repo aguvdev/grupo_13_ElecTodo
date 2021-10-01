@@ -1,6 +1,8 @@
 const {usuarios, guardar} = require('../data/user_db');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
+const db =require('../database/models');
+
 
 module.exports = {
     login : (req,res) => {
@@ -34,47 +36,23 @@ module.exports = {
         return res.render('../views/users/register')
     },
     processRegister : (req,res) => {
-        const result = validationResult(req);
-        
-        let emailRegistrado = usuarios.find(usuario => usuario.email === req.body.email)
-        if(emailRegistrado){
-            return res.render('../views/users/register', {
-                errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-            })
-        }
-
-        if(result.isEmpty()){  
-            let {nombre, lastname, email}= req.body
-            let newUser = {
-                userId : usuarios.length > 0 ? usuarios[usuarios.length - 1].userId + 1 : 1,
-                nombre,
-                lastname,
-                email,
-                password : bcrypt.hashSync(req.body.password, 10),
-                image : req.file ? req.file.filename : 'foto-de-perfil-default.png',
-                rol : "user"
-            }
-            usuarios.push(newUser);
-            guardar(usuarios);
-
-            req.session.userLogin = {
-                userId : newUser.userId,
-                nombre : newUser.nombre
-            }
-
-            return res.redirect('/')
-        }else{
-            return res.render('../views/users/register', {
-                errors: result.mapped(),
-                oldData: req.body
-            })
-        }
+         
+            let {name, password,rol_id, email,phone,address_id}= req.body;
+            db.User.create({
+            name,
+            password : bcrypt.hashSync(password, 10),
+            email,
+            rol : "user",
+            phone,
+            address_id,
+            avatar : 'foto-de-perfil-default.png'
+            }).then(users =>{
+                console.log(users)
+                return res.redirect("/")
+            }).catch(error => console.log(error))
     },
+
+
     logout : (req,res) =>{
         req.session.destroy();
         res.cookie('elecTodo',null,{maxAge:-1})

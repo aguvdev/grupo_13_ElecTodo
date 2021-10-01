@@ -14,42 +14,36 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         password : {
-            type : dataTypes.STRING(12),
+            type : dataTypes.STRING(500),
             allowNull: false
         },
         email : {
             type : dataTypes.STRING(50),
             allowNull: false
         },
-        image_id : {
-            type : dataTypes.INTEGER,
-            allowNull: false
-        },
-        rol_id : {
-            type : dataTypes.INTEGER,
+        rol : {
+            type : dataTypes.STRING(10),
             allowNull: false
         },
         phone : {
             type : dataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         address_id : {
             type : dataTypes.INTEGER,
+            allowNull: true
+        },
+        avatar : {
+            type : dataTypes.STRING(100),
             allowNull: false
         }
     }
 
     let config = {
+        timestamps : false,
         underscored : true
     }
     const User = sequelize.define(alias, cols, config);
-
-    User.associate = function(models){
-        User.hasOne(models.User_image, {
-            as: "users_images",
-            foreignKey: "image_id"
-        })
-    }
     User.associate = function(models){
         User.hasOne(models.Address, {
             as: "address",

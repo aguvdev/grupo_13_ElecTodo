@@ -88,7 +88,7 @@
                 <div class="cuadro-gamCelNote">
                   <img src="/img/gamingTeclado.png" alt="">
                   <div class="tit-secc">
-                    <label>accesorios</label>
+                    <label>videojuegos</label>
                   </div>
                 </div>
               </div>
@@ -104,16 +104,16 @@
 
                   <div class="carousel__listaGam">
 
-                    <% laptops.forEach(product=> { %>
+                    <% videojuegos.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
                           <div class="img-prod">
-                            <img src="/img/<%= product.images[0].name %> " alt="">
+                            <img src="/img/<%= product.images[0] %> " alt="error no hay imagen papa carga una ">
+
                           </div>
                           <div class="info-prod">
                             <!-- titulo -->
-                            <h4>categoria:
-                              <%= product.category_id %> <br>
+                            <h4>
 
                               <%= product.name %>
                             </h4>
@@ -177,12 +177,11 @@
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
                           <div class="img-prod">
-                            <img src="/img/default-image.png" alt="">
+                            <img src="/img/<%= product.images[0] %> " alt="error no hay imagen papa carga una ">
                           </div>
                           <div class="info-prod">
                             <!-- titulo -->
-                            <h4>categoria:
-                              <%= product.category_id %> <br>
+                            <h4>
 
                               <%= product.name %>
                             </h4>
@@ -246,12 +245,11 @@
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
                           <div class="img-prod">
-                            <img src="/img/default-image.png" alt="">
+                            <img src="/img/<%= product.images[0] %> " alt="error no hay imagen papa carga una ">
                           </div>
                           <div class="info-prod">
                             <!-- titulo -->
-                            <h4>categoria:
-                              <%= product.category_id %> <br>
+                            <h4>
 
                               <%= product.name %>
                             </h4>

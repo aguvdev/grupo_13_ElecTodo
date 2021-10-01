@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = "User_image";
+    let alias = "images";
     
     let cols = {
         id : {
@@ -13,12 +13,16 @@ module.exports = (sequelize, dataTypes) => {
             type : dataTypes.STRING(255),
             allowNull: false
         },
+        created_at : {
+            type : dataTypes.DATE,
+            allowNull: false
+        },
         updated_at : {
             type : dataTypes.DATE,
             allowNull: false
         },
-        created_at : {
-            type : dataTypes.DATE,
+        product_id : {
+            type : dataTypes.INTEGER,
             allowNull: false
         }
     }
@@ -26,14 +30,12 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         underscored : true
     }
-    const User_image = sequelize.define(alias, cols, config);
-
-    User_image.associate = function(models){
-        User_image.belongsTo(models.User, {
-            as: "users_images",
-            foreignKey: "image_id"
+    const Images = sequelize.define(alias, cols, config);
+    Images.associate = models => {
+        Images.belongsTo(models.Products,{
+            as : "product",
+            foreignKey : "product_id"
         })
     }
-
-    return User_image
+    return Images
 }
