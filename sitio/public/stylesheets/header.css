@@ -100,8 +100,8 @@ header a {
   header .menu {
     background: linear-gradient(120deg, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
     height: 35px;
-    /* padding: 5px 0; */
-    /* margin-bottom: 20px; */
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
   }
   
   header .menu .contenedor-botones-menu {

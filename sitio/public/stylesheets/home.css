@@ -27,6 +27,8 @@
     -webkit-border-radius: 0 100% 0 0;
     border-radius: 0 100% 0 0;
     position: relative;
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
 }
 
 .home .ofertas .impreDesc img{
@@ -65,6 +67,8 @@
     -webkit-border-radius: 0 100% 0 0;
     border-radius: 0 100% 0 0;
     position: relative;
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
 }
 
 .home .ofertas .auriDesc img{
@@ -140,6 +144,8 @@
     -moz-border-radius: 50% 0 / 100% 0;
     -webkit-border-radius: 50% 0 / 100% 0;
     border-radius: 0 35% / 0 100%;
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
 }
 
 .home  .cuadro-gamCelNote img{
@@ -369,6 +375,8 @@
     -moz-border-radius: 50% 0 / 100% 0;
     -webkit-border-radius: 50% 0 / 100% 0;
     border-radius: 0 35% / 0 100%;
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
 }
 
 .home  .cuadro-Cel img{
@@ -389,6 +397,8 @@
     -moz-border-radius: 50% 0 / 100% 0;
     -webkit-border-radius: 50% 0 / 100% 0;
     border-radius: 0 35% / 0 100%;
+    background-size: 200%;
+    animation: bg-animation 5s infinite alternate;
 }
 
 .home .cuadro-Note img{
