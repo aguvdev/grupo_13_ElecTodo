@@ -98,7 +98,7 @@ header a {
   /* ---------- */
   
   header .menu {
-    background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    background: linear-gradient(120deg, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
     height: 35px;
     /* padding: 5px 0; */
     /* margin-bottom: 20px; */

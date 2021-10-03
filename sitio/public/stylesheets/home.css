@@ -18,7 +18,7 @@
 /* -----IMPRESORA DESCUENTO----- */
 
 .home .ofertas .impreDesc{
-    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    background: linear-gradient(120deg, var(--color-rosaFluor), var(--color-celesteClaro));
     font-size: 16px;
     width: 300px;
     height: 200px;
@@ -56,7 +56,7 @@
 /* -----AURICULARES DESCUENTO----- */
 
 .home .ofertas .auriDesc{
-    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    background: linear-gradient(120deg, var(--color-rosaFluor), var(--color-celesteClaro));
     font-size: 16px;
     width: 300px;
     height: 200px;
@@ -135,7 +135,7 @@
 .home .cuadro-gamCelNote{
     width: 280px;
     height: 50px;
-    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    background: linear-gradient(45deg, var(--color-rosaFluor), var(--color-celesteClaro));
     position: relative;
     -moz-border-radius: 50% 0 / 100% 0;
     -webkit-border-radius: 50% 0 / 100% 0;
@@ -364,7 +364,7 @@
 .home .cuadro-Cel{
     width: 280px;
     height: 50px;
-    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    background: linear-gradient(45deg, var(--color-rosaFluor), var(--color-celesteClaro));
     position: relative;
     -moz-border-radius: 50% 0 / 100% 0;
     -webkit-border-radius: 50% 0 / 100% 0;
@@ -384,7 +384,7 @@
 .home .cuadro-Note{
     width: 280px;
     height: 50px;
-    background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    background: linear-gradient(45deg, var(--color-rosaFluor), var(--color-celesteClaro));
     position: relative;
     -moz-border-radius: 50% 0 / 100% 0;
     -webkit-border-radius: 50% 0 / 100% 0;
