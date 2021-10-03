@@ -21,28 +21,33 @@ header{
 
 header h3,
 header a{
-    text-decoration: none;
-    font-family: Play;
+  text-decoration: none;
+  font-family: Play;
 }
 
 ul{
-    margin: 0;
+  margin: 0;
 }
 
 .cabeza{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding: 15px 0;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  padding: 15px 0;
 }
 
 .buscador2{
-    display: none;
+  display: none;
 }
 
 .logo a img{
-    width: 70px;
-    display: flex;
+  width: 70px;
+  display: flex;
+  transition: 0.3s;
+}
+
+.logo a img:hover {
+  filter: drop-shadow(0.70rem 0.35rem 0.4rem rgba(255, 255, 255, 0.7));
 }
 
 .buscador{
