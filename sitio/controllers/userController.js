@@ -6,9 +6,8 @@ const db =require('../database/models');
 
 module.exports = {
     login : (req,res) => {
-        return res.render('../views/users/login', {
-            usuarios
-        })
+        db.User.findAll()
+        .then(user => res.render('../views/users/login', {user}))
     },
     processLogin : (req,res) => {
         const result = validationResult(req);
