@@ -11,7 +11,7 @@
 } */
 
 header{
-    background-image: url('/img/curls.png');
+    background-image: url('/img/bk/giphy_4.gif');
     position: fixed;
     z-index: 50;
     left: 0;
@@ -98,10 +98,11 @@ header a {
   /* ---------- */
   
   header .menu {
-    background: linear-gradient(120deg, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
+    /* background: linear-gradient(120deg, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro)); */
+    background-image: url('/img/bk/rojo_negro.jpg');
     height: 35px;
-    background-size: 200%;
-    animation: bg-animation 5s infinite alternate;
+    /* background-size: 200%; */
+    animation: bg-animation 20s infinite alternate;
   }
   
   header .menu .contenedor-botones-menu {
@@ -270,7 +271,7 @@ header a {
   }
   
   header .grid .categorias a:hover {
-    color: var(--color-rosaFluor);
+    color: rgb(228, 28, 28);
     font-weight: bold;
   }
   
@@ -319,13 +320,13 @@ header a {
   }
   
   header .grid .enlaces-subcategoria a:hover {
-    color: var(--color-rosaFluor);
+    color: rgb(228, 28, 28);
   }
   
   header .grid .subtitulo {
     font-size: 18px;
     font-weight: normal;
-    color: var(--color-rosaFluor);
+    color: rgb(228, 28, 28);
     padding: 10px 20px;
   }
   

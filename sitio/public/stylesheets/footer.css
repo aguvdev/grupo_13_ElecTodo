@@ -1,12 +1,13 @@
 /* footer */
 
 .seccion-newsletter{
-    background: linear-gradient(120deg, var(--color-rosaFluor), var(--color-azulOscuro));
+    /* background: linear-gradient(120deg, rgb(26, 26, 26),rgb(255, 36, 36),rgb(26, 26, 26)); */
+    background-image: url('/img/bk/rojo_negro.jpg');
     width: 100%;
     height: 200px;
     text-align: center;
-    background-size: 200%;
-    animation: bg-animation 5s infinite alternate;
+    /* background-size: 200%; */
+    animation: bg-animation 20s infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -64,7 +65,7 @@
     color: white;
     display: flex;
     justify-content: space-around;
-    background-image: url('/img/curls.png');
+    background-image: url('/img/bk/giphy_4.gif');
     width: 100%;
     height: 100%;
     padding: 50px 35px;
@@ -91,10 +92,11 @@
 
 .copyr{
     color: white;
-    background-color: black;
+    background-image: url('/img/bk/rojo_negro.jpg');
     width: 100%;
     height: 30px;
     padding: 5px;
+    animation: bg-animation 20s infinite alternate;
 }
 
 .copyr p{

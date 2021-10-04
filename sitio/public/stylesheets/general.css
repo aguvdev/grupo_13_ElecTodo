@@ -25,11 +25,12 @@
 }
 
 ::-webkit-scrollbar-track{
-    background-image: url('/img/curls.png');
+    background-image: url('/img/bk/giphy_4.gif');
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%);
+    /* background: linear-gradient(to bottom, var(--color-rosaFluor) 10%, var(--color-celesteClaro) 65%); */
+    background-color: rgb(228, 28, 28);
     border-radius: 50px;
 }
 
@@ -53,7 +54,7 @@
 } */
 
 body{
-    background-image: url('/img/curls.png');
+    background-image: url('/img/bk/giphy_4.gif');
 }
 
 /* main{
@@ -114,7 +115,7 @@ ul, ol{
 .fa-whatsapp{
     color: var(--color-naranja);
     font-size: 1.5em;
-    background: black;
+    background: rgb(228, 28, 28);
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -128,7 +129,7 @@ ul, ol{
     font-size: 2em;
 }
 
-.fa-arrow-left:hover,
+/* .fa-arrow-left:hover,
 .fa-shopping-cart:hover, 
 .fa-laptop:hover, 
 .fa-desktop:hover, 
@@ -148,6 +149,6 @@ ul, ol{
 .fa-heart:hover,
 .fa-user-circle:hover,
 .fa-bell:hover{
-    color: var(--color-rosaFluor);
+    color: rgb(228, 28, 28);
     transition: 0.3s;
-}
+} */
