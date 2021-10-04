@@ -24,7 +24,19 @@ const registerValidation = [
     
     check('email')
     .notEmpty().withMessage('Debes escribir un correo electrónico').bail()
-    .isEmail().withMessage('Debes escribir un correo electrónico válido'),
+    .isEmail().withMessage('Debes escribir un correo electrónico válido').bail()
+    .custom((value,{req}) => {
+        return db.User.findOne({
+            where :{
+                email : value
+            }
+        }).then(userEmail =>{ 
+            if (userEmail){
+                return Promise.reject()
+            }
+        }).catch(() => Promise.reject('Este email ya está registrado'))
+        
+    }) ,
     
     body('emailagain')
     .custom((value,{req}) => {

@@ -44,28 +44,11 @@ module.exports = {
     },
     processRegister : (req,res) => {
             const result = validationResult(req);
-            db.User.findOne({
-                where :{
-                    email : req.body.email
-                }
-            }).then(userEmail => {
-                if (userEmail){
-                    return res.render('../views/users/register', {
-                        errors: {
-                            email: {
-                                msg: 'Este email ya está registrado'
-                            }
-                        },
-                        oldData: req.body
-                    })
-                }
-            })
 
-
-
-
+            
             let {name, password,rol_id, email,phone,address_id}= req.body;
             if(result.isEmpty()){
+
             db.User.create({
             name,
             password : bcrypt.hashSync(password, 10),
