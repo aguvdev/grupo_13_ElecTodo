@@ -46,7 +46,7 @@ module.exports = {
             const result = validationResult(req);
 
             
-            let {name, password,rol_id, email,phone,address_id}= req.body;
+            let {name, password,rol, email,phone,address_id}= req.body;
             if(result.isEmpty()){
 
             db.User.create({
