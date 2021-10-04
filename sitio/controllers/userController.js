@@ -14,17 +14,24 @@ module.exports = {
         const result = validationResult(req);
         const {email, recordar} = req.body
         if(result.isEmpty()){
-            let usuario = usuarios.find(usuario => usuario.email === email)
-            req.session.userLogin = {
-                nombre : usuario.nombre,
-                rol : usuario.rol
+            db.User.findOne({
+                where : {
+                    email
+                }
+            }).then(user=>{
+                req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                rol : user.rol,
+                email: user.email
             }
-            res.locals.userLogin = req.session.userLogin
+            })
+            
             if(recordar){
-                res.cookie('elecTodo',req.session.userLogin,{maxAge: 1000 * 60})
-                req.session.userLogin = req.cookies.elecTodo
+                res.cookie('elecTodo',req.session.userLogin,{maxAge: 1000 * 600})
+                return res.redirect('/')
             }
-            return res.redirect('/')/*aca poner el vista perfil*/
+            
         }else{
             return res.render('../views/users/login', {
                 errors: result.mapped(),
@@ -36,8 +43,12 @@ module.exports = {
         return res.render('../views/users/register')
     },
     processRegister : (req,res) => {
-         
+            const result = validationResult(req);
+
+            
             let {name, password,rol_id, email,phone,address_id}= req.body;
+            if(result.isEmpty()){
+
             db.User.create({
             name,
             password : bcrypt.hashSync(password, 10),
@@ -48,8 +59,15 @@ module.exports = {
             avatar : 'foto-de-perfil-default.png'
             }).then(users =>{
                 console.log(users)
-                return res.redirect("/")
-            }).catch(error => console.log(error))
+                return res.redirect("/users/login")
+            }).catch(error => console.log(error)) 
+        }else{
+            return res.render('../views/users/register', {
+                errors: result.mapped(),
+                oldData: req.body
+            })
+        }
+            
     },
 
 
@@ -59,13 +77,13 @@ module.exports = {
         return res.redirect('/')
     },
     profile: (req,res) => {
-        
         if(req.session.userLogin){
-            
-                res.render('../views/users/profile');
+            db.User.findOne(req.session.userLogin.email)
+            .then(user => res.render('../views/users/profile', {
+                user 
+            })).catch(error => console.log(error)) 
         }else{
-            res.redirect('/users/login')
+            return res.redirect('/users/login')
         }
-        
     }
 }

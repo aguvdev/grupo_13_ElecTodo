@@ -13,23 +13,19 @@
                         <form action="/users/login" method="POST">
                             <div class="mb-3">
                                 <h4 class="card-title text-center">Iniciar Sesión</h4>
-                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null%>" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" name="email" value="<%= locals.oldData ? oldData.email : null%>">
-                                    <% if (locals.errors && errors.email)  { %>
+                                <% if (locals.errors && errors.email)  { %>
                                         <div class="text-danger">
                                                 <%= errors.email.msg%> 
                                         </div>
                                         <% } %>
+                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null%>" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" name="email" value="<%= locals.oldData ? oldData.email : null%>">
+                                    
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null%>" id="exampleInputPassword1" name="password">
-                                <% if (locals.errors && errors.password) { %>
-                                    <div class="text-danger">
-                                            <%= errors.password.msg %>
-                                    </div>
-                                    <% } %>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                                 <div id="emailHelp" class="form-text text-center"><a href="">¿Olvidaste la contraseña?</a></div>
                             </div>
                             <div class="mb-3 form-check">
@@ -66,3 +62,4 @@
 </body>
 
 </html>
+

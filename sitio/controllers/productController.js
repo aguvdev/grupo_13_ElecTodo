@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-
+const {validationResult} = require('express-validator');
 const db =require('../database/models');
 const {Op} = require('sequelize'); /* operador de seuqelize para el buscador search */
 const Products = require("../database/models/Products");
@@ -16,7 +16,9 @@ module.exports={
     },
 
     save : (req,res) => {
+        const result = validationResult(req);
         const { id,name,description,price,discount,stock,image_id,category_id,created_at,updated_at,sub_category_id} = req.body;
+        if(result.isEmpty()){
         db.Products.create({
             id,
             name,
@@ -32,8 +34,16 @@ module.exports={
         }).then(products =>{
             console.log(products)
             return res.redirect("/")
-        })
-        .catch(error => console.log(error))
+        }).catch(error => console.log(error))
+    }else{
+        db.Categories.findAll()
+        .then(Categorias => res.render("carga",{
+            Categorias,
+            errors: result.mapped(),
+            oldData: req.body
+        })).catch(error => console.log(error))
+       
+    }
         },
         
     
