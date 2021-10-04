@@ -12,40 +12,35 @@
                                 <img src="/img/electodo log.png" alt="">
                             </div>
                             <form action="/users/profile">
-                                <% if (locals.userLogin) { %>
                                     <div class="foto-perfil">
-                                        <img src="/img/<%= locals.userLogin.image %>" alt="">
+                                        <img src="/img/<%= user.avatar%>" alt="">
                                         <div class="efecto-borde"></div>
                                     </div>
                                     <div class="fondo-perfil-claro">
                                         <div class="datos-usuario">
                                             <div class="nombre-usuario">
                                                 <label class="nombre-apellido">
-                                                    <%= locals.userLogin.nombre %>
+                                                    <%= user.name %>
                                                 </label>
-                                                <label class="nombre-apellido">
-                                                        <%= locals.userLogin.lastname %>
-                                                </label>
-                                                <label for="">Nombre y Apellido </label>
+                                                <label for="">Nombre </label>
                                             </div>
                                             <div class="datos-generales">
                                                 <p class="numero-cel">011-4444-5555</p>
                                                 <label>Numero de celular</label>
     
                                                 <p class="email" >
-                                                    <%= locals.userLogin.email %>
+                                                    <%= user.email %>
                                                 </p>
                                                 <label>Correo Electrónico</label>
     
                                                 <p id="passOculta" class="email">
-                                                    <%= locals.userLogin.password %>
+                                                    <%= user.password %>
                                                 </p>
                                                 <label>Contraseña</label>
                                             </div>
                                             <button>Editar</button>
                                         </div>
                                     </div>
-                                <% } %>
                                 
                             </form>
 

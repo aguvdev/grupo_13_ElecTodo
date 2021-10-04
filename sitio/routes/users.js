@@ -21,7 +21,7 @@ router.get('/login', login);
 router.post('/login',loginValidation, processLogin)
 
 router.get('/register', register);
-router.post('/register', uploadFile.single('fotoPerfil'), registerValidation, processRegister);
+router.post('/register', registerValidation, processRegister);
 
 router.get('/logOut',logout);
 

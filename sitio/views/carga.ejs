@@ -10,7 +10,7 @@
         
             <main class="carga">
                 
-                <form method="POST">
+                <form action="/product/carga" method="POST">
                     <div class="menu">
                         <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
             
@@ -19,42 +19,74 @@
                     
                                 <div class="titulo">
                                     <h3>Agregar Nombre del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="Nombre:" name="name">  
+                                    <input class="texto-carga" type="text" placeholder="Nombre:" name="name" class="<%= locals.errors && errors.name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.name : null%>">
+                                    <% if (locals.errors && errors.name) { %>
+                                        <div class="text-danger">
+                                                <%= errors.name.msg %> 
+                                        </div>
+                                        <% } %>
                                 </div>
-
                                 <div>
-                                    <h3>Agregar create del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="create:" name="created_at">
-                                    
+                                    <h3>Agregar fecha de creación del producto</h3>
+                                    <input class="texto-carga" type="text" placeholder="create:" name="created_at" class="<%= locals.errors && errors.created_at ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.created_at : null%>">
+                                    <% if (locals.errors && errors.created_at) { %>
+                                        <div class="text-danger">
+                                                <%= errors.created_at.msg %> 
+                                        </div>
+                                        <% } %>
                                 </div>
                                 <div>
-                                    <h3>Agregar create del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="update hdputoo:" name="updated_at">
-                                    
+                                    <h3>Agregar fecha de actualización del producto</h3>
+                                    <input class="texto-carga" type="text" placeholder="update:" name="updated_at" class="<%= locals.errors && errors.updated_at ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.updated_at : null%>">
+                                    <% if (locals.errors && errors.updated_at) { %>
+                                        <div class="text-danger">
+                                                <%= errors.updated_at.msg %> 
+                                        </div>
+                                        <% } %>
                                 </div>
 
                                 <div class="model">
                                     <h3>Agregar stock del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="stock:" name="stock">
+                                    <input class="texto-carga" type="number" placeholder="stock:" name="stock" class="<%= locals.errors && errors.stock ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.stock : null%>">
+                                    <% if (locals.errors && errors.stock) { %>
+                                        <div class="text-danger">
+                                                <%= errors.stock.msg %> 
+                                        </div>
+                                        <% } %>
                                 </div>
 
-                                    <h3>Agregar Categoria del producto</h3>
-                                    <select class="formulario-category" name="category_id">
-                                        <option value="" >Seleccione su categoría</option>
-                                        <% Categorias.forEach(categoria => { %>
-                                            <option value="<%= categoria.id %>"><%= categoria.name %></option>
-                                        <% }) %>
-                                      </select>
+                                <h3>Agregar Categoría del producto</h3>
+                                <select class="formulario-category" name="category_id" class="<%= locals.errors && errors.category_id? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.category_id : null%>"> 
+                                    <option value="" >Seleccione su categoría</option>
+                                    <% Categorias.forEach(categoria => { %>
+                                        <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                                    <% }) %>
+                                  </select>
+                                  <% if (locals.errors && errors.category_id) { %>
+                                    <div class="text-danger">
+                                            <%= errors.category_id.msg %> 
+                                    </div>
+                                    <% } %>
                         
-                                <div class="precio">
-                                    <h4>Agregar Precio <br> del producto :</h4>
-                                    <input class="texto-carga" type="number" placeholder="Precio $:" name="price">
-                                    <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
-                                </div>
+                                    <div class="precio">
+                                        <h4>Agregar Precio <br> del producto :</h4>
+                                        <input class="texto-carga <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" placeholder="Precio $:" name="price" value="<%= locals.oldData ? oldData.price : null%>">
+                                        <% if (locals.errors && errors.price) { %>
+                                            <div class="text-danger">
+                                                    <%= errors.price.msg %> 
+                                            </div>
+                                            <% } %>
+                                        <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
+                                    </div>
                 
                                 <div class="discount">
                                     <h3>pagando con efectivo un descuento de:</h3> 
-                                    <input class="texto-carga" type="text" placeholder="Descuento%:" name="discount">
+                                    <input class="texto-carga <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="number" placeholder="Descuento%:" name="discount" value="<%= locals.oldData ? oldData.discount : null%>">
+                                    <% if (locals.errors && errors.discount) { %>
+                                        <div class="text-danger">
+                                                <%= errors.discount.msg %> 
+                                        </div>
+                                        <% } %>
                                 <div class="garantia-envios">
                                     <i class="fad fa-shield-alt"></i> <span>Garantia - 12 meses</span>
                                     <p></p>
@@ -83,8 +115,12 @@
         
                         <h3> CARACTERISTICAS GENERALES </h3>
                         <div class="caracteristicas-contenido">
-                            <input class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description">                
-                            
+                            <input class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" value="<%= locals.oldData ? oldData.description : null%>">                
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-danger">
+                                        <%= errors.description.msg %> 
+                                </div>
+                                <% } %>
                         </div>
                     </div>              
                               
