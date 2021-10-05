@@ -24,14 +24,11 @@ module.exports = {
                 rol : user.rol,
                 email: user.email
             }
-            })
-            
-            if(recordar){
-                res.cookie('elecTodo',req.session.userLogin,{maxAge: 1000 * 600})
-                return res.redirect('/')
-            }
-            
-        }else{
+            recordar && res.cookie ('elecTodo',req.session.userLogin,{maxAge: 1000 * 600})
+            return res.redirect('/')
+            })          
+        }
+        else{
             return res.render('../views/users/login', {
                 errors: result.mapped(),
                 oldData: req.body
@@ -45,7 +42,7 @@ module.exports = {
             const result = validationResult(req);
 
             
-            let {name, password,rol, email,phone,address_id}= req.body;
+            let {name, password,rol_id, email,phone,address_id}= req.body;
             if(result.isEmpty()){
 
             db.User.create({
@@ -77,7 +74,7 @@ module.exports = {
     },
     profile: (req,res) => {
         if(req.session.userLogin){
-            db.User.findOne(req.session.userLogin.email)
+            db.User.findByPk(req.session.userLogin.id)
             .then(user => res.render('../views/users/profile', {
                 user 
             })).catch(error => console.log(error)) 
