@@ -46,13 +46,37 @@ module.exports={
     }
         },
         
+        product : (req,res) => { 
+            db.Products.findOne({     /* este va aca el de models associacion: "Products".belongsTo(models.Categories,{ */
+                where : {
+                    id : req.params.id
+                },
+                include : [
+                    {association : 'images'},
+                    {association : 'Categories'}
+                ]
+            }).then(products => {/*  este va aca el q esta en la vista <h1><%= "products".name %> </h1>  */
+                    console.log(products);
+                    db.Categories.findOne({
+                        where : {
+                            id : products.category_id
+                        },
+                        include : [
+                            {
+                                association : 'Products',
+                                include : [
+                                    {association : 'images'}
+                                ]
+                            }
+                        ]
+                    }).then(Categories =>{
+                        return res.render('detalle-product',{
+                            products,
+                            relacionados : Categories.products
+                })
+            })
+            }).catch(error => console.log(error))    
     
-    product : (req,res) => {                  /* detalle producto es show que me muestre una pelicula de a uno, entonces tengo que tener el id en routes*/
-        db.Products.findByPk(req.params.id)/* esto me va a devolver una pelicula */
-        .then(products => res.render('detalle-product',{/* una pelicula(movie) la mando a la vista movies_show */
-            products
-        }))
-        .catch(error => console.log(error))
 
     },
     edit : (req,res) => {
