@@ -2,8 +2,6 @@ const {check}=require('express-validator')
 
 const validacionCarga = [
     check('name').notEmpty().withMessage('Indicar el nombre del producto'),
-    check('created_at').notEmpty().withMessage('Indicar la fecha de creación del producto'),
-    check('updated_at').notEmpty().withMessage('Indicar la fecha de creación del producto'),
     check('stock').notEmpty().withMessage('Debes indicar el stock disponible'),
     check('category_id').notEmpty().withMessage('Elegir categoría'),
     check('price').notEmpty().withMessage('Indicar precio del producto'),

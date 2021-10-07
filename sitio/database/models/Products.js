@@ -30,14 +30,6 @@ module.exports = (sequelize, dataTypes) => {
             type : dataTypes.INTEGER,
             allowNull: false
         },
-        created_at : {
-            type : dataTypes.DATE,
-            allowNull: false
-        },
-        updated_at : {
-            type : dataTypes.DATE,
-            allowNull: false
-        },
         category_id : {
             type : dataTypes.INTEGER,
             allowNull: false
@@ -54,7 +46,6 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName : 'products',
-        timestamps : false,
         underscored : true
     };
 

@@ -3,45 +3,63 @@ const path = require("path");
 const {validationResult} = require('express-validator');
 const db =require('../database/models');
 const {Op} = require('sequelize'); /* operador de seuqelize para el buscador search */
-const Products = require("../database/models/Products");
 
 
 
 module.exports={    
     carga : (req,res) => {
         db.Categories.findAll()
-        .then(Categorias => res.render("carga",{
+        .then(Categorias => res.render("carga",{ /* ese Categorias tiene q ser el mismo q esta en la vista de carga el foreach */
             Categorias
         })).catch(error => console.log(error))
     },
 
     save : (req,res) => {
-        const result = validationResult(req);
-        const { id,name,description,price,discount,stock,image_id,category_id,created_at,updated_at,sub_category_id} = req.body;
+        let result = validationResult(req);
+
         if(result.isEmpty()){
+            const { name,description,price,discount,stock,category_id,created_at,updated_at,sub_category_id,brand_id} = req.body;
+
         db.Products.create({
-            id,
-            name,
-            description,
-            price,
+            ...req.body,
             discount : +discount,
-            stock,
-            image_id : 1,
-            category_id,
-            created_at,
-            updated_at,
-            sub_category_id : 1
+            sub_category_id : 1,
+            brand_id : 1
         }).then(products =>{
-            console.log(products)
+
+            if(req.files){
+                console.log(req.files)
+                var imag = []
+                var imagenes = req.files.map(imagen => imagen.filename);/* video 00:31 */
+                imagenes.forEach(img => {
+                    var image = {
+                        name : img,
+                        product_id : products.id,
+                        /* created_at : new Date,
+                        updated_at : new Date */
+
+                    }
+                    imag.push(image)
+                    console.log(image)
+                    db.images.create({...image}).then((image) => console.log(image))
+                })
+                /* console.log(imag)
+                db.images.bulkCreate(imag,{validate : true})
+                    .then( ()=> console.log('imagenes agregadas')) */
+        }
+
             return res.redirect("/")
         }).catch(error => console.log(error))
+
     }else{
         db.Categories.findAll()
-        .then(Categorias => res.render("carga",{
-            Categorias,
-            errors: result.mapped(),
-            oldData: req.body
-        })).catch(error => console.log(error))
+        .then(Categories =>{
+            res.render("carga",{
+                Categories,
+                errors: result.mapped(),
+                oldData: req.body
+            })
+        }).catch(error => console.log(error))
        
     }
         },

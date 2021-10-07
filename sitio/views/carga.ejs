@@ -10,11 +10,16 @@
         
             <main class="carga">
                 
-                <form action="/product/carga" method="POST">
+                <form action="/product/carga" method="POST" enctype="multipart/form-data">
                     <div class="menu">
                         <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
-            
- 
+                            <section class="img-auricular">
+
+                            <label for="productImagen" class="btn btn-light"> seleccione, un maximo de 5 imagenes </label>
+                            <input type="file" class="form-control" id="productImagen" placeholder="ingrese precio" name="images" multiple>
+                            
+                            </section>
+
                             <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
                     
                                 <div class="titulo">
@@ -23,24 +28,6 @@
                                     <% if (locals.errors && errors.name) { %>
                                         <div class="text-danger">
                                                 <%= errors.name.msg %> 
-                                        </div>
-                                        <% } %>
-                                </div>
-                                <div>
-                                    <h3>Agregar fecha de creación del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="create:" name="created_at" class="<%= locals.errors && errors.created_at ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.created_at : null%>">
-                                    <% if (locals.errors && errors.created_at) { %>
-                                        <div class="text-danger">
-                                                <%= errors.created_at.msg %> 
-                                        </div>
-                                        <% } %>
-                                </div>
-                                <div>
-                                    <h3>Agregar fecha de actualización del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="update:" name="updated_at" class="<%= locals.errors && errors.updated_at ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.updated_at : null%>">
-                                    <% if (locals.errors && errors.updated_at) { %>
-                                        <div class="text-danger">
-                                                <%= errors.updated_at.msg %> 
                                         </div>
                                         <% } %>
                                 </div>
