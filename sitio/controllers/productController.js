@@ -90,7 +90,7 @@ module.exports={
                     }).then(Categories =>{
                         return res.render('detalle-product',{
                             products,
-                            relacionados : Categories.products
+                            relacionados : Categories.Products
                 })
             })
             }).catch(error => console.log(error))    
