@@ -8,7 +8,10 @@
             <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
 
                 <section class="img-auricular"><!-- encierro solo las fotos -->
-                    <img id="img-principal" class="img-fluid" src="/img/products/<%= products.images[0].name %>" alt="imagen auris">          
+                    <div class="principal_img">
+                        <img id="img-principal"  src="/img/products/<%= products.images[0].name %>" alt="imagen auris"> 
+                    </div>
+                             
                     
                     <div class="galeria-auris">
                         <% products.images.forEach((imagen,index) => { %>
@@ -85,7 +88,7 @@
     </div>
 
     <!-- productss relacionado -->
-    
+   
     
     </main>
     <%- include("./partials/footer") %>
