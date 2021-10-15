@@ -4,50 +4,46 @@
 
     <body>
         <%- include('../partials/header') %>
-            <main class="profile">
-                <section class="perfil-usuario">
-                    <div class="contenedor-perfil">
-                        <div class="fondo-perfil-oscuro">
-                            <div class="logo-carnet">
-                                <img src="/img/electodo log.png" alt="">
+            <main class="prueba">
+                <div class="circulo"></div>
+                <div>
+                    <div class="carta-padre">
+        
+                        <div class="side-avatar">
+                            <div class="avatar">
+                                <img src="/img/users/<%= user.avatar %>" width="300px" alt="foto-de-perfil">
                             </div>
-                            <form action="/users/profile">
-                                    <div class="foto-perfil">
-                                        <img src="/img/<%= user.avatar%>" alt="">
-                                        <div class="efecto-borde"></div>
-                                    </div>
-                                    <div class="fondo-perfil-claro">
-                                        <div class="datos-usuario">
-                                            <div class="nombre-usuario">
-                                                <label class="nombre-apellido">
-                                                    <%= user.name %>
-                                                </label>
-                                                <label for="">Nombre </label>
-                                            </div>
-                                            <div class="datos-generales">
-                                                <p class="numero-cel">011-4444-5555</p>
-                                                <label>Numero de celular</label>
-    
-                                                <p class="email" >
-                                                    <%= user.email %>
-                                                </p>
-                                                <label>Correo Electrónico</label>
-    
-                                                <p id="passOculta" class="email">
-                                                    <%= user.password %>
-                                                </p>
-                                                <label>Contraseña</label>
-                                            </div>
-                                            <button>Editar</button>
-                                        </div>
-                                    </div>
-                                
-                            </form>
-
-
+                            <p class="nombre-avatar"><%= user.name %> </p>
+                            <p class="num-avatar"><%= user.phone %></p>
+                            <p class="adr-avatar"><%= user.adress %></p>
+                            <p class="email-avatar"><%= user.email %> </p>
                         </div>
+        
+                        <div class="side-datos">
+                            <form action="" class="cont-side-datos" autocomplete="off">
+                                <div class="side-1">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="name" name="name" placeholder="<%= user.name %>" value="<%= user.name %>">
+                                    <label for="Celular/Telefono">Celular/Telefono</label>
+                                    <input type="text" id="Celular/Telefono" name="phone" placeholder="<%= user.phone %>" value="<%= user.phone %>">
+                                    <label for="Ciudad">Ciudad</label>
+                                    <input type="text" id="Ciudad" placeholder="<%= user.adress %> ">
+                                    <button type="submit">Eliminar cuenta</button>
+                                </div>
+                                <div class="side-2">
+                                    <label for="Email">Email</label>
+                                    <input type="text" id="Email" placeholder="<%= user.email %>">
+                                    <label for="Password">Contraseña</label>
+                                    <input type="password" id="Password"  placeholder="Nueva contraseña" class="password"><span onclick="togglePass()">
+                                        <i class="fa fa-eye-slash"></i>
+                                    </span>
+                                    <button type="submit">Editar</button>
+                                </div>
+                            </form>
+                        </div>
+        
                     </div>
-                </section>
+                </div>
             </main>
             <%- include('../partials/footer') %>
                 <%- include('../partials/scripts') %>
