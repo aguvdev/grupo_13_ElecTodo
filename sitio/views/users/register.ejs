@@ -45,7 +45,7 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
                             <input type="password" placeholder="Debe tener al menos 6 caracteres"  name="password" id="password" class="form-control<%= locals.errors && errors.password ? 'is-invalid' : null%>">
-                            <div id="emailHelp"  class="form-text"><i class="fas fa-info"></i> La contraseña debe contener al menos 6 caracteres.
+                            <div id="emailHelp"  class="form-text"><i class="fas fa-info"></i> La contraseña debe contener al menos 8 caracteres.
                                 <% if (locals.errors && errors.password) { %>
                                     <div class="text-danger">
                                             <%= errors.password.msg %> 

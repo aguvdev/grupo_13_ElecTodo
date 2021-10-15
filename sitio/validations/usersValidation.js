@@ -20,7 +20,8 @@ const loginValidation = [
 const registerValidation = [
     check('name')
     .notEmpty().withMessage('Debes escribir un nombre').bail()
-    .isAlpha().withMessage('El nombre debe contener solo letras'),
+    .isAlpha().withMessage('El nombre debe contener solo letras').bail()
+    .isLength({min: 2}).withMessage('El noombre debe tener al menos 2 caracteres'),
     
     check('email')
     .notEmpty().withMessage('Debes escribir un correo electrónico').bail()
@@ -48,7 +49,7 @@ const registerValidation = [
     
     check('password')
     .notEmpty().withMessage('Debes escribir una contraseña').bail()
-    .isLength({min: 6}).withMessage('La contraseña debe contener al menos 6 caracteres'),
+    .isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres'),
 
     body('passwordagain')
     .notEmpty().withMessage('Debes confirmar tu contraseña').bail()

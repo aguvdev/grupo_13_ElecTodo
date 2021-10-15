@@ -16,15 +16,14 @@
                             <section class="img-auricular">
 
                             <label for="productImagen" class="btn btn-light"> seleccione, un maximo de 5 imagenes </label>
-                            <input type="file" class="form-control" id="productImagen" placeholder="ingrese precio" name="images" multiple>
-                            
+                            <input type="file" class="form-control" id="productImagen" placeholder="ingrese precio" name="images" multiple accept="image/png, image/gif, image/jpeg, image/jpg">
                             </section>
 
                             <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
                     
                                 <div class="titulo">
                                     <h3>Agregar Nombre del producto</h3>
-                                    <input class="texto-carga" type="text" placeholder="Nombre:" name="name" class="<%= locals.errors && errors.name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.name : null%>">
+                                    <input class="texto-carga <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" placeholder="Nombre:" name="name" value="<%= locals.oldData ? oldData.name : null%>">
                                     <% if (locals.errors && errors.name) { %>
                                         <div class="text-danger">
                                                 <%= errors.name.msg %> 
@@ -34,7 +33,7 @@
 
                                 <div class="model">
                                     <h3>Agregar stock del producto</h3>
-                                    <input class="texto-carga" type="number" placeholder="stock:" name="stock" class="<%= locals.errors && errors.stock ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.stock : null%>">
+                                    <input class="texto-carga <%= locals.errors && errors.stock ? 'is-invalid' : null%>" type="number" placeholder="stock:" name="stock" value="<%= locals.oldData ? oldData.stock : null%>">
                                     <% if (locals.errors && errors.stock) { %>
                                         <div class="text-danger">
                                                 <%= errors.stock.msg %> 
@@ -43,17 +42,20 @@
                                 </div>
 
                                 <h3>Agregar Categoría del producto</h3>
-                                <select class="formulario-category" name="category_id" class="<%= locals.errors && errors.category_id? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.category_id : null%>"> 
-                                    <option value="" >Seleccione su categoría</option>
-                                    <% Categorias.forEach(categoria => { %>
-                                        <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                                <select class="formulario-category <%= locals.errors && errors.category_id? 'is-invalid' : null%>" name="category_id"> 
+                                    <option value="">Seleccione su categoría</option>
+                                   
+                                    <% Categories.forEach(categoria => { %>
+                                        <option value="<%= categoria.id %>" <%= locals.oldData ? oldData.category_id : null%> ><%= categoria.name %></option>
                                     <% }) %>
+
                                   </select>
                                   <% if (locals.errors && errors.category_id) { %>
                                     <div class="text-danger">
                                             <%= errors.category_id.msg %> 
                                     </div>
                                     <% } %>
+
                         
                                     <div class="precio">
                                         <h4>Agregar Precio <br> del producto :</h4>

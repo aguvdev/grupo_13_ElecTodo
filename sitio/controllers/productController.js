@@ -9,8 +9,8 @@ const {Op} = require('sequelize'); /* operador de seuqelize para el buscador sea
 module.exports={    
     carga : (req,res) => {
         db.Categories.findAll()
-        .then(Categorias => res.render("carga",{ /* ese Categorias tiene q ser el mismo q esta en la vista de carga el foreach */
-            Categorias
+        .then(Categories => res.render("carga",{ /* ese Categorias tiene q ser el mismo q esta en la vista de carga el foreach */
+            Categories
         })).catch(error => console.log(error))
     },
 
@@ -54,7 +54,7 @@ module.exports={
     }else{
         db.Categories.findAll()
         .then(Categories =>{
-            res.render("carga",{
+            return res.render("carga",{
                 Categories,
                 errors: result.mapped(),
                 oldData: req.body
