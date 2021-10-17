@@ -1,0 +1,101 @@
+.search .container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.search .banner{
+    display: none;
+}
+
+.search .banner .carousel-item{
+    height: 40vh;
+    width: 100%;
+    background-size: 100%;
+}
+
+.search section.productos article{
+    background-color: #ffff;
+    box-shadow: 13px 1px 35px red;
+    border-radius: 40px 40px 127px;
+    position: relative;
+    height: 70vh;
+}
+
+.search section.productos article img{
+    width: 100%;
+    height: 75%;
+    object-fit: contain;
+}
+
+.search section.productos article .contenedor{
+    background-color: blue;
+}
+
+
+.search section.productos article a{
+
+    text-transform: uppercase;
+  
+}
+
+.search section.productos h4{
+    margin: 10px 0;
+}
+
+
+.search aside h3, .search section.productos h3{
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #70a6bb;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.search aside section.tutoriales article {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #70a6bb;
+    border-bottom: none;
+}
+
+.search aside section.tutoriales article:last-child {
+    border-bottom: 1px solid #70a6bb;
+}
+
+.search aside section.tutoriales article p {
+   margin-left: 10px;
+}
+
+.search aside section.publicidad article{
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #70a6bb;
+    margin: 20px 0px;
+   
+}
+.search aside section.publicidad article img{
+    width: 100%;
+    height: 130px;
+}
+
+@media (min-width:768px) {
+    .search .banner{
+        display: block;
+    }
+    .search section.productos article{
+     
+        height: 60vh;
+    }
+    
+}
+@media (min-width:1024px) {
+    .search .banner .carousel-item{
+        height: 53vh;
+     
+    }
+
+    .search section.productos article{
+     
+        height: 50vh;
+    }
+}

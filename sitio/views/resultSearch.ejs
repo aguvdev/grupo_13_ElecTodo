@@ -6,29 +6,61 @@
         <body>
             <%- include('./partials/header') %>
             <% if (Producto.length > 0) { %>
-                <h1 class="bg-info">Resultado de la Busqueda de : <%= name %> </h1>
-            <table class="table table-dark table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">NOMBRE DEL PRODUCTO</th>
-                    <th scope="col">DESCRIPCION</th>
-                    <th scope="col">PRECIO</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    <% Producto.forEach(producto => { %>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td><%= producto.name %> </td>
-                            <td><%= producto.description %></td>
-                            <td><%= producto.price %></td>
-                          </tr>  
-                    <% }) %>
-             
-                </tbody>
-              </table>
-            <% } else{ %>
+            <main class="search">
+              <div class="container">
+              
+              
+              <div class="row">
+                  <section class="productos col-12 col-lg-9 ">
+                      <h3 class="">Resultados de la busquedas de: "<%= name %>"</h3>
+                      
+                      <div class="celulares row py-2 gx-3">
+                        <% Producto.forEach(producto => { %>
+                          <div class="col-12 col-md-4 my-2">
+                              <article class="p-3">
+                                <a href="/product/detalle-product/<%= producto.id %>">
+                                <h4 class="text-secondary text-center"><%= producto.name %> </h4>
+                                <img src="/img/products/<%= producto.images[0].name ? producto.images[0].name  : null %>" alt="error no hay imagen papa carga una ">                                        
+                                </a>
+                            </article>
+                            
+                          </div>
+                          
+                        <% }) %>
+                        
+                      
+                  </div>
+                  </section>
+                  <aside class="col-12 col-lg-3">
+                      <section class="tutoriales">
+                          <h3>Tutoriales</h3>
+                          <div class="row">
+                              
+                          </div>
+                         
+                         
+                      </section>
+                      <section class="publicidad">
+                          <h3 class="">Publicidad</h3>
+                          <article class="row">
+                              <div class="col-12 col-md-6 col-lg-12 my-3">
+                              <img  src="/img/mcdonald.jpg" alt="" />
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-12 my-3">
+                              <img  src="/img/cocacola.jpg" alt="" />
+                              </div>
+                          </article>
+                      </section>
+                  </aside>
+                
+              </div>
+              
+            </div>
+          </main>
+          <% } else{ %>
+            <p></p> <br> <p></p>
+            <p></p> <br> <p></p>
+            <p></p> <br> <p></p>
             <h1 class="bg-light" style="color: rgb(196, 73, 73);">No hay resultado para la busqueda de : "<%= name %>" <br> Escriba bien el nombre del producto por favor</h1>
             <% } %>
         
