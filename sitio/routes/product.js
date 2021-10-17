@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {validacionCarga} =require('../validations/cargaValidation')
+const {validacionCarga, validacionEdit} =require('../validations/productValidation')
 const {product,carga,save,edit,update,remove,search} = require("../controllers/productController")
 const multer = require("multer");
 const path = require ("path");
@@ -25,7 +25,7 @@ router.get('/carga',rolAdmin, carga);/* antes que me lleve al metodo de carga ve
 router.post('/carga',upload.array("images"),validacionCarga, save);
 router.get("/detalle-product/:id", product);
 router.get("/edit/:id",rolAdmin,edit);/* aplico rol admin para q aca en edit tambien no ingrese cualquiera solo el admin */
-router.put("/edit/:id",update);
+router.put("/edit/:id",validacionEdit, update);
 router.delete("/remove/:id",remove);
 router.get("/search", search);
 

@@ -17,7 +17,7 @@
                             <section class="img-auricular"><!-- encierro solo las fotos -->  
                                 <label for="productImagen" class="btn btn-light"> <h3>selecion de imagenes a editar</h3> </label>
                                 <input type="file" class="form-contro" id="formGroupExampleInput2"
-                                placeholder="ingrese precio" name="image" value="<%= producto.image %>">
+                                placeholder="ingrese precio" name="image" value="<%= producto.image %>" accept="image/png, image/gif, image/jpeg, image/jpg">
                                     <div class="galeria-auris">
                                         <div class="auris">
                                             <img onclick="document.getElementById('img-principal').setAttribute('src','/img/default-image.png')" src="/img/default-image.png" alt="">
@@ -29,7 +29,12 @@
                     
                                 <div class="titulo">
                                     <h3>Nombre del producto es:</h3>
-                                    <input class="texto-carga" type="text" placeholder="Nombre:" name="name" value="<%= producto.name %>">
+                                    <input class="texto-carga <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" placeholder="Nombre:" name="name" value="<%= producto.name %>">
+                                    <% if (locals.errors && errors.name) { %>
+                                        <div class="text-danger">
+                                                <%= errors.name.msg %> 
+                                        </div>
+                                        <% } %>
                                 </div>
                 
                                 <div class="model">
@@ -46,15 +51,24 @@
                                             </option>
                                             <% }) %>
                                       </select>
-                        
                                 <div class="precio">
                                     <h4>Editar Precio <br> del producto :</h4>
-                                    <input class="texto-carga" type="number" placeholder="Precio $:" name="price" value="<%= producto.price %>">
+                                    <input class="texto-carga <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" placeholder="Precio $:" name="price" value="<%= producto.price %>">
                                     <a href="#"><img src="/img/electodo log.png" alt="electodo"></a>
+                                    <% if (locals.errors && errors.price) { %>
+                                        <div class="text-danger">
+                                                <%= errors.price.msg %> 
+                                        </div>
+                                        <% } %>
                                 </div>
                 
                                 <div class="discount">
-                                    <h4>EDITAR pagando con efectivo un: <br> <input class="texto-carga" type="text" placeholder="Descuento %:" name="discount" value="<%= producto.discount %>">%  de descuento</h4> 
+                                    <h4>EDITAR pagando con efectivo un: <br> <input class="texto-carga <%= locals.errors && errors.discount ? 'is-invalid' : null%>" type="text" placeholder="Descuento %:" name="discount" value="<%= producto.discount %>">%  de descuento</h4>
+                                    <% if (locals.errors && errors.discount) { %>
+                                        <div class="text-danger">
+                                                <%= errors.discount.msg %> 
+                                        </div>
+                                        <% } %> 
                                 </div>
                                     <div class="garantia-envios">
                                     <i class="fad fa-shield-alt"></i> <span>Garantia - 12 meses</span>
@@ -84,7 +98,12 @@
         
                         <h3> CARACTERISTICAS GENERALES </h3>
                         <div class="caracteristicas-contenido">
-                            <input class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description" value="<%= producto.description %>">
+                            <input class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" value="<%= producto.description %>">
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-danger">
+                                        <%= errors.description.msg %> 
+                                </div>
+                                <% } %>
                         </div>
                     </div>              
                               
