@@ -20,7 +20,7 @@
                         </div>
         
                         <div class="side-datos">
-                            <form class="cont-side-datos" autocomplete="off">
+                            <form action="/users/profileEdit/<%= user.id %>?_method=PUT" method="POST" class="cont-side-datos" autocomplete="off">
                                 <div class="side-1">
                                     <label for="nombre">Nombre</label>
                                     <input type="text" id="name" name="name" placeholder="<%= user.name %>" value="<%= user.name %>">
@@ -37,10 +37,12 @@
                                         <i class="fa fa-eye-slash"></i>
                                     </span>
                                    
-                                    
+                                    <button type="submit">Editar</button>
                                 </div>
                             </form>
-                            <a href="/users/profileEdit/<%= user.id %>"><button>Editar</button></a>
+                            <form action="/users/profile/<%= user.id %>?_method=DELETE" method="POST">
+                                <button type="submit">Eliminar cuenta</button>
+                            </form>
                         </div>
         
                     </div>

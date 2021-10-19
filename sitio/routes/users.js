@@ -3,7 +3,7 @@ var router = express.Router();
 const multer=require('multer')
 const path=require('path')
 const {loginValidation, registerValidation} = require('../validations/usersValidation')
-const {login,register, processLogin, processRegister,logout, profile} = require('../controllers/userController')
+const {login,register, processLogin, processRegister,logout, profile,edit, update, destroy} = require('../controllers/userController')
 
 
 const storage = multer.diskStorage({
@@ -25,6 +25,11 @@ router.post('/register', registerValidation, processRegister);
 
 router.get('/logOut',logout);
 
-router.get('/profile', profile)
+router.get('/profile', profile);
+
+router.get('/profileEdit/:id', edit);
+router.put('/profileEdit/:id', update);
+router.delete('/profile/:id', destroy);
+
 
 module.exports = router;

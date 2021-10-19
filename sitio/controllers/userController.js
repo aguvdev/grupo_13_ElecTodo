@@ -73,6 +73,7 @@ module.exports = {
         return res.redirect('/')
     },
     profile: (req,res) => {
+        const result = validationResult(req);
         if(req.session.userLogin){
             db.User.findByPk(req.session.userLogin.id)
             .then(user => res.render('../views/users/profile', {
@@ -81,5 +82,41 @@ module.exports = {
         }else{
             return res.redirect('/users/login')
         }
+    },
+    edit: (req, res) =>{
+       db.User.findByPk(req.params.id)
+       .then(user => res.render('../views/users/profileEdit', {user}))
+       .catch(error => console.log(error))
+    },
+    update: (req, res) => {
+        const {name, phone, email,password}=req.body
+            db.User.update(
+                {
+            ...req.body,
+            password: password != " " && bcrypt.hashSync(password,10)
+            },
+        {
+            where : {
+                id : req.params.id
+            }
+        })
+        .then(response => {
+            console.log(response)
+            return res.redirect('/users/profile')
+        })
+        .catch(error => console.log(error))
+    },
+    destroy: (req, res) =>{ 
+        db.User.destroy({
+            where : {
+                id : req.params.id
+            }
+        }).then(response => {
+            console.log(response)
+            req.session.destroy(),
+            res.cookie('elecTodo',null,{maxAge:-1}),
+            res.redirect('/')
+            
+        }).catch(error => console.log(error))
     }
 }
