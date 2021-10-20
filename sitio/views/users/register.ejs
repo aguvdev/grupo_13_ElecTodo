@@ -1,79 +1,127 @@
 <!DOCTYPE html>
-<html lang="es">
-<%- include('../partials/head') %> 
-<body class="register">
-  <%- include('../partials/header') %> 
-  <main class="register">
-    <div class="row">
-        <div class="col-6 mx-auto mt-5 mb-5">
-            <div class="card">
-                <div class="card-body">
-                    <form action="/users/register" method="POST">
-                        <div class="mb-3">
-                            <h4 class="card-title text-center">Creá tu cuenta</h4>
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text"  name="name" id="name"
-                                aria-describedby="emailHelp" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.name : null%>">
-                                <% if (locals.errors && errors.name) { %>
-                                    <div class="text-danger">
-                                            <%= errors.name.msg %> 
-                                    </div>
-                                    <% } %>
-                        </div>
+<html lang="en">
+    <%- include('../partials/head') %> 
+<body>
+    <!-- ----------HEADER------------- -->
 
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                            <input type="email" name="email" id="email"
-                                aria-describedby="emailHelp" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.email : null%>">
-                                <% if (locals.errors && errors.email) { %>
-                                    <div class="text-danger">
-                                            <%= errors.email.msg %> 
-                                    </div>
-                                    <% } %>
+    <!-- -----------MAIN------------ -->
+    <main class="grilla-register">
+        <div class="icono-electodo">
+            <a href="/">
+             <img src="/img/electodo log.png" alt="">
+             </a>
+        </div>
+        <div class="cajacon"></div>
+        <div class="register">
+            <h2 class="title">Registrarse</h2>
+            <form action="/users/register" class="formulario" id="formulario" method="POST">
+                <!-- Grupo: Nombre -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="formulario__input <%= locals.errors && errors.name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.name : null%>" name="name" id="name" placeholder="Escriba su nombre.">
+                        <i id="check-nombre" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %> 
                         </div>
-                        <div class="mb-3">
-                            <label for="email-again" class="form-label">Vuelve a escribir el correo</label>
-                            <input type="email"  name="emailagain" id="email-again"
-                                aria-describedby="emailHelp" class="form-control <%= locals.errors && errors.emailagain ? 'is-invalid' : null%>">
-                                <% if (locals.errors && errors.emailagain) { %>
-                                    <div class="text-danger">
-                                            <%= errors.emailagain.msg %> 
-                                    </div>
-                                    <% } %>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" placeholder="Debe tener al menos 6 caracteres"  name="password" id="password" class="form-control<%= locals.errors && errors.password ? 'is-invalid' : null%>">
-                            <div id="emailHelp"  class="form-text"><i class="fas fa-info"></i> La contraseña debe contener al menos 8 caracteres.
-                                <% if (locals.errors && errors.password) { %>
-                                    <div class="text-danger">
-                                            <%= errors.password.msg %> 
-                                    </div>
-                                    <% } %>
-                            </div>
-                            
-                        </div>
-                        <div class="mb-3">
-                            <label for="password-again" class="form-label">Vuelve a escribir la contraseña</label>
-                            <input type="password" name="passwordagain" id="password-again" class="form-control<%= locals.errors && errors.passwordagain ? 'is-invalid' : null%>">
-                            <% if (locals.errors && errors.passwordagain) { %>
-                                <div class="text-danger">
-                                        <%= errors.passwordagain.msg %> 
-                                </div>
-                                <% } %>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Continuar</button>
-                        <p>Al continuar, aceptas las <a href="">Condiciones de Uso</a> y
-                            el <a href="">Aviso de Privacidad</a> de Electodo</p>
-                    </form>
+                    <% } %>
+                    <p id="formulario__input-error-nombre" class="formulario__input-error">El nombre solo puede contener letras sin espacios.</p>
                 </div>
+    
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-at"></i>
+                        <input type="email" class="formulario__input <%= locals.errors && errors.email ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.email : null%>" name="email" id="email" placeholder="Escriba su correo.">
+                        <i id="check-correo" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+                    <p id="formulario__input-error-correo" class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                </div>
+    
+                <!-- Grupo: Correo de nuevo -->
+                <div class="formulario__grupo" id="grupo__correo2">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-at"></i>
+                        <input type="text" class="formulario__input <%= locals.errors && errors.emailagain ? 'is-invalid' : null%>" name="emailagain" id="emailagain" placeholder = "Vuelva a escribir su correo.">
+                        <i id="check-correo2" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.emailagain) { %>
+                        <div class="text-danger">
+                            <%= errors.emailagain.msg %> 
+                        </div>
+                    <% } %>
+                    <p id="formulario__input-error-correo2" class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                </div>
+
+                <!-- Grupo: Contraseña -->
+			    <div class="formulario__grupo" id="grupo__password">
+				<div class="formulario__grupo-input">
+                    <i class="fas fa-lock"></i>
+					<input type="password" class="formulario__input <%= locals.errors && errors.password ? 'is-invalid' : null%>" name="password" id="password" placeholder="Escriba su contraseña">
+					<i id="check-password" class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %> 
+                    </div>
+                <% } %>
+				<p id="formulario__input-error-password" class="formulario__input-error">La contraseña tiene que ser de 8 a 12 dígitos.</p>
+			    </div>
+
+			    <!-- Grupo: Contraseña 2 -->
+			    <div class="formulario__grupo" id="grupo__password2">
+				<div class="formulario__grupo-input">
+                    <i class="fas fa-lock"></i>
+					<input type="password" class="formulario__input <%= locals.errors && errors.passwordagain ? 'is-invalid' : null%>" name="passwordagain" id="passwordagain" placeholder="Vuelva a escribir su contraseña.">
+					<i id="check-password2" class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+                <% if (locals.errors && errors.passwordagain) { %>
+                    <div class="text-danger">
+                       <%= errors.passwordagain.msg %> 
+                    </div>
+                <% } %>
+				<p id="formulario__input-error-password2" class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			    </div>
+
+                <!-- Grupo: Terminos y Condiciones -->
+			    <div class="formulario__grupo-terminos" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			    </div>
+
+
+			    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <input type="submit" id='btn1' value="Enviar" class="formulario__btn" />
+			    </div>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel right-panel">
+              <div class="content">
+                <h3>¿Ya tenés cuenta?</h3>
+                <p>
+                  ¡Dale al botón para iniciar sesión!
+                </p>
+                <a href="/users/login">
+                    <button class="btn transparent" id="sign-up-btn">
+                    Login
+                  </button>
+                  </a>
+              </div>
+              <img src="/img/register.svg" class="image" alt="" />
             </div>
         </div>
-    </div>
-</main>
+    </main>
     <%- include('../partials/footer') %> 
-    <%- include('../partials/scripts') %> 
+    <%- include('../partials/scripts') %>
 </body>
 </html>
