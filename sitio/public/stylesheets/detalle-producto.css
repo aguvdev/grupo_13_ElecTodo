@@ -87,13 +87,13 @@
     width: 30px;
     height: 30px;
     border: none;
-    top: calc(50% - 20px);
+    top: calc(50% - 40px);
     cursor: pointer;
     line-height: 30px;
     text-align: center;
     background: none;
     color: #fff;
-    opacity: 20%;
+    
 }
 
 .detalle .carousel__anteriorNot:hover,
@@ -108,13 +108,17 @@
 .detalle .carousel__anteriorNot,
 .detalle .carousel__anteriorCel,
 .detalle .carousel__anterior {
-    left: -25px;
+    left: -60px;
+    color: white;
+    background-color: orangered
 }
 
 .detalle .carousel__siguienteNot,
 .detalle .carousel__siguienteCel,
 .detalle .carousel__siguiente {
-    right: -25px;
+    right: -60px;
+    color: white;
+    background-color: orangered;
 }
 
 .detalle .carousel__listaGam,
@@ -464,6 +468,9 @@
     width: 120%;
 }
 @media (max-width: 481px) {
+    .cuerpo {
+        width: 99%;
+    }
     .detalle .img-auricular img{
         width: 100%;
     }
@@ -483,12 +490,19 @@
     }
     .detalle .contenedor-caracteristicas{
         padding: 0.5rem;
-        margin: -25px 0px 37px 11px;
+        margin: 35px 0px 35px 7px;
         width: 95%;
         background-color: white;
         border-radius: 1em 1em 1em 1em;
         font-style: oblique;
     }
+    .detalle .relacionados{
+        background-color: white;
+        border-radius: 2em 2em 2em 2em;
+        margin: 10px -22px 0px -20px;
+          
+    }
+    
     .detalle .contenedor-especificaciones{
         padding-top: 0em;
         width: 98%;

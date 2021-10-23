@@ -199,32 +199,35 @@
     margin: 0px 0px 20px;
 }
 @media (max-width: 769px) {
-
-     .carga .menu {
-        padding: 0px;
-        margin: 0px;
+ .cuerpo{
+     width: 90%;
+ }
+    .carga .menu {
+       padding: 0px;
+       margin: 0px;
 }
-    .carga .menulado {
-        width: 100%;
-        margin: -7px;
+   .carga .menulado {
+       width: 100%;
+       
 }
 .carga .precio{
-    padding: 15px 0px;
+   padding: 15px 0px;
 }
-.carga .precio img{
-    margin: 12px 14px 17px -25px;
-}
+
 .carga .galeria-mouse{
-    flex-wrap: nowrap;
+   flex-wrap: nowrap;
 }
 .carga .mouse {
-    width: 9em;
+   width: 9em;
 }
 .carga .contenedor-especificaciones{
-    padding-left: 2%;
-    width: 120%;
+   padding-left: 2%;
+   width: 120%;
 }
 @media (max-width: 481px) {
+    .cuerpo {
+        width: 99%;
+    }
     .carga .img-auricular img{
         width: 100%;
     }
@@ -235,6 +238,11 @@
         margin: 0px;
         padding: 0px;
     }
+    .carga .botones {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* sacar este */
+    }
     .carga .carrito{
         margin: 60px 120px;
         font-size: 17px;
@@ -244,12 +252,19 @@
     }
     .carga .contenedor-caracteristicas{
         padding: 0.5rem;
-        margin: -25px 0px 37px 11px;
+        margin: 35px 0px 35px 7px;
         width: 95%;
         background-color: white;
         border-radius: 1em 1em 1em 1em;
         font-style: oblique;
     }
+    .carga .relacionados{
+        background-color: white;
+        border-radius: 2em 2em 2em 2em;
+        margin: 10px -22px 0px -20px;
+          
+    }
+    
     .carga .contenedor-especificaciones{
         padding-top: 0em;
         width: 98%;
