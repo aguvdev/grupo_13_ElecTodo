@@ -18,13 +18,18 @@
     box-shadow: 13px 1px 35px red;
     border-radius: 40px 40px 127px;
     position: relative;
-    height: 70vh;
+    height: 100%;
+}
+.search .cont-img{
+    width: 200px;
+    height: 200px;
 }
 
 .search section.productos article img{
     width: 100%;
-    height: 75%;
+    height: 100%;
     object-fit: contain;
+
 }
 
 .search section.productos article .contenedor{
