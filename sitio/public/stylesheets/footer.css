@@ -10,15 +10,6 @@
     animation: bg-animation 20s infinite alternate;
 }
 
-@keyframes bg-animation {
-    0%{
-        background-position: left;
-    }
-    100%{
-        background-position: right;
-    }
-}
-
 
 .seccion-newsletter div p{
     color: white;

@@ -40,21 +40,6 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes sizeChange {
-    0% {transform: scale(1);
-    }
-    5% {transform: scale(1.1);}
-    10% {transform: scale(1.05);
-    }
-    15% {transform: scale(1.1);}
-    85% {transform: scale(1.1);}
-    90% {transform: scale(1.05);
-    }
-    95% {transform: scale(1.1);}
-    100% {transform: scale(1);}
-}
-
-
 .detalle .tit-secc label{
     position: absolute;
     bottom: 2%;

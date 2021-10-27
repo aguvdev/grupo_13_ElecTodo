@@ -22,11 +22,11 @@
 
 .grilla-register .icono-electodo img:hover {
     filter: drop-shadow(0.70rem 0.35rem 0.4rem rgba(255, 255, 255, 0.7));
-  }
+}
 
 .grilla-register .cajacon:before {
     content: "";
-    position: absolute;
+    position: fixed;
     height: 2000px;
     width: 2000px;
     top: -10%;

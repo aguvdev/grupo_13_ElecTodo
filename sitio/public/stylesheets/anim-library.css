@@ -1,0 +1,26 @@
+/* Animacion de izquierda a derecha, hace eso nomás kjjj */
+
+@keyframes bg-animation {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+/* Cambia de forma el objeto, onda resaltandolo. */
+
+@keyframes sizeChange {
+    0% {transform: scale(1);
+    }
+    5% {transform: scale(1.1);}
+    10% {transform: scale(1.05);
+    }
+    15% {transform: scale(1.1);}
+    85% {transform: scale(1.1);}
+    90% {transform: scale(1.05);
+    }
+    95% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
