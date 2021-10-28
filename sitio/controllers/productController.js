@@ -107,7 +107,9 @@ module.exports={
     },
 
     update : (req,res) => {
-        db.Products.update(
+        let result = validationResult(req);
+        if(result.isEmpty()){
+          db.Products.update(
             {
                 ...req.body
             },
@@ -119,7 +121,20 @@ module.exports={
         ).then( response => {
             console.log(response)
             return res.redirect('/')
-        }).catch(error => console.log(error))
+        }).catch(error => console.log(error))  
+        }else{
+            let categorias = db.Categories.findAll()
+        let producto =  db.Products.findByPk(req.params.id)
+        Promise.all([producto,categorias])
+        .then(([producto,categorias]) => res.render("productEdit",{
+            categorias,
+            producto,
+            errors:result.mapped()
+        })).catch(error => console.log(error))
+            
+        }
+        
+
     },
     
     

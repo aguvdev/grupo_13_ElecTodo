@@ -12,15 +12,15 @@ const loginValidation = [
             }
         }).then(user => {
             if(!user || !bcrypt.compareSync(req.body.password, user.password)){
-                return Promise.reject()
+                return Promise.reject('Correo o contraseña inválidos')
             }
-        }).catch(() => Promise.reject('Correo o contraseña inválidos'))
+        })
     })
 ]
 const registerValidation = [
     check('name')
     .notEmpty().withMessage('Debes escribir un nombre').bail()
-    .isAlpha().withMessage('El nombre debe contener solo letras').bail()
+    .isString().withMessage('El nombre debe contener solo letras').bail()
     .isLength({min: 2}).withMessage('El noombre debe tener al menos 2 caracteres'),
     
     check('email')
@@ -33,9 +33,9 @@ const registerValidation = [
             }
         }).then(userEmail =>{ 
             if (userEmail){
-                return Promise.reject()
+                return Promise.reject('Este email ya está registrado')
             }
-        }).catch(() => Promise.reject('Este email ya está registrado'))
+        })
         
     }) ,
     
@@ -60,6 +60,14 @@ const registerValidation = [
         return true
     }).withMessage('Las contraseñas no coinciden')
 ]
+const editValidation = [
+    check('name')
+    .notEmpty().withMessage('Debes escribir un nombre').bail()
+    .isString().withMessage('El nombre debe contener solo letras').bail()
+    .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
+    check('password')
+    .notEmpty().withMessage('Debes escribir tu contraseña').bail()
+    .isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres'),
+]
 
-
-module.exports = {loginValidation, registerValidation}
+module.exports = {loginValidation, registerValidation, editValidation}

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer=require('multer')
 const path=require('path')
-const {loginValidation, registerValidation} = require('../validations/usersValidation')
+const {loginValidation, registerValidation,editValidation} = require('../validations/usersValidation')
 const {login,register, processLogin, processRegister,logout, profile,edit, update, destroy} = require('../controllers/userController')
 
 
@@ -28,7 +28,7 @@ router.get('/logOut',logout);
 router.get('/profile', profile);
 
 router.get('/profileEdit/:id', edit);
-router.put('/profileEdit/:id', update);
+router.put('/profileEdit/:id', editValidation, update);
 router.delete('/profile/:id', destroy);
 
 

@@ -1,122 +1,130 @@
-const {usuarios, guardar} = require('../data/user_db');
-const {validationResult} = require('express-validator');
+const { usuarios, guardar } = require('../data/user_db');
+const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const db =require('../database/models');
+const db = require('../database/models');
 
 
 module.exports = {
-    login : (req,res) => {
+    login: (req, res) => {
         db.User.findAll()
-        .then(user => res.render('../views/users/login', {user}))
+            .then(user => res.render('../views/users/login', { user }))
     },
-    processLogin : (req,res) => {
+    processLogin: (req, res) => {
         const result = validationResult(req);
-        const {email, recordar} = req.body
-        if(result.isEmpty()){
+        const { email, recordar } = req.body
+        if (result.isEmpty()) {
             db.User.findOne({
-                where : {
+                where: {
                     email
                 }
-            }).then(user=>{
+            }).then(user => {
                 req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                rol : user.rol,
-                email: user.email
-            }
-            recordar && res.cookie ('elecTodo',req.session.userLogin,{maxAge: 1000 * 600})
-            return res.redirect('/')
-            })          
+                    id: user.id,
+                    name: user.name,
+                    rol: user.rol,
+                    email: user.email
+                }
+                recordar && res.cookie('elecTodo', req.session.userLogin, { maxAge: 1000 * 600 })
+                return res.redirect('/')
+            })
         }
-        else{
+        else {
             return res.render('../views/users/login', {
                 errors: result.mapped(),
                 oldData: req.body
             })
         }
     },
-    register : (req,res) => {
+    register: (req, res) => {
         return res.render('../views/users/register')
     },
-    processRegister : (req,res) => {
-            const result = validationResult(req);
-
-            
-            let {name, password,rol_id, email,phone,address_id}= req.body;
-            if(result.isEmpty()){
+    processRegister: (req, res) => {
+        const result = validationResult(req);
+        let { name, password, rol_id, email, phone, address_id } = req.body;
+        if (result.isEmpty()) {
 
             db.User.create({
-            name,
-            password : bcrypt.hashSync(password, 10),
-            email,
-            rol : "user",
-            phone,
-            address_id,
-            avatar : 'foto-de-perfil-default.png'
-            }).then(users =>{
+                name,
+                password: bcrypt.hashSync(password, 10),
+                email,
+                rol: "user",
+                phone,
+                address_id,
+                avatar: 'foto-de-perfil-default.png'
+            }).then(users => {
                 console.log(users)
                 return res.redirect("/users/login")
-            }).catch(error => console.log(error)) 
-        }else{
+            }).catch(error => console.log(error))
+        } else {
             return res.render('../views/users/register', {
                 errors: result.mapped(),
                 oldData: req.body
             })
         }
-            
+
     },
 
 
-    logout : (req,res) =>{
+    logout: (req, res) => {
         req.session.destroy();
-        res.cookie('elecTodo',null,{maxAge:-1})
+        res.cookie('elecTodo', null, { maxAge: -1 })
         return res.redirect('/')
     },
-    profile: (req,res) => {
-        const result = validationResult(req);
-        if(req.session.userLogin){
+    profile: (req, res) => {
+        if (req.session.userLogin) {
             db.User.findByPk(req.session.userLogin.id)
-            .then(user => res.render('../views/users/profile', {
-                user 
-            })).catch(error => console.log(error)) 
-        }else{
+                .then(user => res.render('../views/users/profile', {
+                    user
+                })).catch(error => console.log(error))
+        } else {
             return res.redirect('/users/login')
         }
     },
-    edit: (req, res) =>{
-       db.User.findByPk(req.params.id)
-       .then(user => res.render('../views/users/profileEdit', {user}))
-       .catch(error => console.log(error))
+    edit: (req, res) => {
+        db.User.findByPk(req.params.id)
+            .then(user => res.render('../views/users/profileEdit', { user }))
+            .catch(error => console.log(error))
     },
     update: (req, res) => {
-        const {name, phone, email,password}=req.body
+        let result = validationResult(req);
+        const { name, phone, password } = req.body
+        if (result.isEmpty()) {
             db.User.update(
                 {
-            ...req.body,
-            password: password != " " && bcrypt.hashSync(password,10)
-            },
-        {
-            where : {
-                id : req.params.id
-            }
-        })
-        .then(response => {
-            console.log(response)
-            return res.redirect('/users/profile')
-        })
-        .catch(error => console.log(error))
+                    name: req.body.name,
+                    phone: +phone,
+                    password: password != " " && bcrypt.hashSync(password, 10)
+                    //password: password ? password != " " && bcrypt.hashSync(password,10) : user.password
+                },
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                .then(response => {
+                    console.log(response)
+                    return res.redirect('/users/profile')
+                }).catch(error => console.log(error))
+        } else {
+            db.User.findByPk(req.params.id)
+                .then(user => res.render('../views/users/profileEdit', { 
+                    user,
+                    errors: result.mapped() 
+                }))
+                .catch(error => console.log(error))
+        }
     },
-    destroy: (req, res) =>{ 
+    destroy: (req, res) => {
         db.User.destroy({
-            where : {
-                id : req.params.id
+            where: {
+                id: req.params.id
             }
         }).then(response => {
             console.log(response)
             req.session.destroy(),
-            res.cookie('elecTodo',null,{maxAge:-1}),
-            res.redirect('/')
-            
+                res.cookie('elecTodo', null, { maxAge: -1 }),
+                res.redirect('/')
+
         }).catch(error => console.log(error))
     }
 }
