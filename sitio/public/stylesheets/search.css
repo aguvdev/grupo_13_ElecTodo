@@ -31,6 +31,9 @@
     object-fit: contain;
 
 }
+a{
+    text-decoration: none;
+}
 
 .search section.productos article .contenedor{
     background-color: blue;
@@ -51,7 +54,6 @@
 .search aside h3, .search section.productos h3{
     background-color: white;
     padding: 10px;
-    border: 1px solid #70a6bb;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -82,25 +84,57 @@
     width: 100%;
     height: 130px;
 }
+.search .preciosearch{
+    width: 87%;
+    background: repeating-linear-gradient(144deg, black, #0000003d 80px);
+    color: #fff;
+    padding: 8px;
+    border-radius: 7px 7px 29px;
+    right: -5%;
+    margin: 0px 0px 12px;
+    background-size: 200%;
+    animation: bg-animation 3s infinite alternate;
+}
+.search .preciodescuento{
+    width: 100%;
+    background: repeating-linear-gradient(144deg, black, #0000003d 80px);
+    color: #fff;
+    padding: 8px;
+    border-radius: 7px 7px 29px;
+    right: -5%;
+    bottom: 0;
+    margin: 0;
+    background-size: 200%;
+    animation: bg-animation 3s infinite alternate;
+}
 
-@media (min-width:768px) {
-    .search .banner{
-        display: block;
-    }
+
+@media (max-width:481px) { /* el MAX de 481 para abajo 477,478,479,480,481 etc 
+                             0 ------------ max 481*/
+
+    
     .search section.productos article{
-     
-        height: 60vh;
+        height: 409px;
+            margin: auto;
+            width: 80%;
+    }
+    .search .contenido-search{
+        margin: 20px 60px;
     }
     
+    
 }
-@media (min-width:1024px) {
-    .search .banner .carousel-item{
-        height: 53vh;
-     
-    }
 
+
+
+@media (max-width:769px) {
     .search section.productos article{
-     
-        height: 50vh;
+        height: 409px;
+            margin: auto;
+            width: 71%;
+            margin: 21px 13%;
+    }
+    .search .contenido-search{
+        margin: 20px 20%;
     }
 }
