@@ -75,6 +75,11 @@
 .contactanos p{
     font-family: Play;
 }
+.contactanos a, 
+.sigamos-conectados a{
+    text-decoration: none;
+    color: #fff; 
+}
 
 .final .secciones-footer .sigamos-conectados div i{
     margin-bottom: 15px;
