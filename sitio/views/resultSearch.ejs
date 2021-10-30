@@ -5,8 +5,11 @@
         
         <body>
             <%- include('./partials/header') %>
-            <% if (Producto.length > 0) { %>
-            <main class="search">
+            
+
+            <main class="search cuerpo">
+
+              <% if (Producto.length > 0) { %>
               <div class="container">
               
               
@@ -18,22 +21,23 @@
                         <% Producto.forEach(producto => { %>
                           <div class="col-12 col-md-4 my-2">
                               <article class="p-3">
-                                <a href="/product/detalle-product/<%= producto.id %>">
-                                <h4 class="text-secondary text-center"><%= producto.name %> </h4>
-                                <div class="cont-img">
-                                  <img src="/img/products/<%= producto.images[0].name ? producto.images[0].name  : null %>" alt="error no hay imagen papa carga una ">                                        
+                                <div class="contenido-search">
+                                  <a href="/product/detalle-product/<%= producto.id %>">
+                                    <h4 class="text-secondary text-center"><%= producto.name %> </h4>
+                                    <div class="cont-img">
+                                      <img src="/img/products/<%= producto.images[0].name ? producto.images[0].name  : null %>" alt="error no hay imagen papa carga una ">                                        
+                                    </div>
+                                    
+                                    <% if (producto.discount> 0) { %>
+                                      <h2 class="preciosearch"> $<%= (producto.price - (producto.discount * producto.price /100).toFixed(0)) %>
+                                      </h2>
+                                      <span class="preciodescuento"> $<%= producto.price %>
+                                          <%= producto.discount %>% OFF</span>
+                                      <% }else { %>
+                                        <h2 > $<%= producto.price %></h2>
+                                        <% } %>
+                                      </a>
                                 </div>
-                                
-                                <% if (producto.discount> 0) { %>
-                                  <h3> $<%= (producto.price - (producto.discount * producto.price /100).toFixed(0)) %>
-                                  </h3>
-                                  <span> $<%= producto.price %>
-                                      <%= producto.discount %>% OFF</span>
-                                  <% }else { %>
-                                    <h3> $<%= producto.price %>
-                                    </h3>
-                                    <% } %>
-                                  </a>
                             </article>
                             
                           </div>
