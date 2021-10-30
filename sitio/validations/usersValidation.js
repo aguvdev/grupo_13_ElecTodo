@@ -67,7 +67,7 @@ const editValidation = [
     .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
     check('password')
     .notEmpty().withMessage('Debes escribir tu contraseña').bail()
-    .isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres'),
+    .isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres')
 ]
 
 module.exports = {loginValidation, registerValidation, editValidation}

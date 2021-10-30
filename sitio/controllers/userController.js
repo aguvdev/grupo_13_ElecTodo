@@ -94,7 +94,6 @@ module.exports = {
                     name: req.body.name,
                     phone: +phone,
                     password: password != " " && bcrypt.hashSync(password, 10)
-                    //password: password ? password != " " && bcrypt.hashSync(password,10) : user.password
                 },
                 {
                     where: {
@@ -109,7 +108,8 @@ module.exports = {
             db.User.findByPk(req.params.id)
                 .then(user => res.render('../views/users/profileEdit', { 
                     user,
-                    errors: result.mapped() 
+                    errors: result.mapped(),
+                    oldData: req.body
                 }))
                 .catch(error => console.log(error))
         }

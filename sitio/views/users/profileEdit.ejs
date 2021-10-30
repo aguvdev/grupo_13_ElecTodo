@@ -32,7 +32,8 @@
                                         <% } %>
 
                                     <label for="Celular/Telefono">Celular/Telefono</label>
-                                    <input type="text" id="Celular/Telefono" name="phone" placeholder="<%= user.phone %>" value="<%= user.phone %>">
+                                    <input type="text" id="Celular/Telefono" name="phone" placeholder="<%= user.phone %>" value="<%= locals.oldData ? oldData.phone : user.phone %>">
+
                                     <label for="Ciudad">Ciudad</label>
                                     <input type="text" id="Ciudad" placeholder="<%= user.adress %>" value="<%= user.adress %>">
                                 </div>
