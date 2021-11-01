@@ -154,25 +154,26 @@ module.exports={
     search : (req,res) =>{
         let Producto = db.Products.findAll({
             where : {
-                name : {
-                    [Op.substring] : req.query.search /* para q me busque ej : auris, micro etc.. */
-                }
+                [Op.or] : [
+
+                    {
+                        name : {
+                            [Op.substring] : req.query.search 
+                        }
+                    }
+
+                ]  
             },
                 include : [
                     {association : 'images'},
                     {association : 'Categories'}
                 ]
         })
-        let Categories = db.Categories.findAll()
-        Promise.all([Producto,Categories])
-        .then(([Producto,Categories])=>{
-            return res.render('resultSearch',{
-                Producto,
-                Categories,
-                name : req.query.search
-            })
-        })
-    }
         
-      
+        .then(Producto => res.render('resultSearch',{
+                Producto,
+                busqueda : req.query.search
+            }))
+    
+        }         
 }

@@ -103,8 +103,11 @@
     width: 180px;
 }
 
+
+.carga .botoncito div, 
 .carga .botoncito button{
     text-transform: uppercase;
+    border: none;
     border-radius: 1em 1em 1em 1em;
     color: white;
     background-color: #ce0000eb;
