@@ -28,7 +28,7 @@ router.get('/logOut',logout);
 router.get('/profile', profile);
 
 router.get('/profileEdit/:id', edit);
-router.put('/profileEdit/:id', editValidation, update);
+router.put('/profileEdit/:id', uploadFile.single('avatar'), editValidation, update);
 router.delete('/profile/:id', destroy);
 
 

@@ -87,11 +87,12 @@ module.exports = {
     },
     update: (req, res) => {
         let result = validationResult(req);
-        const { name, phone, password } = req.body
+        const {name, phone, password, avatar} = req.body
         if (result.isEmpty()) {
             db.User.update(
                 {
-                    name: req.body.name,
+                    avatar: req.file && req.file.filename,
+                    name: name,
                     phone: +phone,
                     password: password != " " && bcrypt.hashSync(password, 10)
                 },

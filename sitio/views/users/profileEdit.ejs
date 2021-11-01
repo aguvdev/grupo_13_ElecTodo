@@ -8,7 +8,6 @@
                 <div class="circulo"></div>
                 <div>
                     <div class="carta-padre">
-        
                         <div class="side-avatar">
                             <div class="avatar">
                                 <img src="/img/users/<%= user.avatar %>" width="300px" alt="foto-de-perfil">
@@ -20,8 +19,12 @@
                         </div>
         
                         <div class="side-datos">
-                            <form action="/users/profileEdit/<%= user.id %>?_method=PUT" method="POST" class="cont-side-datos" autocomplete="off">
-                                <div class="side-1">
+                            <form action="/users/profileEdit/<%= user.id %>?_method=PUT" method="POST" class="cont-side-datos" autocomplete="off" enctype="multipart/form-data">
+                                
+                               
+                                <div class="side-1"> 
+                                    <label for="nombre">Cambiar foto de perfil</label>
+                                    <input type="file" width="300px" accept="image/png, image/gif, image/jpeg, image/jpg" name="avatar" id="avatar">
                                     <label for="nombre">Nombre</label>
                                     <input class="<%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" id="name" name="name" placeholder="<%= user.name %>" value="<%= user.name %>">
 
@@ -56,7 +59,8 @@
                                 
                             </form>
                             <form action="/users/profile/<%= user.id %>?_method=DELETE" method="POST">
-                                <button type="submit">Eliminar cuenta</button>
+                                <button onclick="return confirm('¿Estás seguro que quieres eliminar tu cuenta de forma permanente?')" type="submit">Eliminar cuenta</button>
+                                
                             </form>
                         </div>
         
