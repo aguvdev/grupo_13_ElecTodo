@@ -98,10 +98,8 @@ header a {
   /* ---------- */
   
   header .menu {
-    /* background: linear-gradient(120deg, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro)); */
     background-image: url('/img/bk/rojo_negro.jpg');
-    height: 35px;
-    /* background-size: 200%; */
+    height: 35px; 
     animation: bg-animation 20s infinite alternate;
   }
   
@@ -376,7 +374,8 @@ header a {
       justify-content: flex-start;
       position: fixed;
       left: 0;
-      background: #232F3F;
+      background-image: url('/img/bk/rojo_negro.jpg');
+      animation: bg-animation 20s infinite alternate;
       height: 100vh;
       width: 80%;
       z-index: 2000;
@@ -658,7 +657,7 @@ button:focus:not(:focus-visible){
         background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
     }
     .btn-secondary{
-        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor));
+        background: none;
     }
 
     .nav-header-items2 li a{

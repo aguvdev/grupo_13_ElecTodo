@@ -458,6 +458,10 @@
 
 @media (max-width: 320px) {
 
+    .home {
+        padding-top: 200px;
+    }
+
     .home .beneficios{
         flex-direction: column;
         align-items: center;
@@ -467,6 +471,9 @@
         margin: 10px;
     }
 
+    .home .banner{
+        display: none;
+    }
 
     .home .cuadro-Cel,
     .home .cuadro-gamCelNote,
