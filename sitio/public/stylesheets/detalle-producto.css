@@ -384,6 +384,22 @@
 .detalle .contenedor-caracteristicas h3{
     border-bottom: 1px solid rgb(228, 28, 28);
 }
+.detalle .caracteristicas-contenido textarea{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+.detalle .caracteristicas-contenido textarea {
+    width: 90%;
+    height: 250px;
+    resize: none;
+}
 .detalle .caracteristicas-contenido{
     padding-top: 12px;
     font-weight: 600;
