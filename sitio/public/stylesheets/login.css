@@ -100,14 +100,16 @@
     height: 55px;
     border-radius: 55px;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 15% 70% 8% 7%;
     padding: 0 0.4rem;
     position: relative;
 }
 
 .login .formulario .formulario__grupo .formulario__grupo-input .fa-user,
 .login .formulario .formulario__grupo .formulario__grupo-input .fa-at,
-.login .formulario .formulario__grupo .formulario__grupo-input .fa-lock{
+.login .formulario .formulario__grupo .formulario__grupo-input .fa-lock,
+.login .formulario .formulario__grupo .formulario__grupo-input .fa-eye-slash,
+.login .formulario .formulario__grupo .formulario__grupo-input .fa-eye{
     text-align: center;
     line-height: 55px;
     color: #acacac;

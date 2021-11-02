@@ -39,6 +39,9 @@
                 class="formulario__input <%= locals.errors && errors.password ? 'is-invalid' : null%>" name="password"
                 id="passwordL" placeholder="Escriba su contraseña">
               <i id="check-passwordL" class="formulario__validacion-estado fas fa-times-circle"></i>
+              <span class="mostrarPass" onclick="togglePass()">
+                <i class="fa fa-eye-slash"></i>
+              </span>
             </div>
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
