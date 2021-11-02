@@ -8,17 +8,19 @@
             
 
             <main class="search cuerpo">
-
-              <% if (Producto.length > 0) { %>
-              <div class="container">
               
+
+              <% if (productos.length > 0) { %>
+
+              <div class="container">
+               
               
               <div class="row">
                   <section class="productos col-12 col-lg-9 ">
-                      <h3 class="">Resultados de la busqueda de: "<%= busqueda %>"</h3>
+                      <h3 class="" value="">Resultados de la busqueda de: "<%= busqueda %>"</h3>
                       
                       <div class="celulares row py-2 gx-3">
-                        <% Producto.forEach(producto => { %>
+                        <% productos.forEach(producto => { %>
                           <div class="col-12 col-md-4 my-2">
                               <article class="p-3">
                                 <div class="contenido-search">
@@ -66,9 +68,8 @@
             </div>
           </main>
           <% } else{ %>
-            <p></p> <br> <p></p>
-            <p></p> <br> <p></p>
-            <p></p> <br> <p></p>
+             <br> 
+        
             <h1 class="bg-light" style="color: rgb(196, 73, 73);">No hay resultado para la busqueda de : "<%= busqueda %>" <br> Escriba bien el nombre del producto por favor</h1>
             <% } %>
         

@@ -55,9 +55,9 @@
                     <div class="formulario__grupo-input">
                         <i class="fas fa-list-alt"></i>
                         <select class="texto-carga <%= locals.errors && errors.category_id? 'is-invalid' : null%>" name="category_id"> 
-                                    <option value="">Seleccione su categoría</option>
+                                    <option value="" selected hidden>Seleccione su categoría</option>
                                     <% Categories.forEach(categoria => { %>
-                                        <option value="<%= categoria.id %>" <%= locals.oldData ? oldData.category_id : null%> ><%= categoria.name %></option>
+                                        <option value="<%= categoria.id %>" <%= locals.oldData && oldData.category_id === categoria.id ? 'selected' : null%> > <%= categoria.name %> </option>
                                     <% }) %>
 
                         </select>

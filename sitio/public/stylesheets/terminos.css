@@ -1,0 +1,13 @@
+main{
+    padding-top: 110px;
+}
+.terminos{
+    background-color: #fff;
+    padding: 25px;
+   padding-top: 90px;
+    margin: 40px;
+    font-family: Roboto;
+    font-size: 15px;
+    border: 10px solid #000;
+    border-radius: 25px;
+}

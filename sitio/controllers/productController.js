@@ -150,9 +150,8 @@ module.exports={
         }).catch(error => console.log(error))
     },
 
-    
     search : (req,res) =>{
-        let Producto = db.Products.findAll({
+        let productos = db.Products.findAll({ /* aca va let producto si se usa la misma vista pero no, esta es vista search es otra */
             where : {
                 [Op.or] : [
 
@@ -161,6 +160,7 @@ module.exports={
                             [Op.substring] : req.query.search 
                         }
                     }
+                  
 
                 ]  
             },
@@ -169,11 +169,36 @@ module.exports={
                     {association : 'Categories'}
                 ]
         })
-        
-        .then(Producto => res.render('resultSearch',{
-                Producto,
+        let categorias = db.Categories.findAll();
+        Promise.all([productos,categorias])
+        .then(([productos,categorias]) => res.render('resultSearch',{
+                productos,
+                categorias,
                 busqueda : req.query.search
             }))
     
-        }         
+        },
+        filter : (req,res) => {
+            let productos = db.Products.findAll({
+                where : {
+                    
+                    sub_category_id : req.query.searchi,
+                },
+                
+                include : [
+                    {association : 'images'}
+                    
+                ]
+                })            
+                let categorias = db.Categories.findAll();
+                Promise.all([productos,categorias])
+                .then(([productos,categorias]) => res.render('resultSearch',{
+                productos,
+                categorias,
+                busqueda : req.query.searchi
+                
+                    
+            }))
+        } 
+    
 }
