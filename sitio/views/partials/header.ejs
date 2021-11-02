@@ -7,8 +7,8 @@
  
         <div class="buscador">
             <form action="/product/search" method="GET">
-                <input class="buscar-texto" type="text" name="search" placeholder="¿Qué producto estás buscando?">
-                <button class="boton"> <i class="fas fa-search"></i> </button>
+                <input class="buscar-texto" type="search" name="search" placeholder="¿Qué producto estás buscando?">
+                <button class="boton" type="submit"> <i class="fas fa-search"></i> </button>
             </form>
         </div>
         <% if (locals.userLogin) { %>
@@ -105,13 +105,13 @@
               <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
               <h3 class="subtitulo">Categorias</h3>
   
-              <a href="/product/search?search=6" data-categoria="televisores-y-video">Televisores y video <i class="fas fa-angle-right"></i></a>
-              <a href="/product/search?search=7" data-categoria="audio">Audio <i class="fas fa-angle-right"></i></a>
-              <a href="/product/search?search=8" data-categoria="accesorios">Accesorios <i class="fas fa-angle-right"></i></a>
-              <a href="/product/search?search=9" data-categoria="informatica">Informatica <i class="fas fa-angle-right"></i></a>
-              <a href="/product/search?search=10" data-categoria="videojuegos">Videojuegos <i class="fas fa-angle-right"></i></a>
-              <a href="/product/search?search=2" data-categoria="celulares-y-tablets">Celulares y Tablets <i class="fas fa-angle-right"></i></a>
-              <a href="/product/search?search=11" data-categoria="fotografia-y-video">Fotografia y Video <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="televisores-y-video">Televisores y video <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="audio">Audio <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="accesorios">Accesorios <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="informatica">Informatica <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="videojuegos">Videojuegos <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="celulares-y-tablets">Celulares y Tablets <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="fotografia-y-video">Fotografia y Video <i class="fas fa-angle-right"></i></a>
             </div>
             <div class="contenedor-subcategorias">
               <!-- primer subcontenedor -->
@@ -119,8 +119,8 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Televisores y video</h3>
-                  <a href="#">TVLED</a>
-                  <a href="#">SMART TV</a>
+                  <a href="/product/filter?searchi=2+">TVLED</a>
+                  <a href="/product/filter?searchi=1+">SMART TV</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -147,9 +147,10 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Audio</h3>
-                  <a href="#">Asistentes virtuales</a>
-                  <a href="#">Monitores de estudio</a>
-                  <a href="#">Parlantes</a>
+                  <a href="/product/filter?searchi=3+">Asistentes virtuales</a>
+                  <a href="/product/filter?searchi=4+">Monitores de estudio</a>
+                  <a href="/product/filter?searchi=5+">Parlantes</a>
+                  <a href="/product/filter?searchi=19+">Auricular</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -176,9 +177,9 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Accesorios</h3>
-                  <a href="#">Almacenamiento</a>
-                  <a href="#">Insumos</a>
-                  <a href="#">Partes PC</a>
+                  <a href="/product/filter?searchi=6+">Almacenamiento</a>
+                  <a href="/product/filter?searchi=7+">Insumos</a>
+                  <a href="/product/filter?searchi=8+">Partes PC</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -205,9 +206,9 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Informatica</h3>
-                  <a href="#">Notebooks</a>
-                  <a href="#">All in One</a>
-                  <a href="#">Impresoras</a>
+                  <a href="/product/filter?searchi=9+">Notebooks</a>
+                  <a href="/product/filter?searchi=10+">All in One</a>
+                  <a href="/product/filter?searchi=11+">Impresoras</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -234,9 +235,9 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Videojuegos</h3>
-                    <a href="#">Consolas</a>
-                    <a href="#">Juegos de Consola</a>
-                    <a href="#">Joysticks</a>
+                    <a href="/product/filter?searchi=12+">Consolas</a>
+                    <a href="/product/filter?searchi=13+">Juegos de Consola</a>
+                    <a href="/product/filter?searchi=14+">Joysticks</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -263,10 +264,9 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Celulares y Tablets</h3>
-                    <a href="#">Celulares libres</a>
-                    <a href="#">Tablets</a>
-                    <a href="#">Telefonos Fijos</a>
-                    <a href="#">Fax</a>
+                    <a href="/product/filter?searchi=15+">Celulares libres</a>
+                    <a href="/product/filter?searchi=16+">Tablets</a>
+                    
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -293,9 +293,8 @@
                 <div class="enlaces-subcategoria">
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Fotografia y Video</h3>
-                    <a href="#">Cámaras instantáneas</a>
-                    <a href="#">Cámaras digitales</a>
-                    <a href="#">Video Cámaras</a>
+                    <a href="/product/filter?searchi=17+">Cámaras digitales</a>
+                    <a href="/product/filter?searchi=18+">Video Cámaras</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
