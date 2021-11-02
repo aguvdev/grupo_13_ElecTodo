@@ -15,7 +15,7 @@
               
               <div class="row">
                   <section class="productos col-12 col-lg-9 ">
-                      <h3 class="">Resultados de la busqueda de: "<%= name %>"</h3>
+                      <h3 class="">Resultados de la busqueda de: "<%= busqueda %>"</h3>
                       
                       <div class="celulares row py-2 gx-3">
                         <% Producto.forEach(producto => { %>
@@ -69,7 +69,7 @@
             <p></p> <br> <p></p>
             <p></p> <br> <p></p>
             <p></p> <br> <p></p>
-            <h1 class="bg-light" style="color: rgb(196, 73, 73);">No hay resultado para la busqueda de : "<%= name %>" <br> Escriba bien el nombre del producto por favor</h1>
+            <h1 class="bg-light" style="color: rgb(196, 73, 73);">No hay resultado para la busqueda de : "<%= busqueda %>" <br> Escriba bien el nombre del producto por favor</h1>
             <% } %>
         
 

@@ -1,4 +1,4 @@
-const passwordEl = document.querySelector(".password");
+const passwordEl = document.getElementById("passwordL");
 const eyeButton = document.querySelector(".fa");
 let isPass = true;
 function togglePass() {
