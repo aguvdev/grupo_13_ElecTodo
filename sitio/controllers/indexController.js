@@ -60,7 +60,10 @@ module.exports = {
 
 
 
-
+    
+    terminos: (req,res) => {
+        return res.render('terminosYCondiciones')
+    }
 }
 
     
