@@ -1,5 +1,7 @@
 /* main */
-
+a {
+    text-decoration: none;
+}
 /* -----OFERTAS----- */
 .cuerpo{
     width: 90%;

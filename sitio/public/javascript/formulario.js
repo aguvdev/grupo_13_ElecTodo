@@ -1,9 +1,10 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+const textarea = document.querySelectorAll('#formulario textarea')
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{3,16}$/, // Letras, pueden llevar acentos.
-	nombreConNum: /^[a-zA-ZÀ-ÿ0-9_.+-\s]{6,16}$/, // Letras, pueden llevar acentos.
+	nombreConNum: /^[a-zA-ZÀ-ÿ0-9\s]{6,100}$/, // Letras, pueden llevar acentos.
 	descrip: /^[a-zA-ZÀ-ÿ0-9_.+-\s]{20,500}$/, // Letras, pueden llevar acentos.
 	password: /^.{8,16}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -14,13 +15,18 @@ const campos = {
 	correoR: false,
 	passwordR: false,
 	correoL: false,
-	passwordL: false
+	passwordL: false,
+	titulo: false,
+	descripcion: false
 }
 
 const validarFormulario = (e) => {
 	switch (e.target.id) {
+		case "descrption":
+			validarCampoTxtarea(expresiones.descrip, e.target);
+		break;
 		case "title":
-			validarCampo(expresiones.nombreConNum, e.target, 'nombre');
+			validarCampo(expresiones.nombreConNum, e.target, 'titulo');
 		break;
 		case "nameR":
 			validarCampo(expresiones.nombre, e.target, 'nombreR');
@@ -107,6 +113,27 @@ const validarCampo3 = (espacio1, espacio2, campo) => {
 	}
 }
 
+const validarCampoTxtarea = (e) => {
+	switch (e.target.id) {
+		case "description":
+			if (expresiones.descrip.test(e.target.value)) {
+				document.getElementById('grupo__descrip').classList.remove('formulario__grupo-incorrecto');
+				document.getElementById('grupo__descrip').classList.add('formulario__grupo-correcto');
+				campos['descripcion'] = true;
+			} else {
+				document.getElementById('grupo__descrip').classList.add('formulario__grupo-incorrecto');
+				document.getElementById('grupo__descrip').classList.remove('formulario__grupo-correcto');
+				campos['descripcion'] = false
+			}
+		break;
+	}
+}
+
+textarea.forEach((txtarea) => {
+	txtarea.addEventListener('keyup', validarCampoTxtarea)
+	txtarea.addEventListener('blur', validarCampoTxtarea)
+})
+
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
@@ -114,15 +141,18 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-	console.log(campos);
+	/* console.log(campos.titulo);
+	console.log(campos.descripcion); */
 
 	const terminos = document.getElementById('terminosR');
-	console.log(terminos);
+	/* console.log(terminos); */
 	if (campos.nombreR && campos.passwordR && campos.correoR && terminos.checked) {
 		formulario.submit();
 	} else if (campos.correoL && campos.passwordL) {
 		formulario.submit();
-	} else {
+	} else if (campos.titulo && campos.descripcion) {
+		formulario.submit();
+	} /* else	{
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	}
+	} */
 });

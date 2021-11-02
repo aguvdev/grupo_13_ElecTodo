@@ -97,10 +97,12 @@
                     <% videojuegos.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
+                          <a href="product/detalle-product/<%= product.id %>">
                           <div class="img-prod">
                             <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
 
                           </div>
+                        </a>
                           <div class="info-prod">
                             <!-- titulo -->
                             <h4>
@@ -121,7 +123,7 @@
                                 <h3> $<%= product.price %>
                                 </h3>
                                 <% } %>
-                                  <a href="product/detalle-product/<%= product.id %>">
+                                <a href="product/detalle-product/<%= product.id %>">
                                     <button>Más Info</button>
                                   </a>
                           </div>
@@ -166,9 +168,11 @@
                     <% celulares_y_tablets.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
+                          <a href="product/detalle-product/<%= product.id %>">
                           <div class="img-prod">
                             <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
                           </div>
+                        </a>
                           <div class="info-prod">
                             <!-- titulo -->
                             <h4>
@@ -234,9 +238,11 @@
                     <% informatica.forEach(product=> { %>
                       <article class="cont-tarj-prod">
                         <div class="tarj-prod">
+                          <a href="product/detalle-product/<%= product.id %>">
                           <div class="img-prod">
                             <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
                           </div>
+                        </a>
                           <div class="info-prod">
                             <!-- titulo -->
                             <h4>

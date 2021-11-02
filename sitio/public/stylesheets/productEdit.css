@@ -1,0 +1,295 @@
+
+/* MAIN */
+.productEdit input{
+    border-radius: 1em 1em 4em 1em;
+}
+.productEdit .menu{/* todo */
+    padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.productEdit .menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
+    background-color: white;
+    display: flex;
+    margin-bottom: 0px;
+    border-radius: 1em 1em 1em 1em;
+    
+}
+.productEdit .galeria-auris{
+    padding-top: 40px;
+    display: flex;
+    
+    justify-content: space-evenly;  
+}
+.productEdit .auris{
+    width: 6em;
+    margin-bottom: 0px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px 0 rgba(0, 0, 0, .5)
+}
+.productEdit .auris  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.productEdit .menulado{
+    width: 100%;
+    margin: 0px 50px;
+}
+.productEdit .menulado i, .productEdit p{
+    padding: 0px 50px;
+    font-size: 15px;
+    padding: 9px;            
+}
+.productEdit .titulo{
+    border-bottom: 1px var(--color-rosaFluor) solid ;
+    padding: 10px 0px;
+}
+.productEdit .model{
+    border-bottom: 1px var(--color-rosaFluor) solid;
+}
+.productEdit .titulo h1, .model, .discount{
+    
+    font-style: oblique;/* inclinar las palabras */      
+}
+
+.productEdit .precio{/* todo de: 6000, img , p */
+    color: blue;
+    display: flex;
+    margin: 10px 0px;  
+    border-bottom: 1px var(--color-rosaFluor) solid ;
+    padding: 20px 0px;     
+}
+.productEdit .precio img{/* mini logo electodo */
+    width: 50px;
+    margin: 0 40px;/* SEPARAAAA LETRAS P IMG TODO */
+    display: flex;/* no se interponga lo que le siga, ocupa su propia linea */
+    background-color: var(--color-rosaFluor);/* !!!!!!PREGUNTAR A ROBERT!!!! */
+}
+.productEdit .precio p{/* 12 cuotas sin interes a 6840 precio lista */
+    color: black;
+    font-weight: 500;/* grosor letras */ 
+    margin: -15PX 0px;
+}
+.productEdit .precio input{
+    width: 18%;
+    height: 40px;
+}
+.productEdit .discount input{
+    width: 18%;
+
+}
+
+.productEdit .garantia-envios {/* garantia 12 meses, envios todo pais */
+    color: rgb(7, 201, 7);
+    border-top: 1px var(--color-rosaFluor) solid;
+    border-bottom: 1px var(--color-rosaFluor) solid ;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+
+.productEdit .carrito button {
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: var(--color-rosaFluor);
+    padding: 6px;
+    font-size: 18px;
+    margin: 10px auto;
+    color: #fff;
+    width: 180px;
+}
+
+
+.productEdit .botoncito div, 
+.productEdit .botoncito button{
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: #ce0000eb;
+    padding: 5px;
+    font-size: 16px;
+    margin: 10px auto;
+    color: #fff;
+    width: 129px;
+}
+.productEdit .editor{
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    background-color: #2ec209;
+    padding: 8px 31px;
+    font-size: 19px;
+    color: #fff;
+}
+.productEdit .botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productEdit .menu article{
+    text-transform: uppercase;
+    padding: 10px ;
+    font-size: 15px;
+    margin: 60px 10px;
+    background-color: white;
+}
+/* menu caracteriscias conectividad sonido micro  */
+.productEdit .contenedor-especificaciones{
+    padding-top: 2em;
+    padding-left: 20%;
+    width: 100%;
+}
+.productEdit .contenedor-caracteristicas{
+    display: inline-block;
+    padding: .5rem;
+    margin: 0px 20px 20px 0px;
+    width: 73%;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    font-style: oblique;     
+}
+.productEdit .contenedor-caracteristicas h3{
+    border-bottom: 1px solid var(--color-rosaFluor);
+}
+.productEdit .caracteristicas-contenido input{
+    padding-top: 12px;
+    font-weight: 600;
+    padding: 15px;
+    margin: 15px;
+    letter-spacing: 3px;
+    width: 96%;
+    height: 150px; 
+    border-radius: 1em 1em 4em 1em;
+
+     
+}
+/* PRODUCTOS RELACIONADOS */
+.productEdit .relacionados{
+    background-color: white;
+    border-radius: 2em 2em 2em 2em;
+    margin: 10px 0px 0px 0px;
+    padding: 20px 20px 0px;
+    margin: -2px 0px 0px;  
+}
+.productEdit .relacionados h3{
+    border-bottom: 1px solid var(--color-rosaFluor);
+    font-style: oblique;
+}
+.productEdit .galeria-mouse{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+.productEdit .mouse{
+    width: 20em;
+    margin-bottom: 20px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+}
+.productEdit .mouse  img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 1em 1em 5em 1em;
+    margin: 0px 0px 20px;
+}
+@media (max-width: 769px) {
+ .cuerpo{
+     width: 90%;
+ }
+    .productEdit .menu {
+       padding: 0px;
+       margin: 0px;
+}
+   .productEdit .menulado {
+       width: 100%;
+       
+}
+.productEdit .precio{
+   padding: 15px 0px;
+}
+
+.productEdit .galeria-mouse{
+   flex-wrap: nowrap;
+}
+.productEdit .mouse {
+   width: 9em;
+}
+.productEdit .contenedor-especificaciones{
+   padding-left: 2%;
+   width: 120%;
+}
+@media (max-width: 481px) {
+    .cuerpo {
+        width: 99%;
+    }
+    .productEdit .img-auricular img{
+        width: 100%;
+    }
+    .productEdit .menu1{
+        display: block;  
+    }
+    .productEdit .menulado{
+        margin: 0px;
+        padding: 0px;
+    }
+    .productEdit .botones {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* sacar este */
+    }
+    .productEdit .carrito{
+        margin: 60px 120px;
+        font-size: 17px;
+    }
+    .productEdit .precio img{
+        margin: 1px 25px 14px 33px;
+    }
+    .productEdit .contenedor-caracteristicas{
+        padding: 0.5rem;
+        margin: 35px 0px 35px 7px;
+        width: 95%;
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        font-style: oblique;
+    }
+    .productEdit .relacionados{
+        background-color: white;
+        border-radius: 2em 2em 2em 2em;
+        margin: 10px -22px 0px -20px;
+          
+    }
+    
+    .productEdit .contenedor-especificaciones{
+        padding-top: 0em;
+        width: 98%;
+    }
+    .productEdit .relacionados {
+        padding: 8px 111px 0px;
+    }
+    .productEdit .galeria-mouse{
+        display: block;
+    }
+    .productEdit .mouse{
+        width: 15em;
+    }
+}
+}
+
+
+
+
+    
+
+
+    
+
+
