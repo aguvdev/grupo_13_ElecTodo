@@ -75,6 +75,9 @@ module.exports = {
     },
     terminos: (req,res) => {
         return res.render('terminosYCondiciones')
+    },
+    pago: (req,res) => {
+        return res.render('mediosDePago')
     }
 }
 
