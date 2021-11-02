@@ -72,6 +72,9 @@ module.exports = {
                 categoria,
                 productito
         }))
+    },
+    terminos: (req,res) => {
+        return res.render('terminosYCondiciones')
     }
 }
 
