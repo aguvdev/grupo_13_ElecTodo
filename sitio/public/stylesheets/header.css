@@ -653,9 +653,7 @@ button:focus:not(:focus-visible){
         padding: 20px;
         align-items: center;
     }
-    .dropdown-menu{
-        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
-    }
+
     .btn-secondary{
         background: none;
     }
