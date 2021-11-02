@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const {validacionCarga, validacionEdit} =require('../validations/productValidation')
-const {product,carga,save,edit,update,remove,search} = require("../controllers/productController")
+const {product,carga,save,edit,update,remove,search,filter} = require("../controllers/productController")
 const multer = require("multer");
 const path = require ("path");
 
@@ -28,5 +28,6 @@ router.get("/edit/:id",rolAdmin,edit);/* aplico rol admin para q aca en edit tam
 router.put("/edit/:id",validacionEdit, update);
 router.delete("/remove/:id",remove);
 router.get("/search", search);
+router.get("/filter", filter);
 
 module.exports = router;
