@@ -66,6 +66,12 @@ module.exports = {
     },
     pago: (req,res) => {
         return res.render('mediosDePago')
+    },
+    envios: (req,res) => {
+        return res.render('envios')
+    },
+    costo: (req,res) => {
+        return res.render('costoEnvio')
     }
 }
 
