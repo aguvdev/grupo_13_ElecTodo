@@ -15,8 +15,9 @@
                     <div id="preview"></div>
 
                     <section class="img-auricular">
-                        <label for="productImagen" class="btn btn-light"> seleccione, un maximo de 5 imagenes </label>
-                        <input type="file" id="productImagen" placeholder="ingrese precio" name="images" multiple accept="image/png, image/gif, image/jpeg, image/jpg, image/webp">
+                        <p id="selec-5-img2" class="selec-5-img2">Seleccione un maximo de 5 imagenes</p>
+                        <p id="selec-5-img" class="selec-5-img selec-5-img-none">Ha seleccionado mas de 5 imagenes o menos de 1</p>
+                        <input type="file" id="productImagen" name="images" multiple accept="image/png, image/gif, image/jpeg, image/jpg, image/webp">
                     </section>
                     
                 </section>
@@ -55,9 +56,9 @@
                     <div class="formulario__grupo-input">
                         <i class="fas fa-list-alt"></i>
                         <select class="texto-carga <%= locals.errors && errors.category_id? 'is-invalid' : null%>" name="category_id"> 
-                                    <option value="" selected hidden>Seleccione su categoría</option>
+                                    <option value="">Seleccione su categoría</option>
                                     <% Categories.forEach(categoria => { %>
-                                        <option value="<%= categoria.id %>" <%= locals.oldData && oldData.category_id === categoria.id ? 'selected' : null%> > <%= categoria.name %> </option>
+                                        <option value="<%= categoria.id %>" <%= locals.oldData ? oldData.category_id : null%> ><%= categoria.name %></option>
                                     <% }) %>
 
                         </select>
@@ -106,7 +107,8 @@
                 <!-- Caracteristicas -->
                 <div class="cara-gene">
                     <h3> CARACTERISTICAS GENERALES </h3>
-                    <i id="check-nombre" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <i id="check-descrip" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <p id="text-decrip" class="formulario__input-error .formulario__input-error-activo">La descripción debe tener al menos 20 caracteres.</p>
                 </div>
                 <div id="grupo__descrip" class="caracteristicas-contenido">
                     <textarea class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" id="description" value="<%= locals.oldData ? oldData.description : null%>"></textarea>

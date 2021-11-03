@@ -1,6 +1,7 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
-const textarea = document.querySelectorAll('#formulario textarea')
+const textarea = document.querySelectorAll('#formulario textarea');
+const inputImag = document.getElementById('productImagen');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{3,16}$/, // Letras, pueden llevar acentos.
@@ -17,9 +18,9 @@ const campos = {
 	correoL: false,
 	passwordL: false,
 	titulo: false,
-	descripcion: false
+	descripcion: false,
+	productImagen: false
 }
-
 
 const validarFormulario = (e) => {
 	switch (e.target.id) {
@@ -51,6 +52,18 @@ const validarFormulario = (e) => {
 		break;
 		case "passwordL":
 			validarCampo(expresiones.password, e.target, 'passwordL');
+		break;
+		case "productImagen":
+			if (e.target.files.length <= 5 && e.target.files.length > 0) {
+				document.getElementById('selec-5-img').classList.remove('selec-5-img__incorrecto');
+				document.getElementById('selec-5-img2').classList.remove('selec-5-img-none');
+				campos['productImagen'] = true;
+			} else if (e.target.files.length >= 0) {
+				document.getElementById('selec-5-img').classList.add('selec-5-img__incorrecto');
+				document.getElementById('selec-5-img2').classList.add('selec-5-img-none');
+				campos['productImagen'] = false;
+			}
+			console.log(e.target.files.length);
 		break;
 	}
 };
@@ -120,11 +133,21 @@ const validarCampoTxtarea = (e) => {
 			if (expresiones.descrip.test(e.target.value)) {
 				document.getElementById('grupo__descrip').classList.remove('formulario__grupo-incorrecto');
 				document.getElementById('grupo__descrip').classList.add('formulario__grupo-correcto');
+				document.getElementById('check-descrip').classList.remove('formulario__grupo-incorrecto');
+				document.getElementById('check-descrip').classList.add('formulario__grupo-correcto');
+				document.getElementById('check-descrip').classList.add('fa-check-circle');
+				document.getElementById('check-descrip').classList.remove('fa-times-circle');
+				document.getElementById('text-decrip').classList.remove('formulario__input-error-activo');
 				campos['descripcion'] = true;
 			} else {
 				document.getElementById('grupo__descrip').classList.add('formulario__grupo-incorrecto');
 				document.getElementById('grupo__descrip').classList.remove('formulario__grupo-correcto');
-				campos['descripcion'] = false
+				document.getElementById('check-descrip').classList.add('formulario__grupo-incorrecto');
+				document.getElementById('check-descrip').classList.remove('formulario__grupo-correcto');
+				document.getElementById('check-descrip').classList.remove('fa-check-circle');
+				document.getElementById('check-descrip').classList.add('fa-times-circle');
+				document.getElementById('text-decrip').classList.add('formulario__input-error-activo');
+				campos['descripcion'] = false;
 			}
 		break;
 	}
@@ -138,22 +161,29 @@ textarea.forEach((txtarea) => {
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
 	input.addEventListener('blur', validarFormulario);
+	input.addEventListener('mouseout', validarFormulario);
 });
 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-	/* console.log(campos.titulo);
-	console.log(campos.descripcion); */
+
+	console.log(campos.productImagen);
+
+	if (campos.productImagen) {
+		console.log('Es correcto');
+	} else {
+		console.log('no es correcto')
+	}
+
 
 	const terminos = document.getElementById('terminosR');
-	/* console.log(terminos); */
-	if (campos.nombreR && campos.passwordR && campos.correoR && terminos.checked) {
+	if (campos.productImagen && campos.nombreR && campos.passwordR && campos.correoR && terminos.checked) {
 		formulario.submit();
 	} else if (campos.correoL && campos.passwordL) {
 		formulario.submit();
 	} else if (campos.titulo && campos.descripcion) {
 		formulario.submit();
-	} /* else	{
+	} else	{
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	} */
+	}
 });
