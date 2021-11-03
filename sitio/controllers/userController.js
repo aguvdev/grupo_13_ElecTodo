@@ -22,7 +22,8 @@ module.exports = {
                     id: user.id,
                     name: user.name,
                     rol: user.rol,
-                    email: user.email
+                    email: user.email,
+                    avatar: user.avatar
                 }
                 recordar && res.cookie('elecTodo', req.session.userLogin, { maxAge: 1000 * 600 })
                 return res.redirect('/')
