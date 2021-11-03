@@ -10,6 +10,10 @@
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 } */
 
+#imagHeaderPerf{
+  object-fit: cover;
+}
+
 header{
     background-image: url('/img/bk/giphy_4.gif');
     position: fixed;
@@ -99,7 +103,7 @@ header a {
   
   header .menu {
     background-image: url('/img/bk/rojo_negro.jpg');
-    height: 35px; 
+    height: 100%; 
     animation: bg-animation 20s infinite alternate;
   }
   
