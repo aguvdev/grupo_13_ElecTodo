@@ -6,9 +6,9 @@
 
  
         <div class="buscador">
-            <form action="/product/search" method="GET">
-                <input class="buscar-texto" type="search" name="search" placeholder="¿Qué producto estás buscando?">
-                <button class="boton" type="submit" id="lupa"> <i class="fas fa-search"></i> </button>
+            <form action="/product/search" method="GET" id="searchy">
+                <input class="buscar-texto" type="search" name="search" placeholder="¿Qué producto estás buscando?" id="searchinput">
+                <button class="boton" type="submit" > <i class="fas fa-search"></i> </button>
             </form>
 
         </div>
@@ -363,10 +363,3 @@
     </nav> -->
     
 </header>
-<script type="text/javascript">
-  const lupa= document.getElementById('lupa');
-
-  lupa.addEventListener('click', function (e) {
-    e.preventDefault();
-  });
-  </script>

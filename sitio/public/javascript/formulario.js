@@ -20,6 +20,7 @@ const campos = {
 	descripcion: false
 }
 
+
 const validarFormulario = (e) => {
 	switch (e.target.id) {
 		case "descrption":
