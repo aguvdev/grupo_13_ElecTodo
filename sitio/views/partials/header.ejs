@@ -6,10 +6,11 @@
 
  
         <div class="buscador">
-            <form action="/product/search" method="GET">
-                <input class="buscar-texto" type="search" name="search" placeholder="¿Qué producto estás buscando?">
-                <button class="boton" type="submit"> <i class="fas fa-search"></i> </button>
+            <form action="/product/search" method="GET" id="searchy">
+                <input class="buscar-texto" type="search" name="search" placeholder="¿Qué producto estás buscando?" id="searchinput">
+                <button class="boton" type="submit" > <i class="fas fa-search"></i> </button>
             </form>
+
         </div>
         <% if (locals.userLogin) { %>
             <% if (locals.userLogin.rol==="admin") { %>
@@ -17,7 +18,8 @@
                 <nav class="nav-header-menu">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
+                          <img src="/img/users/<%= locals.userLogin.avatar %>" width="37" height="37" style="border-radius: 100%">
+                          <!--<i class="fas fa-user-circle"></i>-->
                         </button>
                         <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Administrador:<%= locals.userLogin.name %></a></li>
@@ -33,7 +35,8 @@
 
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user-circle"></i>
+                      <img src="/img/users/<%= locals.userLogin.avatar %>" width="37" height="37" style="border-radius: 100%">
+                    <!--<i class="fas fa-user-circle"></i>-->
                     </button>
                     <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
                       <li><a class="dropdown-item" href="#">Usuario : <%= locals.userLogin.name %></a></li>
@@ -148,7 +151,6 @@
                   <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
                   <h3 class="subtitulo">Audio</h3>
                   <a href="/product/filter?searchi=3+">Asistentes virtuales</a>
-                  <a href="/product/filter?searchi=4+">Monitores de estudio</a>
                   <a href="/product/filter?searchi=5+">Parlantes</a>
                   <a href="/product/filter?searchi=19+">Auricular</a>
                 </div>
@@ -238,6 +240,7 @@
                     <a href="/product/filter?searchi=12+">Consolas</a>
                     <a href="/product/filter?searchi=13+">Juegos de Consola</a>
                     <a href="/product/filter?searchi=14+">Joysticks</a>
+                    <a href="/product/filter?searchi=20+">Sillas Gamer</a>
                 </div>
                 <div class="banner-subcategoria">
                   <a href="#">
@@ -358,4 +361,5 @@
             <li><a href=""><i class="fas fa-heart"></i></a></li>
         </ul>
     </nav> -->
+    
 </header>

@@ -16,3 +16,5 @@ document.getElementById("productImagen").onchange = function(e) {
       preview.append(image);
     };
 }
+
+ 

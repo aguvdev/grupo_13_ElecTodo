@@ -16,6 +16,7 @@ grid.addEventListener('mouseleave', () => {
     if(!esDispositivoMovil()){
         grid.classList.remove('activo');
     }
+    
 });
 
 document.querySelectorAll('#menu .categorias a').forEach((elemento) => {

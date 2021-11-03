@@ -13,4 +13,6 @@ function togglePass() {
         eyeButton.classList.add("fa-eye-slash");
         isPass = true;
     }
-}
+} 
+
+ 
