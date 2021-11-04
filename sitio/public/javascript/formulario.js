@@ -6,7 +6,7 @@ const inputImag = document.getElementById('productImagen');
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{3,16}$/, // Letras, pueden llevar acentos.
 	nombreConNum: /^[a-zA-ZÀ-ÿ0-9\s]{6,100}$/, // Letras, pueden llevar acentos.
-	descrip: /^[a-zA-ZÀ-ÿ0-9_.+-\s]{20,500}$/, // Letras, pueden llevar acentos.
+	descrip: /^.{20,500}$/, // Letras, pueden llevar acentos.
 	password: /^.{8,16}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 };
@@ -177,11 +177,11 @@ formulario.addEventListener('submit', (e) => {
 
 
 	const terminos = document.getElementById('terminosR');
-	if (campos.productImagen && campos.nombreR && campos.passwordR && campos.correoR && terminos.checked) {
+	if (campos.nombreR && campos.passwordR && campos.correoR && terminos.checked) {
 		formulario.submit();
 	} else if (campos.correoL && campos.passwordL) {
 		formulario.submit();
-	} else if (campos.titulo && campos.descripcion) {
+	} else if (campos.productImagen && campos.titulo && campos.descripcion) {
 		formulario.submit();
 	} else	{
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
