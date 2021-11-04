@@ -207,6 +207,16 @@
     transition: 0.5s;
 }
 
+.carga .formulario .boton-cancelar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carga .formulario .boton-cancelar a{
+    color: #fff;
+}
+
 .carga .formulario .formulario__btn:hover {
     box-shadow: 3px 0 30px rgba(163, 163, 163, 0.2);
 }
