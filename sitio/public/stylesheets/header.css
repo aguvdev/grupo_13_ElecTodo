@@ -9,10 +9,26 @@
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 } */
-
+ /* carrito */
+ header .btn-cart{
+  border: 0;
+  background: none;
+  margin-right: 15px;
+  position: relative;
+}
+header .btn-cart i{
+  font-size: 40px;
+}
+header .btn-cart span{
+  font-size: 16px;
+  position: absolute;
+  top:2px;
+  right: -4px;
+}
 #imagHeaderPerf{
   object-fit: cover;
 }
+/* carrito termina */
 
 header{
     background-image: url('/img/bk/giphy_4.gif');

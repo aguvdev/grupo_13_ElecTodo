@@ -3,9 +3,11 @@ var router = express.Router();
 
 const {validarPago, validacionFinal, validarDireccion} = require('../validations/cartValidation')
 const {carrito, metodoDePago, confirmacion, pagar, eliminar, terminar, agregarDireccion} = require('../controllers/cartController')
+const rolUser = require("../middlewares/rolUser")
 /* /cart */ 
 /*Vista carrito de compras*/ 
-router.get('/', carrito)
+router.get('/',rolUser, carrito)
+
 /* proceso informacion de la dirección*/
 router.post('/', validarDireccion, agregarDireccion)
 

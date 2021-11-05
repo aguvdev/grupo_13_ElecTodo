@@ -74,13 +74,24 @@
                               }
                             </script>
                         </div>
-                        <% } %>
+                      <% } %>
+
+                      <% if (locals.userLogin && locals.userLogin.rol === "user") { %>
                         
                         <div class="botones">
-                            <div class="carrito">
-                                <a href="/cart"><span>sumar al carrito</span></a>
-                            </div>                      
-                        </div>
+                          <div class="carrito">
+                              <a href="/cart"><span>sumar al carrito</span></a>
+                          </div>                      
+                      </div>
+                        <% }else{ %>
+                          <div class="botones">
+                          <div class="carrito">
+                              <a href="/users/login"><span>sumar al carrito</span></a>
+                          </div>                      
+                      </div>
+                      <% } %>
+                        
+                        
 
                     
                 </div>
