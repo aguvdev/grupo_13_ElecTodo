@@ -2,7 +2,7 @@
 Swal.fire({
     title: "Digital House ",
     footer: "ANUNCIO",
-    html: '<a href="https://www.digitalhouse.com/ar">click aqui</a>',
+    html: '¡¡¡¡¡¡Quedan pocos días para disfrutar de la #DigitalWeek!!!!!… <a href="https://www.digitalhouse.com/ar">click aqui</a>',
     text: "quieres ser programador full stack?",
     //icon:"success",
     padding: "1rem",
