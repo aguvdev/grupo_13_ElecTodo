@@ -7,7 +7,7 @@
     <%- include('./partials/header') %>
     <main class="grilla-carga cuerpo">
         <div class="carga">
-            <form action="/product/edit/<%= producto.id %>?_method=PUT" class="formulario" id="formulario" method="POST" enctype="multipart/form-data">
+            <form action="/product/edit/<%= producto.id %>?_method=PUT" class="formulario" id="formulario" method="POST">
                 <div class="fondo-ord">
                 
                 <!-- Grupo: Imagenes -->
@@ -15,8 +15,8 @@
                     <div id="preview"></div>
 
                     <section class="img-auricular">
-                        <p id="selec-5-img2" class="selec-5-img2">Seleccione un maximo de 5 imagenes</p>
-                        <p id="selec-5-img" class="selec-5-img selec-5-img-none">Ha seleccionado mas de 5 imagenes o menos de 1</p>
+                        <!-- <p id="selec-5-img2" class="selec-5-img2">Seleccione un maximo de 5 imagenes</p>
+                        <p id="selec-5-img" class="selec-5-img selec-5-img-none">Ha seleccionado mas de 5 imagenes o menos de 1</p> -->
                         <input type="file" id="productImagen" name="images" value="<%= producto.image %>" multiple accept="image/png, image/gif, image/jpeg, image/jpg, image/webp">
                     </section>
                     

@@ -181,7 +181,7 @@ formulario.addEventListener('submit', (e) => {
 		formulario.submit();
 	} else if (campos.correoL && campos.passwordL) {
 		formulario.submit();
-	} else if (campos.productImagen && campos.titulo && campos.descripcion) {
+	} else if (/* campos.productImagen &&  */campos.titulo && campos.descripcion) {
 		formulario.submit();
 	} else	{
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
