@@ -15,6 +15,7 @@
         <% if (locals.userLogin) { %>
             <% if (locals.userLogin.rol==="admin") { %>
                 <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
+                <h5 class=" btn btn-outline-danger">Administrador</h5>
                 <nav class="nav-header-menu">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,7 +48,7 @@
             </nav>  
                     
                       <li class="nav-item">
-                        <button type="button" class="nav-link btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+                        <button type="button" class=" btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
                           <i class="fas fa-shopping-cart"></i>
                           <span class="badge rounded-pill bg-warning"></span>
                         </button>
