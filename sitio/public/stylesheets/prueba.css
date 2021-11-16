@@ -1,0 +1,200 @@
+.prueba {
+    font-family: poppins;
+    padding-top: 150px;
+}
+
+.prueba .circulo {
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    background-image: url('/img/bk/rojo_negro1.jpg');
+    position: absolute;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    animation: bg-animation 20s infinite alternate;
+}
+
+.prueba .carta-padre {
+    border-radius: 50px;
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+
+    grid-template-areas: "side-avatar side-datos side-datos";
+    
+}
+
+
+
+/* ---------------------AVATAR------------------------- */
+
+.prueba .side-avatar {
+    border-radius: 20px;
+    background: rgba(230, 230, 230, 0.4);
+    grid-area: side-avatar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prueba .side-avatar .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+.prueba .side-avatar .avatar img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.prueba .side-avatar .nombre-avatar{
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(252, 252, 252);
+    font-family: Roboto;
+}
+
+.prueba .side-avatar .num-avatar,
+.prueba .side-avatar .adr-avatar,
+.prueba .side-avatar .email-avatar{
+    font-family: poppins;
+    color: rgb(252, 252, 252);
+}
+
+/* ---------------------------------------------------- */
+
+.prueba .side-datos {
+    border-radius: 25px;
+    background: rgba(230, 230, 230, 0.4);
+    grid-area: side-datos;
+}
+
+.prueba .cont-side-datos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.prueba .cont-side-datos label,
+.prueba .cont-side-datos input{
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.prueba .cont-side-datos label {
+    color: rgb(252, 252, 252);
+}
+
+.prueba input::placeholder {
+    color: gray;
+  }
+
+.prueba .cont-side-datos .side-1,
+.prueba .cont-side-datos .side-2{  
+    padding: 18px;
+}
+
+.prueba .cont-side-datos .side-2{ 
+    position: relative;
+}
+.prueba .cont-side-datos .side-1 input,
+.prueba .cont-side-datos .side-2 input{
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-family: poppins;
+}
+
+.prueba .cont-side-datos .side-2 input.password {
+    width: 85%;
+    
+}
+
+.prueba .cont-side-datos .side-2 span {
+    top: 47%;
+    right : 7%;
+    color: #fff;
+    cursor: pointer;
+    padding: 6.5px;
+    position: absolute;
+}
+.prueba .carta-padre .side-datos button{
+    background-color: rgb(288, 28, 28);
+    width: 150px;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.prueba .carta-padre .side-datos button:hover{
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.2);
+}
+
+
+@media screen and (max-width: 769px) {
+    .prueba .carta-padre {
+        grid-template-areas: "side-avatar side-avatar side-avatar"
+                             "side-datos side-datos side-datos";
+    }
+
+    .prueba .side-datos {
+        grid-row: -2 / -1;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .prueba .cont-side-datos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        grid-template-areas: "side-1 side-1"
+                             "side-2 side-2";
+
+    }
+
+    .prueba .cont-side-datos .side-1{
+        grid-area: side-1;
+    }
+
+    .prueba .cont-side-datos .side-2{
+        grid-area: side-2;
+    }
+}

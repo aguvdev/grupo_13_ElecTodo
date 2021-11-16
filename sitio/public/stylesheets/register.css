@@ -1,0 +1,296 @@
+.grilla-register{
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+
+
+    grid-template-areas: "logo-e logo-e logo-e"
+                         "datos datos ir-login";
+}
+
+.grilla-register .icono-electodo{
+    grid-area: logo-e;
+}
+
+.grilla-register .icono-electodo img{
+    width: 70px;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+.grilla-register .icono-electodo img:hover {
+    filter: drop-shadow(0.70rem 0.35rem 0.4rem rgba(255, 255, 255, 0.7));
+}
+
+.grilla-register .cajacon:before {
+    content: "";
+    position: fixed;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    left: 48%;
+    transform: translateY(-50%);
+    background-image: url('/img/bk/rojo_negro1.jpg');
+    background-size: 150%;
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: -1;
+    animation: bg-animation 20s infinite alternate;
+}
+
+/* ----------------GRILLA PANEL CONTAINER-------------------- */
+
+.grilla-register .panels-container{
+    grid-area: ir-login;
+}
+
+.grilla-register .panels-container img{
+    width: 70%;
+}
+
+.grilla-register .panels-container .btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.grilla-register .panels-container .panel .content h3,
+.grilla-register .panels-container .panel .content p,
+.grilla-register .panels-container .panel .content button{
+    color: #fff;
+}
+
+
+
+/* ----------GRILLA REGISTER------------ */
+
+.grilla-register .register{
+    padding: 30px;
+    grid-area: datos;
+}
+
+.register .title {
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.register .formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.register .formulario .formulario__grupo .formulario__grupo-input {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.register .formulario .formulario__grupo .formulario__grupo-input .fa-user,
+.register .formulario .formulario__grupo .formulario__grupo-input .fa-at,
+.register .formulario .formulario__grupo .formulario__grupo-input .fa-lock{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.register .formulario .formulario__grupo .formulario__validacion-estado{
+    text-align: center;
+    line-height: 55px;
+    transition: 0.5s;
+    font-size: 1.1rem;
+    opacity: 0;
+}
+
+.register .formulario .formulario__grupo .formulario__grupo-input input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+
+.register .formulario .formulario__grupo .formulario__grupo-input input:focus{
+    border-bottom: 3px solid #188fff;
+
+}
+
+.register .formulario .formulario__grupo .formulario__input-error{
+    font-size: 12px;
+    color: #F66060;;
+    margin-bottom: 0;
+    display: none;
+}
+
+.register .formulario .formulario__grupo .formulario__input-error-activo {
+    display: block;
+    font-size: 12px;
+    color: #F66060;;
+    margin-bottom: 0;
+}
+
+.register .formulario .formulario__label {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.register .formulario .formulario__label .formulario__checkbox{
+    margin-right: 5px;
+}
+
+.register .formulario .formulario__grupo-terminos,
+.register .formulario .formulario__mensaje,
+.register .formulario .formulario__grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+.register .formulario .formulario__mensaje{
+    height: 100%;
+    line-height: 45px;
+    background-color: #F66060;
+    padding: 0 15px;
+    color: #fff;
+    border-radius: 3px;
+    display: none;
+}
+
+.register .formulario .formulario__mensaje-activo{
+    display: block;
+}
+
+.register .formulario .formulario__btn {
+    width: 150px;
+    background-color: rgb(228, 28, 28);
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.register .formulario .formulario__btn:hover {
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.2);
+}
+
+.register .formulario .formulario__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register .formulario .formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.register .formulario .formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/* ------------------- --------------------- ESTILOS PARA VALIDACION------------------ ---------------- */
+
+.register .formulario .formulario__grupo-correcto .formulario__validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.register .formulario .formulario__grupo-correcto .formulario__grupo-input input:focus {
+    border-bottom: 3px solid #1ed12d;
+}
+
+.register .formulario .formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.register .formulario .formulario__grupo-incorrecto .formulario__grupo-input input:focus {
+    border-bottom: 3px solid #bb2929;
+}
+
+/* ----------------------------------------MEDIAQUERIES---------------------------------------- */
+
+@media screen and (max-width: 769px) {
+    .grilla-register{
+        grid-template-areas: "logo-e ir-login ir-login"
+                             "datos datos datos";
+    }
+
+    .grilla-register .panels-container .panel{
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas: "content img";
+    }
+
+    .grilla-register .cajacon:before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 642px) {
+
+    .grilla-register{
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "logo-e logo-e logo-e"
+                             "ir-login ir-login ir-login"
+                             "datos datos datos";
+    }
+
+    .grilla-register .panels-container .panel{
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grilla-register .panels-container .panel img{
+        display: none;
+    }
+
+    .register .formulario{
+        grid-template-columns: 1fr;
+    }
+    .register .formulario .formulario__grupo-terminos,
+    .register .formulario .formulario__mensaje,
+    .register .formulario .formulario__grupo-btn-enviar {
+    grid-column: 1;
+    }
+
+    .register .formulario .formulario__btn{
+        width: 100%;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head') %>
+        
+<body>
+    <%- include('./partials/header') %>
+    <main class="grilla-carga cuerpo">
+        <div class="carga">
+            <form action="/product/edit/<%= producto.id %>?_method=PUT" class="formulario" id="formulario" method="POST">
+                <div class="fondo-ord">
+                
+                <!-- Grupo: Imagenes -->
+                <section class="img-auricular">
+                    <div id="preview"></div>
+
+                    <section class="img-auricular">
+                        <!-- <p id="selec-5-img2" class="selec-5-img2">Seleccione un maximo de 5 imagenes</p>
+                        <p id="selec-5-img" class="selec-5-img selec-5-img-none">Ha seleccionado mas de 5 imagenes o menos de 1</p> -->
+                        <input type="file" id="productImagen" name="images" value="<%= producto.image %>" multiple accept="image/png, image/gif, image/jpeg, image/jpg, image/webp">
+                    </section>
+                    
+                </section>
+
+                <!-- Grupo: Titulo -->
+                <div class="formulario__grupo" id="grupo__titulo">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-box"></i>
+                        <input type="text" class="formulario__input <%= locals.errors && errors.name ? 'is-invalid' : null%>" value="<%= producto.name %>" name="name" id="title" placeholder="Nombre del producto.">
+                        <i id="check-titulo" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %> 
+                        </div>
+                    <% } %>
+                    <p id="formulario__input-error-titulo" class="formulario__input-error">El nombre no es válido, recuerde que no puede usar símbolos</p>
+                </div>
+            
+                <!-- Grupo: Stock -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-boxes"></i>
+                        <input class="texto-carga <%= locals.errors && errors.stock ? 'is-invalid' : null%>" type="number" placeholder="Agregar stock del producto" name="stock" value="<%= producto.stock %>">
+                        <i id="check-nombre" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+            
+                <!-- Grupo: Categoria -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-list-alt"></i>
+                        <select class="texto-carga <%= locals.errors && errors.category_id? 'is-invalid' : null%>" name="category_id"> 
+                            <option value="">Seleccione su categoría</option>
+                            <% categorias.forEach(categoria => { %>
+                                <option value="<%= categoria.id %>" <%= locals.oldData ? oldData.category_id : null%> ><%= categoria.name %></option>
+                            <% }) %>
+                        </select>
+                        <% if (locals.errors && errors.category_id) { %>
+                            <div class="text-danger">
+                                <%= errors.category_id.msg %> 
+                            </div>
+                        <% } %>
+                        <i id="check-nombre" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger">
+                            <%= errors.name.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+        
+                <!-- Grupo: Precio -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-dollar-sign"></i>
+                        <input class="texto-carga <%= locals.errors && errors.stock ? 'is-invalid' : null%>" type="number" placeholder="Precio" name="price" value="<%= producto.price %>">
+                        <i id="check-nombre" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="text-danger">
+                            <%= errors.price.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+
+                <!-- Grupo: Descuento -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <div class="formulario__grupo-input">
+                        <i class="fas fa-percent"></i>
+                        <input class="texto-carga <%= locals.errors && errors.stock ? 'is-invalid' : null%>" type="number" placeholder="Descuento" name="discount" value="<%= producto.discount %>">
+                        <i id="check-nombre" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <% if (locals.errors && errors.discount) { %>
+                        <div class="text-danger">
+                            <%= errors.discount.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+
+                <!-- Caracteristicas -->
+                <div class="cara-gene">
+                    <h3> CARACTERISTICAS GENERALES </h3>
+                    <i id="check-descrip" class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <p id="text-decrip" class="formulario__input-error .formulario__input-error-activo">La descripción debe tener al menos 20 caracteres.</p>
+                </div>
+                <div id="grupo__descrip" class="caracteristicas-contenido">
+                    <textarea class="texto-carga-espe <%= locals.errors && errors.description ? 'is-invalid' : null%>" type="text" placeholder="Descripción del producto:" name="description" id="description" value=""><%= producto.description %></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="text-danger">
+                            <%= errors.description.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <input type="submit" id='btn1' value="Enviar" class="formulario__btn" />
+                    <div class="formulario__btn boton-cancelar">   
+                        <a href="/product/detalle-product/<%= producto.id %>">  
+                        Cancelar
+                    </div>
+                </div>
+                </div>
+            </form>
+        </div>      
+    </main>
+    <%- include('./partials/footer') %>
+    <%- include('./partials/scripts') %>
+</body>
+</html>

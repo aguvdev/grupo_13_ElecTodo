@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("./partials/head") %> 
+<body>
+    <%- include("./partials/header") %>
+    <main class="detalle cuerpo">
+        <div class="menu">
+            <div class="menu1"><!-- encierro fotos titulo precio logos sumar carrito envios p y h1 -->
+
+                <section class="img-auricular"><!-- encierro solo las fotos -->
+                    <div class="principal_img">
+                        <img id="img-principal"  src="/img/products/<%= products.images[0].name %>" alt="imagen auris"> 
+                    </div>
+                             
+                    
+                    <div class="galeria-auris">
+                        <% products.images.forEach((imagen,index) => { %>
+                        <div class="auris">
+                                <img onclick="document.getElementById('img-principal').setAttribute('src','/img/products/<%=imagen.name%>')" src="/img/products/<%= imagen.name %>" alt="">
+                        </div>
+                        <% }) %>
+
+                    </div>
+                </section>       
+                
+
+
+                <div class="menulado"><!-- encierro logos h1 p precios sumar carrito envios -->
+                    
+                        <div class="titulo">
+                            <h1><%= products.name %> </h1>  
+                        </div>
+        
+                        <div class="model">
+                            <h4>Categoria de: <%= products.Categories.name %></h4>
+                        </div>
+                
+                        <div class="precio">
+                            <h4> $<%= products.price %> <br> Precio Lista</h4>
+                            <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
+                        </div>
+        
+                        <div class="discount">
+                            <h4>pagando con efectivo un: <br> <%= products.discount %>%  de descuento</h4>
+                            <h4 class="text-primary">$<%= (products.price - (products.discount * products.price /100).toFixed(0)) %> %OFF</h4>
+                        </div>
+                
+                        <div class="garantia-envios">
+                            <i class="fad fa-shield-alt"></i> <span>Garantia - 12 meses</span>
+                            <p></p>
+                            <i class="fas fa-truck"></i> <span>Envios a todo el pais</span>
+                        </div> 
+
+                        <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                        <div class="botones">  
+                            <div >                  
+                                <a class="editor" href="/product/edit/<%= products.id %>" >Editar</a>                  
+                            </div>
+                            <div class="botoncito">
+                                <form action="/product/remove/<%= products.id %>?_method=DELETE" method="POST">
+                                    <button class="btn btn-primary btn-danger" onclick="return ConfirmDelete()">Eliminar</button>
+                                  </form>
+                            </div>
+                            <script type="text/javascript">
+                              function ConfirmDelete()
+                              {
+                                var respuesta = confirm("estas seguro que deseas eliminar el producto?")
+                                if (respuesta == true)
+                                {
+                                  return true;
+                                }else{
+                                  return false;
+                                }
+                              }
+                            </script>
+                        </div>
+                      <% } %>
+
+                      <% if (locals.userLogin && locals.userLogin.rol === "user") { %>
+                        
+                        <div class="botones">
+                          <div class="carrito">
+                              <a href="/cart"><span>sumar al carrito</span></a>
+                          </div>                      
+                      </div>
+                        <% }else{ %>
+                          <div class="botones">
+                          <div class="carrito">
+                              <a href="/users/login"><span>sumar al carrito</span></a>
+                          </div>                      
+                      </div>
+                      <% } %>
+                        
+                        
+
+                    
+                </div>
+            </div>
+        </div>
+    
+    </div>   
+    <div class="contenedor-especificaciones">
+        <div class="contenedor-caracteristicas">
+
+                <h3> CARACTERISTICAS GENERALES </h3>
+                <div id="grupo__descrip" class="caracteristicas-contenido">
+                  <textarea class="texto-carga-espe" type="text" placeholder="Descripción del producto:" name="description" id="description"><%= products.description %></textarea>
+                </div>
+            </div>              
+                      
+    </div>
+
+    <!-- productss relacionado -->
+    <section class="relacionados">
+        <h3>PRODUCTOS RELACIONADOS</h3>
+        <p></p>
+     
+
+    <section class="recomendaciones">
+          <!-- carousel -->
+
+          <div class="carousel">
+
+            <div class="carousel__contenedor">
+
+              <button aria-label = "Anterior" class="carousel__anterior">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+
+              <div class="carousel__listaGam">
+
+                <% relacionados.forEach(product=> { %>
+                  <article class="cont-tarj-prod">
+                    <div class="tarj-prod">
+                      <div class="img-prod">
+                        <a href="/product/detalle-product/<%= product.id %>">
+                        <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
+
+                      </div>
+                      <div class="info-prod">
+                        <!-- titulo -->
+                        <h4>
+
+                          <%= product.name %>
+                        </h4>
+                        <!-- descripcion -->
+                        <p>
+                          <%= product.description %>
+                        </p>
+                        <!-- precio -->
+                        <% if (product.discount> 0) { %>
+                          <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                          </h3>
+                          <span> $<%= product.price %>
+                              <%= product.discount %>% OFF</span>
+                          <% }else { %>
+                            <h3> $<%= product.price %>
+                            </h3>
+                            <% } %>
+                              <a href="/product/detalle-product/<%= product.id %>">
+                                <button>Más Info</button>
+                              </a>
+                      </div>
+                    </div>
+                  </article>
+                  <% }) %>
+                
+                </div>
+
+              <button aria-label = "Siguiente" class="carousel__siguiente">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+
+            </div>
+
+            <div role="tablist" class="carousel__indicadores"></div>
+
+          </div>
+
+        </div>
+
+      </section>
+    </section>
+    
+    </main>
+    <%- include("./partials/footer") %>
+    <%- include("./partials/scripts") %>
+</body>
+</html>

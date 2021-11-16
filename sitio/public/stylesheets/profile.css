@@ -1,0 +1,120 @@
+.profile .perfil-usuario {
+    margin-top: 50px;
+}
+
+.profile .contenedor-perfil {
+    min-width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    height: 600px;
+}
+
+.profile  .fondo-perfil-oscuro{
+    background-image: url('/img/double-bubble-dark.png');
+    background-repeat: repeat;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 0px 30px rgb(255, 255, 255, 0.5);
+}
+
+.profile  .fondo-perfil-oscuro .foto-perfil img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.profile  .fondo-perfil-oscuro .efecto-borde{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    z-index: 2;
+    border-radius: 50%;
+    border: 1px solid #1D9AF2;
+    opacity: 1;
+    animation: spinner4 800ms linear infinite;
+}
+
+@keyframes spinner4 {
+    to {
+    transform: scale(1.5);
+    opacity: 0;
+    }
+}
+
+.profile  .fondo-perfil-claro{
+    background-image: url('/img/double-bubble.png');
+    background-repeat: repeat;
+    width: 70%;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    position: absolute;
+    right: 0;
+}
+
+.profile  .fondo-perfil-oscuro .logo-carnet img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    left: 2%;
+    z-index: 2;
+}
+
+.profile .nombre-usuario{
+    margin: 20px;
+    text-align: center;
+}
+
+.profile .nombre-usuario .nombre-apellido{
+    display: block;
+    font-family: Allison, sans-serif;
+    font-size: 80px;
+    border-bottom: solid 1px grey;
+}
+
+.profile .datos-usuario label{
+    font-family: Bebas Neue, sans-serif;
+    font-size: 20px;
+}
+
+.profile .datos-generales{
+    margin: 40px;
+}
+
+
+.profile .datos-generales p{
+    font-family: Dancing Script, sans-serif;
+    font-size: 25px;
+    margin-top: 10px;
+    border-bottom: solid 1px grey;
+}
+
+.profile .fondo-perfil-claro button{
+    color: rgb(209, 209, 209);
+    background-color: rgb(29, 29, 29);
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height:32px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.profile .fondo-perfil-claro button:hover{
+    box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+    transform: translateX(-3px);
+}

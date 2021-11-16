@@ -1,32 +1,73 @@
 /* header */
-header{
+/* header{
     background: linear-gradient(to bottom right, var(--color-rosaFluor) 10%, var(--color-azulOscuro) 65%);
-    width: 100%;
-    height: 100%;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+} */
+ /* carrito */
+ header .btn-cart{
+  border: 0;
+  background: none;
+  margin-right: 15px;
+  position: relative;
+}
+header .btn-cart i{
+  font-size: 40px;
+}
+header .btn-cart span{
+  font-size: 16px;
+  position: absolute;
+  top:2px;
+  right: -4px;
+}
+#imagHeaderPerf{
+  object-fit: cover;
+}
+/* carrito termina */
+
+header{
+    background-image: url('/img/bk/giphy_4.gif');
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
-a{
-    text-decoration: none;
+header h3,
+header a{
+  text-decoration: none;
+  font-family: Play;
 }
 
 ul{
-    margin: 0;
+  margin: 0;
 }
 
 .cabeza{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    padding: 30px 0;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  padding: 15px 0;
 }
 
 .buscador2{
-    display: none;
+  display: none;
 }
 
 .logo a img{
-    width: 100px;
-    display: flex;
+  width: 70px;
+  display: flex;
+  transition: 0.3s;
+}
+
+.logo a img:hover {
+  filter: drop-shadow(0.70rem 0.35rem 0.4rem rgba(255, 255, 255, 0.7));
 }
 
 .buscador{
@@ -34,6 +75,7 @@ ul{
     border: 3px solid rgb(168, 168, 168);
     border-radius: 2em;
     align-items: center;
+    height: 40px;
 }
 
 .buscar-texto:focus{
@@ -47,6 +89,7 @@ ul{
     font-size: 16px;
     width: 40vw;
     padding-left: 10px;
+    font-family: Play;
 }
 
 .boton{
@@ -58,11 +101,401 @@ ul{
     text-decoration: none;
 }
 
-.nav-header-menu2{
-    display: none;
-}
+/* -----------------------NUEVO DESPLEGABLE--------------------------------- */
 
-.nav-header-menu ul li{
+header a {
+    text-decoration: none;
+  }
+  
+  header .contenedor {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* ---------- */
+  /* Enlaces del NAV */
+  /* ---------- */
+  
+  header .menu {
+    background-image: url('/img/bk/rojo_negro.jpg');
+    height: 100%; 
+    animation: bg-animation 20s infinite alternate;
+  }
+  
+  header .menu .contenedor-botones-menu {
+    display: none;
+    justify-content: space-between;
+  }
+  
+  header .menu .contenedor-botones-menu button{
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    font-family: Play;
+  }
+  
+  header .menu .contenedor-botones-menu button:hover {
+    border: 1px solid rgba(255, 255, 255, .4);
+  }
+  
+  header .menu .contenedor-botones-menu .btn-menu-cerrar{
+    display: none;
+  }
+  
+  header .menu .contenedor-botones-menu .btn-menu-cerrar.activo{
+    display: inline-block;
+  }
+  
+  header .menu .contenedor-enlaces-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 25px; */
+  }
+  
+  header .menu .btn-categorias{
+    color: #fff;
+    padding: 7px;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid transparent;
+    cursor: default;
+    height: 35px;
+  }
+  
+  header .menu .btn-categorias:hover {
+    border: 1px solid rgba(255, 255, 255, .4);
+  }
+  
+  header .menu .btn-categorias i {
+    margin-left: 20px;
+    position: relative;
+    bottom: 2px;
+  }
+
+  header .menu .btn-categorias p {
+    display: block;
+    font-size: 14px;
+    font-family: Play;
+    margin: 0;
+  }
+  
+  header .menu .btn-categorias span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  header .menu .contenedor-enlaces-nav .enlaces a {
+    color: #ccc;
+    border: 1px solid transparent;
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  header .menu .contenedor-enlaces-nav .enlaces a:hover {
+    border: 1px solid rgba(255, 255, 255, .4);
+  }
+  
+  
+  /* ----------------------------- */
+  /* GRID */
+  /* ----------------------------- */
+  
+  header .contenedor-grid {
+    position: relative;
+  }
+  
+  header .grid {
+    width: 100%;
+    display: none;
+    position: absolute;
+    /* top: 5px; */
+    z-index: 1000;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "categorias subcategorias subcategorias subcategorias";
+  }
+  
+  header .grid.activo {
+    display: grid;
+  }
+  
+  header .grid::before {
+    content: "";
+    display: block;
+    background: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    position: absolute;
+    top: -5px;
+    left: 40px;
+  }
+  
+  header .grid > div {
+    background: #fff;
+    box-shadow: 0px 3px 6px rgba(8, 0, 0, 0.10);
+  }
+  
+  /* ----------------------------- */
+  /* CATEGORÍAS */
+  /* ----------------------------- */
+  
+  header .grid .btn-regresar {
+    background: #232f3e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  header .grid .btn-regresar i {
+    margin-right: 10px;
+  }
+  
+  header .grid .categorias {
+    grid-area: categorias;
+    padding-top: 10px;
+    min-height: 300px;
+    overflow: auto;
+  }
+  
+  header .grid .categorias .subtitulo {
+    display: none;
+  }
+  
+  header .grid .categorias a {
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  header .grid .categorias a i {
+    display: none;
+  }
+  
+  header .grid .categorias a:hover {
+    color: rgb(228, 28, 28);
+    font-weight: bold;
+  }
+  
+  header .grid .categorias a:hover i {
+    display: inline-block;
+  }
+  
+  /* ------------------------ */
+  /* Subcategorias */
+  /* ------------------------ */
+  
+  header .grid .contenedor-subcategorias {
+    grid-area: subcategorias;
+  }
+  
+  header .grid .subcategoria {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+  }
+  
+  header .grid .subcategoria.activo {
+    display: grid;
+  }
+  
+  header .grid .subcategoria img {
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  header .grid .enlaces-subcategoria {
+    padding-top: 10px;
+    height: 100%;
+    max-height: 300px;
+    overflow: auto;
+  }
+  
+  header .grid .enlaces-subcategoria a {
+    color: #000;
+    display: block;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  header .grid .enlaces-subcategoria a:hover {
+    color: rgb(228, 28, 28);
+  }
+  
+  header .grid .subtitulo {
+    font-size: 18px;
+    font-weight: normal;
+    color: rgb(228, 28, 28);
+    padding: 10px 20px;
+  }
+  
+  header .grid .banner-subcategoria a {
+    display: block;
+    height: 100%;
+  }
+  
+  header .grid .galeria-subcategoria {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+  }
+  
+  header .grid .galeria-subcategoria a {
+    width: 50%;
+    height: 50%;
+  }
+  
+  /* ----------------------- */
+  /* Mediaqueries */
+  /* ----------------------- */
+  
+  @media (max-width: 1000px) {
+    header .menu .contenedor-enlaces-nav{
+      padding: 0 10px;
+    }
+  
+    header .menu .contenedor {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    header .menu .contenedor{
+      width: 90%;
+    }
+  
+    header .menu .contenedor-botones-menu {
+      display: flex;
+    }
+  
+    header .menu .contenedor-enlaces-nav {
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      left: 0;
+      background-image: url('/img/bk/rojo_negro.jpg');
+      animation: bg-animation 20s infinite alternate;
+      height: 100vh;
+      width: 80%;
+      z-index: 2000;
+      transition: .3s ease all;
+      transform: translate(-100%);
+    }
+  
+    header .menu .contenedor-enlaces-nav.activo {
+      transform: translate(0%);
+    }
+  
+    header .menu .btn-categorias {
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  
+    header .menu .btn-categorias i {
+      position: static;
+      margin-left: 20px;
+      transform: rotate(-90deg);
+    }
+  
+    header .menu .enlaces {
+      width: 100%;
+    }
+  
+    header .menu .enlaces a {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+    }
+  
+    header .grid {
+      display: grid;
+      transition: .3s ease all;
+      transform: translateX(-100%);
+      z-index: 3000;
+      width: 80%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      grid-template-areas: "categorias categorias categorias categorias";
+    }
+  
+    header .grid.activo {
+      transform: translateX(0);
+    }
+  
+    header .grid::before {
+      display: none;
+    }
+  
+    header .grid .btn-regresar{
+      display: inline-block;
+    }
+  
+    header .grid .categorias .subtitulo {
+      display: block;
+    }
+  
+    header .grid .contenedor-subcategorias {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%);
+      transition: .3s ease all;
+      overflow: auto;
+    }
+  
+    header .grid .contenedor-subcategorias.activo {
+      transform: translateX(0%)
+    }
+  
+    header .grid .contenedor-subcategorias .subcategoria {
+      grid-template-columns: 1fr;
+    }
+  
+    header .grid .contenedor-subcategorias .banner-subcategoria {
+      width: 100%;
+      min-height: 250px;
+      max-height: 350px;
+    }
+  
+    header .grid .contenedor-subcategorias .enlaces-subcategoria {
+      min-height: 50vh;
+      overflow: auto;
+    }
+  
+    header .grid .contenedor-subcategorias .galeria-subcategoria a {
+      width: 25%;
+      height: 100%;
+    }
+  }
+
+/* ------------------------------------------------------------------------- */
+/* .nav-header-menu ul li{
     list-style: none;
     float: left;
     margin: 10px
@@ -71,8 +504,15 @@ ul{
 .nav-header-items{
     background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
     width: 100%;
-    height: 100%;
-    padding: 5px 20px 10px;
+    padding: 2px;
+}
+
+.nav-header-items i{
+    font-size: 1em;
+}
+
+.nav-header-items a{
+    font-family: Play;
 }
 
 .nav-header-items2{
@@ -88,7 +528,6 @@ ul{
     list-style: none;
     float: left;
     text-align: center;
-    margin-top: 10px;
 }
 
 .nav-header-items ul li a{
@@ -96,7 +535,37 @@ ul{
     list-style: none;
     text-decoration: none;
     font-size: 1em;
+} */
+
+/* -----------DESPLEGRABLE-------------- */
+
+.color-boton-caca{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
 }
+
+.color-boton-caca:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.color-menu-caca{
+    /* background: rgb(221, 221, 221); */
+    background-image: url('/img/moroccan-flower.png');
+}
+.dropdown-item{
+    color: rgb(31, 31, 31);
+    font-family: Play;
+}
+
+button:focus:not(:focus-visible){
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+
+
 
 
 @media (max-width: 769px) {
@@ -168,10 +637,6 @@ ul{
         align-items: center;
     }
 
-    .nav-header-menu{
-        display: none;
-    }
-
     .nav-header-menu2{
         display: flex;
         align-items: center;
@@ -204,15 +669,13 @@ ul{
         display: flex;
         justify-content: space-evenly;
         background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
-        height: auto;
+        height: 50px;
         padding: 20px;
         align-items: center;
     }
-    .dropdown-menu{
-        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor), var(--color-azulOscuro));
-    }
+
     .btn-secondary{
-        background: linear-gradient(to right, var(--color-celesteClaro), var(--color-rosaFluor));
+        background: none;
     }
 
     .nav-header-items2 li a{

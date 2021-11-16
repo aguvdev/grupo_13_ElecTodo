@@ -1,0 +1,528 @@
+/* ----------------Seccion gaming-------------- */
+
+.detalle .cont-cuadro-gamCelNote{
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+
+.detalle .cuadro-gamCelNote{
+    width: 280px;
+    height: 50px;
+    /* background: linear-gradient(45deg, rgb(228, 28, 28), var(--color-celesteClaro)); */
+    background-image: url('/img/bk/giphy_5.gif');
+    position: relative;
+    -moz-border-radius: 50% 0 / 100% 0;
+    -webkit-border-radius: 50% 0 / 100% 0;
+    border-radius: 0 35% / 0 100%;
+    /* background-size: 200%; */
+    animation: bg-animation 20s infinite alternate;
+}
+
+.detalle  .cuadro-gamCelNote img{
+    width: 170px;
+    height: auto;
+    position: absolute;
+    top: -122%;
+    left: 0%;
+}
+
+
+/* -------------------Animacion----------------- */
+.detalle .cuadro-Note img,
+.detalle .cuadro-Cel img,
+.detalle  .cuadro-gamCelNote img{
+    transition: 0.3ms;
+    animation: sizeChange;
+    animation-duration: 120s;
+    animation-delay: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.detalle .tit-secc label{
+    position: absolute;
+    bottom: 2%;
+    right: 9%;
+    margin: 0;
+    color: white;
+    font-family: Play;
+    font-size: 30px;
+    margin: 0;
+}
+
+
+/* ------------------CAROUSEL---------------------- */
+
+.detalle .carousel__contenedorNot,
+.detalle .carousel__contenedorCel,
+.detalle .carousel__contenedor{
+    position: relative;
+}
+
+
+.detalle .carousel__anteriorNot,
+.detalle .carousel__siguienteNot,
+.detalle .carousel__anteriorCel,
+.detalle .carousel__siguienteCel,
+.detalle .carousel__anterior,
+.detalle .carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 40px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #fff;
+    
+}
+
+.detalle .carousel__anteriorNot:hover,
+.detalle .carousel__siguienteNot:hover,
+.detalle .carousel__anteriorCel:hover,
+.detalle .carousel__siguienteCel:hover,
+.detalle .carousel__anterior:hover,
+.detalle .carousel__siguiente:hover {
+    opacity: 100%;
+}
+
+.detalle .carousel__anteriorNot,
+.detalle .carousel__anteriorCel,
+.detalle .carousel__anterior {
+    left: -60px;
+    color: white;
+    background-color: orangered
+}
+
+.detalle .carousel__siguienteNot,
+.detalle .carousel__siguienteCel,
+.detalle .carousel__siguiente {
+    right: -60px;
+    color: white;
+    background-color: orangered;
+}
+
+.detalle .carousel__listaGam,
+.detalle .carousel__listaCel,
+.detalle .carousel__listaNot {
+    overflow: hidden;
+}
+
+.detalle .carousel__indicadoresNot .glider-dot,
+.detalle .carousel__indicadoresCel .glider-dot,
+.detalle .carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: .2;
+}
+
+.detalle .carousel__indicadoresNot .glider-dot:hover,
+.detalle .carousel__indicadoresCel .glider-dot:hover,
+.detalle .carousel__indicadores .glider-dot:hover {
+    opacity: .5;
+}
+
+.detalle .carousel__indicadoresNot .glider-dot.active,
+.detalle .carousel__indicadoresCel .glider-dot.active,
+.detalle .carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
+/* ------------------TARJETAS DE PRODUCTOS-------------------*/
+
+
+.detalle .tarj-prod{
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    margin: 15px;
+}
+
+.detalle .tarj-prod:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.detalle .tarj-prod .img-prod img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    -webkit-box-reflect: below -25px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+}
+
+.detalle .info-prod{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.detalle .info-prod h4{
+    font-family: Play;
+    color: rgb(27, 27, 27);
+    /* background: linear-gradient(to bottom right, rgba(228, 20, 118, 0.5) 30%, rgba(2, 200, 237, 0.5) 70%); */
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 2px;
+}
+
+.detalle .info-prod p{
+    display: -webkit-box;
+    max-width: 190px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.detalle .info-prod h3{
+    /* width: 100%; */
+    /* background: rgb(2, 237, 61); */
+    background: linear-gradient(45deg, rgb(2, 237, 61), rgb(2, 128, 33));
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    margin: 0;
+    background-size: 200%;
+    animation: bg-animation 20s infinite alternate;
+}
+
+.detalle .info-prod span{
+    width: 100px;
+    background: rgb(237, 88, 2);
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: -5%;
+    bottom: 30%;
+    text-decoration: line-through;
+}
+
+.detalle .info-prod button{
+    width: 85px;
+    background: rgb(228, 28, 28);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    border: none;
+}
+
+/* MAIN */
+
+.detalle .menu{/* todo */
+    padding: 0px 200px;/* un espaciado: abajo, derecha 200px */ 
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.detalle .menu1{/* esto es todo img h1 hasta sumar carrito nada mas */
+    background-color: white;
+    display: flex;
+    margin-bottom: 0px;
+    border-radius: 1em 1em 1em 1em;
+    
+}
+.detalle .galeria-auris{
+    padding-top: 40px;
+    display: flex;
+    
+    justify-content: space-evenly;  
+}
+.detalle .principal_img{
+    width: 400px;
+    height: 400px;
+    
+}
+.detalle .principal_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detalle .auris{
+    width: 6em;
+    margin-bottom: 0px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px 0 rgba(0, 0, 0, .5)
+}
+.detalle .auris  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.detalle .menulado{
+    width: 100%;
+    margin: 0px 50px;
+}
+.detalle .menulado i, .detalle p{
+    padding: 0px 50px;
+    font-size: 15px;
+    padding: 9px;            
+}
+.detalle .titulo{
+    border-bottom: 1px rgb(228, 28, 28) solid ;
+    padding: 10px 0px;
+}
+.detalle .model{
+    border-bottom: 1px rgb(228, 28, 28) solid;
+}
+.detalle .titulo h1, .model, .discount{
+    font-family: play;
+    font-style: oblique;/* inclinar las palabras */      
+}
+
+.detalle .precio{/* todo de: 6000, img , p */
+    color: blue;
+    display: flex;
+    margin: 10px 0px;  
+    border-bottom: 1px rgb(228, 28, 28) solid ;
+    padding: 20px 0px;     
+}
+.detalle .precio img{/* mini logo electodo */
+    width: 50px;
+    margin: 0 40px;/* SEPARAAAA LETRAS P IMG TODO */
+    display: flex;/* no se interponga lo que le siga, ocupa su propia linea */
+    background-color: rgb(228, 28, 28);/* !!!!!!PREGUNTAR A ROBERT!!!! */
+}
+.detalle .precio p{/* 12 cuotas sin interes a 6840 precio lista */
+    color: black;
+    font-weight: 500;/* grosor letras */ 
+    margin: -15PX 0px;
+}
+
+.detalle .garantia-envios {/* garantia 12 meses, envios todo pais */
+    color: rgb(7, 201, 7);
+    border-top: 1px rgb(228, 28, 28) solid;
+    border-bottom: 1px rgb(228, 28, 28) solid ;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+
+.detalle .carrito {
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: rgb(228, 28, 28);
+    padding: 6px;
+    font-size: 18px;
+    margin: 10px auto;
+    color: #fff;
+    width: 180px;
+}
+.detalle .carrito a{
+    text-decoration: none;
+    color: white;
+}
+.detalle .botoncito button{
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    color: white;
+    background-color: #ce0000eb;
+    padding: 5px;
+    font-size: 16px;
+    margin: 10px auto;
+    color: #fff;
+    width: 129px;
+}
+.detalle .editor{
+    text-transform: uppercase;
+    border-radius: 1em 1em 1em 1em;
+    background-color: #2ec209;
+    padding: 8px 31px;
+    font-size: 19px;
+    color: #fff;
+}
+.detalle .botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.detalle .menu article{
+    text-transform: uppercase;
+    padding: 10px ;
+    font-size: 15px;
+    margin: 60px 10px;
+    background-color: white;
+}
+/* menu caracteriscias conectividad sonido micro  */
+.detalle .contenedor-especificaciones{
+    padding-top: 2em;
+    padding-left: 20%;
+    width: 100%;
+}
+.detalle .contenedor-caracteristicas{
+    display: inline-block;
+    padding: .5rem;
+    margin: 0px 20px 20px 0px;
+    width: 73%;
+    background-color: white;
+    border-radius: 1em 1em 1em 1em;
+    font-style: oblique;     
+}
+.detalle .contenedor-caracteristicas h3{
+    border-bottom: 1px solid rgb(228, 28, 28);
+}
+.detalle .caracteristicas-contenido textarea{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+.detalle .caracteristicas-contenido textarea {
+    width: 90%;
+    height: 250px;
+    resize: none;
+}
+.detalle .caracteristicas-contenido{
+    padding-top: 12px;
+    font-weight: 600;
+    padding: 15px;
+    margin: 15px;
+    letter-spacing: 3px; 
+     
+}
+/* PRODUCTOS RELACIONADOS */
+.detalle .relacionados{
+    background-color: white;
+    border-radius: 2em 2em 2em 2em;
+    margin: 10px 0px 0px 0px;
+    padding: 20px 20px 0px;
+    margin: -2px 0px 0px;  
+}
+.detalle .relacionados h3{
+    border-bottom: 1px solid rgb(228, 28, 28);
+    font-style: oblique;
+}
+.detalle .galeria-mouse{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: center;
+}
+.detalle .mouse{
+    width: 20em;
+    margin-bottom: 20px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+}
+.detalle .mouse  img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 1em 1em 5em 1em;
+    margin: 0px 0px 20px;
+}
+@media (max-width: 769px) {
+
+     .detalle .menu {
+        padding: 0px;
+        margin: 0px;
+}
+    .detalle .menulado {
+        width: 100%;
+        margin: -7px;
+}
+.detalle .precio{
+    padding: 15px 0px;
+}
+.detalle .precio img{
+    margin: 12px 14px 17px -25px;
+}
+.detalle .galeria-mouse{
+    flex-wrap: nowrap;
+}
+.detalle .mouse {
+    width: 9em;
+}
+.detalle .contenedor-especificaciones{
+    width: 100%;
+}
+@media (max-width: 481px) {
+    .cuerpo {
+        width: 99%;
+    }
+    .detalle .img-auricular img{
+        width: 100%;
+    }
+    .detalle .menu1{
+        display: block;  
+    }
+    .detalle .menulado{
+        margin: 0px;
+        padding: 0px;
+    }
+    .detalle .carrito{
+        margin: 60px 120px;
+        font-size: 17px;
+    }
+    .detalle .precio img{
+        margin: 1px 25px 14px 33px;
+    }
+    .detalle .contenedor-caracteristicas{
+        padding: 0.5rem;
+        margin: 35px 0px 35px 7px;
+        width: 95%;
+        background-color: white;
+        border-radius: 1em 1em 1em 1em;
+        font-style: oblique;
+    }
+    .detalle .relacionados{
+        background-color: white;
+        border-radius: 2em 2em 2em 2em;
+        margin: 10px -22px 0px -20px;
+          
+    }
+    
+    .detalle .contenedor-especificaciones{
+        padding-top: 0em;
+        width: 98%;
+    }
+   
+    .detalle .galeria-mouse{
+        display: block;
+    }
+    .detalle .mouse{
+        width: 15em;
+    }
+}
+}
+
+
+
+
+    
+
+
+    
+
+

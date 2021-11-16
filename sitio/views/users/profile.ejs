@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="prueba">
+                <div class="circulo"></div>
+                <div>
+                    <div class="carta-padre">
+        
+                        <div class="side-avatar">
+                            <div class="avatar">
+                                <img src="/img/users/<%= user.avatar %>" width="300px" alt="foto-de-perfil">
+                            </div>
+                            <p class="nombre-avatar"><%= user.name %> </p>
+                            <p class="num-avatar"><%= user.phone %></p>
+                            <p class="adr-avatar"><%= user.adress %></p>
+                            <p class="email-avatar"><%= user.email %> </p>
+                        </div>
+        
+                        <div class="side-datos">
+                            <form class="cont-side-datos" autocomplete="off">
+                                <div class="side-1">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="name" name="name" placeholder="<%= user.name %>" value="<%= user.name %>" disabled>
+                                    <label for="Celular/Telefono">Celular/Telefono</label>
+                                    <input type="text" id="Celular/Telefono" name="phone" placeholder="<%= user.phone %>" value="<%= user.phone %>"disabled>
+                                    <label for="Ciudad">Ciudad</label>
+                                    <input type="text" id="Ciudad" placeholder="<%= user.adress %>" disabled>
+                                </div>
+                                <div class="side-2">
+                                    <label for="Email">Email</label>
+                                    <input type="text" id="Email" name="email" placeholder="<%= user.email %>" value="<%= user.email %>" disabled>
+                                    <label for="Password">Contraseña</label>
+                                    <input type="password" id="Password" name="password" placeholder="Nueva contraseña" class="password" disabled><span onclick="togglePass()">
+                                        <i class="fa fa-eye-slash"></i>
+                                    </span>
+                                   
+                                    
+                                </div>
+                            </form>
+                            <a href="/users/profileEdit/<%= user.id %>">
+                                <button>Editar</button>
+                            </a>
+                        </div>
+        
+                    </div>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+                <%- include('../partials/scripts') %>
+    </body>
+
+</html>

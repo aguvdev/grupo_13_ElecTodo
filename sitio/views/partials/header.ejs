@@ -3,21 +3,72 @@
         <div class="logo">
             <a href="/"><img src="/img/electodo log.png" alt="electodo"></a>
         </div>
+
+ 
         <div class="buscador">
-                <input class="buscar-texto" type="text" placeholder="¿Qué producto estás buscando?">
-            <button class="boton">
-                <i class="fas fa-search"></i>
-            </button>
+            <form action="/product/search" method="GET" id="searchy">
+                <input class="buscar-texto" type="search" name="search" placeholder="¿Qué producto estás buscando?" id="searchinput">
+                <button class="boton" type="submit" > <i class="fas fa-search"></i> </button>
+            </form>
+
         </div>
-        <nav class="nav-header-menu">
-            <ul>
-                <li><a href=""><i class="fas fa-bell"></i></a></li>
-                <li><a href="/login"><i class="fas fa-user-circle"></i></a></li>
-                <li><a href=""><i class="fas fa-heart"></i></a></li>
-                <li><a href="/CarritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
-        <nav class="nav-header-menu2">
+        <% if (locals.userLogin) { %>
+            <% if (locals.userLogin.rol==="admin") { %>
+                <li><a href="/product/carga"><i class="fas fa-upload"></i></a></li>
+                <h5 class=" btn btn-outline-danger">Administrador</h5>
+                <nav class="nav-header-menu">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img id="imagHeaderPerf" src="/img/users/<%= locals.userLogin.avatar %>" width="37" height="37" style="border-radius: 100%">
+                          <!--<i class="fas fa-user-circle"></i>-->
+                        </button>
+                        <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Administrador:<%= locals.userLogin.name %></a></li>
+                          <li><a class="dropdown-item" href="/users/profile">Ir a mi Perfil</a></li>
+                          <li><a class="dropdown-item" href="/users/logOut">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            
+            <% } else { %>
+             
+            <nav class="nav-header-menu">
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img id="imagHeaderPerf" src="/img/users/<%= locals.userLogin.avatar %>" width="37" height="37" style="border-radius: 100%">
+                    <!--<i class="fas fa-user-circle"></i>-->
+                    </button>
+                    <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Usuario : <%= locals.userLogin.name %></a></li>
+                      <li><a class="dropdown-item" href="/users/profile">Ir a mi Perfil</a></li>
+                      <li><a class="dropdown-item" href="/users/logOut">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </nav>  
+                    
+                      <li class="nav-item">
+                        <button type="button" class=" btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+                          <i class="fas fa-shopping-cart"></i>
+                          <span class="badge rounded-pill bg-warning"></span>
+                        </button>
+                      </li>             
+            
+            <% } %>
+        <% }else{ %>
+                <nav class="nav-header-menu">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle color-boton-caca" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown p-2 mb-2 color-menu-caca" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>
+                          <li><a class="dropdown-item" href="/users/register">Registrarse</a></li>
+                        </ul>
+                    </div>
+                </nav>
+       <% } %>
+<!--         <nav class="nav-header-menu2">
             <div class="buscador2">
                 <input type="text" class="buscar-texto2">
                 <a href="" class="boton-busc">
@@ -26,19 +77,260 @@
             </div>
             <ul>
                 <li>
-                    <a href="/login">
+                    <a href="/users/login">
                         <i class="fas fa-user-circle"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="/CarritoDeCompras">
+                    <a href="/cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </div>
-    <nav class="nav-header-items">
+
+    <!-- ----------------------------------------NUEVO DESPLEGABLE-------------------------------------- -->
+
+    <nav class="menu" id="menu">
+        <!-- botones para responsive mobile -->
+        <div class="contenedor contenedor-botones-menu">
+          <button id="btn-menu-barras" class="btn-menu-barras"><i class="fas fa-bars"></i></button>
+          <button id="btn-menu-cerrar" class="btn-menu-cerrar"><i class="fas fa-times"></i></button>
+        </div>
+        <!-- buscador principal -->
+        <div class="contenedor contenedor-enlaces-nav">
+          <div class="btn-categorias" id="btn-categorias">
+            <p>Todas las Categorias</p>
+            <i class="fas fa-caret-down"></i>
+          </div>
+  
+
+        </div>
+        <!-- contenedero del GRID -->
+        <div class="contenedor contenedor-grid">
+          <div class="grid" id="grid">
+            <div class="categorias">
+              <button class="btn-regresar"><i class="fas fa-arrow-left"></i> Regresar</button>
+              <h3 class="subtitulo">Categorias</h3>
+  
+              <a href="#" data-categoria="televisores-y-video">Televisores y video <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="audio">Audio <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="accesorios">Accesorios <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="informatica">Informatica <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="videojuegos">Videojuegos <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="celulares-y-tablets">Celulares y Tablets <i class="fas fa-angle-right"></i></a>
+              <a href="#" data-categoria="fotografia-y-video">Fotografia y Video <i class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="contenedor-subcategorias">
+              <!-- primer subcontenedor -->
+              <div class="subcategoria activo" data-categoria="televisores-y-video">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Televisores y video</h3>
+                  <a href="/product/filter?searchi=2+">TVLED</a>
+                  <a href="/product/filter?searchi=1+">SMART TV</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/television-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/television-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- segundo subcontenedor -->
+              <div class="subcategoria" data-categoria="audio">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Audio</h3>
+                  <a href="/product/filter?searchi=3+">Asistentes virtuales</a>
+                  <a href="/product/filter?searchi=5+">Parlantes</a>
+                  <a href="/product/filter?searchi=19+">Auricular</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/audio-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/audio-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- tercer subcontenedor -->
+              <div class="subcategoria" data-categoria="accesorios">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Accesorios</h3>
+                  <a href="/product/filter?searchi=6+">Almacenamiento</a>
+                  <a href="/product/filter?searchi=7+">Insumos</a>
+                  <a href="/product/filter?searchi=8+">Partes PC</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/almacenamiento-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- cuarto subcontenedor -->
+              <div class="subcategoria" data-categoria="informatica">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Informatica</h3>
+                  <a href="/product/filter?searchi=9+">Notebooks</a>
+                  <a href="/product/filter?searchi=10+">All in One</a>
+                  <a href="/product/filter?searchi=11+">Impresoras</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-banner-1.png" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-1.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-2.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-3.png" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/tecnologia-galeria-4.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- quinto subcontenedor -->
+              <div class="subcategoria" data-categoria="videojuegos">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Videojuegos</h3>
+                    <a href="/product/filter?searchi=12+">Consolas</a>
+                    <a href="/product/filter?searchi=13+">Juegos de Consola</a>
+                    <a href="/product/filter?searchi=14+">Joysticks</a>
+                    <a href="/product/filter?searchi=20+">Sillas Gamer</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/videojuegos-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- sexto subcontenedor -->
+              <div class="subcategoria" data-categoria="celulares-y-tablets">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Celulares y Tablets</h3>
+                    <a href="/product/filter?searchi=15+">Celulares libres</a>
+                    <a href="/product/filter?searchi=16+">Tablets</a>
+                    
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/celulares-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <!-- séptimo subcontenedor -->
+              <div class="subcategoria" data-categoria="fotografia-y-video">
+                <div class="enlaces-subcategoria">
+                  <button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+                  <h3 class="subtitulo">Fotografia y Video</h3>
+                    <a href="/product/filter?searchi=17+">Cámaras digitales</a>
+                    <a href="/product/filter?searchi=18+">Video Cámaras</a>
+                </div>
+                <div class="banner-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-banner-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="galeria-subcategoria">
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-1.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-2.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-3.jpg" alt="">
+                  </a>
+                  <a href="#">
+                    <img src="/img/desplegable/camaras-galeria-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!-- <nav class="nav-header-items">
         <ul>
             <li><a href=""><i class="fas fa-laptop"></i> Laptops</a></li>
             <li><a href=""><i class="fas fa-desktop"></i> PC</a></li>
@@ -51,8 +343,8 @@
             <li><a href=""><i class="fab fa-xbox"></i> Consolas</a></li>
             <li><a href=""><i class="fas fa-print"></i> Impresoras</a></li>
         </ul>
-    </nav>
-    <nav class="nav-header-items2">
+    </nav> -->
+    <!-- <nav class="nav-header-items2">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-bars"></i>
@@ -74,5 +366,47 @@
             <li><a href=""><i class="fas fa-bell"></i></a></li>
             <li><a href=""><i class="fas fa-heart"></i></a></li>
         </ul>
-    </nav>
+    </nav> -->
+    
 </header>
+<aside>
+  <!-- Modal -->
+  <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="miCarrito">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mi changuito</h5>
+        </div>
+        <div class="modal-body" id="lista-carrito">
+          <div class="table-responsive">
+            <table class="table">
+              <thead id="cart-head">
+                <tr>
+                  <th colspan="3">Producto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">SubTotal</th>
+                </tr>
+              </thead>
+                <tbody>
+                  <span id="cart-empty" class="text-danger">El carrito no tiene productos agregados</span>
+                </tbody>
+                <tfoot id="cart-footer">
+                  <tr>
+                    <th colspan="4"  class="text-end" id="totaltitle">TOTAL:</th>
+                    <th >
+                      <h5 id="total"></h5>
+                    </th>
+                  </tr>
+                </tfoot>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-danger" id="btn-delete-cart" onclick="empty()">Vaciar carrito</button>
+          <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+          <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy"> Finalizar compra</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>

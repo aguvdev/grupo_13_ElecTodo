@@ -1,0 +1,45 @@
+[
+  {
+    "userId": 1,
+    "nombre": "Juan",
+    "lastname": "Perez",
+    "email": "juan1988@outlook.com",
+    "password": "$2a$10$HB1ikCWzsGXJ.XZiFcO/I.VKbFAhyaHMuiZ9mEsFt1iBxTfHKGCEW",
+    "image": "default-image.png"
+  },
+  {
+    "userId": 2,
+    "nombre": "Rocio",
+    "lastname": "Recalde",
+    "email": "rorecalde@gmail.com",
+    "password": "$2a$10$l82BmAGB11kne0f4CFqWlefrC5dYiONpybAirV75PLmFsPfsaD5hG",
+    "image": "default-image.png"
+  },
+  {
+    "userId": 5,
+    "nombre": "sergiowin",
+    "lastname": "romeo",
+    "email": "romeosantos@gmail.com",
+    "password": "$2a$10$AmD51ioRZzbO6b04zVhXye92qQF/IiVi8xEhmIn79ejM1qaIDtq3G",
+    "image": "default-image.png",
+    "rol": "admin"
+  },
+  {
+    "userId": 6,
+    "nombre": "manolo",
+    "lastname": "ropercio",
+    "email": "manusergio96@gmail.com",
+    "password": "$2a$10$wuRun9GVdWh2hclsf3LVpuqqPkJkYfplZNmJlbT9oKODBKyZZsktC",
+    "image": "default-image.png",
+    "rol": "user"
+  },
+  {
+    "userId": 7,
+    "nombre": "Patricio",
+    "lastname": "Vill",
+    "email": "patricio.vill74@gmail.com",
+    "password": "$2a$10$RVxuzX683/aQc02Fu3d4KuVHtXWuEGldrTzpCTJdLBHsCvgcEjWOe",
+    "image": "default-image.png",
+    "rol": "admin"
+  }
+]

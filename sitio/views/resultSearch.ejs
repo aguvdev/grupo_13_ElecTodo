@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+        <%- include('./partials/head') %>
+        
+        <body>
+            <%- include('./partials/header') %>
+            
+
+            <main class="search cuerpo">
+              
+
+              <% if (productos.length > 0) { %>
+
+              <div class="container">
+               
+              
+              <div class="row">
+                  <section class="productos col-12 col-lg-9 ">
+                      <h3 class="" value="">Resultados de la busqueda de: "<%= busqueda %>"</h3>
+                      
+                      <div class="celulares row py-2 gx-3">
+                        <% productos.forEach(producto => { %>
+                          <div class="col-12 col-md-4 my-2">
+                              <article class="p-3">
+                                <div class="contenido-search">
+                                  <a href="/product/detalle-product/<%= producto.id %>">
+                                    <h4 class="text-secondary text-center"><%= producto.name %> </h4>
+                                    <div class="cont-img">
+                                      <img src="/img/products/<%= producto.images[0].name ? producto.images[0].name  : null %>" alt="error no hay imagen papa carga una ">                                        
+                                    </div>
+                                    
+                                    <% if (producto.discount> 0) { %>
+                                      <h2 class="preciosearch"> $<%= (producto.price - (producto.discount * producto.price /100).toFixed(0)) %>
+                                      </h2>
+                                      <span class="preciodescuento"> $<%= producto.price %>
+                                          <%= producto.discount %>% OFF</span>
+                                      <% }else { %>
+                                        <h2 > $<%= producto.price %></h2>
+                                        <% } %>
+                                      </a>
+                                </div>
+                            </article>
+                            
+                          </div>
+                          
+                        <% }) %>
+                        
+                      
+                  </div>
+                  </section>
+                  <aside class="col-12 col-lg-3">
+                      <section class="publicidad">
+                          <h3 class="">Sitio publicitario</h3>
+                          <article class="row">
+                              <div class="col-12 col-md-6 col-lg-12 my-3">
+                                <a href="https://www.digitalhouse.com/ar">
+                                  <img  src="/img/digital.png" alt="" />
+                                </a>
+                              
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-12 my-3">
+                                <a href="https://www.mcdonalds.com.ar/">
+                              <img  src="/img/mcdonalds.png" alt="" />
+                            </a>
+                              </div>
+                              
+                          </article>
+                      </section>
+                  </aside>
+                
+              </div>
+              
+            </div>
+          </main>
+          <% } else{ %>
+             <br> 
+        
+            <h1 class="bg-light" style="color: rgb(196, 73, 73);">No hay resultado para la busqueda de : "<%= busqueda %>" <br> Escriba bien el nombre del producto por favor</h1>
+            <% } %>
+        
+
+    <%- include('./partials/footer') %>
+    <%- include('./partials/scripts') %>
+</body>
+</html>

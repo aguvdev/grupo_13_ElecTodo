@@ -1,224 +1,510 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %> 
-<body>
+<%- include('./partials/head') %>
+
+  <body>
     <%- include('./partials/header') %>
-    <main class="home">
-        <div class="cuerpo">
-            <section class="banner">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="/img/img-banner.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/img/img-banner2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/img/img-banner3.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </section>
-            <section class="ofertas">
-                <a href="">
-                    <div class="impreYCartDesc">
-                        <img src="/img/impresorasYcartuchosDesct.png" alt="">
-                        <h3>Impresoras y Cartuchos</h3>
-                        <span>20% OFF</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="impreYCartDesc">
-                        <img src="/img/auricularesDesc.png" alt="">
-                        <h3>Auriculares</h3>
-                        <span>15% OFF</span>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="impreYCartDesc">
-                        <img src="/img/audioDesct.png" alt="">
-                        <h3>Audio</h3>
-                        <span>15% OFF</span>
-                    </div>
-                </a>
-            </section>
-            <section class="recomendaciones2">
-                <div class="gaming-sect">
-                    <a href="">
-                        <img src="/img/gaming-sect.jpg" alt="">
-                    </a>
-                </div>
-                <div class="cellphones-sect">
-                    <a href=""><img src="/img/cellphones-sect.jpg" alt=""></a>
-                </div>
-                <div class="netbooks-sect">
-                    <a href=""><img src="/img/netbooks-sect.jpg" alt=""></a>
-                </div>
-            </section>
-            <section class="beneficios">
-                <div>
-                    <i class="fas fa-credit-card"></i><p>Todos los medios de pago</p>
-                </div>
-                <div>
-                    <i class="fas fa-store-alt"></i><p>Retirá gratis en nuestras sucursales</p>
-                </div>
-                <div>
-                    <i class="fas fa-truck"></i><p>Envíos a todo el país</p>
-                </div>
-            </section>
-            <div class="carrousel-ind">
-                <article>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <div class="item-carrousel">
-                                <div class="card">
-                                    <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-precio">$5.000</h5>
-                                      <p class="card-descuento">40% OFF</p>
-                                      <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="item-carrousel">
-                                <div class="card">
-                                    <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-precio">$5.000</h5>
-                                      <p class="card-descuento">40% OFF</p>
-                                      <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="item-carrousel">
-                                <div class="card">
-                                    <img src="/img/product-image-comodin.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-precio">$5.000</h5>
-                                      <p class="card-descuento">40% OFF</p>
-                                      <a href="/detalle-producto" class="btn btn-primary">Comprar</a>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                          <span class="visually"><i class="fas fa-arrow-left"></i></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                          <span class="visually"><i class="fas fa-arrow-right"></i></span>
-                        </button>
-                      </div>
-                </article>
+      <main class="home">
+        <div class="nieve">
+          <div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+<div class="snow"></div>
+        </div>
+        <!-- --------------BANNER--------------- -->
+        <section id="banner" class="banner">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
             </div>
-            <section class="recomendaciones">
-                <div class="seccion-gaming">
-                    <div class="cuadro-gaming">
-                        <a href="">
-                            <img src="/img/gamingTeclado.png" alt="">
-                            <h3>Gaming</h3>
-                        </a>
-                    </div>
-                    <% Gaming.forEach(product => { %>
-                     <article>
-                        <div class="card">
-                            <img src="/img/<%= product.image %>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <p class="product-name"><%= product.name %> </p>
-                              <% if (product.discount > 0) { %>
-                                <h5 class="card-precio precio-desc">$<%= product.price %> </h5>
-                               <p class="card-descuento desc-font"><%= (product.price - (product.discount * product.price /100).toFixed(0)) %> %OFF</p>
-                              <% }else { %>
-                                <h5 class="card-precio">$<%= product.price %> </h5>
-                              <% } %>
-                              <a href="product/detalle-product/<%= product.id %>" class="btn btn-primary">Comprar</a>
-                            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="/product/filter?searchi=20+">
+                <img src="/img/img-banner.jpg" class="d-block w-100" alt="...">
+              </a>
+              </div>
+              <div class="carousel-item">
+                <a href="/product/filter?searchi=8+">
+                <img src="/img/img-banner2.jpg" class="d-block w-100" alt="...">
+              </a>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <div class="cuerpo">
+          <!-- ---------OFERTAS-------- -->
+          <section class="ofertas">
+              <div class="impreDesc">
+                <a href="/product/filter?searchi=11+">
+                <img src="/img/impresorasYcartuchosDesct.png" alt="">
+              </a>
+                <h3>Impresoras y Cartuchos</h3>
+                <span>20% OFF</span>
+              </div>
+
+              <div class="auriDesc">
+                <a href="/product/filter?searchi=19+">
+                <img src="/img/auricularesDesc.png" alt="">
+                </a>
+                <h3>Auriculares</h3>
+                <span>15% OFF</span>
+              </div>
+              <div class="impreDesc">
+                <a href="/product/filter?searchi=5+">
+                <img src="/img/audioDesct.png" alt="">
+                </a>
+                <h3>Audio</h3>
+                <span>15% OFF</span>
+              </div>
+          </section>
+          <!-- ------------------BENEFICIOS----------- -->
+<!--           <section class="beneficios">
+            <div>
+              <i class="fas fa-credit-card"></i>
+              <p>Todos los medios de pago</p>
+            </div>
+            <div>
+              <i class="fas fa-store-alt"></i>
+              <p>Retirá gratis en nuestras sucursales</p>
+            </div>
+            <div>
+              <i class="fas fa-truck"></i>
+              <p>Envíos a todo el país</p>
+            </div>
+          </section> -->
+          <!-- ---------------RECOMENDACIONES--------------- -->
+          <section class="recomendaciones">
+            <!-- -----GAMING----- -->
+            <div class="recom-gamCelNote">
+              <!-- CUADRO DE SECCION -->
+              <div class="cont-cuadro-gamCelNote">
+                <div class="cuadro-gamCelNote">
+                  <img src="/img/gamingTeclado.png" alt="">
+                  <div class="tit-secc">
+                    <label>Videojuegos</label>
+                  </div>
+                </div>
+              </div>
+              <!-- carousel -->
+
+              <div class="carousel">
+
+                <div class="carousel__contenedor">
+
+                  <button aria-label = "Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="carousel__listaGam">
+
+                    <% videojuegos.forEach(product=> { %>
+                      <article class="cont-tarj-prod">
+                        <div class="tarj-prod">
+                          <a href="product/detalle-product/<%= product.id %>">
+                          <div class="img-prod">
+                            <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
+
                           </div>
-                    </article>
-                    <% }) %>
+                        </a>
+                          <div class="info-prod">
+                            <!-- titulo -->
+                            <h4>
+
+                              <%= product.name %>
+                            </h4>
+                            <!-- descripcion -->
+                            <p>
+                              <%= product.description %>
+                            </p>
+                            <!-- precio -->
+                            <% if (product.discount> 0) { %>
+                              <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                              </h3>
+                              <span> $<%= product.price %>
+                                  <%= product.discount %>% OFF</span>
+                              <% }else { %>
+                                <h3> $<%= product.price %>
+                                </h3>
+                                <% } %>
+                                <a href="product/detalle-product/<%= product.id %>">
+                                    <button>Más Info</button>
+                                  </a>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+                    
+                    </div>
+
+                  <button aria-label = "Siguiente" class="carousel__siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
                 </div>
 
-                <div class="seccion-celulares">
-                  <% Celulares.forEach(product => { %>
-                   <article>
-                        <div class="card">
-                            <img src="/img/<%= product.image %> " class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <p class="product-name"><%= product.name %> </p>
-                              <% if (product.discount > 0) { %>
-                                <h5 class="card-precio precio-desc">$<%= product.price %> </h5>
-                                <p class="card-descuento desc-font"><%= (product.price - (product.discount * product.price /100).toFixed(0)) %> %OFF</p>
-                                <% }else { %>
-                                  <h5 class="card-precio">$<%= product.price %> </h5>
-                                <% } %>
-                              <a href="product/detalle-product/<%= product.id %>" class="btn btn-primary">Comprar</a>
-                            </div>
+                <div role="tablist" class="carousel__indicadores"></div>
+
+              </div>
+
+            </div>
+            <!-- -----CELULARES----- -->
+            <div class="recom-gamCelNote">
+              <!-- CUADRO DE SECCION -->
+              <div class="cont-cuadro-gamCelNote">
+                <div class="cuadro-Cel">
+                  <img src="/img/celular-sect.png" alt="">
+                  <div class="tit-secc">
+                    <label>Celulares</label>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel">
+
+                <div class="carousel__contenedor">
+
+                  <button aria-label = "Anterior" class="carousel__anteriorCel">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="carousel__listaCel">
+
+                    <% celulares_y_tablets.forEach(product=> { %>
+                      <article class="cont-tarj-prod">
+                        <div class="tarj-prod">
+                          <a href="product/detalle-product/<%= product.id %>">
+                          <div class="img-prod">
+                            <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
                           </div>
-                    </article>
-                  <% }) %>
-                    <div class="cuadro-celulares">
-                        <a href="">
-                            <img src="/img/celular-sect.png" alt="">
-                            <h3>Celulares</h3>
                         </a>
+                          <div class="info-prod">
+                            <!-- titulo -->
+                            <h4>
+
+                              <%= product.name %>
+                            </h4>
+                            <!-- descripcion -->
+                            <p>
+                              <%= product.description %>
+                            </p>
+                            <!-- precio -->
+                            <% if (product.discount> 0) { %>
+                              <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                              </h3>
+                              <span> $<%= product.price %>
+                                  <%= product.discount %>% OFF</span>
+                              <% }else { %>
+                                <h3> $<%= product.price %>
+                                </h3>
+                                <% } %>
+                                  <a href="product/detalle-product/<%= product.id %>">
+                                    <button>Más Info</button>
+                                  </a>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+                    
                     </div>
+
+                  <button aria-label = "Siguiente" class="carousel__siguienteCel">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
                 </div>
-                <div class="seccion-notebooks">
-                    <div class="cuadro-notebooks">
-                        <img src="/img/notebooksDesc.png" alt="">
-                        <h3>Notebooks</h3>
+
+                <div role="tablist" class="carousel__indicadoresCel"></div>
+
+              </div>
+
+            </div>
+            <!-- -----NOTEBOOKS----- -->
+            <div class="recom-gamCelNote">
+              <!-- CUADRO DE SECCION -->
+              <div class="cont-cuadro-gamCelNote">
+                <div class="cuadro-Note">
+                  <img src="/img/notebooksDesc.png" alt="">
+                  <div class="tit-secc">
+                    <label>Informatica</label>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel">
+
+                <div class="carousel__contenedorNot">
+
+                  <button aria-label = "Anterior" class="carousel__anteriorNot">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="carousel__listaNot">
+
+                    <% informatica.forEach(product=> { %>
+                      <article class="cont-tarj-prod">
+                        <div class="tarj-prod">
+                          <a href="product/detalle-product/<%= product.id %>">
+                          <div class="img-prod">
+                            <img src="/img/products/<%= product.images[0].name %>" alt="error no hay imagen papa carga una ">
+                          </div>
+                        </a>
+                          <div class="info-prod">
+                            <!-- titulo -->
+                            <h4>
+
+                              <%= product.name %>
+                            </h4>
+                            <!-- descripcion -->
+                            <p>
+                              <%= product.description %>
+                            </p>
+                            <!-- precio -->
+                            <% if (product.discount> 0) { %>
+                              <h3> $<%= (product.price - (product.discount * product.price /100).toFixed(0)) %>
+                              </h3>
+                              <span> $<%= product.price %>
+                                  <%= product.discount %>% OFF</span>
+                              <% }else { %>
+                                <h3> $<%= product.price %>
+                                </h3>
+                                <% } %>
+                                  <a href="product/detalle-product/<%= product.id %>">
+                                    <button>Más Info</button>
+                                  </a>
+                          </div>
+                        </div>
+                      </article>
+                      <% }) %>
+                    
                     </div>
-                    <% Notebooks.forEach(product => { %>
-                      <article>
-                           <div class="card">
-                               <img src="/img/<%= product.image %> " class="card-img-top" alt="...">
-                               <div class="card-body">
-                                <p class="product-name"><%= product.name %> </p>
-                                 <% if (product.discount > 0) { %> 
-                                  <h5 class="card-precio precio-desc">$<%= product.price %> </h5>
-                                   <p class="card-descuento desc-font"><%= (product.price - (product.discount * product.price /100).toFixed(0)) %> %OFF</p>
-                              
-                                  <% }else { %>
-                                    <h5 class="card-precio">$<%= product.price %> </h5>
-                                  <% } %>
-                                 <a href="product/detalle-product/<%= product.id %>" class="btn btn-primary">Comprar</a>
-                               </div>
-                             </div>
-                       </article>
-                     <% }) %>
+
+                  <button aria-label = "Siguiente" class="carousel__siguienteNot">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+
                 </div>
-            </section>
-            <section class="ofertas2">
-                <a href=""><img src="/img/impr-cart-cell-witdth.jpg" alt=""></a>
-                <a href=""><img src="/img/audio-cell-width.jpg" alt=""></a>
-                <a href=""><img src="/img/auriculares-cell-width.jpg" alt=""></a>
-            </section>
-    </main>
-    <%- include('./partials/footer') %>
-    <%- include('./partials/scripts') %>
-</body>
+
+                <div role="tablist" class="carousel__indicadoresNot"></div>
+
+              </div>
+
+            </div>
+          </section>
+
+      </main>
+      <a id="gototop-btn" href="#banner">
+        <i class="fa fa-arrow-up"></i>
+      </a>
+      <%- include('./partials/footer') %>
+        <%- include('./partials/scripts') %>
+        <script src="/javascript/sweetAlert.js"></script>
+  </body>
+
 </html>

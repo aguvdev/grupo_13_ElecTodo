@@ -1,0 +1,319 @@
+/* NUEVO CARGA */
+
+#preview {
+    margin: 20px;
+    border:1px solid #ddd;
+    padding:5px;
+    border-radius:2px;
+    background:#fff;
+    width:380px;
+    height: 380px;
+}
+  
+#preview img {
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.carga .fondo-ord{
+    background-color: #fff;
+    max-width: 1200;
+    width: 70%;
+    margin: auto;
+    border-radius: 1em 1em 1em 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+
+    grid-template-areas: "imagen datos"
+                         "imagen datos"
+                         "imagen datos"
+                         "imagen datos"
+                         "imagen datos"
+                         "cara-desc cara-desc"
+                         "descrip descrip"
+                         "boton boton";
+}
+
+.carga .formulario .img-auricular{
+    grid-area: imagen;
+}
+
+.carga .formulario .img-auricular .selec-5-img2,
+.carga .formulario .img-auricular .selec-5-img{
+    margin: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+
+.carga .formulario .img-auricular .selec-5-img-none{
+    display: none;
+}
+
+.carga .formulario .img-auricular .selec-5-img__incorrecto{
+    color: rgb(255, 64, 64);
+    display: block;
+}
+
+.carga .formulario .img-auricular .selec-5-img__correcto{
+    color: rgb(109, 255, 64);
+    display: block;
+}
+
+.carga .formulario__grupo .formulario__grupo-input {
+    max-width: 380px;
+    width: 100%;
+    background-color: #fff;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding: 0 0.4rem;
+    position: relative;
+    grid-area: datos;
+}
+
+.carga .formulario .fondo-ord .cara-gene {
+    display: grid;
+    grid-template-columns: 60% 10%;
+    grid-area: cara-desc;
+    margin: 20px;
+}
+
+
+
+.carga .formulario .fondo-ord .cara-gene h3{
+    font-family: Play;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carga .formulario .fondo-ord .caracteristicas-contenido{
+    grid-area: descrip;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carga .formulario .fondo-ord .caracteristicas-contenido textarea {
+    width: 90%;
+    height: 250px;
+    resize: none;
+}
+
+.carga .formulario .formulario__grupo .formulario__grupo-input .fa-box,
+.carga .formulario .formulario__grupo .formulario__grupo-input .fa-list-alt,
+.carga .formulario .formulario__grupo .formulario__grupo-input .fa-boxes,
+.carga .formulario .formulario__grupo .formulario__grupo-input .fa-dollar-sign,
+.carga .formulario .formulario__grupo .formulario__grupo-input .fa-percent{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.carga .formulario .cara-gene .formulario__validacion-estado,
+.carga .formulario .formulario__grupo .formulario__validacion-estado{
+    text-align: center;
+    line-height: 55px;
+    transition: 0.5s;
+    font-size: 1.1rem;
+    opacity: 0;
+}
+
+.carga .formulario .fondo-ord .caracteristicas-contenido textarea,
+.carga .formulario .formulario__grupo .formulario__grupo-input input,
+.carga .formulario .formulario__grupo .formulario__grupo-input select {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+}
+
+.carga .formulario .fondo-ord .caracteristicas-contenido textarea:focus,
+.carga .formulario .formulario__grupo .formulario__grupo-input input:focus{
+    border-bottom: 3px solid #188fff;
+}
+
+.carga .formulario .formulario__grupo .formulario__input-error,
+.carga .formulario .fondo-ord .cara-gene .formulario__input-error{
+    font-size: 12px;
+    color: #F66060;;
+    margin-bottom: 0;
+    display: none;
+}
+
+.carga .formulario .formulario__grupo .formulario__input-error-activo,
+.carga .formulario .fondo-ord .cara-gene .formulario__input-error-activo {
+    display: block;
+}
+
+.carga .formulario .formulario__label {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.carga .formulario .formulario__label .formulario__checkbox{
+    margin-right: 5px;
+}
+
+.carga .formulario .formulario__grupo-btn-enviar {
+    grid-area: boton;
+}
+
+.carga .formulario .formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background-color: #F66060;
+    padding: 0 15px;
+    color: #fff;
+    border-radius: 3px;
+    display: none;
+}
+
+.carga .formulario .formulario__mensaje-activo{
+    display: block;
+}
+
+.carga .formulario .formulario__btn {
+    width: 150px;
+    background-color: rgb(228, 28, 28);
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.carga .formulario .boton-cancelar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carga .formulario .boton-cancelar a{
+    color: #fff;
+}
+
+.carga .formulario .formulario__btn:hover {
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.2);
+}
+
+.carga .formulario .formulario__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carga .formulario .formulario__mensaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.carga .formulario .formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/* ------------------- --------------------- ESTILOS PARA VALIDACION------------------ ---------------- */
+
+.carga .formulario .fondo-ord .cara-gene .formulario__grupo-correcto,
+.carga .formulario .formulario__grupo-correcto .formulario__validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.carga .formulario .fondo-ord .formulario__grupo-correcto textarea:focus,
+.carga .formulario .formulario__grupo-correcto .formulario__grupo-input input:focus {
+    border-bottom: 3px solid #1ed12d;
+}
+
+.carga .formulario .fondo-ord .cara-gene .formulario__grupo-incorrecto,
+.carga .formulario .formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.carga .formulario .fondo-ord .formulario__grupo-incorrecto textarea:focus,
+.carga .formulario .formulario__grupo-incorrecto .formulario__grupo-input input:focus {
+    border-bottom: 3px solid #bb2929;
+}
+
+/* --------------------MEDIAQUERIES--------------------- */
+
+@media screen and (max-width: 1089px) {
+    .carga .fondo-ord{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .carga .fondo-ord{
+        grid-template-areas: "datos datos"
+                             "datos datos"
+                             "datos datos"
+                             "imagen imagen"
+                             "imagen imagen"
+                             "cara-desc cara-desc"
+                             "descrip descrip"
+                             "boton boton";
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .carga .fondo-ord {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, auto);
+
+
+        grid-template-areas: "imagen"
+                             "imagen"
+                             "datos"
+                             "datos"
+                             "datos"
+                             "datos"
+                             "datos"
+                             "cara-desc"
+                             "descrip"
+                             "boton";
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    main.grilla-carga{
+        padding-top: 150px;
+    }
+
+    #preview{
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+    }
+
+    .carga .formulario__grupo .formulario__grupo-input{
+        width: 300px;
+    }
+}

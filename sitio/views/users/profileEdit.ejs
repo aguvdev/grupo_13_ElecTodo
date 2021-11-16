@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="prueba">
+                <div class="circulo"></div>
+                <div>
+                    <div class="carta-padre">
+                        <div class="side-avatar">
+                            <div class="avatar">
+                                <img src="/img/users/<%= user.avatar %>" width="300px" alt="foto-de-perfil">
+                            </div>
+                            <p class="nombre-avatar"><%= user.name %> </p>
+                            <p class="num-avatar"><%= user.phone %></p>
+                            <p class="adr-avatar"><%= user.adress %></p>
+                            <p class="email-avatar"><%= user.email %> </p>
+                        </div>
+        
+                        <div class="side-datos">
+                            <form action="/users/profileEdit/<%= user.id %>?_method=PUT" method="POST" class="cont-side-datos" autocomplete="off" enctype="multipart/form-data">
+                                
+                               
+                                <div class="side-1"> 
+                                    <label for="nombre">Cambiar foto de perfil</label>
+                                    <input type="file" width="300px" accept="image/png, image/gif, image/jpeg, image/jpg" name="avatar" id="avatar">
+                                    <label for="nombre">Nombre</label>
+                                    <input class="<%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" id="name" name="name" placeholder="<%= user.name %>" value="<%= locals.oldData ? oldData.name : user.name%>">
+
+                                    <% if (locals.errors && errors.name) { %>
+                                        <div class="text-danger">
+                                                <%= errors.name.msg %> 
+                                        </div>
+                                        <% } %>
+
+                                    <label for="Celular/Telefono">Celular/Telefono</label>
+                                    <input type="text" id="Celular/Telefono" name="phone" placeholder="<%= user.phone %>" value="<%= locals.oldData ? oldData.phone : user.phone %>">
+
+                                    <label for="Ciudad">Ciudad</label>
+                                    <input type="text" id="Ciudad" placeholder="<%= user.adress %>" value="<%= user.adress %>">
+                                </div>
+                                <div class="side-2">
+                                    <label for="Email">Email</label>
+                                    <input type="email" id="Email" name="email" placeholder="<%= user.email %>" value="<%= user.email %>" disabled>
+
+                                    <label for="Password">Contraseña</label>
+                                    <input type="password" id="Password" name="password" placeholder="Nueva contraseña" class="password <%= locals.errors && errors.password ? 'is-invalid' : null%>"><span onclick="togglePass()">
+                                        <i class="fa fa-eye-slash"></i>
+                                    </span>
+                                   
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="text-danger">
+                                                <%= errors.password.msg %> 
+                                        </div>
+                                        <% } %>
+                                      <button type="submit">Editar</button>  
+                                </div>
+                                
+                            </form>
+                            <form action="/users/profile/<%= user.id %>?_method=DELETE" method="POST">
+                                <button onclick="return confirm('¿Estás seguro que quieres eliminar tu cuenta de forma permanente?')" type="submit">Eliminar cuenta</button>
+                                
+                            </form>
+                        </div>
+        
+                    </div>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+                <%- include('../partials/scripts') %>
+    </body>
+
+</html>
