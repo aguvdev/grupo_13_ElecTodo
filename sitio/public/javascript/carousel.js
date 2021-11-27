@@ -11,7 +11,7 @@ window.addEventListener('load', function(){
             },
             responsive: [
                 {
-                    // screens greater than >= 775px
+                    // screens greater than >= 450px
                     breakpoint: 450,
                     settings: {
                       // Set to `auto` and provide item width to adjust to viewport
@@ -20,7 +20,7 @@ window.addEventListener('load', function(){
                       duration: 0.25
                     }
                   },{
-                    // screens greater than >= 775px
+                    // screens greater than >= 750px
                     breakpoint: 750,
                     settings: {
                       // Set to `auto` and provide item width to adjust to viewport
@@ -29,7 +29,7 @@ window.addEventListener('load', function(){
                       duration: 0.25
                     }
                   },{
-                  // screens greater than >= 775px
+                  // screens greater than >= 940px
                   breakpoint: 940,
                   settings: {
                     // Set to `auto` and provide item width to adjust to viewport
@@ -38,7 +38,7 @@ window.addEventListener('load', function(){
                     duration: 0.25
                   }
                 },{
-                  // screens greater than >= 1024px
+                  // screens greater than >= 1176px
                   breakpoint: 1176,
                   settings: {
                     slidesToShow: 5,
@@ -62,7 +62,7 @@ window.addEventListener('load', function(){
           },
           responsive: [
               {
-                  // screens greater than >= 775px
+                  // screens greater than >= 450px
                   breakpoint: 450,
                   settings: {
                     // Set to `auto` and provide item width to adjust to viewport
@@ -71,7 +71,7 @@ window.addEventListener('load', function(){
                     duration: 0.25
                   }
                 },{
-                  // screens greater than >= 775px
+                  // screens greater than >= 750px
                   breakpoint: 750,
                   settings: {
                     // Set to `auto` and provide item width to adjust to viewport
@@ -80,7 +80,7 @@ window.addEventListener('load', function(){
                     duration: 0.25
                   }
                 },{
-                // screens greater than >= 775px
+                // screens greater than >= 940px
                 breakpoint: 940,
                 settings: {
                   // Set to `auto` and provide item width to adjust to viewport
@@ -89,7 +89,7 @@ window.addEventListener('load', function(){
                   duration: 0.25
                 }
               },{
-                // screens greater than >= 1024px
+                // screens greater than >= 1176px
                 breakpoint: 1176,
                 settings: {
                   slidesToShow: 5,
@@ -113,7 +113,7 @@ window.addEventListener('load', function(){
           },
           responsive: [
               {
-                  // screens greater than >= 775px
+                  // screens greater than >= 450px
                   breakpoint: 450,
                   settings: {
                     // Set to `auto` and provide item width to adjust to viewport
@@ -122,7 +122,7 @@ window.addEventListener('load', function(){
                     duration: 0.25
                   }
                 },{
-                  // screens greater than >= 775px
+                  // screens greater than >= 750px
                   breakpoint: 750,
                   settings: {
                     // Set to `auto` and provide item width to adjust to viewport
@@ -131,7 +131,7 @@ window.addEventListener('load', function(){
                     duration: 0.25
                   }
                 },{
-                // screens greater than >= 775px
+                // screens greater than >= 940px
                 breakpoint: 940,
                 settings: {
                   // Set to `auto` and provide item width to adjust to viewport
@@ -140,7 +140,7 @@ window.addEventListener('load', function(){
                   duration: 0.25
                 }
               },{
-                // screens greater than >= 1024px
+                // screens greater than >= 1176px
                 breakpoint: 1176,
                 settings: {
                   slidesToShow: 5,
